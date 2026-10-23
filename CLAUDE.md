@@ -74,7 +74,7 @@ Mahmoud wants to catch trending topics early. When he asks for a trend article:
 ## Still to do (update this list as items are completed)
 
 - [x] Namecheap DNS → GitHub Pages: A records for `@` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME for `www` to `mahabujamil.github.io` (done 2026-10-23)
-- [ ] Enable "Enforce HTTPS" once GitHub issues the certificate: `gh api -X PUT repos/mahabujamil/maloomah/pages -F https_enforced=true`
+- [x] HTTPS certificate issued for maloomah.com and www, with "Enforce HTTPS" on (2026-10-23)
 - [ ] Namecheap email forwarding: `contact@maloomah.com` → Mahmoud's Gmail
 - [ ] Google Search Console: verify the domain, submit `https://maloomah.com/sitemap-index.xml`, put the verification code in `SITE.googleSiteVerification`
 - [ ] Google Analytics: put the measurement ID in `SITE.googleAnalyticsId`
