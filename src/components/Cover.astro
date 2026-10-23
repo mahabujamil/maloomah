@@ -1,0 +1,20 @@
+---
+// Generated cover art: category gradient + dot pattern + big icon. No stock photos needed.
+import Icon from './Icon.astro';
+import { CATEGORIES, type CategoryId, type Lang } from '../site';
+
+interface Props {
+  category: CategoryId;
+  lang: Lang;
+  iconSize?: number;
+  showLabel?: boolean;
+}
+const { category, lang, iconSize = 92, showLabel = true } = Astro.props;
+const [c1, c2] = CATEGORIES[category].colors;
+---
+
+<div class="cover" style={`--c1:${c1};--c2:${c2}`} aria-hidden="true">
+  <span class="cover-ring"></span>
+  <Icon name={category} size={iconSize} strokeWidth={1.4} class="cover-icon" />
+  {showLabel && <span class="cover-label">{CATEGORIES[category].name[lang]}</span>}
+</div>

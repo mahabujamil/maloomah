@@ -1,0 +1,279 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import AdSlot from '../components/AdSlot.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Cover from '../components/Cover.astro';
+import Icon from '../components/Icon.astro';
+import {
+  articleUrl,
+  categoryUrl,
+  getArticles,
+  relatedArticles,
+  slugOf,
+  slugSet,
+  type Article,
+} from '../lib/content';
+import { CATEGORIES, SITE, formatDate, localePath, otherLang, readingMinutes, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  article: Article;
+}
+const { lang, article } = Astro.props;
+const ui = t(lang);
+const { title, description, category, date, updated, tags } = article.data;
+const slug = slugOf(article);
+const cat = CATEGORIES[category];
+const { Content, headings } = await render(article);
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const minutes = readingMinutes(article.body ?? '');
+
+const other = otherLang(lang);
+const hasTranslation = (await slugSet(other)).has(slug);
+const related = relatedArticles(await getArticles(lang), article);
+
+const url = new URL(articleUrl(lang, slug), SITE.url).href;
+const home = localePath(lang, '/');
+const shareText = encodeURIComponent(title);
+const shareUrl = encodeURIComponent(url);
+const shares = [
+  { name: 'WhatsApp', icon: 'whatsapp', color: '#25d366', href: `https://wa.me/?text=${shareText}%20${shareUrl}` },
+  { name: 'Facebook', icon: 'facebook', color: '#1877f2', href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}` },
+  { name: 'X', icon: 'x', color: '#111111', href: `https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}` },
+  { name: 'Telegram', icon: 'telegram', color: '#229ed9', href: `https://t.me/share/url?url=${shareUrl}&text=${shareText}` },
+];
+
+const needsDisclaimer = category === 'health' || category === 'money';
+const disclaimer = {
+  health: {
+    ar: 'هذا المقال للتثقيف العام ولا يغني عن استشارة الطبيب أو المختص.',
+    en: 'This article is for general education and is not a substitute for advice from a doctor or qualified professional.',
+  },
+  money: {
+    ar: 'هذا المقال للتثقيف العام وليس نصيحة مالية أو استثمارية.',
+    en: 'This article is for general education and is not financial or investment advice.',
+  },
+} as const;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    inLanguage: lang,
+    datePublished: date.toISOString(),
+    dateModified: (updated ?? date).toISOString(),
+    articleSection: cat.name[lang],
+    keywords: tags.join(', '),
+    mainEntityOfPage: url,
+    url,
+    image: `${SITE.url}/og/${category}.png`,
+    author: { '@type': 'Organization', name: SITE.name[lang], url: SITE.url },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name[lang],
+      logo: { '@type': 'ImageObject', url: `${SITE.url}/apple-touch-icon.png` },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: ui.breadcrumbHome, item: new URL(home, SITE.url).href },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: cat.name[lang],
+        item: new URL(categoryUrl(lang, category), SITE.url).href,
+      },
+      { '@type': 'ListItem', position: 3, name: title },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title={title}
+  description={description}
+  alternatePath={hasTranslation ? articleUrl(other, slug) : undefined}
+  image={`/og/${category}.png`}
+  type="article"
+  published={date}
+  modified={updated ?? date}
+  section={cat.name[lang]}
+  tags={tags}
+  jsonLd={jsonLd}
+  currentCategory={category}
+>
+  <div class="progress" aria-hidden="true"></div>
+  <article>
+    <header class="container article-head">
+      <Breadcrumbs
+        items={[
+          { label: ui.breadcrumbHome, href: home },
+          { label: cat.name[lang], href: categoryUrl(lang, category) },
+          { label: title },
+        ]}
+      />
+      <div style="margin-top:18px">
+        <a class="chip" style={`--c1:${cat.colors[0]}`} href={categoryUrl(lang, category)}>
+          <Icon name={category} size={14} />
+          {cat.name[lang]}
+        </a>
+      </div>
+      <h1>{title}</h1>
+      <p class="lead">{description}</p>
+      <div class="meta">
+        <span><Icon name="calendar" size={16} />{ui.published} <time datetime={date.toISOString()}>{formatDate(date, lang)}</time></span>
+        {
+          updated && (
+            <span>
+              {ui.updated} <time datetime={updated.toISOString()}>{formatDate(updated, lang)}</time>
+            </span>
+          )
+        }
+        <span><Icon name="clock" size={16} />{ui.minRead(minutes)}</span>
+      </div>
+      <div class="article-cover">
+        <Cover category={category} lang={lang} iconSize={180} />
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <div>
+        <div class="prose" lang={lang}>
+          <Content />
+        </div>
+        <AdSlot />
+
+        {
+          tags.length > 0 && (
+            <div class="tags">
+              {tags.map((tag) => (
+                <a class="tag" href={`${localePath(lang, '/search/')}?q=${encodeURIComponent(tag)}`}>
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          )
+        }
+
+        {needsDisclaimer && <p class="disclaimer">{disclaimer[category as 'health' | 'money'][lang]}</p>}
+
+        <section class="share">
+          <h2>{ui.share}</h2>
+          <div class="share-row">
+            {
+              shares.map((s) => (
+                <a class="share-btn" style={`--c1:${s.color}`} href={s.href} target="_blank" rel="noopener noreferrer">
+                  <Icon name={s.icon} size={18} />
+                  {s.name}
+                </a>
+              ))
+            }
+            <button class="share-btn" type="button" data-copy={url} data-copied={ui.copied}>
+              <Icon name="link" size={18} />
+              <span>{ui.copyLink}</span>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      {
+        toc.length > 1 && (
+          <aside class="article-aside">
+            <div class="aside-sticky">
+              <details class="toc-box" open>
+                <summary>
+                  <Icon name="menu" size={18} />
+                  {ui.toc}
+                </summary>
+                <ol>
+                  {toc.map((h) => (
+                    <li class={`depth-${h.depth}`}>
+                      <a href={`#${h.slug}`}>{h.text}</a>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+            </div>
+          </aside>
+        )
+      }
+    </div>
+  </article>
+
+  {
+    related.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>{ui.related}</h2>
+          </div>
+          <div class="grid grid-3">
+            {related.map((a) => (
+              <ArticleCard article={a} lang={lang} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<script>
+  // Reading progress bar
+  const bar = document.querySelector<HTMLElement>('.progress');
+  const article = document.querySelector<HTMLElement>('.prose');
+  if (bar && article) {
+    const update = () => {
+      const rect = article.getBoundingClientRect();
+      const total = rect.height - window.innerHeight * 0.6;
+      const progress = Math.min(1, Math.max(0, -rect.top / Math.max(total, 1)));
+      bar.style.transform = `scaleX(${progress})`;
+    };
+    addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  // Highlight the current section in the table of contents
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc-box a')];
+  if (links.length && 'IntersectionObserver' in window) {
+    const byId = new Map(links.map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          links.forEach((a) => a.classList.remove('active'));
+          byId.get(entry.target.id)?.classList.add('active');
+        }
+      },
+      { rootMargin: '-140px 0px -65% 0px' },
+    );
+    document.querySelectorAll('.prose h2[id], .prose h3[id]').forEach((h) => observer.observe(h));
+  }
+
+  // On small screens the table of contents starts collapsed
+  if (matchMedia('(max-width: 999px)').matches) {
+    document.querySelector('.toc-box')?.removeAttribute('open');
+  }
+
+  // Copy link
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy ?? location.href);
+        const label = btn.querySelector('span');
+        if (label) {
+          const original = label.textContent;
+          label.textContent = btn.dataset.copied ?? '✓';
+          setTimeout(() => (label.textContent = original), 1800);
+        }
+      } catch {}
+    });
+  });
+</script>

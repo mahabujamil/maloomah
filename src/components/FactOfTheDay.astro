@@ -1,0 +1,48 @@
+---
+import Icon from './Icon.astro';
+import { FACTS } from '../data/facts';
+import { t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const facts = FACTS.map((f) => f[lang]);
+---
+
+<aside class="fact-card reveal reveal-3" data-facts={JSON.stringify(facts)}>
+  <span class="fact-glow"></span>
+  <span class="fact-label"><Icon name="bulb" size={18} />{ui.factOfDay}</span>
+  <p class="fact-text" aria-live="polite">{facts[0]}</p>
+  <div class="fact-footer">
+    <span class="fact-count" dir="ltr">1 / {facts.length}</span>
+    <button class="fact-next" type="button">
+      <Icon name="refresh" size={16} />
+      {ui.anotherFact}
+    </button>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.fact-card').forEach((card) => {
+    const facts: string[] = JSON.parse(card.dataset.facts ?? '[]');
+    const text = card.querySelector('.fact-text');
+    const count = card.querySelector('.fact-count');
+    if (!facts.length || !text || !count) return;
+    // Same fact for everyone on a given day, a new one tomorrow.
+    let index = Math.floor(Date.now() / 86_400_000) % facts.length;
+    const show = () => {
+      text.textContent = facts[index];
+      count.textContent = `${index + 1} / ${facts.length}`;
+      text.classList.remove('swap');
+      void (text as HTMLElement).offsetWidth;
+      text.classList.add('swap');
+    };
+    show();
+    card.querySelector('.fact-next')?.addEventListener('click', () => {
+      index = (index + 1) % facts.length;
+      show();
+    });
+  });
+</script>

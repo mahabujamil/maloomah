@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Icon from '../components/Icon.astro';
+import { getArticles } from '../lib/content';
+import { SITE, localePath, otherLang, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const articles = await getArticles(lang);
+const description =
+  lang === 'ar'
+    ? `تصفّح كل مقالات ${SITE.name.ar} في العلوم والصحة والتقنية والتاريخ والمال والمزيد.`
+    : `Browse every ${SITE.name.en} article on science, health, technology, history, money and more.`;
+---
+
+<BaseLayout
+  lang={lang}
+  title={ui.allArticles}
+  description={description}
+  alternatePath={localePath(otherLang(lang), '/articles/')}
+  current="articles"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: ui.breadcrumbHome, href: localePath(lang, '/') }, { label: ui.allArticles }]} />
+      <div style="display:flex;align-items:center;gap:16px;margin-top:18px">
+        <span class="hero-icon"><Icon name="book" size={30} /></span>
+        <div>
+          <h1 style="margin-top:0">{ui.allArticles}</h1>
+          <p class="cat-count">{ui.articlesIn(articles.length)}</p>
+        </div>
+      </div>
+      <p class="lead">{description}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-3">
+      {articles.map((article) => <ArticleCard article={article} lang={lang} />)}
+    </div>
+  </section>
+</BaseLayout>

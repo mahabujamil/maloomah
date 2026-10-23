@@ -1,0 +1,38 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { slugOf, type Page } from '../lib/content';
+import { formatDate, localePath, otherLang, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  page: Page;
+}
+const { lang, page } = Astro.props;
+const ui = t(lang);
+const { Content } = await render(page);
+const slug = slugOf(page);
+---
+
+<BaseLayout
+  lang={lang}
+  title={page.data.title}
+  description={page.data.description}
+  alternatePath={localePath(otherLang(lang), `/${slug}/`)}
+  current={slug === 'about' ? 'about' : undefined}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: ui.breadcrumbHome, href: localePath(lang, '/') }, { label: page.data.title }]} />
+      <h1>{page.data.title}</h1>
+      <p class="lead">{page.data.description}</p>
+      {page.data.updated && <p class="cat-count" style="margin-top:8px">{ui.updated}: {formatDate(page.data.updated, lang)}</p>}
+    </div>
+  </section>
+  <section class="container page-body">
+    <div class="prose" lang={lang}>
+      <Content />
+    </div>
+  </section>
+</BaseLayout>

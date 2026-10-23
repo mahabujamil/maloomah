@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Icon from '../components/Icon.astro';
+import { articleUrl, getArticles, slugOf } from '../lib/content';
+import { CATEGORIES, CATEGORY_IDS, localePath, otherLang, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const index = (await getArticles(lang)).map((a) => ({
+  t: a.data.title,
+  d: a.data.description,
+  k: [CATEGORIES[a.data.category].name[lang], ...a.data.tags].join(' '),
+  u: articleUrl(lang, slugOf(a)),
+  c: a.data.category,
+}));
+const colors = Object.fromEntries(CATEGORY_IDS.map((id) => [id, CATEGORIES[id].colors]));
+const description =
+  lang === 'ar' ? 'ابحث في كل مقالات معلومة بالكلمة أو الموضوع.' : 'Search every Maloomah article by keyword or topic.';
+---
+
+<BaseLayout
+  lang={lang}
+  title={ui.searchTitle}
+  description={description}
+  alternatePath={localePath(otherLang(lang), '/search/')}
+  noindex
+  current="search"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: ui.breadcrumbHome, href: localePath(lang, '/') }, { label: ui.search }]} />
+      <h1>{ui.searchTitle}</h1>
+      <form class="search-field" style="margin-top:20px;max-width:640px" role="search" data-search-form>
+        <Icon name="search" />
+        <input type="search" name="q" placeholder={ui.searchPlaceholder} aria-label={ui.search} autofocus />
+        <button class="btn btn-primary" type="submit">{ui.search}</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="container" style="padding-bottom:48px">
+    <p class="search-status" aria-live="polite" data-search-status></p>
+    <div class="search-results" data-search-results></div>
+  </section>
+
+  {CATEGORY_IDS.map((id) => <template data-icon={id}><Icon name={id} size={22} /></template>)}
+  <script type="application/json" id="search-index" set:html={JSON.stringify({ index, colors, noResults: ui.noResults, lang })} />
+</BaseLayout>
+
+<script>
+  type Item = { t: string; d: string; k: string; u: string; c: string };
+  const data = JSON.parse(document.getElementById('search-index')?.textContent ?? '{}') as {
+    index: Item[];
+    colors: Record<string, [string, string]>;
+    noResults: string;
+    lang: 'ar' | 'en';
+  };
+  const form = document.querySelector<HTMLFormElement>('[data-search-form]')!;
+  const input = form.querySelector('input')!;
+  const status = document.querySelector<HTMLElement>('[data-search-status]')!;
+  const results = document.querySelector<HTMLElement>('[data-search-results]')!;
+
+  // Make Arabic matching forgiving: ignore diacritics and unify common letter variants.
+  const normalize = (s: string) =>
+    s
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[ً-ٰٟـ]/g, '')
+      .replace(/[أإآٱ]/g, 'ا')
+      .replace(/ة/g, 'ه')
+      .replace(/ى/g, 'ي')
+      .replace(/ؤ/g, 'و')
+      .replace(/ئ/g, 'ي')
+      .replace(/[̀-ͯ]/g, '');
+
+  const prepared = data.index.map((item) => ({ item, hay: normalize(`${item.t} ${item.d} ${item.k}`) }));
+
+  const escapeHtml = (s: string) =>
+    s.replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]!);
+
+  const highlight = (text: string, terms: string[]) => {
+    let html = escapeHtml(text);
+    for (const term of terms) {
+      if (term.length < 2) continue;
+      const safe = escapeHtml(term).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      html = html.replace(new RegExp(`(${safe})`, 'gi'), '<mark>$1</mark>');
+    }
+    return html;
+  };
+
+  const countLabel = (n: number) =>
+    data.lang === 'ar' ? `${n} نتيجة` : `${n} result${n === 1 ? '' : 's'}`;
+
+  function run(query: string) {
+    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    results.replaceChildren();
+    if (!terms.length) {
+      status.textContent = '';
+      return;
+    }
+    const hits = prepared.filter(({ hay }) => terms.every((term) => hay.includes(term))).map((p) => p.item);
+    status.textContent = hits.length ? countLabel(hits.length) : data.noResults;
+    const rawTerms = query.split(/\s+/).filter(Boolean);
+    for (const hit of hits) {
+      const [c1, c2] = data.colors[hit.c] ?? ['#5a48ee', '#8b5cf6'];
+      const a = document.createElement('a');
+      a.className = 'result';
+      a.href = hit.u;
+      const icon = document.createElement('span');
+      icon.className = 'result-icon';
+      icon.style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
+      const tpl = document.querySelector<HTMLTemplateElement>(`template[data-icon="${hit.c}"]`);
+      if (tpl) icon.append(tpl.content.cloneNode(true));
+      const body = document.createElement('div');
+      body.innerHTML = `<h3>${highlight(hit.t, rawTerms)}</h3><p>${highlight(hit.d, rawTerms)}</p>`;
+      a.append(icon, body);
+      results.append(a);
+    }
+  }
+
+  const initial = new URLSearchParams(location.search).get('q') ?? '';
+  input.value = initial;
+  run(initial);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    const url = new URL(location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+    run(q);
+  });
+  input.addEventListener('input', () => run(input.value));
+</script>

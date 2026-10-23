@@ -1,0 +1,21 @@
+---
+// GitHub Pages serves this file for every missing URL, in either language.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../site';
+
+const ar = t('ar');
+const en = t('en');
+---
+
+<BaseLayout lang="ar" title={ar.notFoundTitle} description={ar.notFoundText} noindex>
+  <section class="container not-found">
+    <div class="big gradient-text">404</div>
+    <h1 style="margin-top:12px">{ar.notFoundTitle}</h1>
+    <p>{ar.notFoundText}</p>
+    <p lang="en" dir="ltr">{en.notFoundTitle}. {en.notFoundText}</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/">{ar.backHome}</a>
+      <a class="btn btn-ghost" href="/en/" lang="en">{en.backHome}</a>
+    </div>
+  </section>
+</BaseLayout>

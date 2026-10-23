@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import FactOfTheDay from '../components/FactOfTheDay.astro';
+import Icon from '../components/Icon.astro';
+import { getArticles } from '../lib/content';
+import { CATEGORIES, CATEGORY_IDS, SITE, localePath, otherLang, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const articles = await getArticles(lang);
+const featured = articles.find((a) => a.data.featured) ?? articles[0];
+const latest = articles.filter((a) => a !== featured).slice(0, 6);
+const countBy = (id: string) => articles.filter((a) => a.data.category === id).length;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name[lang],
+    alternateName: SITE.name[otherLang(lang)],
+    url: new URL(localePath(lang, '/'), SITE.url).href,
+    inLanguage: lang,
+    description: SITE.description[lang],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name[lang],
+    url: SITE.url,
+    logo: `${SITE.url}/apple-touch-icon.png`,
+    email: SITE.email,
+  },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title={SITE.name[lang]}
+  description={SITE.description[lang]}
+  alternatePath={localePath(otherLang(lang), '/')}
+  jsonLd={jsonLd}
+  isHome
+  current="home"
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker reveal"><span class="dot"><Icon name="sparkle" size={14} /></span>{ui.heroKicker}</span>
+        <h1 class="reveal reveal-2">
+          {ui.heroTitleA}
+          <br />
+          <span class="gradient-text">{ui.heroTitleB}</span>
+        </h1>
+        <p class="hero-text reveal reveal-2">{ui.heroText}</p>
+        <form class="search-field hero-search reveal reveal-3" action={localePath(lang, '/search/')} method="get" role="search">
+          <Icon name="search" />
+          <input type="search" name="q" placeholder={ui.searchPlaceholder} aria-label={ui.search} />
+          <button class="btn btn-primary" type="submit">{ui.search}</button>
+        </form>
+        <div class="stats reveal reveal-4">
+          <div class="stat"><strong><bdi>{articles.length}+</bdi></strong><span>{ui.statArticles}</span></div>
+          <div class="stat"><strong>{CATEGORY_IDS.length}</strong><span>{ui.statCategories}</span></div>
+          <div class="stat"><strong>2</strong><span>{ui.statLangs}</span></div>
+        </div>
+      </div>
+      <FactOfTheDay lang={lang} />
+    </div>
+  </section>
+
+  {
+    featured && (
+      <section class="section" style="padding-top:8px">
+        <div class="container">
+          <ArticleCard article={featured} lang={lang} featured />
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{ui.exploreCategories}</h2>
+        </div>
+      </div>
+      <div class="cat-grid">
+        {
+          CATEGORY_IDS.map((id) => {
+            const cat = CATEGORIES[id];
+            return (
+              <a class="cat-tile" href={localePath(lang, `/category/${id}/`)} style={`--c1:${cat.colors[0]};--c2:${cat.colors[1]}`}>
+                <span class="cat-icon"><Icon name={id} size={24} /></span>
+                <span class="cat-name">{cat.name[lang]}</span>
+                <span class="cat-desc">{cat.description[lang]}</span>
+                <span class="cat-count">{ui.articlesIn(countBy(id))}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>{ui.latest}</h2>
+        <a class="section-link" href={localePath(lang, '/articles/')}>
+          {ui.viewAll}
+          <Icon name="arrow" size={18} class="flip-rtl" />
+        </a>
+      </div>
+      <div class="grid grid-3">
+        {latest.map((article) => <ArticleCard article={article} lang={lang} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

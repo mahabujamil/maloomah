@@ -1,0 +1,12 @@
+---
+import ArticleView from '../../views/ArticleView.astro';
+import { getArticles, slugOf } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const articles = await getArticles('ar');
+  return articles.map((article) => ({ params: { slug: slugOf(article) }, props: { article } }));
+}
+const { article } = Astro.props;
+---
+
+<ArticleView lang="ar" article={article} />

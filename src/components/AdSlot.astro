@@ -1,0 +1,26 @@
+---
+// Renders a Google AdSense unit once SITE.adsenseClient and a slot id are set; otherwise nothing.
+import { SITE } from '../site';
+
+interface Props {
+  slot?: string; // AdSense ad-unit id, e.g. '1234567890'
+}
+const { slot = '' } = Astro.props;
+const enabled = Boolean(SITE.adsenseClient && slot);
+---
+
+{
+  enabled && (
+    <div class="ad-slot">
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client={SITE.adsenseClient}
+        data-ad-slot={slot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+      <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  )
+}

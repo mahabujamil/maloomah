@@ -1,0 +1,52 @@
+---
+import Logo from './Logo.astro';
+import { CATEGORIES, CATEGORY_IDS, SITE, localePath, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="logo" href={localePath(lang, '/')}>
+          <Logo id="footer" class="logo-mark" />
+          <span class="logo-text">{SITE.name[lang]}</span>
+        </a>
+        <p>{ui.footerText}</p>
+      </div>
+      <div class="footer-col cats">
+        <h2>{ui.footerSections}</h2>
+        <ul>
+          {
+            CATEGORY_IDS.map((id) => (
+              <li>
+                <a href={localePath(lang, `/category/${id}/`)}>{CATEGORIES[id].name[lang]}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>{ui.footerSite}</h2>
+        <ul>
+          <li><a href={localePath(lang, '/articles/')}>{ui.allArticles}</a></li>
+          <li><a href={localePath(lang, '/about/')}>{ui.about}</a></li>
+          <li><a href={localePath(lang, '/contact/')}>{ui.contact}</a></li>
+          <li><a href={localePath(lang, '/privacy/')}>{ui.privacy}</a></li>
+          <li><a href={localePath(lang, '/terms/')}>{ui.terms}</a></li>
+          <li><a href={localePath(lang, '/rss.xml')}>RSS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {SITE.name[lang]}. {ui.rights}.</span>
+      <span>maloomah.com</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,109 @@
+---
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+import { CATEGORIES, CATEGORY_IDS, SITE, localePath, t, type CategoryId, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  switchHref: string; // same page in the other language (or its home page)
+  current?: 'home' | 'articles' | 'about' | 'search';
+  currentCategory?: CategoryId;
+}
+const { lang, switchHref, current, currentCategory } = Astro.props;
+const ui = t(lang);
+const nav = [
+  { key: 'home', label: ui.home, href: localePath(lang, '/') },
+  { key: 'articles', label: ui.articles, href: localePath(lang, '/articles/') },
+  { key: 'about', label: ui.about, href: localePath(lang, '/about/') },
+] as const;
+---
+
+<header class="site-header">
+  <div class="container header-row">
+    <a class="logo" href={localePath(lang, '/')} aria-label={SITE.name[lang]}>
+      <Logo id="header" class="logo-mark" />
+      <span class="logo-text">
+        {SITE.name[lang]}
+        <small>{SITE.tagline[lang]}</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label={ui.menu}>
+      {
+        nav.map((item) => (
+          <a href={item.href} aria-current={current === item.key ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-btn" href={localePath(lang, '/search/')} aria-label={ui.search}>
+        <Icon name="search" />
+      </a>
+      <a class="lang-btn" href={switchHref} hreflang={lang === 'ar' ? 'en' : 'ar'} lang={lang === 'ar' ? 'en' : 'ar'}>
+        <Icon name="globe" size={18} />
+        <span class="lang-full">{ui.otherLangName}</span>
+        <span class="lang-short">{ui.otherLangShort}</span>
+      </a>
+      <button class="icon-btn theme-toggle" type="button" aria-label={ui.toggleTheme} data-theme-toggle>
+        <Icon name="moon" class="icon-moon" />
+        <Icon name="sun" class="icon-sun" />
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-label={ui.menu} aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <Icon name="menu" />
+      </button>
+    </div>
+  </div>
+
+  <div class="container mobile-menu" id="mobile-menu">
+    <form class="search-field compact mobile-search" action={localePath(lang, '/search/')} method="get" role="search">
+      <Icon name="search" size={18} />
+      <input type="search" name="q" placeholder={ui.searchPlaceholder} aria-label={ui.search} />
+    </form>
+    <nav aria-label={ui.menu}>
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href={localePath(lang, '/contact/')}>{ui.contact}</a>
+    </nav>
+  </div>
+
+  <div class="cat-bar">
+    <nav class="container cat-bar-inner" aria-label={ui.categories}>
+      {
+        CATEGORY_IDS.map((id) => (
+          <a
+            class="chip"
+            style={`--c1:${CATEGORIES[id].colors[0]}`}
+            href={localePath(lang, `/category/${id}/`)}
+            aria-current={currentCategory === id ? 'page' : undefined}
+          >
+            <Icon name={id} size={15} />
+            {CATEGORIES[id].name[lang]}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+  toggle?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const current =
+      root.dataset.theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {}
+  });
+
+  const menuBtn = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.getElementById('mobile-menu');
+  menuBtn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('open') ?? false;
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+</script>
