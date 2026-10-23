@@ -290,6 +290,11 @@ const UI = {
     dykTranslation: 'الترجمة',
     dykTip: 'نصيحة للإذاعة المدرسية: اختر من 5 إلى 7 معلومات من مواد مختلفة، وابدأ كل واحدة بعبارة «هل تعلم أنّ».',
     dykOtherSubjects: 'مواد أخرى',
+    trendTitle: 'ترند اليوم',
+    trendUpdated: 'آخر تحديث',
+    trendSearches: 'الأكثر بحثاً الآن:',
+    trendBadge: 'ترند',
+    relatedSearches: 'عمليات بحث ذات صلة',
   },
   en: {
     home: 'Home',
@@ -364,6 +369,11 @@ const UI = {
     dykTranslation: 'Translation',
     dykTip: 'Tip for school assemblies: pick 5 to 7 facts from different subjects and start each one with "Did you know that...".',
     dykOtherSubjects: 'Other subjects',
+    trendTitle: 'Trending today',
+    trendUpdated: 'Updated',
+    trendSearches: 'Most searched now:',
+    trendBadge: 'Trending',
+    relatedSearches: 'Related searches',
   },
 } as const;
 

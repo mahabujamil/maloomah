@@ -4,8 +4,10 @@ import ArticleCard from '../components/ArticleCard.astro';
 import FactCard from '../components/FactCard.astro';
 import FactOfTheDay from '../components/FactOfTheDay.astro';
 import Icon from '../components/Icon.astro';
+import TrendingBlock from '../components/TrendingBlock.astro';
 import { LEVEL_IDS, SUBJECTS, SUBJECT_IDS, factsBySubject, type SubjectId } from '../data/did-you-know';
-import { getArticles } from '../lib/content';
+import { isTrending } from '../data/trending';
+import { getArticles, slugOf } from '../lib/content';
 import { CATEGORIES, CATEGORY_IDS, SITE, localePath, otherLang, t, type Lang } from '../site';
 
 interface Props {
@@ -14,8 +16,7 @@ interface Props {
 const { lang } = Astro.props;
 const ui = t(lang);
 const articles = await getArticles(lang);
-const featured = articles.find((a) => a.data.featured) ?? articles[0];
-const latest = articles.filter((a) => a !== featured).slice(0, 6);
+const latest = articles.filter((a) => !isTrending(slugOf(a))).slice(0, 6);
 const countBy = (id: string) => articles.filter((a) => a.data.category === id).length;
 // Four facts per subject for the home tabs, mixing school stages.
 const sampleFacts = (id: SubjectId) => {
@@ -83,15 +84,7 @@ const jsonLd = [
     </div>
   </section>
 
-  {
-    featured && (
-      <section class="section" style="padding-top:8px">
-        <div class="container">
-          <ArticleCard article={featured} lang={lang} featured />
-        </div>
-      </section>
-    )
-  }
+  <TrendingBlock lang={lang} articles={articles} />
 
   <section class="section">
     <div class="container">

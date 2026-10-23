@@ -1,0 +1,85 @@
+---
+// Home-page «ترند اليوم»: a "most searched now" ticker, one big trending story and a numbered list.
+import { Image } from 'astro:assets';
+import ArticleCard from './ArticleCard.astro';
+import Icon from './Icon.astro';
+import { articleUrl, categoryUrl, slugOf, type Article } from '../lib/content';
+import { coverFor } from '../lib/images';
+import { TRENDING, TRENDING_UPDATED } from '../data/trending';
+import { CATEGORIES, formatDate, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  articles: Article[];
+}
+const { lang, articles } = Astro.props;
+const ui = t(lang);
+const bySlug = new Map(articles.map((a) => [slugOf(a), a]));
+const trending = TRENDING.map((s) => bySlug.get(s)).filter((a): a is Article => Boolean(a));
+const [lead, ...rest] = trending;
+const list = rest.slice(0, 5);
+const searches = trending
+  .map((a) => ({ label: a.data.keywords[0] ?? a.data.title, href: articleUrl(lang, slugOf(a)) }))
+  .slice(0, 8);
+---
+
+{
+  lead && (
+    <section class="section trend-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="trend-title">
+              <span class="live-dot" aria-hidden="true" />
+              {ui.trendTitle}
+            </h2>
+            <p>
+              {ui.trendUpdated}: <time datetime={TRENDING_UPDATED}>{formatDate(new Date(TRENDING_UPDATED), lang)}</time>
+            </p>
+          </div>
+        </div>
+
+        <div class="trend-searches">
+          <span class="trend-searches-label">
+            <Icon name="search" size={15} />
+            {ui.trendSearches}
+          </span>
+          <div class="trend-chips">
+            {searches.map((s) => (
+              <a class="trend-chip" href={s.href}>
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="trend-grid">
+          <ArticleCard article={lead} lang={lang} featured />
+          <ol class="trend-list">
+            {list.map((a, i) => {
+              const slug = slugOf(a);
+              const photo = coverFor(slug);
+              const cat = CATEGORIES[a.data.category];
+              return (
+                <li class="trend-item">
+                  <span class="trend-num">{i + 2}</span>
+                  {photo && (
+                    <Image src={photo.src} alt={photo.alt[lang]} widths={[160, 240]} sizes="120px" class="trend-thumb" />
+                  )}
+                  <div class="trend-body">
+                    <a class="trend-cat" style={`--c1:${cat.colors[0]}`} href={categoryUrl(lang, a.data.category)}>
+                      {cat.name[lang]}
+                    </a>
+                    <h3>
+                      <a href={articleUrl(lang, slug)}>{a.data.title}</a>
+                    </h3>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+    </section>
+  )
+}

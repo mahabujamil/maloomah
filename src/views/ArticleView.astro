@@ -15,6 +15,8 @@ import {
   slugSet,
   type Article,
 } from '../lib/content';
+import { coverFor, shareImageUrl } from '../lib/images';
+import { isTrending } from '../data/trending';
 import { CATEGORIES, SITE, formatDate, localePath, otherLang, readingMinutes, t, type Lang } from '../site';
 
 interface Props {
@@ -23,7 +25,7 @@ interface Props {
 }
 const { lang, article } = Astro.props;
 const ui = t(lang);
-const { title, description, category, date, updated, tags, keywords } = article.data;
+const { title, description, category, date, updated, tags, keywords, recipe } = article.data;
 const slug = slugOf(article);
 const cat = CATEGORIES[category];
 const { Content, headings } = await render(article);
@@ -35,6 +37,9 @@ const hasTranslation = (await slugSet(other)).has(slug);
 const related = relatedArticles(await getArticles(lang), article);
 
 const url = new URL(articleUrl(lang, slug), SITE.url).href;
+const photo = coverFor(slug);
+const shareImage = (await shareImageUrl(slug)) ?? `${SITE.url}/og/${category}.png`;
+const photoCredit = { ar: 'الصورة', en: 'Photo' }[lang];
 const home = localePath(lang, '/');
 const shareText = encodeURIComponent(title);
 const shareUrl = encodeURIComponent(url);
@@ -58,7 +63,7 @@ const disclaimer = {
   },
 } as const;
 
-const jsonLd = [
+const jsonLd: Record<string, unknown>[] = [
   {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -71,7 +76,7 @@ const jsonLd = [
     keywords: [...new Set([...keywords, ...tags])].join(', '),
     mainEntityOfPage: url,
     url,
-    image: `${SITE.url}/og/${category}.png`,
+    image: shareImage,
     author: { '@type': 'Organization', name: SITE.name[lang], url: SITE.url },
     publisher: {
       '@type': 'Organization',
@@ -94,6 +99,28 @@ const jsonLd = [
     ],
   },
 ];
+if (recipe) {
+  const minutes = (iso: string) => Number(/PT(?:(\d+)H)?(?:(\d+)M)?/.exec(iso)?.slice(1).reduce((s, v, i) => s + (Number(v) || 0) * (i ? 1 : 60), 0) ?? 0);
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: title,
+    description,
+    image: [shareImage],
+    inLanguage: lang,
+    author: { '@type': 'Organization', name: SITE.name[lang], url: SITE.url },
+    datePublished: date.toISOString(),
+    prepTime: recipe.prepTime,
+    cookTime: recipe.cookTime,
+    totalTime: `PT${minutes(recipe.prepTime) + minutes(recipe.cookTime)}M`,
+    recipeYield: recipe.yield,
+    recipeCuisine: recipe.cuisine,
+    recipeCategory: recipe.type,
+    keywords: [...keywords, ...tags].join(', '),
+    recipeIngredient: recipe.ingredients,
+    recipeInstructions: recipe.steps.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text })),
+  });
+}
 ---
 
 <BaseLayout
@@ -101,7 +128,7 @@ const jsonLd = [
   title={title}
   description={description}
   alternatePath={hasTranslation ? articleUrl(other, slug) : undefined}
-  image={`/og/${category}.png`}
+  image={shareImage}
   type="article"
   published={date}
   modified={updated ?? date}
@@ -120,11 +147,12 @@ const jsonLd = [
           { label: title },
         ]}
       />
-      <div style="margin-top:18px">
+      <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
         <a class="chip" style={`--c1:${cat.colors[0]}`} href={categoryUrl(lang, category)}>
           <Icon name={category} size={14} />
           {cat.name[lang]}
         </a>
+        {isTrending(slug) && <span class="badge-trend">🔥 {ui.trendBadge}</span>}
       </div>
       <h1>{title}</h1>
       <p class="lead">{description}</p>
@@ -139,9 +167,37 @@ const jsonLd = [
         }
         <span><Icon name="clock" size={16} />{ui.minRead(minutes)}</span>
       </div>
-      <div class="article-cover">
-        <Cover category={category} lang={lang} iconSize={180} />
-      </div>
+      <figure class="article-cover">
+        <Cover
+          category={category}
+          lang={lang}
+          slug={slug}
+          iconSize={180}
+          widths={[800, 1200, 1600]}
+          sizes="(min-width: 1200px) 1150px, 100vw"
+          priority
+        />
+        {
+          photo && (
+            <figcaption class="photo-credit">
+              {photoCredit}:{' '}
+              <a href={photo.source} target="_blank" rel="noopener nofollow">
+                {photo.creator}
+              </a>
+              {photo.licenseUrl ? (
+                <>
+                  {' · '}
+                  <a href={photo.licenseUrl} target="_blank" rel="noopener nofollow license">
+                    {photo.license}
+                  </a>
+                </>
+              ) : (
+                <> · {photo.license}</>
+              )}
+            </figcaption>
+          )
+        }
+      </figure>
     </header>
 
     <div class="container article-layout">
@@ -152,14 +208,20 @@ const jsonLd = [
         <AdSlot />
 
         {
-          tags.length > 0 && (
-            <div class="tags">
-              {tags.map((tag) => (
-                <a class="tag" href={`${localePath(lang, '/search/')}?q=${encodeURIComponent(tag)}`}>
-                  #{tag}
-                </a>
-              ))}
-            </div>
+          (keywords.length > 0 || tags.length > 0) && (
+            <section class="related-searches">
+              <h2>
+                <Icon name="search" size={16} />
+                {ui.relatedSearches}
+              </h2>
+              <div class="tags">
+                {[...new Set([...keywords, ...tags])].map((term) => (
+                  <a class="tag" href={`${localePath(lang, '/search/')}?q=${encodeURIComponent(term)}`}>
+                    {term}
+                  </a>
+                ))}
+              </div>
+            </section>
           )
         }
 

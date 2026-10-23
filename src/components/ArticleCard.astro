@@ -1,6 +1,7 @@
 ---
 import Cover from './Cover.astro';
 import Icon from './Icon.astro';
+import { isTrending } from '../data/trending';
 import { articleUrl, categoryUrl, slugOf, type Article } from '../lib/content';
 import { CATEGORIES, formatDate, readingMinutes, t, type Lang } from '../site';
 
@@ -12,20 +13,32 @@ interface Props {
 const { article, lang, featured = false } = Astro.props;
 const ui = t(lang);
 const { title, description, category, date } = article.data;
-const href = articleUrl(lang, slugOf(article));
+const slug = slugOf(article);
+const href = articleUrl(lang, slug);
 const minutes = readingMinutes(article.body ?? '');
 ---
 
 <article class:list={['card', { 'card-featured': featured }]}>
-  <Cover category={category} lang={lang} iconSize={featured ? 150 : 92} />
+  <Cover
+    category={category}
+    lang={lang}
+    slug={slug}
+    iconSize={featured ? 150 : 92}
+    widths={featured ? [640, 960, 1280] : [400, 640, 800]}
+    sizes={featured ? '(min-width: 860px) 620px, 100vw' : undefined}
+  />
   <div class="card-body">
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       {
-        featured && (
-          <span class="badge-featured">
-            <Icon name="sparkle" size={14} />
-            {ui.featured}
-          </span>
+        isTrending(slug) ? (
+          <span class="badge-trend">🔥 {ui.trendBadge}</span>
+        ) : (
+          featured && (
+            <span class="badge-featured">
+              <Icon name="sparkle" size={14} />
+              {ui.featured}
+            </span>
+          )
         )
       }
       <a class="chip" style={`--c1:${CATEGORIES[category].colors[0]}`} href={categoryUrl(lang, category)}>

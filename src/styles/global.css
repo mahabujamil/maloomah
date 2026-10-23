@@ -523,9 +523,10 @@ a.chip:hover { background: color-mix(in srgb, var(--c1) 20%, transparent); }
 .section { padding-block: 44px; }
 .section-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 16px;
+  gap: 10px 16px;
   margin-bottom: 24px;
 }
 .section-head h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); }
@@ -767,14 +768,51 @@ a.chip:hover { background: color-mix(in srgb, var(--c1) 20%, transparent); }
 .article-head h1 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.3; margin-top: 14px; max-width: 900px; }
 .article-head .lead { margin-top: 14px; font-size: 1.15rem; color: var(--text-soft); max-width: 760px; }
 .article-head .meta { margin-top: 18px; font-size: 0.92rem; }
-.article-cover {
-  margin-top: 26px;
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-.article-cover .cover { aspect-ratio: 21 / 8; }
+.article-cover { margin: 26px 0 0; }
+.article-cover .cover { aspect-ratio: 21 / 8; border-radius: 26px; box-shadow: var(--shadow); }
+.article-cover .cover.has-photo { aspect-ratio: 16 / 9; }
+@media (min-width: 900px) { .article-cover .cover.has-photo { aspect-ratio: 2 / 1; } }
 .article-cover .cover-label { font-size: clamp(1.1rem, 3vw, 1.8rem); }
+.photo-credit { margin-top: 8px; font-size: 0.8rem; color: var(--muted); text-align: end; }
+.photo-credit a:hover { color: var(--brand-ink); text-decoration: underline; }
+
+/* Real photos inside covers */
+.cover.has-photo { background: var(--surface-2); }
+.cover.has-photo::before { display: none; }
+.cover.has-photo::after {
+  inset: 0;
+  width: auto;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: linear-gradient(to top, rgba(10, 10, 30, 0.55), transparent 50%);
+  z-index: 1;
+}
+.cover-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.card:hover .cover-photo { transform: scale(1.05); }
+.cover.has-photo .cover-label {
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  bottom: 12px;
+  inset-inline-start: 12px;
+  max-width: calc(100% - 24px);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: color-mix(in srgb, var(--c1) 88%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-shadow: none;
+}
+.article-cover .cover.has-photo .cover-label { font-size: 0.95rem; bottom: 16px; inset-inline-start: 16px; }
 
 .article-layout { display: grid; gap: 36px; padding-block: 36px 24px; }
 @media (min-width: 1000px) {
@@ -1190,3 +1228,117 @@ a.chip:hover { background: color-mix(in srgb, var(--c1) 20%, transparent); }
 .dyk-tab[aria-selected='true'] { background: var(--c1); color: #fff; border-color: var(--c1); }
 .dyk-more { margin-top: 16px; white-space: normal; text-align: center; }
 @media (min-width: 640px) { .dyk-home { padding: 30px; } }
+
+/* ---------- «ترند اليوم» ---------- */
+.trend-section { padding-top: 8px; }
+.trend-title { display: flex; align-items: center; gap: 12px; }
+.live-dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ef4444;
+  flex-shrink: 0;
+}
+.live-dot::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  animation: livePulse 1.6s ease-out infinite;
+}
+@keyframes livePulse {
+  from { transform: scale(0.5); opacity: 1; }
+  to { transform: scale(1.4); opacity: 0; }
+}
+.trend-searches {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.trend-searches-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #dc2626;
+}
+.trend-chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.trend-chips::-webkit-scrollbar { display: none; }
+.trend-chip {
+  flex-shrink: 0;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  transition: color 0.2s, border-color 0.2s;
+}
+.trend-chip:hover { color: #dc2626; border-color: #dc2626; }
+.trend-grid { display: grid; gap: 22px; }
+@media (min-width: 1000px) {
+  .trend-grid { grid-template-columns: 1.5fr 1fr; align-items: start; }
+  .trend-grid .card-featured { grid-template-columns: 1fr; }
+  .trend-grid .card-featured .cover { min-height: 0; aspect-ratio: 16 / 9; }
+  .trend-grid .card-featured .card-body { padding: 24px; }
+}
+.trend-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.trend-item {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.trend-item:hover { border-color: color-mix(in srgb, #ef4444 45%, var(--border)); transform: translateY(-2px); }
+.trend-num {
+  flex-shrink: 0;
+  width: 34px;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  background: linear-gradient(180deg, #ef4444, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.trend-thumb { width: 96px; height: 72px; object-fit: cover; border-radius: 12px; flex-shrink: 0; }
+.trend-body { min-width: 0; display: grid; gap: 4px; }
+.trend-body h3 { font-size: 0.98rem; line-height: 1.5; }
+.trend-body h3 a::after { content: ''; position: absolute; inset: 0; }
+.trend-cat { --c1: var(--brand); position: relative; z-index: 1; font-size: 0.78rem; font-weight: 700; color: var(--c1); }
+.badge-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #b91c1c;
+  background: #fee2e2;
+}
+:root[data-theme='dark'] .badge-trend { background: #450a0a; color: #fca5a5; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .badge-trend { background: #450a0a; color: #fca5a5; }
+}
+
+.related-searches { margin-top: 30px; max-width: 760px; }
+.related-searches h2 { display: flex; align-items: center; gap: 8px; font-size: 1rem; color: var(--muted); }
+.related-searches .tags { margin-top: 12px; }

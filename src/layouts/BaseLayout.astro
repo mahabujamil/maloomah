@@ -69,7 +69,10 @@ const ogLocale = { ar: 'ar_AR', en: 'en_US' };
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
+    <meta
+      name="robots"
+      content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+    />
 
     <link rel="alternate" hreflang={lang} href={canonical} />
     {altUrl && <link rel="alternate" hreflang={other} href={altUrl} />}

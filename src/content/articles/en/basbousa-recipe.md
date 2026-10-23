@@ -5,6 +5,33 @@ category: food
 date: 2026-10-23
 tags: ["desserts", "easy recipes", "basbousa", "Middle Eastern sweets"]
 keywords: ["basbousa recipe", "semolina cake", "eggless basbousa", "basbousa syrup"]
+recipe:
+  prepTime: PT20M
+  cookTime: PT30M
+  yield: "20 pieces"
+  cuisine: "Middle Eastern"
+  type: "Dessert"
+  ingredients:
+    - "2 cups coarse semolina"
+    - "1 cup sugar"
+    - "1 cup plain yogurt"
+    - "1/2 cup melted ghee or butter"
+    - "1/2 cup desiccated coconut (optional)"
+    - "1 teaspoon baking powder"
+    - "1/2 teaspoon vanilla"
+    - "1 tablespoon tahini to grease the tray"
+    - "Almonds to decorate"
+    - "1 1/2 cups sugar for the syrup"
+    - "1 cup water for the syrup"
+    - "1 teaspoon lemon juice"
+  steps:
+    - "Boil the sugar and water, add the lemon juice and simmer for 8–10 minutes, then let the syrup cool completely."
+    - "Preheat the oven to 180 °C and grease the tray with tahini."
+    - "Mix the semolina, sugar, coconut and baking powder, then rub in the melted ghee."
+    - "Stir in the yogurt and vanilla just until combined, and let the mixture rest for 10–15 minutes."
+    - "Spread it in the tray, cut into squares and press an almond into each piece."
+    - "Bake for 25–35 minutes until golden."
+    - "Pour the cold syrup over the hot basbousa straight from the oven and leave it for 30 minutes before serving."
 ---
 
 Basbousa (also called harissa in the Levant or namoura in Lebanon) is one of the best-loved and easiest Middle Eastern desserts. The ingredients are simple and probably already in your kitchen, and you don't need much experience. Here is how to make soft, golden basbousa with semolina and yogurt, with all the secrets for getting it right the first time.

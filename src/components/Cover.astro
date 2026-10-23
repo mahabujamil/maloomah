@@ -1,20 +1,54 @@
 ---
-// Generated cover art: category gradient + dot pattern + big icon. No stock photos needed.
+// Article cover: the article's photo when it has one, otherwise generated art
+// (category gradient + dot pattern + big icon).
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import { coverFor } from '../lib/images';
 import { CATEGORIES, type CategoryId, type Lang } from '../site';
 
 interface Props {
   category: CategoryId;
   lang: Lang;
+  slug?: string;
   iconSize?: number;
   showLabel?: boolean;
+  /** Responsive image sizes hint, e.g. "(min-width: 1000px) 33vw, 100vw" */
+  sizes?: string;
+  widths?: number[];
+  priority?: boolean;
 }
-const { category, lang, iconSize = 92, showLabel = true } = Astro.props;
+const {
+  category,
+  lang,
+  slug,
+  iconSize = 92,
+  showLabel = true,
+  sizes = '(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw',
+  widths = [400, 640, 800],
+  priority = false,
+} = Astro.props;
 const [c1, c2] = CATEGORIES[category].colors;
+const photo = slug ? coverFor(slug) : undefined;
 ---
 
-<div class="cover" style={`--c1:${c1};--c2:${c2}`} aria-hidden="true">
-  <span class="cover-ring"></span>
-  <Icon name={category} size={iconSize} strokeWidth={1.4} class="cover-icon" />
-  {showLabel && <span class="cover-label">{CATEGORIES[category].name[lang]}</span>}
+<div class:list={['cover', { 'has-photo': photo }]} style={`--c1:${c1};--c2:${c2}`}>
+  {
+    photo ? (
+      <Image
+        src={photo.src}
+        alt={photo.alt[lang]}
+        widths={widths}
+        sizes={sizes}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : 'auto'}
+        class="cover-photo"
+      />
+    ) : (
+      <>
+        <span class="cover-ring" aria-hidden="true" />
+        <Icon name={category} size={iconSize} strokeWidth={1.4} class="cover-icon" />
+      </>
+    )
+  }
+  {showLabel && !photo && <span class="cover-label" aria-hidden="true">{CATEGORIES[category].name[lang]}</span>}
 </div>

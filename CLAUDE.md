@@ -22,7 +22,25 @@ npm run dev          # local preview at http://localhost:4321 (drafts visible)
 npm run build        # production build into dist/ (must pass before pushing)
 node scripts/make-images.ts   # regenerate social images in public/og/ (after changing categories or colors)
 node scripts/keywords.mjs ar "طريقة عمل" "فوائد"   # keyword research via Google autocomplete
+node scripts/images.mjs search <slug> "<english query>"   # find free photos (Wikimedia Commons) -> .image-candidates/<slug>-sheet.jpg
+node scripts/images.mjs pick <slug> <n> "<alt ar>" "<alt en>"   # save photo #n + its credit
 ```
+
+## Photos
+
+Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its credit in `src/data/images.json`. It's used on cards, as the article hero, and as the social and Google share image (1200×630 is generated automatically). Without a photo, the generated category art is shown instead.
+
+- Only use the image tool, which keeps only licences that allow commercial use (CC0, Public Domain, CC BY, CC BY-SA). Never use random web images.
+- **Look at the contact sheet before picking.** Choose landscape, high-quality, relevant photos that suit a conservative Arab family audience: no nudity, swimwear, alcohol or violence. Avoid identifiable children; backs and silhouettes are fine.
+- The credit line under the hero photo is required by the licences, so don't remove it.
+
+## «ترند اليوم» (home page trending block)
+
+`src/data/trending.ts` controls it. Put the hottest article slugs first and update `TRENDING_UPDATED` whenever new trend articles go live. Trending articles get a 🔥 badge everywhere. The "most searched now" chips use each article's first `keywords` entry.
+
+## Recipes
+
+Food articles can add a `recipe:` block to their frontmatter (prepTime/cookTime as ISO durations such as `PT20M`, yield, ingredients, steps; see `basbousa-recipe.md`). This outputs Recipe structured data, which gives Google rich results with the photo and cooking time.
 
 On these Windows machines the Bash tool may not have Node on PATH. If so, prefix with `export PATH="/c/Program Files/nodejs:$PATH"`.
 

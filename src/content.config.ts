@@ -18,6 +18,18 @@ const articles = defineCollection({
     keywords: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
+    // Recipes only: becomes Recipe structured data (rich results with photo, time and ingredients in Google).
+    recipe: z
+      .object({
+        prepTime: z.string(), // ISO 8601 duration, e.g. PT20M
+        cookTime: z.string(),
+        yield: z.string(),
+        cuisine: z.string().optional(),
+        type: z.string().optional(), // e.g. "حلويات" / "Dessert"
+        ingredients: z.array(z.string()),
+        steps: z.array(z.string()),
+      })
+      .optional(),
   }),
 });
 
