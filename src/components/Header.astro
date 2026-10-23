@@ -6,7 +6,7 @@ import { CATEGORIES, CATEGORY_IDS, SITE, localePath, t, type CategoryId, type La
 interface Props {
   lang: Lang;
   switchHref: string; // same page in the other language (or its home page)
-  current?: 'home' | 'articles' | 'about' | 'search';
+  current?: 'home' | 'articles' | 'about' | 'search' | 'dyk';
   currentCategory?: CategoryId;
 }
 const { lang, switchHref, current, currentCategory } = Astro.props;
@@ -14,6 +14,7 @@ const ui = t(lang);
 const nav = [
   { key: 'home', label: ui.home, href: localePath(lang, '/') },
   { key: 'articles', label: ui.articles, href: localePath(lang, '/articles/') },
+  { key: 'dyk', label: ui.dykNav, href: localePath(lang, '/did-you-know/') },
   { key: 'about', label: ui.about, href: localePath(lang, '/about/') },
 ] as const;
 ---
@@ -31,7 +32,12 @@ const nav = [
     <nav class="main-nav" aria-label={ui.menu}>
       {
         nav.map((item) => (
-          <a href={item.href} aria-current={current === item.key ? 'page' : undefined}>
+          <a
+            href={item.href}
+            class:list={{ 'nav-dyk': item.key === 'dyk' }}
+            aria-current={current === item.key ? 'page' : undefined}
+          >
+            {item.key === 'dyk' && <Icon name="bulb" size={16} />}
             {item.label}
           </a>
         ))
@@ -63,7 +69,14 @@ const nav = [
       <input type="search" name="q" placeholder={ui.searchPlaceholder} aria-label={ui.search} />
     </form>
     <nav aria-label={ui.menu}>
-      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      {
+        nav.map((item) => (
+          <a href={item.href} class:list={{ 'nav-dyk': item.key === 'dyk' }}>
+            {item.key === 'dyk' && <Icon name="bulb" size={16} />}
+            {item.label}
+          </a>
+        ))
+      }
       <a href={localePath(lang, '/contact/')}>{ui.contact}</a>
     </nav>
   </div>

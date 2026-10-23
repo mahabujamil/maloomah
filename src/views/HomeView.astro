@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import FactCard from '../components/FactCard.astro';
 import FactOfTheDay from '../components/FactOfTheDay.astro';
 import Icon from '../components/Icon.astro';
+import { LEVEL_IDS, SUBJECTS, SUBJECT_IDS, factsBySubject, type SubjectId } from '../data/did-you-know';
 import { getArticles } from '../lib/content';
 import { CATEGORIES, CATEGORY_IDS, SITE, localePath, otherLang, t, type Lang } from '../site';
 
@@ -15,6 +17,16 @@ const articles = await getArticles(lang);
 const featured = articles.find((a) => a.data.featured) ?? articles[0];
 const latest = articles.filter((a) => a !== featured).slice(0, 6);
 const countBy = (id: string) => articles.filter((a) => a.data.category === id).length;
+// Four facts per subject for the home tabs, mixing school stages.
+const sampleFacts = (id: SubjectId) => {
+  const byLevel = LEVEL_IDS.map((level) => factsBySubject(id).filter((x) => x.level === level));
+  const out = [];
+  for (let i = 0; out.length < 4 && i < 12; i++) {
+    const pick = byLevel[i % 3][Math.floor(i / 3)];
+    if (pick) out.push(pick);
+  }
+  return out;
+};
 
 const jsonLd = [
   {
@@ -83,6 +95,57 @@ const jsonLd = [
 
   <section class="section">
     <div class="container">
+      <div class="dyk-home">
+        <div class="section-head">
+          <div>
+            <h2><Icon name="bulb" size={26} class="dyk-home-icon" />{ui.dykHomeTitle}</h2>
+            <p>{ui.dykHomeText}</p>
+          </div>
+          <a class="section-link" href={localePath(lang, '/did-you-know/')}>
+            {ui.dykAllFacts}
+            <Icon name="arrow" size={18} class="flip-rtl" />
+          </a>
+        </div>
+        <div class="dyk-tabs" role="tablist" aria-label={ui.dykSubjects}>
+          {
+            SUBJECT_IDS.map((id, i) => (
+              <button
+                class="dyk-tab"
+                type="button"
+                role="tab"
+                id={`dyk-tab-${id}`}
+                aria-controls={`dyk-panel-${id}`}
+                aria-selected={i === 0 ? 'true' : 'false'}
+                tabindex={i === 0 ? 0 : -1}
+                style={`--c1:${SUBJECTS[id].colors[0]}`}
+              >
+                <Icon name={SUBJECTS[id].icon} size={16} />
+                {SUBJECTS[id].name[lang]}
+              </button>
+            ))
+          }
+        </div>
+        {
+          SUBJECT_IDS.map((id, i) => (
+            <div class="dyk-panel" role="tabpanel" id={`dyk-panel-${id}`} aria-labelledby={`dyk-tab-${id}`} hidden={i !== 0}>
+              <div class="dyk-grid">
+                {sampleFacts(id).map((fact) => (
+                  <FactCard fact={fact} lang={lang} showSubject={false} />
+                ))}
+              </div>
+              <a class="btn btn-ghost dyk-more" href={localePath(lang, `/did-you-know/${id}/`)}>
+                {SUBJECTS[id].title[lang]}
+                <Icon name="arrow" size={16} class="flip-rtl" />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <div class="section-head">
         <div>
           <h2>{ui.exploreCategories}</h2>
@@ -121,3 +184,27 @@ const jsonLd = [
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('.dyk-tab')];
+  const select = (tab: HTMLButtonElement) => {
+    for (const t of tabs) {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls') ?? '');
+      if (panel) panel.hidden = !on;
+    }
+  };
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => select(tab));
+    tab.addEventListener('keydown', (e) => {
+      const rtl = document.documentElement.dir === 'rtl';
+      const step = { ArrowRight: rtl ? -1 : 1, ArrowLeft: rtl ? 1 : -1 }[e.key];
+      if (!step) return;
+      const next = tabs[(i + step + tabs.length) % tabs.length];
+      next.focus();
+      select(next);
+    });
+  });
+</script>

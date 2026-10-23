@@ -1,0 +1,11 @@
+---
+import DidYouKnowView from '../../../views/DidYouKnowView.astro';
+import { SUBJECT_IDS } from '../../../data/did-you-know';
+
+export function getStaticPaths() {
+  return SUBJECT_IDS.map((subject) => ({ params: { subject }, props: { subject } }));
+}
+const { subject } = Astro.props;
+---
+
+<DidYouKnowView lang="en" subject={subject} />

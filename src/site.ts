@@ -22,16 +22,27 @@ export const SITE = {
   googleSiteVerification: '', // the content="" value of Search Console's meta tag
 };
 
+// Order = order in the header bar, home grid and footer (most searched first).
 export const CATEGORY_IDS = [
   'science',
-  'space',
   'health',
   'technology',
+  'food',
+  'education',
+  'business',
   'history',
   'geography',
+  'space',
+  'animals',
+  'body',
+  'environment',
+  'inventions',
+  'people',
   'money',
   'psychology',
+  'family',
   'sports',
+  'cars',
   'culture',
 ] as const;
 export type CategoryId = (typeof CATEGORY_IDS)[number];
@@ -123,6 +134,86 @@ export const CATEGORIES: Record<CategoryId, Category> = {
     },
     colors: ['#a855f7', '#db2777'],
   },
+  food: {
+    name: { ar: 'طبخ ووصفات', en: 'Cooking & Recipes' },
+    description: {
+      ar: 'وصفات مجرّبة بخطوات واضحة، ونصائح مطبخ وفوائد الأطعمة.',
+      en: 'Tried-and-tested recipes with clear steps, kitchen tips and food facts.',
+    },
+    colors: ['#f97316', '#e11d48'],
+  },
+  animals: {
+    name: { ar: 'حيوانات', en: 'Animals' },
+    description: {
+      ar: 'عالم الحيوان المدهش: أغرب الكائنات وطباعها وأسرار بقائها.',
+      en: 'The amazing animal kingdom: strange creatures, behaviour and survival secrets.',
+    },
+    colors: ['#84cc16', '#15803d'],
+  },
+  body: {
+    name: { ar: 'جسم الإنسان', en: 'Human Body' },
+    description: {
+      ar: 'كيف يعمل جسمك؟ الأعضاء والعظام والحواس بشرح مبسّط.',
+      en: 'How does your body work? Organs, bones and senses, simply explained.',
+    },
+    colors: ['#f43f5e', '#be123c'],
+  },
+  environment: {
+    name: { ar: 'بيئة ومناخ', en: 'Environment & Climate' },
+    description: {
+      ar: 'التغير المناخي والتلوث والطاقة النظيفة، وكيف نحمي كوكبنا.',
+      en: 'Climate change, pollution, clean energy and how to protect our planet.',
+    },
+    colors: ['#22c55e', '#0891b2'],
+  },
+  inventions: {
+    name: { ar: 'اختراعات واكتشافات', en: 'Inventions & Discoveries' },
+    description: {
+      ar: 'من اخترع ماذا؟ قصص الاختراعات والاكتشافات التي غيّرت حياتنا.',
+      en: 'Who invented what? The stories behind inventions that changed our lives.',
+    },
+    colors: ['#eab308', '#ea580c'],
+  },
+  people: {
+    name: { ar: 'شخصيات ملهمة', en: 'Inspiring People' },
+    description: {
+      ar: 'علماء ومبدعون وشخصيات تركت أثراً، وقصص نجاحهم.',
+      en: 'Scientists, creators and history-makers, and their stories of success.',
+    },
+    colors: ['#6366f1', '#0ea5e9'],
+  },
+  education: {
+    name: { ar: 'دراسة وتعليم', en: 'Study & Education' },
+    description: {
+      ar: 'طرق المذاكرة الصحيحة ونصائح الامتحانات ومهارات التعلّم.',
+      en: 'Effective study methods, exam tips and learning skills.',
+    },
+    colors: ['#2563eb', '#7c3aed'],
+  },
+  business: {
+    name: { ar: 'ربح وأعمال', en: 'Business & Earning' },
+    description: {
+      ar: 'طرق حقيقية للربح من الإنترنت، والمشاريع الصغيرة، وريادة الأعمال.',
+      en: 'Real ways to earn online, small business ideas and entrepreneurship.',
+    },
+    colors: ['#0d9488', '#1e40af'],
+  },
+  cars: {
+    name: { ar: 'سيارات', en: 'Cars' },
+    description: {
+      ar: 'السيارات الكهربائية والهايبرد، والصيانة ونصائح الشراء.',
+      en: 'Electric and hybrid cars, maintenance and buying tips.',
+    },
+    colors: ['#64748b', '#1e293b'],
+  },
+  family: {
+    name: { ar: 'أسرة وتربية', en: 'Family & Parenting' },
+    description: {
+      ar: 'تربية الأطفال والتعامل مع المراهقين وبناء أسرة سعيدة.',
+      en: 'Raising children, understanding teenagers and building a happy family.',
+    },
+    colors: ['#fb7185', '#f59e0b'],
+  },
 };
 
 const UI = {
@@ -178,6 +269,27 @@ const UI = {
     breadcrumbHome: 'الرئيسية',
     keyTakeaway: 'الخلاصة',
     viewAll: 'عرض الكل',
+    dykNav: 'هل تعلم؟',
+    dykTitle: 'هل تعلم؟ معلومات قصيرة للإذاعة المدرسية',
+    dykLead:
+      'معلومات مدهشة وموثوقة لطلاب المدارس، مرتبة حسب المادة والمرحلة الدراسية. اختر ما يناسبك وانسخه بضغطة واحدة لفقرة هل تعلم في الإذاعة المدرسية.',
+    dykHomeTitle: 'هل تعلم؟ للطلاب',
+    dykHomeText: 'معلومات قصيرة جاهزة للإذاعة المدرسية، حسب المادة والمرحلة.',
+    dykAllFacts: 'كل معلومات هل تعلم',
+    dykSubjects: 'المواد الدراسية',
+    dykFacts: (n: number) => `${n} معلومة`,
+    dykSubjectsCount: (n: number) => `${n} مواد`,
+    dykLevelsCount: (n: number) => `${n} مراحل`,
+    dykLevelHeading: (level: string) => `معلومات لطلاب المرحلة ${level === 'إعدادي' ? 'الإعدادية' : level === 'ثانوي' ? 'الثانوية' : 'الابتدائية'}`,
+    dykAllSubjects: 'كل المواد',
+    dykAllLevels: 'كل المراحل',
+    dykCopy: 'نسخ',
+    dykCopyAll: 'نسخ الفقرة كاملة',
+    dykCopiedAll: 'تم نسخ المعلومات ✓',
+    dykPrefix: 'هل تعلم؟',
+    dykTranslation: 'الترجمة',
+    dykTip: 'نصيحة للإذاعة المدرسية: اختر من 5 إلى 7 معلومات من مواد مختلفة، وابدأ كل واحدة بعبارة «هل تعلم أنّ».',
+    dykOtherSubjects: 'مواد أخرى',
   },
   en: {
     home: 'Home',
@@ -231,6 +343,27 @@ const UI = {
     breadcrumbHome: 'Home',
     keyTakeaway: 'Key takeaway',
     viewAll: 'View all',
+    dykNav: 'Did you know?',
+    dykTitle: 'Did You Know? Fun Facts for Students',
+    dykLead:
+      'Amazing, reliable facts for school students, sorted by subject and school stage. Pick the ones you like and copy them in one click for class or school assemblies.',
+    dykHomeTitle: 'Did you know? For students',
+    dykHomeText: 'Short facts ready for class and school assemblies, by subject and stage.',
+    dykAllFacts: 'All "Did you know?" facts',
+    dykSubjects: 'School subjects',
+    dykFacts: (n: number) => `${n} facts`,
+    dykSubjectsCount: (n: number) => `${n} subjects`,
+    dykLevelsCount: (n: number) => `${n} stages`,
+    dykLevelHeading: (level: string) => `Facts for ${level} students`,
+    dykAllSubjects: 'All subjects',
+    dykAllLevels: 'All stages',
+    dykCopy: 'Copy',
+    dykCopyAll: 'Copy all',
+    dykCopiedAll: 'Facts copied ✓',
+    dykPrefix: 'Did you know?',
+    dykTranslation: 'Translation',
+    dykTip: 'Tip for school assemblies: pick 5 to 7 facts from different subjects and start each one with "Did you know that...".',
+    dykOtherSubjects: 'Other subjects',
   },
 } as const;
 

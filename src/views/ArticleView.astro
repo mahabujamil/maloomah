@@ -23,7 +23,7 @@ interface Props {
 }
 const { lang, article } = Astro.props;
 const ui = t(lang);
-const { title, description, category, date, updated, tags } = article.data;
+const { title, description, category, date, updated, tags, keywords } = article.data;
 const slug = slugOf(article);
 const cat = CATEGORIES[category];
 const { Content, headings } = await render(article);
@@ -45,7 +45,8 @@ const shares = [
   { name: 'Telegram', icon: 'telegram', color: '#229ed9', href: `https://t.me/share/url?url=${shareUrl}&text=${shareText}` },
 ];
 
-const needsDisclaimer = category === 'health' || category === 'money';
+const disclaimerKey = category === 'business' ? 'money' : category;
+const needsDisclaimer = disclaimerKey === 'health' || disclaimerKey === 'money';
 const disclaimer = {
   health: {
     ar: 'هذا المقال للتثقيف العام ولا يغني عن استشارة الطبيب أو المختص.',
@@ -67,7 +68,7 @@ const jsonLd = [
     datePublished: date.toISOString(),
     dateModified: (updated ?? date).toISOString(),
     articleSection: cat.name[lang],
-    keywords: tags.join(', '),
+    keywords: [...new Set([...keywords, ...tags])].join(', '),
     mainEntityOfPage: url,
     url,
     image: `${SITE.url}/og/${category}.png`,
@@ -162,7 +163,7 @@ const jsonLd = [
           )
         }
 
-        {needsDisclaimer && <p class="disclaimer">{disclaimer[category as 'health' | 'money'][lang]}</p>}
+        {needsDisclaimer && <p class="disclaimer">{disclaimer[disclaimerKey as 'health' | 'money'][lang]}</p>}
 
         <section class="share">
           <h2>{ui.share}</h2>

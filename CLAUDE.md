@@ -21,6 +21,7 @@ npm install          # once per machine
 npm run dev          # local preview at http://localhost:4321 (drafts visible)
 npm run build        # production build into dist/ (must pass before pushing)
 node scripts/make-images.ts   # regenerate social images in public/og/ (after changing categories or colors)
+node scripts/keywords.mjs ar "طريقة عمل" "فوائد"   # keyword research via Google autocomplete
 ```
 
 On these Windows machines the Bash tool may not have Node on PATH. If so, prefix with `export PATH="/c/Program Files/nodejs:$PATH"`.
@@ -33,9 +34,25 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 | `src/content/articles/ar/<slug>.md` and `src/content/articles/en/<slug>.md` | Articles. **The same slug in both folders = translations of each other.** |
 | `src/content/pages/<lang>/` | About, contact, privacy and terms pages |
 | `src/data/facts.ts` | The "fact of the day" list on the home page |
+| `src/data/did-you-know.ts` | The students' «هل تعلم؟» section: 8 subjects, facts tagged by school stage (primary, middle, secondary), shown at `/did-you-know/` and in a tab on the home page |
 | `src/views/` | Page templates shared by both languages |
 | `src/pages/` | Routes: Arabic at `/`, English under `/en/` |
 | `src/styles/global.css` | All styling. Uses logical CSS properties so RTL and LTR share one stylesheet |
+
+## Design decisions (made by Mahmoud, 2026-10-23)
+
+- **Font:** Cairo, via `@fontsource/cairo`, imported in `BaseLayout.astro`.
+- **Template:** keep the current design and improve it. Don't switch to a different layout style without asking.
+- **20 categories,** defined in `src/site.ts`, with the most searched first.
+- **The «هل تعلم؟» students section** is organised by subject, with a school-stage badge on every fact. Arabic pages show English-language facts in English with the Arabic translation, because «هل تعلم بالانجليزي مترجمة» is a popular search.
+
+## Content growth plan
+
+Mahmoud's long-term goal is about 100 articles per category. **Grow in batches of about 20–30 quality articles per session, never thousands at once.** Google's spam policies target mass-produced, low-value content, which could sink the whole site and block AdSense approval.
+
+- Run keyword research first (`node scripts/keywords.mjs ...`) and pick the real queries people type.
+- Prioritise categories with few articles and the highest-volume queries.
+- Add student facts to `src/data/did-you-know.ts` in the same careful, verified way.
 
 ## Adding an article (the most common task)
 
@@ -45,10 +62,11 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
    ```yaml
    title: "..."            # target keyword first; aim for 60 characters or fewer
    description: "..."      # 120–160 characters; this becomes the Google snippet (max 200)
-   category: science       # science | space | health | technology | history | geography | money | psychology | sports | culture
+   category: science       # one of the 20 CATEGORY_IDS in src/site.ts, e.g. science | health | food | education | business ...
    date: 2026-10-23
    updated: 2026-11-01     # optional; set it when you substantially revise
-   tags: ["...", "..."]
+   tags: ["...", "..."]    # shown on the page; link to search
+   keywords: ["...", "..."] # the exact search queries this article targets (from keyword research)
    featured: false         # one featured article is shown big on the home page
    draft: false            # true = only visible in npm run dev
    ```
@@ -59,7 +77,8 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
    - A `## أسئلة شائعة` / `## Frequently asked questions` section with `###` questions (good for long-tail search)
    - Final `## الخلاصة` / `## Key takeaway`
    - Use tables where data fits naturally
-5. Arabic articles use Modern Standard Arabic (فصحى). The English version is a natural translation, not word for word.
+   - Put the main keyword in the title, the description, the first paragraph and at least one `##` heading, written naturally and not stuffed.
+5. Arabic articles use Modern Standard Arabic (فصحى). In Arabic text, put a space after «و» when the next word is English (`Upwork و Fiverr`, not `وFiverr`). Otherwise the bidi rendering glues them together. The English version is a natural translation, not word for word.
 6. **Accuracy is non-negotiable.** Only state facts you are confident about, hedge estimates ("about", "نحو"), and never invent studies or statistics. Health and money articles automatically get a disclaimer.
 7. Run `npm run build`, then commit and push.
 

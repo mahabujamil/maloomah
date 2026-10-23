@@ -1,0 +1,78 @@
+---
+import Icon from './Icon.astro';
+import { LEVELS, SUBJECTS, type Fact } from '../data/did-you-know';
+import { t, type Lang } from '../site';
+
+interface Props {
+  fact: Fact;
+  lang: Lang;
+  showSubject?: boolean;
+}
+const { fact, lang, showSubject = true } = Astro.props;
+const ui = t(lang);
+const subject = SUBJECTS[fact.subject];
+const level = LEVELS[fact.level];
+// Arabic pages show English-language facts in English with the Arabic translation underneath,
+// because students search for «هل تعلم بالانجليزي مترجمة».
+const bilingual = lang === 'ar' && fact.subject === 'english';
+const main = bilingual ? fact.en : fact[lang];
+const translation = bilingual ? fact.ar : undefined;
+const copyText = `${ui.dykPrefix} ${main}${translation ? `\n(${translation})` : ''}`;
+---
+
+<article
+  class="dyk-card"
+  style={`--c1:${subject.colors[0]};--c2:${subject.colors[1]}`}
+  data-subject={fact.subject}
+  data-level={fact.level}
+  data-copy-text={copyText}
+>
+  <div class="dyk-card-top">
+    {
+      showSubject && (
+        <span class="dyk-subject">
+          <Icon name={subject.icon} size={14} />
+          {subject.name[lang]}
+        </span>
+      )
+    }
+    <span class="dyk-level" style={`--lc:${level.color}`}>{level.name[lang]}</span>
+  </div>
+  <p class="dyk-text" lang={bilingual ? 'en' : undefined} dir={bilingual ? 'ltr' : undefined}>{main}</p>
+  {translation && <p class="dyk-translation"><span>{ui.dykTranslation}:</span> {translation}</p>}
+  <button class="dyk-copy" type="button" data-copied={ui.copied}>
+    <Icon name="copy" size={15} />
+    <span>{ui.dykCopy}</span>
+  </button>
+</article>
+
+<script>
+  async function copy(text: string, label: HTMLElement | null, done: string) {
+    try {
+      await navigator.clipboard.writeText(text);
+      if (label) {
+        const original = label.textContent;
+        label.textContent = done;
+        setTimeout(() => (label.textContent = original), 1800);
+      }
+    } catch {}
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const one = target.closest<HTMLButtonElement>('.dyk-copy');
+    if (one) {
+      const card = one.closest<HTMLElement>('.dyk-card');
+      copy(card?.dataset.copyText ?? '', one.querySelector('span'), one.dataset.copied ?? '✓');
+      return;
+    }
+    // "Copy all" buttons copy every visible card inside their scope as a numbered list.
+    const all = target.closest<HTMLButtonElement>('[data-copy-all]');
+    if (all) {
+      const scope = all.closest(all.dataset.copyAll || 'main') ?? document;
+      const cards = [...scope.querySelectorAll<HTMLElement>('.dyk-card')].filter((c) => !c.hidden);
+      const text = cards.map((c, i) => `${i + 1}. ${c.dataset.copyText}`).join('\n\n');
+      copy(text, all.querySelector('span'), all.dataset.copied ?? '✓');
+    }
+  });
+</script>

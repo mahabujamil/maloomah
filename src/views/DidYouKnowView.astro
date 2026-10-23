@@ -1,0 +1,234 @@
+---
+// The students' «هل تعلم؟» hub (all subjects, with filters) and the per-subject pages.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FactCard from '../components/FactCard.astro';
+import Icon from '../components/Icon.astro';
+import {
+  DID_YOU_KNOW,
+  LEVELS,
+  LEVEL_IDS,
+  SUBJECTS,
+  SUBJECT_IDS,
+  factsBySubject,
+  type SubjectId,
+} from '../data/did-you-know';
+import { SITE, localePath, otherLang, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  subject?: SubjectId;
+}
+const { lang, subject } = Astro.props;
+const ui = t(lang);
+const hubPath = '/did-you-know/';
+const pagePath = subject ? `/did-you-know/${subject}/` : hubPath;
+const facts = subject ? factsBySubject(subject) : DID_YOU_KNOW;
+const info = subject ? SUBJECTS[subject] : undefined;
+const title = info ? info.title[lang] : ui.dykTitle;
+const description = info ? info.description[lang] : ui.dykLead;
+const colors = info?.colors ?? ['#f59e0b', '#db2777'];
+const home = localePath(lang, '/');
+
+const crumbs = [
+  { label: ui.breadcrumbHome, href: home },
+  { label: ui.dykNav, href: localePath(lang, hubPath) },
+  ...(info ? [{ label: info.name[lang] }] : []),
+];
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    inLanguage: lang,
+    url: new URL(localePath(lang, pagePath), SITE.url).href,
+    audience: { '@type': 'EducationalAudience', educationalRole: 'student' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.label,
+      ...(c.href && i < crumbs.length - 1 ? { item: new URL(c.href, SITE.url).href } : {}),
+    })),
+  },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title={title}
+  description={description}
+  alternatePath={localePath(otherLang(lang), pagePath)}
+  jsonLd={jsonLd}
+  current="dyk"
+>
+  <section class="dyk-hero" style={`--c1:${colors[0]};--c2:${colors[1]}`}>
+    <div class="container">
+      <Breadcrumbs items={crumbs} />
+      <div class="dyk-hero-row">
+        <span class="hero-icon"><Icon name={info?.icon ?? 'bulb'} size={32} /></span>
+        <h1>{title}</h1>
+      </div>
+      <p class="lead">{description}</p>
+      <div class="dyk-stats">
+        <span><Icon name="bulb" size={16} />{ui.dykFacts(facts.length)}</span>
+        {!subject && <span><Icon name="book" size={16} />{ui.dykSubjectsCount(SUBJECT_IDS.length)}</span>}
+        <span><Icon name="school" size={16} />{ui.dykLevelsCount(LEVEL_IDS.length)}</span>
+      </div>
+      <p class="dyk-tip"><Icon name="sparkle" size={16} />{ui.dykTip}</p>
+    </div>
+  </section>
+
+  {
+    !subject && (
+      <section class="section" style="padding-bottom:12px">
+        <div class="container">
+          <div class="section-head">
+            <h2>{ui.dykSubjects}</h2>
+          </div>
+          <div class="dyk-subjects">
+            {SUBJECT_IDS.map((id) => (
+              <a
+                class="cat-tile"
+                href={localePath(lang, `/did-you-know/${id}/`)}
+                style={`--c1:${SUBJECTS[id].colors[0]};--c2:${SUBJECTS[id].colors[1]}`}
+              >
+                <span class="cat-icon">
+                  <Icon name={SUBJECTS[id].icon} size={24} />
+                </span>
+                <span class="cat-name">{SUBJECTS[id].name[lang]}</span>
+                <span class="cat-count">{ui.dykFacts(factsBySubject(id).length)}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    !subject && (
+      <section class="section dyk-browser" data-dyk-browser>
+        <div class="container">
+          <div class="dyk-filters">
+            <div class="dyk-filter-row" role="group" aria-label={ui.dykSubjects}>
+              <button class="dyk-chip active" type="button" data-filter-subject="">
+                {ui.dykAllSubjects}
+              </button>
+              {SUBJECT_IDS.map((id) => (
+                <button class="dyk-chip" type="button" data-filter-subject={id} style={`--c1:${SUBJECTS[id].colors[0]}`}>
+                  {SUBJECTS[id].name[lang]}
+                </button>
+              ))}
+            </div>
+            <div class="dyk-filter-row" role="group">
+              <button class="dyk-chip active" type="button" data-filter-level="">
+                {ui.dykAllLevels}
+              </button>
+              {LEVEL_IDS.map((id) => (
+                <button class="dyk-chip" type="button" data-filter-level={id} style={`--c1:${LEVELS[id].color}`}>
+                  {LEVELS[id].name[lang]}
+                </button>
+              ))}
+              <button class="btn btn-primary dyk-copy-all" type="button" data-copy-all="[data-dyk-browser]" data-copied={ui.dykCopiedAll}>
+                <Icon name="copy" size={16} />
+                <span>{ui.dykCopyAll}</span>
+              </button>
+            </div>
+            <p class="search-status" aria-live="polite" data-dyk-count>
+              {ui.dykFacts(facts.length)}
+            </p>
+          </div>
+          <div class="dyk-grid">
+            {facts.map((fact) => (
+              <FactCard fact={fact} lang={lang} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    subject &&
+      LEVEL_IDS.map((level) => {
+        const list = facts.filter((x) => x.level === level);
+        return (
+          list.length > 0 && (
+            <section class="section dyk-level-section" data-level-section>
+              <div class="container">
+                <div class="section-head">
+                  <h2>{ui.dykLevelHeading(LEVELS[level].name[lang])}</h2>
+                  <button class="btn btn-ghost" type="button" data-copy-all="[data-level-section]" data-copied={ui.dykCopiedAll}>
+                    <Icon name="copy" size={16} />
+                    <span>{ui.dykCopyAll}</span>
+                  </button>
+                </div>
+                <div class="dyk-grid">
+                  {list.map((fact) => (
+                    <FactCard fact={fact} lang={lang} showSubject={false} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          )
+        );
+      })
+  }
+
+  {
+    subject && (
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>{ui.dykOtherSubjects}</h2>
+            <a class="section-link" href={localePath(lang, hubPath)}>
+              {ui.dykAllFacts}
+              <Icon name="arrow" size={18} class="flip-rtl" />
+            </a>
+          </div>
+          <div class="dyk-filter-row">
+            {SUBJECT_IDS.filter((id) => id !== subject).map((id) => (
+              <a class="chip" style={`--c1:${SUBJECTS[id].colors[0]}`} href={localePath(lang, `/did-you-know/${id}/`)}>
+                <Icon name={SUBJECTS[id].icon} size={14} />
+                {SUBJECTS[id].name[lang]}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<script>
+  const browser = document.querySelector<HTMLElement>('[data-dyk-browser]');
+  if (browser) {
+    const state = { subject: '', level: '' };
+    const cards = [...browser.querySelectorAll<HTMLElement>('.dyk-card')];
+    const count = browser.querySelector<HTMLElement>('[data-dyk-count]');
+    const label = (count?.textContent ?? '').replace(/[0-9]+/, '{n}');
+    const apply = () => {
+      let shown = 0;
+      for (const card of cards) {
+        const ok =
+          (!state.subject || card.dataset.subject === state.subject) && (!state.level || card.dataset.level === state.level);
+        card.hidden = !ok;
+        if (ok) shown++;
+      }
+      if (count) count.textContent = label.replace('{n}', String(shown));
+    };
+    browser.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.dyk-chip');
+      if (!btn) return;
+      const key = 'filterSubject' in btn.dataset ? 'subject' : 'level';
+      state[key] = (key === 'subject' ? btn.dataset.filterSubject : btn.dataset.filterLevel) ?? '';
+      btn.parentElement?.querySelectorAll('.dyk-chip').forEach((b) => b.classList.toggle('active', b === btn));
+      apply();
+    });
+  }
+</script>
