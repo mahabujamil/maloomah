@@ -73,8 +73,10 @@ Mahmoud wants to catch trending topics early. When he asks for a trend article:
 
 ## Still to do (update this list as items are completed)
 
-- [ ] Namecheap DNS → GitHub Pages: A records for `@` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME for `www` to `mahabujamil.github.io`; then enable "Enforce HTTPS" in the repo's Pages settings
+- [x] Namecheap DNS → GitHub Pages: A records for `@` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME for `www` to `mahabujamil.github.io` (done 2026-10-23)
+- [ ] Enable "Enforce HTTPS" once GitHub issues the certificate: `gh api -X PUT repos/mahabujamil/maloomah/pages -F https_enforced=true`
 - [ ] Namecheap email forwarding: `contact@maloomah.com` → Mahmoud's Gmail
 - [ ] Google Search Console: verify the domain, submit `https://maloomah.com/sitemap-index.xml`, put the verification code in `SITE.googleSiteVerification`
 - [ ] Google Analytics: put the measurement ID in `SITE.googleAnalyticsId`
-- [ ] Google AdSense: apply once there are about 25–30 solid articles; then set `SITE.adsenseClient`, add `public/ads.txt`, and pass slot IDs to `<AdSlot slot="..."/>` in `src/views/ArticleView.astro`
+- [x] Google AdSense code added: `SITE.adsenseClient = 'ca-pub-8690671273411786'` (loads on every page) and `public/ads.txt` (2026-10-23)
+- [ ] AdSense approval is pending. Keep adding solid articles, since about 25–30 makes approval much more likely. Once approved, either turn on Auto ads in the AdSense dashboard, or create ad units and pass their slot IDs to `<AdSlot slot="..."/>` in `src/views/ArticleView.astro`
