@@ -95,7 +95,8 @@ Mahmoud wants to catch trending topics early. When he asks for a trend article:
 - [x] Namecheap DNS → GitHub Pages: A records for `@` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME for `www` to `mahabujamil.github.io` (done 2026-10-23)
 - [x] HTTPS certificate issued for maloomah.com and www, with "Enforce HTTPS" on (2026-10-23)
 - [ ] Namecheap email forwarding: `contact@maloomah.com` → Mahmoud's Gmail
-- [ ] Google Search Console: verify the domain, submit `https://maloomah.com/sitemap-index.xml`, put the verification code in `SITE.googleSiteVerification`
+- [x] Google Search Console verified for `https://maloomah.com` using the HTML file method (2026-10-23). **Never delete `public/googled3f535bad5389f96.html`**, or the verification breaks.
+- [ ] Confirm that `sitemap-index.xml` has been submitted in Search Console → Sitemaps
 - [ ] Google Analytics: put the measurement ID in `SITE.googleAnalyticsId`
 - [x] Google AdSense code added: `SITE.adsenseClient = 'ca-pub-8690671273411786'` (loads on every page) and `public/ads.txt` (2026-10-23)
 - [ ] AdSense approval is pending. Keep adding solid articles, since about 25–30 makes approval much more likely. Once approved, either turn on Auto ads in the AdSense dashboard, or create ad units and pass their slot IDs to `<AdSlot slot="..."/>` in `src/views/ArticleView.astro`
