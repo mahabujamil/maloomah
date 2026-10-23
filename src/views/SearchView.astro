@@ -106,7 +106,7 @@ const description =
     status.textContent = hits.length ? countLabel(hits.length) : data.noResults;
     const rawTerms = query.split(/\s+/).filter(Boolean);
     for (const hit of hits) {
-      const [c1, c2] = data.colors[hit.c] ?? ['#5a48ee', '#8b5cf6'];
+      const [c1, c2] = data.colors[hit.c] ?? ['#059669', '#10b981'];
       const a = document.createElement('a');
       a.className = 'result';
       a.href = hit.u;

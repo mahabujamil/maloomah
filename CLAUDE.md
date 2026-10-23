@@ -36,7 +36,7 @@ Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its 
 
 ## Daily cloud routine (auto-publishing)
 
-A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends, writes 2–3 bilingual articles, updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
+A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends and writes 2–3 bilingual articles. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
 
 - Because of this, **always `git pull` before local work**; `main` changes every morning.
 - Its sandbox blocks Google Trends, Google autocomplete and Wikimedia, so its articles usually arrive **without photos**. During local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
@@ -68,6 +68,8 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 ## Design decisions (made by Mahmoud, 2026-10-23)
 
 - **Font:** Cairo, via `@fontsource/cairo`, imported in `BaseLayout.astro`.
+- **Colours:** the emerald palette (`--brand` #059669 and `--brand-2` #10b981, with amber `--accent`), chosen by Mahmoud. The interface must not use pink or violet anymore. Category colours stay varied.
+- **Pagination:** `/articles/` and the category pages show `PAGE_SIZE` (24) per page, with numbered links to every page. Old articles must never become unreachable. The home page section «من أرشيف معلومة» shows 6 older articles, reshuffled every day.
 - **Template:** keep the current design and improve it. Don't switch to a different layout style without asking.
 - **20 categories,** defined in `src/site.ts`, with the most searched first.
 - **The «هل تعلم؟» students section** is organised by subject, with a school-stage badge on every fact. Arabic pages show English-language facts in English with the Arabic translation, because «هل تعلم بالانجليزي مترجمة» is a popular search.

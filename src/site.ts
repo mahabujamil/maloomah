@@ -22,6 +22,9 @@ export const SITE = {
   googleSiteVerification: '', // the content="" value of Search Console's meta tag
 };
 
+/** Articles per page on /articles/ and category pages. Every page links to every other page. */
+export const PAGE_SIZE = 24;
+
 // Order = order in the header bar, home grid and footer (most searched first).
 export const CATEGORY_IDS = [
   'science',
@@ -295,6 +298,12 @@ const UI = {
     trendSearches: 'الأكثر بحثاً الآن:',
     trendBadge: 'ترند',
     relatedSearches: 'عمليات بحث ذات صلة',
+    pageLabel: (n: number) => `صفحة ${n}`,
+    prevPage: 'السابق',
+    nextPage: 'التالي',
+    pagination: 'التنقل بين الصفحات',
+    archiveTitle: 'من أرشيف معلومة',
+    archiveText: 'مقالات مختارة من الأرشيف تتجدد كل يوم.',
   },
   en: {
     home: 'Home',
@@ -374,6 +383,12 @@ const UI = {
     trendSearches: 'Most searched now:',
     trendBadge: 'Trending',
     relatedSearches: 'Related searches',
+    pageLabel: (n: number) => `Page ${n}`,
+    prevPage: 'Previous',
+    nextPage: 'Next',
+    pagination: 'Pagination',
+    archiveTitle: 'From the Maloomah archive',
+    archiveText: 'Hand-picked articles from our archive, refreshed every day.',
   },
 } as const;
 

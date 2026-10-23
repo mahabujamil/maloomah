@@ -1,0 +1,13 @@
+---
+// /articles/, /articles/2/, ... (newest first)
+import ArticlesView from '../../../views/ArticlesView.astro';
+import { getArticles } from '../../../lib/content';
+import { PAGE_SIZE } from '../../../site';
+
+export async function getStaticPaths({ paginate }) {
+  return paginate(await getArticles('en'), { pageSize: PAGE_SIZE });
+}
+const { page } = Astro.props;
+---
+
+<ArticlesView lang="en" page={page} />

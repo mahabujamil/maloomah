@@ -27,7 +27,7 @@ const facts = subject ? factsBySubject(subject) : DID_YOU_KNOW;
 const info = subject ? SUBJECTS[subject] : undefined;
 const title = info ? info.title[lang] : ui.dykTitle;
 const description = info ? info.description[lang] : ui.dykLead;
-const colors = info?.colors ?? ['#f59e0b', '#db2777'];
+const colors = info?.colors ?? ['#f59e0b', '#059669'];
 const home = localePath(lang, '/');
 
 const crumbs = [

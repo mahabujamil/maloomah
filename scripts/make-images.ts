@@ -17,7 +17,7 @@ mkdirSync(OUT, { recursive: true });
 const logoMark = (size: number, rounded = true) => `
   <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 40 40">
     <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5a48ee"/><stop offset="1" stop-color="#b14bf4"/>
+      <stop offset="0" stop-color="#047857"/><stop offset="1" stop-color="#10b981"/>
     </linearGradient></defs>
     <rect width="40" height="40" rx="${rounded ? 12 : 0}" fill="url(#g)"/>
     <circle cx="20" cy="12.6" r="3.3" fill="#fff"/>
@@ -106,7 +106,7 @@ async function brandRow(right: number, top: number) {
     await rightAligned(await text('maloomah.com', 30, FONT_MEDIUM, 0.8), right, 540),
     { input: await sharp(Buffer.from(logoMark(260))).png().toBuffer(), left: 110, top: 185 },
   ];
-  await render('default.png', background('#4f3ff0', '#8b5cf6', '#db2777'), layers);
+  await render('default.png', background('#064e3b', '#059669', '#0d9488'), layers);
 }
 
 // One image per category

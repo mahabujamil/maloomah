@@ -3,26 +3,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Icon from '../components/Icon.astro';
-import { categoryUrl, getArticles } from '../lib/content';
+import Pagination from '../components/Pagination.astro';
+import { categoryUrl, type Article } from '../lib/content';
 import { CATEGORIES, SITE, localePath, otherLang, t, type CategoryId, type Lang } from '../site';
 
 interface Props {
   lang: Lang;
   category: CategoryId;
+  page: { data: Article[]; currentPage: number; lastPage: number; total: number };
 }
-const { lang, category } = Astro.props;
+const { lang, category, page } = Astro.props;
 const ui = t(lang);
 const cat = CATEGORIES[category];
-const articles = (await getArticles(lang)).filter((a) => a.data.category === category);
 const home = localePath(lang, '/');
+const suffix = page.currentPage > 1 ? `${page.currentPage}/` : '';
+const title = page.currentPage > 1 ? `${cat.name[lang]} - ${ui.pageLabel(page.currentPage)}` : cat.name[lang];
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: cat.name[lang],
+    name: title,
     description: cat.description[lang],
-    url: new URL(categoryUrl(lang, category), SITE.url).href,
+    url: new URL(`${categoryUrl(lang, category)}${suffix}`, SITE.url).href,
     inLanguage: lang,
   },
   {
@@ -38,9 +41,9 @@ const jsonLd = [
 
 <BaseLayout
   lang={lang}
-  title={cat.name[lang]}
+  title={title}
   description={cat.description[lang]}
-  alternatePath={categoryUrl(otherLang(lang), category)}
+  alternatePath={`${categoryUrl(otherLang(lang), category)}${suffix}`}
   image={`/og/${category}.png`}
   jsonLd={jsonLd}
   currentCategory={category}
@@ -51,16 +54,19 @@ const jsonLd = [
       <div style="display:flex;align-items:center;gap:16px;margin-top:18px">
         <span class="hero-icon"><Icon name={category} size={32} /></span>
         <div>
-          <h1 style="margin-top:0">{cat.name[lang]}</h1>
-          <p class="cat-count">{ui.articlesIn(articles.length)}</p>
+          <h1 style="margin-top:0">{title}</h1>
+          <p class="cat-count">{ui.articlesIn(page.total)}</p>
         </div>
       </div>
       <p class="lead">{cat.description[lang]}</p>
     </div>
   </section>
   <section class="section">
-    <div class="container grid grid-3">
-      {articles.map((article) => <ArticleCard article={article} lang={lang} />)}
+    <div class="container">
+      <div class="grid grid-3">
+        {page.data.map((article) => <ArticleCard article={article} lang={lang} />)}
+      </div>
+      <Pagination lang={lang} basePath={categoryUrl(lang, category)} current={page.currentPage} last={page.lastPage} />
     </div>
   </section>
 </BaseLayout>

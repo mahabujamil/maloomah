@@ -1,0 +1,19 @@
+---
+// /category/<id>/, /category/<id>/2/, ... (newest first)
+import CategoryView from '../../../views/CategoryView.astro';
+import { getArticles } from '../../../lib/content';
+import { CATEGORY_IDS, PAGE_SIZE } from '../../../site';
+
+export async function getStaticPaths({ paginate }) {
+  const articles = await getArticles('ar');
+  return CATEGORY_IDS.flatMap((id) =>
+    paginate(
+      articles.filter((a) => a.data.category === id),
+      { params: { id }, props: { category: id }, pageSize: PAGE_SIZE },
+    ),
+  );
+}
+const { page, category } = Astro.props;
+---
+
+<CategoryView lang="ar" category={category} page={page} />

@@ -3,15 +3,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Icon from '../components/Icon.astro';
-import { getArticles } from '../lib/content';
+import Pagination from '../components/Pagination.astro';
+import type { Article } from '../lib/content';
 import { SITE, localePath, otherLang, t, type Lang } from '../site';
 
 interface Props {
   lang: Lang;
+  page: { data: Article[]; currentPage: number; lastPage: number; total: number };
 }
-const { lang } = Astro.props;
+const { lang, page } = Astro.props;
 const ui = t(lang);
-const articles = await getArticles(lang);
+const base = '/articles/';
+const suffix = page.currentPage > 1 ? `${page.currentPage}/` : '';
+const title = page.currentPage > 1 ? `${ui.allArticles} - ${ui.pageLabel(page.currentPage)}` : ui.allArticles;
 const description =
   lang === 'ar'
     ? `تصفّح كل مقالات ${SITE.name.ar} في العلوم والصحة والتقنية والتاريخ والمال والمزيد.`
@@ -20,9 +24,9 @@ const description =
 
 <BaseLayout
   lang={lang}
-  title={ui.allArticles}
+  title={title}
   description={description}
-  alternatePath={localePath(otherLang(lang), '/articles/')}
+  alternatePath={localePath(otherLang(lang), `${base}${suffix}`)}
   current="articles"
 >
   <section class="page-hero">
@@ -31,16 +35,19 @@ const description =
       <div style="display:flex;align-items:center;gap:16px;margin-top:18px">
         <span class="hero-icon"><Icon name="book" size={30} /></span>
         <div>
-          <h1 style="margin-top:0">{ui.allArticles}</h1>
-          <p class="cat-count">{ui.articlesIn(articles.length)}</p>
+          <h1 style="margin-top:0">{title}</h1>
+          <p class="cat-count">{ui.articlesIn(page.total)}</p>
         </div>
       </div>
       <p class="lead">{description}</p>
     </div>
   </section>
   <section class="section">
-    <div class="container grid grid-3">
-      {articles.map((article) => <ArticleCard article={article} lang={lang} />)}
+    <div class="container">
+      <div class="grid grid-3">
+        {page.data.map((article) => <ArticleCard article={article} lang={lang} />)}
+      </div>
+      <Pagination lang={lang} basePath={localePath(lang, base)} current={page.currentPage} last={page.lastPage} />
     </div>
   </section>
 </BaseLayout>

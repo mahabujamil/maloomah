@@ -6,7 +6,7 @@ import FactOfTheDay from '../components/FactOfTheDay.astro';
 import Icon from '../components/Icon.astro';
 import TrendingBlock from '../components/TrendingBlock.astro';
 import { LEVEL_IDS, SUBJECTS, SUBJECT_IDS, factsBySubject, type SubjectId } from '../data/did-you-know';
-import { isTrending } from '../data/trending';
+import { TRENDING, isTrending } from '../data/trending';
 import { getArticles, slugOf } from '../lib/content';
 import { CATEGORIES, CATEGORY_IDS, SITE, localePath, otherLang, t, type Lang } from '../site';
 
@@ -17,6 +17,16 @@ const { lang } = Astro.props;
 const ui = t(lang);
 const articles = await getArticles(lang);
 const latest = articles.filter((a) => !isTrending(slugOf(a))).slice(0, 6);
+
+// «من أرشيف معلومة»: six older articles not shown above, reshuffled every day
+// (the site rebuilds each morning), so older articles keep appearing on the home page.
+const shown = new Set([...TRENDING, ...latest.map(slugOf)]);
+const day = Math.floor(Date.now() / 86_400_000);
+const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, day);
+const archive = articles
+  .filter((a) => !shown.has(slugOf(a)))
+  .sort((a, b) => hash(slugOf(a)) - hash(slugOf(b)))
+  .slice(0, 6);
 const countBy = (id: string) => articles.filter((a) => a.data.category === id).length;
 // Four facts per subject for the home tabs, mixing school stages.
 const sampleFacts = (id: SubjectId) => {
@@ -176,6 +186,30 @@ const jsonLd = [
       </div>
     </div>
   </section>
+
+  {
+    archive.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>{ui.archiveTitle}</h2>
+              <p>{ui.archiveText}</p>
+            </div>
+            <a class="section-link" href={localePath(lang, '/articles/')}>
+              {ui.allArticles}
+              <Icon name="arrow" size={18} class="flip-rtl" />
+            </a>
+          </div>
+          <div class="grid grid-3">
+            {archive.map((article) => (
+              <ArticleCard article={article} lang={lang} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 </BaseLayout>
 
 <script>

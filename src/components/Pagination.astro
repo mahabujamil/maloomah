@@ -1,0 +1,56 @@
+---
+// Numbered pagination. Shows every page number (with gaps only when there are many),
+// so all older articles stay reachable by readers and by Google.
+import Icon from './Icon.astro';
+import { t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  /** Path of page 1, e.g. "/articles/" or "/en/category/food/" */
+  basePath: string;
+  current: number;
+  last: number;
+}
+const { lang, basePath, current, last } = Astro.props;
+const ui = t(lang);
+const href = (n: number) => (n <= 1 ? basePath : `${basePath}${n}/`);
+
+// 1 … (current-2 … current+2) … last
+const nums: (number | null)[] = [];
+for (let n = 1; n <= last; n++) {
+  if (n === 1 || n === last || Math.abs(n - current) <= 2) nums.push(n);
+  else if (nums[nums.length - 1] !== null) nums.push(null);
+}
+---
+
+{
+  last > 1 && (
+    <nav class="pagination" aria-label={ui.pagination}>
+      {current > 1 && (
+        <a class="page-btn" href={href(current - 1)} rel="prev">
+          <Icon name="arrow" size={16} class="arrow-back" />
+          {ui.prevPage}
+        </a>
+      )}
+      <ol>
+        {nums.map((n) =>
+          n === null ? (
+            <li class="page-gap">…</li>
+          ) : (
+            <li>
+              <a class="page-num" href={href(n)} aria-current={n === current ? 'page' : undefined} aria-label={ui.pageLabel(n)}>
+                {n}
+              </a>
+            </li>
+          ),
+        )}
+      </ol>
+      {current < last && (
+        <a class="page-btn" href={href(current + 1)} rel="next">
+          {ui.nextPage}
+          <Icon name="arrow" size={16} class="flip-rtl" />
+        </a>
+      )}
+    </nav>
+  )
+}
