@@ -5,7 +5,7 @@
 //       -> downloads up to 12 landscape candidates and a numbered contact sheet into .image-candidates/
 //   node scripts/images.mjs pick <slug> <number> "<alt text ar>" "<alt text en>"
 //       -> saves src/assets/articles/<slug>.jpg (max 1600px) and its credit in src/data/images.json
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
@@ -150,7 +150,24 @@ async function pick(slug, number, altAr, altEn) {
   console.log(`saved src/assets/articles/${slug}.jpg (${meta.width}x${meta.height}) - ${r.license} by ${r.creator}`);
 }
 
+// Articles that still have no photo (e.g. published by the cloud routine when Wikimedia was blocked).
+function missing() {
+  const db = existsSync(DB) ? JSON.parse(readFileSync(DB, 'utf8')) : {};
+  const dir = `${ROOT}src/content/articles/ar/`;
+  const slugs = readdirSync(dir)
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => f.slice(0, -3))
+    .filter((s) => !db[s] || !existsSync(`${ASSETS}${s}.jpg`));
+  console.log(slugs.length ? slugs.join('\n') : 'Every article has a photo.');
+}
+
 const [cmd, ...args] = process.argv.slice(2);
 if (cmd === 'search') await search(args[0], args[1], args[2]);
 else if (cmd === 'pick') await pick(args[0], args[1], args[2], args[3]);
-else console.log('usage: node scripts/images.mjs search <slug> "<query>" [commons|openverse]\n       node scripts/images.mjs pick <slug> <n> "<alt ar>" "<alt en>"');
+else if (cmd === 'missing') missing();
+else
+  console.log(
+    'usage: node scripts/images.mjs search <slug> "<query>" [commons|openverse]\n' +
+      '       node scripts/images.mjs pick <slug> <n> "<alt ar>" "<alt en>"\n' +
+      '       node scripts/images.mjs missing',
+  );

@@ -191,6 +191,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Il_cuore.jpg"
   },
+  "lentil-soup-recipe": {
+    "alt": {
+      "ar": "طبق شوربة عدس مزين بالبقدونس مع خبز",
+      "en": "A bowl of lentil soup topped with parsley, served with bread"
+    },
+    "title": "Lentil Soup - Schnitzel & Co. 2026-05-16",
+    "creator": "Andy Li",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Lentil_Soup_-_Schnitzel_%26_Co._2026-05-16.jpg"
+  },
   "make-money-from-crypto": {
     "alt": {
       "ar": "يد تمسك عملة بيتكوين ذهبية",
@@ -299,6 +311,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Sophia_humanoid_robot_-_Word_Investment_Forum_2018_(44775983214).jpg"
   },
+  "what-is-chatgpt": {
+    "alt": {
+      "ar": "هاتف ذكي يعرض محادثة شات جي بي تي فوق لوحة مفاتيح",
+      "en": "A smartphone showing a ChatGPT conversation on a keyboard"
+    },
+    "title": "Smartphone with ChatGPT on keyboard (52917311050)",
+    "creator": "Jernej Furman from Slovenia",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Smartphone_with_ChatGPT_on_keyboard_(52917311050).jpg"
+  },
   "what-is-cryptocurrency": {
     "alt": {
       "ar": "عملة بيتكوين ذهبية على لوحة مفاتيح حاسوب",
@@ -310,6 +334,18 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Bitcoin_on_Laptop_Keyboard.jpg"
+  },
+  "what-is-daylight-saving-time": {
+    "alt": {
+      "ar": "برج ساعة مضاء عند شروق الشمس",
+      "en": "A clock tower lit up at sunrise"
+    },
+    "title": "The Montréal Clock Tower at sunrise",
+    "creator": "Michael Vesia",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Montr%C3%A9al_Clock_Tower_at_sunrise.jpg"
   },
   "what-is-inflation": {
     "alt": {

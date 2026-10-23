@@ -34,6 +34,14 @@ Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its 
 - **Look at the contact sheet before picking.** Choose landscape, high-quality, relevant photos that suit a conservative Arab family audience: no nudity, swimwear, alcohol or violence. Avoid identifiable children; backs and silhouettes are fine.
 - The credit line under the hero photo is required by the licences, so don't remove it.
 
+## Daily cloud routine (auto-publishing)
+
+A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends, writes 2–3 bilingual articles, updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
+
+- Because of this, **always `git pull` before local work**; `main` changes every morning.
+- Its sandbox blocks Google Trends, Google autocomplete and Wikimedia, so its articles usually arrive **without photos**. During local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
+- Its sandbox Node is too old for Astro. It fetches Node 24 with `npm pack node-linux-x64@24`, which is already in its prompt.
+
 ## «ترند اليوم» (home page trending block)
 
 `src/data/trending.ts` controls it. Put the hottest article slugs first and update `TRENDING_UPDATED` whenever new trend articles go live. Trending articles get a 🔥 badge everywhere. The "most searched now" chips use each article's first `keywords` entry.
