@@ -39,7 +39,7 @@ Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its 
 A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends and writes 2–3 bilingual articles. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
 
 - Because of this, **always `git pull` before local work**; `main` changes every morning.
-- Its sandbox blocks Google Trends, Google autocomplete and Wikimedia, so its articles usually arrive **without photos**. During local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
+- Network: on 2026-10-25 Mahmoud added `*.wikimedia.org`, `trends.google.com` and `suggestqueries.google.com` to the **Default** cloud environment's allowed domains (claude.ai/code → environment selector → Default → ⚙️ → Network access). Google Trends, autocomplete and the Wikimedia photo tool were verified working there on 2026-10-25, so the routine adds photos itself. As a safety net during local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
 - Its sandbox Node is too old for Astro. It fetches Node 24 with `npm pack node-linux-x64@24`, which is already in its prompt.
 
 ## «ترند اليوم» (home page trending block)
