@@ -11,6 +11,8 @@ recipe:
   yield: "4 cups"
   cuisine: "Middle Eastern"
   type: "Drink"
+  calories: 250
+  servingSize: "cup"
   ingredients:
     - "4 cups whole milk"
     - "3 tablespoons cornstarch"

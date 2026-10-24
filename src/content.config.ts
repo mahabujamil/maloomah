@@ -26,6 +26,8 @@ const articles = defineCollection({
         yield: z.string(),
         cuisine: z.string().optional(),
         type: z.string().optional(), // e.g. "حلويات" / "Dessert"
+        calories: z.number().optional(), // approximate kcal per serving (only when it can be estimated sensibly)
+        servingSize: z.string().optional(), // e.g. "قطعة واحدة" / "1 piece"
         ingredients: z.array(z.string()),
         steps: z.array(z.string()),
       })

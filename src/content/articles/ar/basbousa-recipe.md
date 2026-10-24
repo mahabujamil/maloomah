@@ -11,6 +11,8 @@ recipe:
   yield: "20 قطعة"
   cuisine: "عربية"
   type: "حلويات"
+  calories: 230
+  servingSize: "قطعة"
   ingredients:
     - "2 كوب سميد خشن"
     - "1 كوب سكر"

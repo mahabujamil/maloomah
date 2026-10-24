@@ -11,6 +11,8 @@ recipe:
   yield: "4 أكواب"
   cuisine: "عربية"
   type: "مشروبات"
+  calories: 250
+  servingSize: "كوب"
   ingredients:
     - "4 أكواب حليب كامل الدسم"
     - "3 ملاعق كبيرة نشا ذرة"

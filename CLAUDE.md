@@ -48,7 +48,13 @@ A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4
 
 ## Recipes
 
-Food articles can add a `recipe:` block to their frontmatter (prepTime/cookTime as ISO durations such as `PT20M`, yield, ingredients, steps; see `basbousa-recipe.md`). This outputs Recipe structured data, which gives Google rich results with the photo and cooking time.
+Every recipe article must have a `recipe:` block in its frontmatter. It holds:
+- `prepTime` and `cookTime` as ISO durations such as `PT20M`
+- `yield`, `cuisine` and `type`
+- `calories` (approximate kcal per serving, estimated from the ingredient amounts) and `servingSize` (for example «قطعة» or "piece")
+- `ingredients` and `steps`
+
+See `basbousa-recipe.md`. The block renders a visible «بطاقة الوصفة» card, whose steps carry ids, and Recipe structured data with nutrition plus a name, url and image for every step. Google Search Console asked for exactly these on 2026-10-25. Video is optional, and we don't have any.
 
 On these Windows machines the Bash tool may not have Node on PATH. If so, prefix with `export PATH="/c/Program Files/nodejs:$PATH"`.
 

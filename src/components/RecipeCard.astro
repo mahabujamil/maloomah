@@ -1,0 +1,63 @@
+---
+// Visible recipe summary that mirrors the Recipe structured data (Google prefers them to match).
+// Steps carry ids, so the structured data can link straight to each step.
+import Icon from './Icon.astro';
+import { isoMinutes, stepId } from '../lib/recipe';
+import { t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+  recipe: {
+    prepTime: string;
+    cookTime: string;
+    yield: string;
+    calories?: number;
+    servingSize?: string;
+    ingredients: string[];
+    steps: string[];
+  };
+}
+const { lang, recipe } = Astro.props;
+const ui = t(lang);
+const prep = isoMinutes(recipe.prepTime);
+const cook = isoMinutes(recipe.cookTime);
+const stats = [
+  { icon: 'clock', label: ui.prepTime, value: ui.minutes(prep) },
+  { icon: 'food', label: ui.cookTime, value: ui.minutes(cook) },
+  { icon: 'clock', label: ui.totalTime, value: ui.minutes(prep + cook) },
+  { icon: 'family', label: ui.recipeYield, value: recipe.yield },
+  ...(recipe.calories ? [{ icon: 'health', label: ui.caloriesLabel, value: ui.caloriesValue(recipe.calories, recipe.servingSize) }] : []),
+];
+---
+
+<section class="recipe-card" id="recipe">
+  <h2 class="recipe-title"><Icon name="food" size={22} />{ui.recipeCard}</h2>
+  <dl class="recipe-stats">
+    {
+      stats.map((s) => (
+        <div>
+          <dt>
+            <Icon name={s.icon} size={15} />
+            {s.label}
+          </dt>
+          <dd>{s.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+  <div class="recipe-cols">
+    <div>
+      <h3>{ui.ingredients}</h3>
+      <ul class="recipe-ingredients">
+        {recipe.ingredients.map((x) => <li>{x}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h3>{ui.method}</h3>
+      <ol class="recipe-steps">
+        {recipe.steps.map((s, i) => <li id={stepId(i)}>{s}</li>)}
+      </ol>
+    </div>
+  </div>
+  {recipe.calories && <p class="recipe-note">{ui.caloriesNote}</p>}
+</section>

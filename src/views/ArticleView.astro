@@ -17,6 +17,8 @@ import {
 } from '../lib/content';
 import { coverFor, shareImageUrl } from '../lib/images';
 import { isTrending } from '../data/trending';
+import RecipeCard from '../components/RecipeCard.astro';
+import { isoMinutes, stepId, stepName } from '../lib/recipe';
 import { CATEGORIES, SITE, formatDate, localePath, otherLang, readingMinutes, t, type Lang } from '../site';
 
 interface Props {
@@ -100,7 +102,6 @@ const jsonLd: Record<string, unknown>[] = [
   },
 ];
 if (recipe) {
-  const minutes = (iso: string) => Number(/PT(?:(\d+)H)?(?:(\d+)M)?/.exec(iso)?.slice(1).reduce((s, v, i) => s + (Number(v) || 0) * (i ? 1 : 60), 0) ?? 0);
   jsonLd.push({
     '@context': 'https://schema.org',
     '@type': 'Recipe',
@@ -108,17 +109,32 @@ if (recipe) {
     description,
     image: [shareImage],
     inLanguage: lang,
+    url,
     author: { '@type': 'Organization', name: SITE.name[lang], url: SITE.url },
     datePublished: date.toISOString(),
     prepTime: recipe.prepTime,
     cookTime: recipe.cookTime,
-    totalTime: `PT${minutes(recipe.prepTime) + minutes(recipe.cookTime)}M`,
+    totalTime: `PT${isoMinutes(recipe.prepTime) + isoMinutes(recipe.cookTime)}M`,
     recipeYield: recipe.yield,
     recipeCuisine: recipe.cuisine,
     recipeCategory: recipe.type,
     keywords: [...keywords, ...tags].join(', '),
+    ...(recipe.calories && {
+      nutrition: {
+        '@type': 'NutritionInformation',
+        calories: `${recipe.calories} calories`,
+        ...(recipe.servingSize && { servingSize: recipe.servingSize }),
+      },
+    }),
     recipeIngredient: recipe.ingredients,
-    recipeInstructions: recipe.steps.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text })),
+    recipeInstructions: recipe.steps.map((text, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: stepName(text),
+      text,
+      url: `${url}#${stepId(i)}`,
+      image: shareImage,
+    })),
   });
 }
 ---
@@ -202,6 +218,7 @@ if (recipe) {
 
     <div class="container article-layout">
       <div>
+        {recipe && <RecipeCard lang={lang} recipe={recipe} />}
         <div class="prose" lang={lang}>
           <Content />
         </div>

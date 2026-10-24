@@ -11,6 +11,8 @@ recipe:
   yield: "20 pieces"
   cuisine: "Middle Eastern"
   type: "Dessert"
+  calories: 230
+  servingSize: "piece"
   ingredients:
     - "2 cups coarse semolina"
     - "1 cup sugar"

@@ -1375,3 +1375,42 @@ a.chip:hover { background: color-mix(in srgb, var(--c1) 20%, transparent); }
 .page-btn:hover { border-color: var(--brand); color: var(--brand-ink); }
 .page-num[aria-current='page'] { background: var(--brand); border-color: var(--brand); color: #fff; }
 .page-gap { display: grid; place-items: center; min-width: 24px; color: var(--muted); }
+
+/* ---------- Recipe card ---------- */
+.recipe-card {
+  max-width: 760px;
+  margin-bottom: 30px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, #f97316 6%, var(--surface));
+  border: 1px solid color-mix(in srgb, #f97316 25%, var(--border));
+}
+.recipe-title { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; color: #c2410c; }
+:root[data-theme='dark'] .recipe-title { color: #fdba74; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .recipe-title { color: #fdba74; }
+}
+.recipe-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  margin: 16px 0 6px;
+}
+.recipe-stats div {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.recipe-stats dt { display: flex; align-items: center; gap: 5px; font-size: 0.8rem; color: var(--muted); }
+.recipe-stats dd { margin: 2px 0 0; font-weight: 700; font-size: 0.95rem; }
+.recipe-cols { display: grid; gap: 22px; margin-top: 16px; }
+@media (min-width: 720px) { .recipe-cols { grid-template-columns: 1fr 1.4fr; } }
+.recipe-cols h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.recipe-ingredients, .recipe-steps { margin: 0; padding-inline-start: 1.3em; line-height: 1.8; font-size: 0.98rem; }
+.recipe-ingredients li::marker { color: #f97316; }
+.recipe-steps li { scroll-margin-top: 140px; }
+.recipe-steps li + li, .recipe-ingredients li + li { margin-top: 4px; }
+.recipe-steps li::marker { color: #ea580c; font-weight: 700; }
+.recipe-steps li:target { background: color-mix(in srgb, #f97316 15%, transparent); border-radius: 8px; }
+.recipe-note { margin-top: 14px; font-size: 0.82rem; color: var(--muted); }

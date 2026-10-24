@@ -11,6 +11,8 @@ recipe:
   yield: "4 إلى 5 أشخاص"
   cuisine: "عربية"
   type: "شوربات"
+  calories: 250
+  servingSize: "طبق"
   ingredients:
     - "1 كوب عدس أصفر (مجروش)"
     - "1 بصلة متوسطة مقطعة"

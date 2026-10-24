@@ -11,6 +11,8 @@ recipe:
   yield: "4 to 5 servings"
   cuisine: "Middle Eastern"
   type: "Soup"
+  calories: 250
+  servingSize: "bowl"
   ingredients:
     - "1 cup split red or yellow lentils"
     - "1 medium onion, chopped"
