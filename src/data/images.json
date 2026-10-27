@@ -11,6 +11,18 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Shopping_for_gifts_(Unsplash).jpg"
   },
+  "ballon-d-or": {
+    "alt": {
+      "ar": "كأس الكرة الذهبية (Ballon d'Or) معروضة في صندوق زجاجي",
+      "en": "The Ballon d'Or trophy on display in a glass case"
+    },
+    "title": "FIFA Ballon D‘OR Awards, FIFA Museum, Zurich 09",
+    "creator": "Ank kumar",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FIFA_Ballon_D%E2%80%98OR_Awards,_FIFA_Museum,_Zurich_09.jpg"
+  },
   "basbousa-recipe": {
     "alt": {
       "ar": "قطع بسبوسة ذهبية مزينة باللوز في طبق أبيض",
@@ -335,6 +347,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Salep_on_a_wooden_table.jpg"
   },
+  "smart-electricity-meter": {
+    "alt": {
+      "ar": "عداد كهرباء ذكي رقمي مثبت على جدار منزل",
+      "en": "A digital smart electricity meter mounted on a house wall"
+    },
+    "title": "Aclara I-210+ single phase smart electricity meter",
+    "creator": "277volts",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aclara_I-210%2B_single_phase_smart_electricity_meter.jpg"
+  },
   "strangest-animals-in-the-world": {
     "alt": {
       "ar": "سمندل الأكسولوتل الوردي في حوض مائي",
@@ -454,6 +478,18 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Shopping_Cart_Supermarket.jpg"
+  },
+  "what-is-twitch": {
+    "alt": {
+      "ar": "حاسوب محمول وميكروفون ومازج صوت لإعداد بث مباشر",
+      "en": "A laptop, microphone and audio mixer set up for a live stream"
+    },
+    "title": "Live streaming audio setup for Sobra-tankar - Yamaha MG124cx audio mixer, Sennheiser ew100G3 wireless set, Shure PGW24-PG58 wireless set",
+    "creator": "Christian Dahlqvist",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Live_streaming_audio_setup_for_Sobra-tankar_-_Yamaha_MG124cx_audio_mixer,_Sennheiser_ew100G3_wireless_set,_Shure_PGW24-PG58_wireless_set.jpg"
   },
   "who-invented-electricity": {
     "alt": {
