@@ -109,6 +109,7 @@ const ogLocale = { ar: 'ar_AR', en: 'en_US' };
     <meta name="theme-color" content="#059669" />
     <meta name="generator" content={Astro.generator} />
     {SITE.googleSiteVerification && <meta name="google-site-verification" content={SITE.googleSiteVerification} />}
+    {SITE.adsenseClient && <meta name="google-adsense-account" content={SITE.adsenseClient} />}
 
     {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
 
