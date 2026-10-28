@@ -68,15 +68,21 @@ const ogLocale = { ar: 'ar_AR', en: 'en_US' };
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
     <meta
       name="robots"
       content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
     />
-
-    <link rel="alternate" hreflang={lang} href={canonical} />
-    {altUrl && <link rel="alternate" hreflang={other} href={altUrl} />}
-    {arUrl && <link rel="alternate" hreflang="x-default" href={arUrl} />}
+    {
+      /* Pages Google shouldn't index (404, search) get no canonical/hreflang, so they never point at URLs that don't exist. */
+      !noindex && (
+        <>
+          <link rel="canonical" href={canonical} />
+          <link rel="alternate" hreflang={lang} href={canonical} />
+          {altUrl && <link rel="alternate" hreflang={other} href={altUrl} />}
+          {arUrl && <link rel="alternate" hreflang="x-default" href={arUrl} />}
+        </>
+      )
+    }
 
     <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content={type} />
