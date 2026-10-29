@@ -419,6 +419,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:ViVi%27s_smartphone_recording_video_at_Yuanshan_Park_20231125.jpg"
   },
+  "uae-national-day": {
+    "alt": {
+      "ar": "علم الإمارات العربية المتحدة يرفرف في السماء",
+      "en": "The flag of the United Arab Emirates flying against the sky"
+    },
+    "title": "CGI United Arab Emirates Flag",
+    "creator": "Aerra Carnicom",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CGI_United_Arab_Emirates_Flag.png"
+  },
   "ways-to-earn-money-online": {
     "alt": {
       "ar": "حاسوب محمول ودفتر وفنجان قهوة على مكتب خشبي",
@@ -514,6 +526,30 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Shopping_Cart_Supermarket.jpg"
+  },
+  "what-is-instapay": {
+    "alt": {
+      "ar": "هاتف ذكي يعرض رمز دفع أثناء عملية دفع إلكتروني",
+      "en": "A smartphone showing a payment code during a mobile payment"
+    },
+    "title": "Mobile Payment",
+    "creator": "Richard Tanzer Fotografie / VeroPay",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mobile_Payment.jpg"
+  },
+  "what-is-the-nba": {
+    "alt": {
+      "ar": "صالة كرة سلة مكتظة بالجماهير أثناء مباراة",
+      "en": "A packed basketball arena during a game"
+    },
+    "title": "Kansas Jayhawks Open Practice at the 2016 March Madness Opening Rounds (25217234113)",
+    "creator": "Phil Roeder from Des Moines, IA, USA",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kansas_Jayhawks_Open_Practice_at_the_2016_March_Madness_Opening_Rounds_(25217234113).jpg"
   },
   "what-is-twitch": {
     "alt": {
