@@ -1,0 +1,118 @@
+---
+import Icon from './Icon.astro';
+import { FACTS } from '../data/facts';
+import { DID_YOU_KNOW } from '../data/did-you-know';
+import { SITE, localePath, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const PER_SHEET = 4;
+
+// General facts plus the students' facts (English-language ones are skipped: they're meant to be read in English).
+// A fixed shuffle mixes the topics so each sheet of four covers different subjects.
+const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const facts = [...FACTS.map((f) => f[lang]), ...DID_YOU_KNOW.filter((f) => f.subject !== 'english').map((f) => f[lang])].sort(
+  (a, b) => hash(a) - hash(b),
+);
+const shareUrl = new URL(localePath(lang, '/did-you-know/'), SITE.url).href;
+---
+
+<aside
+  class="fact-sheet reveal reveal-3"
+  data-facts={JSON.stringify(facts)}
+  data-per={PER_SHEET}
+  data-title={ui.dykPrefix}
+  data-from={ui.sheetFrom}
+  data-url={shareUrl}
+>
+  <div class="sheet-head">
+    <div class="sheet-title">
+      <span class="sheet-icon"><Icon name="bulb" size={22} /></span>
+      <div>
+        <h2>{ui.dykPrefix}</h2>
+        <small>{ui.sheetSub}</small>
+      </div>
+    </div>
+    <button class="sheet-more" type="button" aria-label={ui.sheetMore}>
+      <Icon name="refresh" size={16} />
+      <span>{ui.sheetMore}</span>
+    </button>
+  </div>
+  <ol class="sheet-list" aria-live="polite">
+    {
+      facts.slice(0, PER_SHEET).map((fact, i) => (
+        <li>
+          <span class="sheet-num">{i + 1}</span>
+          <p>{fact}</p>
+        </li>
+      ))
+    }
+  </ol>
+  <div class="sheet-actions">
+    <button class="btn btn-primary sheet-copy" type="button" data-copied={ui.copied}>
+      <Icon name="copy" size={18} />
+      <span>{ui.sheetCopy}</span>
+    </button>
+    <button class="btn btn-ghost sheet-share" type="button">
+      <Icon name="share" size={18} />
+      <span>{ui.sheetShare}</span>
+    </button>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.fact-sheet').forEach((sheet) => {
+    const facts: string[] = JSON.parse(sheet.dataset.facts ?? '[]');
+    const per = Number(sheet.dataset.per) || 4;
+    const items = [...sheet.querySelectorAll<HTMLElement>('.sheet-list p')];
+    const list = sheet.querySelector<HTMLElement>('.sheet-list');
+    if (!facts.length || !items.length || !list) return;
+    const sets = Math.ceil(facts.length / per);
+    // Same sheet for everyone on a given day, a new one tomorrow.
+    let set = Math.floor(Date.now() / 86_400_000) % sets;
+    const current = () => items.map((_, i) => facts[(set * per + i) % facts.length]);
+    const show = () => {
+      current().forEach((fact, i) => (items[i].textContent = fact));
+      list.classList.remove('swap');
+      void list.offsetWidth;
+      list.classList.add('swap');
+    };
+    show();
+
+    const text = () =>
+      `${sheet.dataset.title}\n\n${current()
+        .map((fact, i) => `${i + 1}. ${fact}`)
+        .join('\n\n')}\n\n${sheet.dataset.from} ${sheet.dataset.url}`;
+
+    sheet.querySelector('.sheet-more')?.addEventListener('click', () => {
+      set = (set + 1) % sets;
+      show();
+    });
+
+    const copyBtn = sheet.querySelector<HTMLButtonElement>('.sheet-copy');
+    copyBtn?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(text());
+        const label = copyBtn.querySelector('span');
+        if (!label) return;
+        const original = label.textContent;
+        label.textContent = copyBtn.dataset.copied ?? '✓';
+        setTimeout(() => (label.textContent = original), 1800);
+      } catch {}
+    });
+
+    // Phones open the system share sheet; browsers without it fall back to WhatsApp.
+    sheet.querySelector('.sheet-share')?.addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: sheet.dataset.title, text: text() });
+        } catch {}
+        return;
+      }
+      window.open(`https://wa.me/?text=${encodeURIComponent(text())}`, '_blank', 'noopener');
+    });
+  });
+</script>

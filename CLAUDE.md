@@ -14,6 +14,20 @@ A bilingual (Arabic + English) knowledge blog at **https://maloomah.com**, built
    - Use other countries as examples.
    - Skip any trend or topic that can't be covered accurately without it.
    - On 2026-10-29 the articles `how-are-fuel-prices-set-in-uae` and `uae-national-day` were removed, along with every passing mention. Don't recreate them.
+2. **Keep SEO in everything we publish.** Mahmoud set this on 2026-10-29. Every article, page and design change must keep or improve SEO.
+   - **Articles:**
+     - Do keyword research first and use the real search queries in `keywords`.
+     - Put the main keyword in the title (about 60 characters or fewer), in the description (120–160 characters), in the first paragraph and in at least one `##` heading.
+     - Include an FAQ section and 1–3 internal links.
+     - Add a photo with descriptive alt text in both languages.
+     - Publish both languages under the same slug.
+   - **Pages and design:**
+     - Use one `h1` per page, with logical `h2`/`h3` headings below it.
+     - Real content must be in the HTML, not added only by JavaScript.
+     - Keep pages fast: no heavy scripts or unoptimised images.
+     - Keep layouts mobile-friendly, with no horizontal scrolling.
+     - Never break canonical, hreflang, structured data, the sitemap, RSS or `robots.txt`.
+   - **Before every push:** `npm run build`, then `node scripts/audit.mjs`. Every count it prints must be 0.
 
 ## Two computers, one repo
 
@@ -29,6 +43,7 @@ Mahmoud works from two Windows PCs, his home PC and his work PC. GitHub is the s
 npm install          # once per machine
 npm run dev          # local preview at http://localhost:4321 (drafts visible)
 npm run build        # production build into dist/ (must pass before pushing)
+node scripts/audit.mjs   # SEO audit of dist/: broken links, hreflang, canonicals, images, sitemap, duplicate titles (all must be 0)
 node scripts/make-images.ts   # regenerate social images in public/og/ (after changing categories or colors)
 node scripts/keywords.mjs ar "طريقة عمل" "فوائد"   # keyword research via Google autocomplete
 node scripts/images.mjs search <slug> "<english query>"   # find free photos (Wikimedia Commons) -> .image-candidates/<slug>-sheet.jpg
@@ -74,7 +89,7 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 | `src/site.ts` | Site name, categories (names, descriptions, colors), UI translations, and the AdSense / Analytics / Search Console IDs |
 | `src/content/articles/ar/<slug>.md` and `src/content/articles/en/<slug>.md` | Articles. **The same slug in both folders = translations of each other.** |
 | `src/content/pages/<lang>/` | About, contact, privacy and terms pages |
-| `src/data/facts.ts` | The "fact of the day" list on the home page |
+| `src/data/facts.ts` | General facts for the home page «هل تعلم؟» sheet (`src/components/FactSheet.astro`). The sheet mixes them with the students' facts and shows 4 a day, with copy and share buttons. Mahmoud approved this design on 2026-10-29 |
 | `src/data/did-you-know.ts` | The students' «هل تعلم؟» section: 8 subjects, facts tagged by school stage (primary, middle, secondary), shown at `/did-you-know/` and in a tab on the home page |
 | `src/views/` | Page templates shared by both languages |
 | `src/pages/` | Routes: Arabic at `/`, English under `/en/` |

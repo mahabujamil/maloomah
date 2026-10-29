@@ -445,80 +445,99 @@ a.chip:hover { background: color-mix(in srgb, var(--c1) 20%, transparent); }
   .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 56px; }
 }
 
-/* ---------- Fact of the day ---------- */
-.fact-card {
-  position: relative;
+/* ---------- «هل تعلم؟» sheet (home hero) ---------- */
+.fact-sheet {
   border-radius: 26px;
-  padding: 28px;
-  color: #fff;
-  background: linear-gradient(145deg, #047857, #059669 55%, #0d9488);
+  background: var(--surface);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
+}
+.sheet-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+  color: #fff;
+  background: linear-gradient(145deg, #047857, #059669 55%, #0d9488);
   isolation: isolate;
 }
-.fact-card::before {
+.sheet-head::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
   background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.2px, transparent 1.2px);
   background-size: 18px 18px;
-  mask-image: linear-gradient(to bottom, #000, transparent 85%);
-  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 85%);
 }
-.fact-card .fact-glow {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: #f5a524;
-  filter: blur(70px);
-  opacity: 0.45;
-  inset-inline-end: -60px;
-  bottom: -80px;
-  z-index: -1;
-}
-.fact-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 0.92rem;
-  padding: 6px 12px;
-  border-radius: 999px;
+.sheet-title { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.sheet-title h2 { font-size: 1.4rem; line-height: 1.2; color: #fff; }
+.sheet-title small { display: block; margin-top: 2px; font-size: 0.84rem; opacity: 0.88; }
+.sheet-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
-.fact-text {
-  margin-top: 18px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.7;
-  min-height: 6.8em;
-}
-.fact-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 18px;
-}
-.fact-count { font-size: 0.85rem; opacity: 0.8; }
-.fact-next {
+.sheet-more {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 9px 16px;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   transition: background 0.2s;
 }
-.fact-next:hover { background: rgba(255, 255, 255, 0.24); }
-.fact-text.swap { animation: fadeUp 0.45s ease; }
+.sheet-more:hover { background: rgba(255, 255, 255, 0.24); }
+.sheet-list { list-style: none; margin: 0; padding: 4px 22px; }
+.sheet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.sheet-list li:last-child { border-bottom: 0; }
+.sheet-num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.sheet-list p { margin: 0; font-weight: 500; line-height: 1.8; color: var(--text); }
+.sheet-list.swap li { animation: fadeUp 0.45s ease; }
+.sheet-actions {
+  display: flex;
+  gap: 10px;
+  padding: 14px 22px 18px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.sheet-actions .btn { flex: 1; min-width: 0; justify-content: center; }
+@media (max-width: 420px) {
+  .sheet-more span { display: none; }
+  .sheet-more { padding: 9px; }
+  .sheet-actions { padding-inline: 16px; }
+  .sheet-actions .btn { gap: 6px; padding-inline: 12px; font-size: 0.93rem; }
+}
 
 /* ---------- Sections ---------- */
 .section { padding-block: 44px; }
