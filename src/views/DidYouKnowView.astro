@@ -24,6 +24,17 @@ const ui = t(lang);
 const hubPath = '/did-you-know/';
 const pagePath = subject ? `/did-you-know/${subject}/` : hubPath;
 const facts = subject ? factsBySubject(subject) : DID_YOU_KNOW;
+// The hub shows a daily mix (one fact per subject and stage) rather than all ~1,000 facts, to keep the page light;
+// every fact is on its subject page. The site rebuilds every morning, so the mix changes daily.
+const day = Math.floor(Date.now() / 86_400_000);
+const mix = subject
+  ? []
+  : SUBJECT_IDS.flatMap((id) =>
+      LEVEL_IDS.map((level) => {
+        const list = factsBySubject(id).filter((x) => x.level === level);
+        return list[day % list.length];
+      }),
+    ).filter(Boolean);
 const info = subject ? SUBJECTS[subject] : undefined;
 const title = info ? info.title[lang] : ui.dykTitle;
 const description = info ? info.description[lang] : ui.dykLead;
@@ -114,6 +125,12 @@ const jsonLd = [
     !subject && (
       <section class="section dyk-browser" data-dyk-browser>
         <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>{ui.dykMixTitle}</h2>
+              <p>{ui.dykMixText}</p>
+            </div>
+          </div>
           <div class="dyk-filters">
             <div class="dyk-filter-row" role="group" aria-label={ui.dykSubjects}>
               <button class="dyk-chip active" type="button" data-filter-subject="">
@@ -140,11 +157,11 @@ const jsonLd = [
               </button>
             </div>
             <p class="search-status" aria-live="polite" data-dyk-count>
-              {ui.dykFacts(facts.length)}
+              {ui.dykFacts(mix.length)}
             </p>
           </div>
           <div class="dyk-grid">
-            {facts.map((fact) => (
+            {mix.map((fact) => (
               <FactCard fact={fact} lang={lang} />
             ))}
           </div>

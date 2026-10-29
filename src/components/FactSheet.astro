@@ -14,15 +14,21 @@ const PER_SHEET = 4;
 // General facts plus the students' facts (English-language ones are skipped: they're meant to be read in English).
 // A fixed shuffle mixes the topics so each sheet of four covers different subjects.
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
-const facts = [...FACTS.map((f) => f[lang]), ...DID_YOU_KNOW.filter((f) => f.subject !== 'english').map((f) => f[lang])].sort(
+const pool = [...FACTS.map((f) => f[lang]), ...DID_YOU_KNOW.filter((f) => f.subject !== 'english').map((f) => f[lang])].sort(
   (a, b) => hash(a) - hash(b),
 );
+// Only ten sheets' worth goes into the page, starting at a point that moves with each daily rebuild,
+// so the home page stays light while the whole pool of ~1,000 facts takes its turn.
+const buildDay = Math.floor(Date.now() / 86_400_000);
+const start = (buildDay * PER_SHEET) % pool.length;
+const facts = [...pool, ...pool].slice(start, start + PER_SHEET * 10);
 const shareUrl = new URL(localePath(lang, '/did-you-know/'), SITE.url).href;
 ---
 
 <aside
   class="fact-sheet reveal reveal-3"
   data-facts={JSON.stringify(facts)}
+  data-day={buildDay}
   data-per={PER_SHEET}
   data-title={ui.dykPrefix}
   data-from={ui.sheetFrom}
@@ -71,8 +77,9 @@ const shareUrl = new URL(localePath(lang, '/did-you-know/'), SITE.url).href;
     const list = sheet.querySelector<HTMLElement>('.sheet-list');
     if (!facts.length || !items.length || !list) return;
     const sets = Math.ceil(facts.length / per);
-    // Same sheet for everyone on a given day, a new one tomorrow.
-    let set = Math.floor(Date.now() / 86_400_000) % sets;
+    // The page opens on the build day's sheet; if it hasn't been rebuilt since, move on one sheet per day.
+    const days = Math.floor(Date.now() / 86_400_000) - (Number(sheet.dataset.day) || 0);
+    let set = ((days % sets) + sets) % sets;
     const current = () => items.map((_, i) => facts[(set * per + i) % facts.length]);
     const show = () => {
       current().forEach((fact, i) => (items[i].textContent = fact));

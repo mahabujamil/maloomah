@@ -90,7 +90,7 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 | `src/content/articles/ar/<slug>.md` and `src/content/articles/en/<slug>.md` | Articles. **The same slug in both folders = translations of each other.** |
 | `src/content/pages/<lang>/` | About, contact, privacy and terms pages |
 | `src/data/facts.ts` | General facts for the home page «هل تعلم؟» sheet (`src/components/FactSheet.astro`). The sheet mixes them with the students' facts and shows 4 a day, with copy and share buttons. Mahmoud approved this design on 2026-10-29 |
-| `src/data/did-you-know.ts` | The students' «هل تعلم؟» section: 8 subjects, facts tagged by school stage (primary, middle, secondary), shown at `/did-you-know/` and in a tab on the home page |
+| `src/data/did-you-know.ts` and `src/data/dyk/<subject>.json` | The «هل تعلم؟» fact bank. Mahmoud asked for about 1,000 facts on 2026-10-29. It has 16 subjects of about 62 facts each, every one tagged by school stage. Subject names, titles and colours live in `did-you-know.ts`. The facts live in one JSON file per subject, each entry `["primary" \| "middle" \| "secondary", "Arabic", "English"]`. They're shown on `/did-you-know/<subject>/`, in a daily mix on the hub, in the home page tabs and in the home «هل تعلم؟» sheet. New facts must be verified and must not duplicate existing ones |
 | `src/views/` | Page templates shared by both languages |
 | `src/pages/` | Routes: Arabic at `/`, English under `/en/` |
 | `src/styles/global.css` | All styling. Uses logical CSS properties so RTL and LTR share one stylesheet |
