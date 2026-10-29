@@ -119,6 +119,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "fastest-animal-in-the-world": {
+    "alt": {
+      "ar": "فهد صياد يركض بأقصى سرعته على العشب",
+      "en": "A cheetah sprinting at full speed across the grass"
+    },
+    "title": "Cheetah Run",
+    "creator": "Mark Dumont",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cheetah_Run.jpg"
+  },
   "freelancing-for-beginners": {
     "alt": {
       "ar": "شخص يعمل على حاسوبه المحمول في مقهى",
@@ -215,6 +227,30 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Combined_image_from_SOHO,_Solar_Dynamics_Observatory_and_La_Silla_(eso1912aa).jpg"
   },
+  "how-many-bones-in-the-human-body": {
+    "alt": {
+      "ar": "نموذج ثلاثي الأبعاد لعظام الجمجمة والعمود الفقري والقفص الصدري والأطراف",
+      "en": "3D model of the skull, spine, rib cage and limb bones"
+    },
+    "title": "Bones of skeletal system",
+    "creator": "https://www.scientificanimations.com/",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bones_of_skeletal_system.jpg"
+  },
+  "how-many-planets-in-the-solar-system": {
+    "alt": {
+      "ar": "كواكب المجموعة الشمسية مصطفة بجوار الشمس",
+      "en": "The planets of the solar system lined up beside the Sun"
+    },
+    "title": "Solar System collage background",
+    "creator": "NASA and ESA",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Solar_System_collage_background.png"
+  },
   "how-much-sleep-do-you-need": {
     "alt": {
       "ar": "سرير مريح بوسائد بيضاء وإضاءة دافئة",
@@ -226,6 +262,42 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Bed_in_hotel.JPG"
+  },
+  "how-much-water-should-you-drink": {
+    "alt": {
+      "ar": "كأس ماء صافٍ على طاولة",
+      "en": "A clear glass of water on a table"
+    },
+    "title": "Glass of water ouside",
+    "creator": "Kurt Kaiser",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Glass_of_water_ouside.jpg"
+  },
+  "how-often-to-change-engine-oil": {
+    "alt": {
+      "ar": "سكب زيت المحرك الجديد في فتحة الزيت بمحرك سيارة",
+      "en": "Pouring fresh engine oil into a car engine"
+    },
+    "title": "Pouring engine oil to motor",
+    "creator": "Santeri Viinamäki",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pouring_engine_oil_to_motor.jpg"
+  },
+  "how-to-deal-with-child-tantrums": {
+    "alt": {
+      "ar": "ظل أم وطفلها يمشيان على الشاطئ وقت الغروب",
+      "en": "Silhouette of a parent and child walking by the sea at sunset"
+    },
+    "title": "DSC 7746 A parent and child walk along the shoreline at sunset the sun casting a golden path across the water",
+    "creator": "PattayaPatrol",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:DSC_7746_A_parent_and_child_walk_along_the_shoreline_at_sunset_the_sun_casting_a_golden_path_across_the_water.jpg"
   },
   "how-to-save-electricity-at-home": {
     "alt": {
@@ -299,6 +371,18 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Lentil_Soup_-_Schnitzel_%26_Co._2026-05-16.jpg"
   },
+  "longest-river-in-the-world": {
+    "alt": {
+      "ar": "صورة جوية لوادي النيل الأخضر بين الصحراء قرب الأقصر",
+      "en": "Aerial view of the green Nile valley between desert near Luxor"
+    },
+    "title": "Vallee fertile du Nil a Louxor",
+    "creator": "Wikimedia Commons",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Vallee_fertile_du_Nil_a_Louxor.jpg"
+  },
   "madrasati-platform": {
     "alt": {
       "ar": "طالبة تدرس على حاسوب محمول في الهواء الطلق",
@@ -346,6 +430,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:EuropeanFormOfArabianDigits.png"
+  },
+  "origin-of-coffee": {
+    "alt": {
+      "ar": "حبوب قهوة محمصة في راحتي اليد",
+      "en": "Roasted coffee beans held in two hands"
+    },
+    "title": "Bali 003 - Ubud - famous lukaw coffee",
+    "creator": "mckaysavage",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bali_003_-_Ubud_-_famous_lukaw_coffee.jpg"
   },
   "receiver-iptv-server-codes": {
     "alt": {
@@ -491,6 +587,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:The_Montr%C3%A9al_Clock_Tower_at_sunrise.jpg"
   },
+  "what-is-emotional-intelligence": {
+    "alt": {
+      "ar": "شخصان يتحدثان في مقهى وأمامهما كوب",
+      "en": "Two people talking in a café, with a cup in the foreground"
+    },
+    "title": "Conversation (5556628632)",
+    "creator": "Matt @ PEK from Taipei, Taiwan",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Conversation_(5556628632).jpg"
+  },
   "what-is-inflation": {
     "alt": {
       "ar": "عربة تسوق فيها مشتريات داخل سوبرماركت",
@@ -539,6 +647,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Live_streaming_audio_setup_for_Sobra-tankar_-_Yamaha_MG124cx_audio_mixer,_Sennheiser_ew100G3_wireless_set,_Shure_PGW24-PG58_wireless_set.jpg"
   },
+  "who-built-petra": {
+    "alt": {
+      "ar": "واجهة الخزنة في البتراء المنحوتة في الصخر الوردي",
+      "en": "The Treasury (Al-Khazneh) carved into pink rock at Petra"
+    },
+    "title": "The Treasury (Al Khazneh), Petra - 2259302872",
+    "creator": "twiga-swala",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Treasury_(Al_Khazneh),_Petra_-_2259302872.jpg"
+  },
   "who-invented-electricity": {
     "alt": {
       "ar": "مصباح كهربائي متوهج في الظلام",
@@ -562,6 +682,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg"
+  },
+  "who-is-ibn-sina": {
+    "alt": {
+      "ar": "مخطوطة عربية لكتاب القانون في الطب لابن سينا",
+      "en": "An Arabic manuscript of Ibn Sina's Canon of Medicine"
+    },
+    "title": "Handwritten Arabic Manuscript of Canon Medicinae - BuAli Sina (Avicenna) Mausoleum - Hamadan - Western Iran (7423558016)",
+    "creator": "Adam Jones from Kelowna, BC, Canada",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Handwritten_Arabic_Manuscript_of_Canon_Medicinae_-_BuAli_Sina_(Avicenna)_Mausoleum_-_Hamadan_-_Western_Iran_(7423558016).jpg"
   },
   "why-is-the-sky-blue": {
     "alt": {

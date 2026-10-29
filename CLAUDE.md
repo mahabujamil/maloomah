@@ -45,7 +45,7 @@ Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its 
 
 ## Daily cloud routine (auto-publishing)
 
-A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends and writes 2–3 bilingual articles. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
+A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends (Google Trends for Jordan, Saudi Arabia, Egypt and Kuwait) and writes 2–3 bilingual articles. Since 2026-10-29 it also writes **3 "category builder" articles** each day, one in each of the 3 categories with the fewest articles. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
 
 - Because of this, **always `git pull` before local work**; `main` changes every morning.
 - Network: on 2026-10-25 Mahmoud added `*.wikimedia.org`, `trends.google.com` and `suggestqueries.google.com` to the **Default** cloud environment's allowed domains (claude.ai/code → environment selector → Default → ⚙️ → Network access). Google Trends, autocomplete and the Wikimedia photo tool were verified working there on 2026-10-25, so the routine adds photos itself. As a safety net during local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
@@ -91,7 +91,7 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 
 ## Content growth plan
 
-Mahmoud's long-term goal is about 100 articles per category. **Grow in batches of about 20–30 quality articles per session, never thousands at once.** Google's spam policies target mass-produced, low-value content, which could sink the whole site and block AdSense approval.
+Mahmoud's long-term goal is about 100 articles per category. **The first milestone (set 2026-10-29) is at least 30 articles in every category.** Always fill the categories with the fewest articles first; check with `grep -h '^category:' src/content/articles/ar/*.md | sort | uniq -c | sort -n`. **Grow in batches of about 20–30 quality articles per session, never thousands at once.** Google's spam policies target mass-produced, low-value content, which could sink the whole site and block AdSense approval.
 
 - Run keyword research first (`node scripts/keywords.mjs ...`) and pick the real queries people type.
 - Prioritise categories with few articles and the highest-volume queries.
