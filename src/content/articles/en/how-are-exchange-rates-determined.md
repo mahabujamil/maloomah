@@ -41,7 +41,7 @@ Countries don't all manage their currencies the same way. There are two main sys
 The central bank sets a fixed price for its currency against another, usually the dollar, and buys or sells dollars from its reserves to hold that level. Well-known examples in the Arab world:
 
 - **Saudi riyal:** pegged at 3.75 per dollar since 1986, according to the Saudi Central Bank.
-- **UAE dirham:** pegged at about 3.6725 per dollar.
+- **Qatari riyal:** pegged at 3.64 per dollar.
 - **Jordanian dinar:** pegged since the mid-1990s at about 0.709 per dollar.
 
 A peg brings stability and makes planning easier for families and businesses, but it requires large foreign-currency reserves to maintain.

@@ -5,13 +5,13 @@ export const TRENDING_UPDATED = '2026-10-29';
 
 export const TRENDING: string[] = [
   'what-is-instapay',
-  'uae-national-day',
   'what-is-the-nba',
   'madrasati-platform',
   'how-are-weather-forecasts-made',
-  'how-are-fuel-prices-set-in-uae',
   'ballon-d-or',
   'what-is-twitch',
+  'smart-electricity-meter',
+  'el-clasico-history',
 ];
 
 export const isTrending = (slug: string) => TRENDING.includes(slug);

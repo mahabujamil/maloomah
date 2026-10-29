@@ -67,7 +67,7 @@ In response, Jordan raised its emissions-reduction target to **31% by 2030** (pa
 
 ## What is the world doing?
 
-In 2015, countries signed the **Paris Agreement**, which aims to keep warming well below 2 °C while pursuing efforts to limit it to 1.5 °C. Arab countries have hosted the UN climate summits, including Egypt in Sharm El-Sheikh in 2022 and the UAE in Dubai in 2023.
+In 2015, countries signed the **Paris Agreement**, which aims to keep warming well below 2 °C while pursuing efforts to limit it to 1.5 °C. Arab countries have hosted the UN climate summits, including Qatar in Doha in 2012, Morocco in Marrakech in 2016 and Egypt in Sharm El-Sheikh in 2022.
 
 ## How can you help?
 

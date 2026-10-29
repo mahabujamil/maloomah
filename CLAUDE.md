@@ -6,6 +6,15 @@ A bilingual (Arabic + English) knowledge blog at **https://maloomah.com**, built
 
 **Goal:** rank well on Google (SEO) and earn from Google AdSense. Every change should keep pages fast, accurate and well structured.
 
+## Owner's content rules (Mahmoud). These override everything else in this file and in the daily routine
+
+1. **No content about the United Arab Emirates.** This is Mahmoud's editorial decision, made on 2026-10-29.
+   - Write no articles, trend pieces or news about it.
+   - Don't mention it in passing either: not its name, cities, landmarks, currency, companies, events or people. Use no photos taken there.
+   - Use other countries as examples.
+   - Skip any trend or topic that can't be covered accurately without it.
+   - On 2026-10-29 the articles `how-are-fuel-prices-set-in-uae` and `uae-national-day` were removed, along with every passing mention. Don't recreate them.
+
 ## Two computers, one repo
 
 Mahmoud works from two Windows PCs, his home PC and his work PC. GitHub is the single source of truth.

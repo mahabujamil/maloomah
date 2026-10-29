@@ -7,7 +7,7 @@ tags: ["NBA", "Basketball", "American sports", "Sports", "Basketball rules"]
 keywords: ["what is the nba", "nba", "nba schedule", "what is the nba cup", "nba season format", "how many games in an nba season"]
 ---
 
-Every autumn a new season tips off and the **NBA** shoots up the search charts, from the US to Saudi Arabia and the UAE. But what is the NBA exactly, how does its long season work, and what are the rules that make it different? Here is a clear, beginner-friendly guide.
+Every autumn a new season tips off and the **NBA** shoots up the search charts, from the US to Saudi Arabia and across the Arab world. But what is the NBA exactly, how does its long season work, and what are the rules that make it different? Here is a clear, beginner-friendly guide.
 
 ## What is the NBA?
 

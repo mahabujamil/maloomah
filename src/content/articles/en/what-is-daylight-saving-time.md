@@ -59,7 +59,7 @@ Most smartphones update automatically if automatic date and time is switched on;
 
 ## Countries that don't change the clocks
 
-Most countries near the equator don't bother with DST, because day length barely changes through the year. In the Arab world, **Saudi Arabia** and the **United Arab Emirates** don't use it, and **Jordan** and **Syria** announced in October 2022 that they would stop switching their clocks twice a year and keep one time all year round.
+Most countries near the equator don't bother with DST, because day length barely changes through the year. In the Arab world, **Saudi Arabia** and **Qatar** don’t use it, and **Jordan** and **Syria** announced in October 2022 that they would stop switching their clocks twice a year and keep one time all year round.
 
 ## Does changing the clocks affect your health?
 
