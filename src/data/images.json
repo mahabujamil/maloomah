@@ -59,6 +59,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Drought_land_dry_mud_BOUHANIFIA_Algeria.jpg"
   },
+  "crocodile-facts": {
+    "alt": {
+      "ar": "تمساح نيلي يستريح على صخرة ويظهر فمه الطويل وأسنانه",
+      "en": "A Nile crocodile resting on a rock, showing its long snout and teeth"
+    },
+    "title": "Nile crocodile head",
+    "creator": "Leigh Bedford",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nile_crocodile_head.jpg"
+  },
   "dead-sea": {
     "alt": {
       "ar": "سباحون يطفون على سطح البحر الميت الهادئ",
@@ -178,6 +190,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Traditional_Iraqi_Soap_Shop_01.jpg"
+  },
+  "hot-vs-cold-crypto-wallet": {
+    "alt": {
+      "ar": "محفظة عملات رقمية باردة (محفظة أجهزة) بجانب عملة بيتكوين معدنية",
+      "en": "A hardware cold wallet for cryptocurrency next to a physical bitcoin coin"
+    },
+    "title": "Two Trezor One hardware wallets and a 5BTC Casascius physical coin by Gage Skidmore",
+    "creator": "Gage Skidmore",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Two_Trezor_One_hardware_wallets_and_a_5BTC_Casascius_physical_coin_by_Gage_Skidmore.jpg"
   },
   "how-are-exchange-rates-determined": {
     "alt": {
@@ -322,6 +346,18 @@
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+  },
+  "human-heart-facts": {
+    "alt": {
+      "ar": "رسم تشريحي توضيحي لقلب الإنسان من الخارج مع الأوعية الدموية الكبرى",
+      "en": "Anatomical illustration of the human heart and its major blood vessels"
+    },
+    "title": "Heart oblique external",
+    "creator": "Patrick J. Lynch, medical illustrator",
+    "creatorUrl": "",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Heart_oblique_external.jpg"
   },
   "hybrid-vs-electric-car": {
     "alt": {
@@ -515,6 +551,18 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Home-office-336377.jpg"
   },
+  "what-is-a-black-hole": {
+    "alt": {
+      "ar": "أول صورة حقيقية لثقب أسود: الثقب الأسود في مركز المجرة M87 كما صوّره تلسكوب أفق الحدث",
+      "en": "The first real image of a black hole: M87* captured by the Event Horizon Telescope"
+    },
+    "title": "Black hole - Messier 87",
+    "creator": "Event Horizon Telescope",
+    "creatorUrl": "",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_hole_-_Messier_87.jpg"
+  },
   "what-is-a-server": {
     "alt": {
       "ar": "ممر بين خزائن السيرفرات في مركز بيانات حديث",
@@ -682,6 +730,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg"
+  },
+  "who-invented-the-telephone": {
+    "alt": {
+      "ar": "هاتف أرضي قديم أسود بقرص دوّار",
+      "en": "A vintage black rotary dial telephone"
+    },
+    "title": "Antique telephone 04",
+    "creator": "Vis M",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Antique_telephone_04.jpg"
   },
   "who-is-ibn-sina": {
     "alt": {

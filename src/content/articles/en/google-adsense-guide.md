@@ -3,6 +3,7 @@ title: "Google AdSense for Beginners: Requirements, Approval Steps and Earning M
 description: "How do you make money with Google AdSense? The approval requirements, how to add your site, common rejection reasons, how payments work, and tips to grow your ad income without breaking the rules."
 category: business
 date: 2026-10-23
+updated: 2026-10-30
 tags: ["Google AdSense", "make money online", "blogging", "SEO"]
 keywords: ["Google AdSense for beginners", "AdSense approval requirements", "how to make money with AdSense", "AdSense rejection reasons", "AdSense payment threshold"]
 ---
@@ -46,8 +47,9 @@ The fix is usually to **add more quality content**, solve the issue, and apply a
 
 ## How do AdSense payments work?
 
-- When your earnings reach **$10**, Google mails a **PIN** to your address so you can verify it.
-- Once your balance reaches the **$100 payment threshold**, you're paid the following month, usually in the second half of the month.
+- When your earnings reach a small verification threshold (about **$10**), Google mails a **PIN** to your address. The letter can take **2–3 weeks** to arrive, and you must enter the PIN before any payment can be issued.
+- The **payment threshold** depends on your account currency; in US dollars it's **$100**. Your account's exact threshold is shown in the Payments section.
+- If your balance reaches the threshold by the end of a month, Google issues the payment **between the 21st and the 26th of the following month**. If not, your earnings roll over until it does.
 - **Payment methods** depend on your country; bank transfer is the most common.
 
 ## Strictly forbidden!
@@ -76,6 +78,10 @@ You can earn through AdSense without a website via **YouTube**: [YouTube Partner
 ### How much does AdSense pay per 1,000 visits?
 
 There's no fixed number. Earnings depend on your niche, where your visitors are, the ads shown and how visitors interact with them.
+
+### What percentage of ad revenue does AdSense pay?
+
+Since 2024, Google splits the revenue share in two: for display ads, publishers receive **80%** of the revenue left after the advertiser-side platform takes its fee. Google said this works out to roughly the same **68%** publishers received on average before. Payments are also now mostly **per impression** rather than per click.
 
 ### How many articles do I need to get approved?
 
