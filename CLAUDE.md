@@ -158,6 +158,13 @@ Mahmoud wants to catch trending topics early. When he asks for a trend article:
 - Prefer evergreen angles that keep getting traffic after the trend fades.
 - Publish in both languages, link from related older articles where relevant, and set `featured: true` on it, removing it from the previous featured article.
 
+## The «الذاكرين» app (Mahmoud's Android app, added 2026-10-31)
+
+maloomah.com is also the developer website of Mahmoud's Android app «الذاكرين» (azkar, prayer times and the Quran; package `com.abwaab.thakireen`; code in `D:\claude code\sakina`, not in this repo). Mahmoud plans to add a «الذاكرين» tab to the site later.
+
+- **Never delete `public/app-ads.txt`.** AdMob uses it to verify the app's ad inventory. It contains the same line as `ads.txt`, because AdSense and AdMob share the publisher ID `pub-8690671273411786`.
+- **The app's privacy policy is in `src/content/pages/<lang>/thakireen-privacy.md`** (`/thakireen-privacy/` and `/en/thakireen-privacy/`). Google Play links to it and the app opens it from Settings, so don't rename or remove it. Update it when the app gains features that touch data.
+
 ## Still to do (update this list as items are completed)
 
 - [x] Namecheap DNS → GitHub Pages: A records for `@` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME for `www` to `mahabujamil.github.io` (done 2026-10-23)
