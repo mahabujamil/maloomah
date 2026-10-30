@@ -28,6 +28,15 @@ A bilingual (Arabic + English) knowledge blog at **https://maloomah.com**, built
      - Keep layouts mobile-friendly, with no horizontal scrolling.
      - Never break canonical, hreflang, structured data, the sitemap, RSS or `robots.txt`.
    - **Before every push:** `npm run build`, then `node scripts/audit.mjs`. Every count it prints must be 0.
+3. **Make money online is the top priority.** Mahmoud set this on 2026-10-30. Publish **2 "make money online" articles every day** (category `business`), on top of the rest of the daily routine.
+   - Work through the queue in `content-plan/make-money-online.md`: it lists the real search queries to target, in priority order. Tick each row when published and add new rows from fresh keyword research when the queue runs low.
+   - Aim to rank first: cover the whole cluster of related queries in headings and FAQs, verify current platform requirements on official pages, and add the year to the title only when the article has current-year requirements.
+   - Stay honest: real methods, realistic expectations, scam warnings. No gambling, trading signals, investment advice, pay-to-join schemes or religious rulings.
+   - These articles go into the «ترند اليوم» block, right after the day's trend articles.
+   - When choosing an article to refresh, prefer the older make-money-online articles, since platform rules change often.
+   - **For the daily routine:** this rule adds a fourth daily job to the routine's prompt, on top of the trends, the category builder and the refresh. The routine may also change `content-plan/make-money-online.md` (to tick rows and add new ones) and the two `ways-to-earn-money-online` files (only to link to new money articles), and its commit message should list the money articles too. Its final message to Mahmoud must list the 2 money articles with links and say how many rows remain in the queue.
+   - Check English descriptions with a real character count (Python `len`); bash `wc`/`${#var}` count bytes in this sandbox.
+   - The cloud checkout can be on a detached HEAD. Push with `git push origin HEAD:main` after `git fetch origin main && git rebase origin/main`.
 
 ## Two computers, one repo
 
@@ -60,7 +69,7 @@ Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its 
 
 ## Daily cloud routine (auto-publishing)
 
-A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends (Google Trends for Jordan, Saudi Arabia, Egypt and Kuwait) and writes 2–3 bilingual articles. Since 2026-10-29 it also writes **3 "category builder" articles** each day, one in each of the 3 categories with the fewest articles. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
+A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends (Google Trends for Jordan, Saudi Arabia, Egypt and Kuwait) and writes 2–3 bilingual articles. Since 2026-10-29 it also writes **3 "category builder" articles** each day, one in each of the 3 categories with the fewest articles. Since 2026-10-30 it also writes **2 make-money-online articles** each day from `content-plan/make-money-online.md`. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
 
 - Because of this, **always `git pull` before local work**; `main` changes every morning.
 - Network: on 2026-10-25 Mahmoud added `*.wikimedia.org`, `trends.google.com` and `suggestqueries.google.com` to the **Default** cloud environment's allowed domains (claude.ai/code → environment selector → Default → ⚙️ → Network access). Google Trends, autocomplete and the Wikimedia photo tool were verified working there on 2026-10-25, so the routine adds photos itself. As a safety net during local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
@@ -88,6 +97,7 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 | --- | --- |
 | `src/site.ts` | Site name, categories (names, descriptions, colors), UI translations, and the AdSense / Analytics / Search Console IDs |
 | `src/content/articles/ar/<slug>.md` and `src/content/articles/en/<slug>.md` | Articles. **The same slug in both folders = translations of each other.** |
+| `content-plan/make-money-online.md` | The make-money-online keyword queue the daily routine works through (2 articles a day) |
 | `src/content/pages/<lang>/` | About, contact, privacy and terms pages |
 | `src/data/facts.ts` | General facts for the home page «هل تعلم؟» sheet (`src/components/FactSheet.astro`). The sheet mixes them with the students' facts and shows 4 a day, with copy and share buttons. Mahmoud approved this design on 2026-10-29 |
 | `src/data/did-you-know.ts` and `src/data/dyk/<subject>.json` | The «هل تعلم؟» fact bank. Mahmoud asked for about 1,000 facts on 2026-10-29. It has 16 subjects of about 62 facts each, every one tagged by school stage. Subject names, titles and colours live in `did-you-know.ts`. The facts live in one JSON file per subject, each entry `["primary" \| "middle" \| "secondary", "Arabic", "English"]`. They're shown on `/did-you-know/<subject>/`, in a daily mix on the hub, in the home page tabs and in the home «هل تعلم؟» sheet. New facts must be verified and must not duplicate existing ones |

@@ -6,12 +6,12 @@ export const TRENDING_UPDATED = '2026-10-30';
 export const TRENDING: string[] = [
   'crocodile-facts',
   'hot-vs-cold-crypto-wallet',
+  'facebook-monetization',
+  'make-money-with-ai',
   'what-is-a-thunderstorm',
   'what-is-instapay',
   'what-is-the-nba',
   'madrasati-platform',
-  'how-are-weather-forecasts-made',
-  'ballon-d-or',
 ];
 
 export const isTrending = (slug: string) => TRENDING.includes(slug);
