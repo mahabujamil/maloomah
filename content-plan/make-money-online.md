@@ -33,7 +33,8 @@ Category is `business` unless noted.
 
 ways-to-earn-money-online · freelancing-for-beginners · affiliate-marketing-guide ·
 google-adsense-guide · youtube-monetization · tiktok-monetization · home-business-ideas ·
-make-money-from-crypto · what-is-twitch · hot-vs-cold-crypto-wallet
+make-money-from-crypto · what-is-twitch · hot-vs-cold-crypto-wallet · facebook-monetization ·
+make-money-with-ai · instagram-monetization · snapchat-monetization
 
 ## Queue (highest priority first)
 
@@ -41,8 +42,8 @@ make-money-from-crypto · what-is-twitch · hot-vs-cold-crypto-wallet
 | --- | --- | --- | --- | --- |
 | [x] 2026-10-30 | facebook-monetization | شروط الربح من فيسبوك 2026 | الربح من فيسبوك، الربح من ريلز الفيسبوك، شروط الربح من ريلز فيسبوك، سحب الارباح من الفيس بوك | facebook monetization requirements |
 | [x] 2026-10-30 | make-money-with-ai | الربح من الذكاء الاصطناعي للمبتدئين | طرق الربح من الذكاء الاصطناعي، الربح من الذكاء الاصطناعي مجانا، 2026 | make money with ai |
-| [ ] | instagram-monetization | الربح من انستقرام | شروط الربح من انستقرام، الربح من ريلز انستقرام، تفعيل الربح من انستقرام، الربح من انستقرام عن طريق المشاهدات | make money on instagram |
-| [ ] | snapchat-monetization | الربح من سناب شات منصة الأضواء | شروط الربح من سناب شات 2026، كم الربح من سناب شات | snapchat monetization |
+| [x] 2026-10-31 | instagram-monetization | الربح من انستقرام | شروط الربح من انستقرام، الربح من ريلز انستقرام، تفعيل الربح من انستقرام، الربح من انستقرام عن طريق المشاهدات | make money on instagram |
+| [x] 2026-10-31 | snapchat-monetization | الربح من سناب شات منصة الأضواء | شروط الربح من سناب شات 2026، كم الربح من سناب شات | snapchat monetization |
 | [ ] | make-money-online-without-capital | الربح من الانترنت بدون راس مال | الربح من الانترنت مجانا، مجالات الربح بدون راس مال، مشروع اونلاين بدون راس مال | make money online for free |
 | [ ] | are-money-making-apps-real | تطبيقات الربح من مشاهدة الاعلانات | الربح من مشاهدة الاعلانات، الربح من مشاهدة الفيديوهات، تطبيقات الربح الحقيقي، كيف تكشف مواقع الربح الوهمية | are money making apps legit |
 | [ ] | make-money-from-phone | الربح من الهاتف للمبتدئين | الربح من الهاتف المحمول، تطبيقات الربح من الهاتف | make money from your phone |

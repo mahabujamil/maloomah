@@ -30,7 +30,7 @@ In-demand skills include design, content writing, translation, programming, vide
 
 Start a **YouTube** channel or **TikTok** and **Instagram** accounts about something you love and understand. Income comes from ads once you join partner programmes, plus sponsorships and brand collaborations.
 
-Each platform has requirements. For example, the YouTube Partner Program requires a certain number of subscribers and watch hours, which usually takes months of regular posting to reach. For Facebook specifically, see [Facebook monetization requirements 2026](/en/articles/facebook-monetization/), and to speed up your work with modern tools, read [how to make money with AI](/en/articles/make-money-with-ai/).
+Each platform has requirements. For example, the YouTube Partner Program requires a certain number of subscribers and watch hours, which usually takes months of regular posting to reach. For Facebook specifically, see [Facebook monetization requirements 2026](/en/articles/facebook-monetization/), and to speed up your work with modern tools, read [how to make money with AI](/en/articles/make-money-with-ai/). For other platforms, see [how to make money on Instagram](/en/articles/instagram-monetization/) and [Snapchat monetization requirements](/en/articles/snapchat-monetization/).
 
 ### 3. Blogging and Google ads
 

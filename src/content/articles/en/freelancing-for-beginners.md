@@ -3,6 +3,7 @@ title: "Freelancing for Beginners: A Complete Guide to Getting Started Online"
 description: "How do you start freelancing online from scratch? The most in-demand skills, a comparison of Fiverr, Upwork and other platforms, how to land your first project, and the mistakes beginners make."
 category: business
 date: 2026-10-23
+updated: 2026-10-31
 tags: ["freelancing", "make money online", "remote work", "skills"]
 keywords: ["freelancing for beginners", "how to start freelancing", "Fiverr vs Upwork", "freelance skills in demand", "first freelance job"]
 ---
@@ -35,6 +36,16 @@ Imagine working from home, choosing your own projects and hours, and working wit
 - **Regional platforms:** many regions have their own; in the Arab world, for example, Mostaql and Khamsat are popular.
 
 Every platform takes a **commission** from your earnings, so read the terms before you start.
+
+### How much do freelance platforms take?
+
+| Platform | Freelancer fee (at this article's last update) |
+| --- | --- |
+| **Fiverr** | A flat 20% of every order |
+| **Upwork** | A variable fee of 0% to 15% per contract, shown to you when you submit a proposal |
+| **Regional platforms** (e.g. Mostaql, Khamsat) | A percentage of each project or service, listed in each platform's terms |
+
+For example, sell a $100 service on Fiverr and $80 reaches your balance, before any withdrawal fees. Build the fee into your prices from day one, and check each platform's official fee page, because fees can change.
 
 ## How to start freelancing
 
@@ -90,6 +101,10 @@ It depends on your skill, its quality, your hours and your reviews. Many people 
 ### Fiverr or Upwork: which is better for beginners?
 
 **Fiverr** suits clearly packaged services at set prices, while **Upwork** suits bigger, proposal-based projects. Many freelancers use both.
+
+### Do you need money to start freelancing?
+
+Usually not much: a decent computer or phone, an internet connection and an in-demand skill are enough. Just remember platform fees and withdrawal costs when you set your prices. If you show your work on social media, you may also find ideas in our guide to [making money on Instagram](/en/articles/instagram-monetization/).
 
 ## Key takeaway
 
