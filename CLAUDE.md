@@ -172,6 +172,6 @@ maloomah.com is also the developer website of Mahmoud's Android app «الذاك
 - [ ] Namecheap email forwarding: `contact@maloomah.com` → Mahmoud's Gmail
 - [x] Google Search Console verified for `https://maloomah.com` using the HTML file method (2026-10-23). **Never delete `public/googled3f535bad5389f96.html`**, or the verification breaks.
 - [ ] Confirm that `sitemap-index.xml` has been submitted in Search Console → Sitemaps
-- [ ] Google Analytics: put the measurement ID in `SITE.googleAnalyticsId`
+- [x] Google Analytics: measurement ID `G-G3KTSCJWHL` (stream «موقع معلومة», account ABU JAMIL ANALYTICS) added to `SITE.googleAnalyticsId` (2026-11-04)
 - [x] Google AdSense code added: `SITE.adsenseClient = 'ca-pub-8690671273411786'` (loads on every page) and `public/ads.txt` (2026-10-23)
 - [ ] AdSense approval is pending. Keep adding solid articles, since about 25–30 makes approval much more likely. Once approved, either turn on Auto ads in the AdSense dashboard, or create ad units and pass their slot IDs to `<AdSlot slot="..."/>` in `src/views/ArticleView.astro`

@@ -18,7 +18,7 @@ export const SITE = {
   email: 'contact@maloomah.com',
   // Fill these in once the accounts exist (see CLAUDE.md). Empty = feature switched off.
   adsenseClient: 'ca-pub-8690671273411786',
-  googleAnalyticsId: '', // e.g. 'G-XXXXXXXXXX'
+  googleAnalyticsId: 'G-G3KTSCJWHL', // e.g. 'G-XXXXXXXXXX'
   googleSiteVerification: '', // the content="" value of Search Console's meta tag
 };
 
