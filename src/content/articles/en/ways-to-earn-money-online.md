@@ -14,6 +14,7 @@ keywords: ["how to make money online", "make money online for beginners", "freel
 - Making money online is **real work**, not a shortcut to getting rich.
 - The first months are usually **slow**, and results build gradually.
 - You're always selling either a **skill**, **content** or a **product**; there's no money from nothing.
+- You don't need big capital to start; see our guide on [how to make money online for free](/en/articles/make-money-online-without-capital/).
 
 ## 8 real ways to make money online
 
@@ -65,7 +66,7 @@ Be careful immediately if you see any of these:
 3. **It depends on recruiting new people** who also pay; that's a pyramid scheme.
 4. It tells you to **"double your money"** or offers "guaranteed" trading or crypto signals.
 5. **It asks for your bank card details** or passwords.
-6. Apps that pay you to **watch ads** or click links usually pay pennies, if they pay at all.
+6. Apps that pay you to **watch ads** or click links usually pay pennies, if they pay at all. More on that in [are money-making apps legit?](/en/articles/are-money-making-apps-real/)
 
 > **Did you know?** The golden rule: **if an offer seems too good to be true, it almost certainly is**. Real income comes from providing real value to others.
 
