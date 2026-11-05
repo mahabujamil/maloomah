@@ -35,7 +35,8 @@ ways-to-earn-money-online · freelancing-for-beginners · affiliate-marketing-gu
 google-adsense-guide · youtube-monetization · tiktok-monetization · home-business-ideas ·
 make-money-from-crypto · what-is-twitch · hot-vs-cold-crypto-wallet · facebook-monetization ·
 make-money-with-ai · instagram-monetization · snapchat-monetization ·
-make-money-online-without-capital · are-money-making-apps-real
+make-money-online-without-capital · are-money-making-apps-real · make-money-from-phone ·
+khamsat-and-mostaql-guide
 
 ## Queue (highest priority first)
 
@@ -47,8 +48,8 @@ make-money-online-without-capital · are-money-making-apps-real
 | [x] 2026-10-31 | snapchat-monetization | الربح من سناب شات منصة الأضواء | شروط الربح من سناب شات 2026، كم الربح من سناب شات | snapchat monetization |
 | [x] 2026-11-04 | make-money-online-without-capital | الربح من الانترنت بدون راس مال | الربح من الانترنت مجانا، مجالات الربح بدون راس مال، مشروع اونلاين بدون راس مال | make money online for free |
 | [x] 2026-11-04 | are-money-making-apps-real | تطبيقات الربح من مشاهدة الاعلانات | الربح من مشاهدة الاعلانات، الربح من مشاهدة الفيديوهات، تطبيقات الربح الحقيقي، كيف تكشف مواقع الربح الوهمية | are money making apps legit |
-| [ ] | make-money-from-phone | الربح من الهاتف للمبتدئين | الربح من الهاتف المحمول، تطبيقات الربح من الهاتف | make money from your phone |
-| [ ] | khamsat-and-mostaql-guide | خمسات ومستقل | خمسات، مستقل للعمل الحر، سحب الارباح من مستقل، سحب الارباح من خمسات | khamsat mostaql (Arabic freelance platforms) |
+| [x] 2026-11-05 | make-money-from-phone | الربح من الهاتف للمبتدئين | الربح من الهاتف المحمول، تطبيقات الربح من الهاتف | make money from your phone |
+| [x] 2026-11-05 | khamsat-and-mostaql-guide | خمسات ومستقل | خمسات، مستقل للعمل الحر، سحب الارباح من مستقل، سحب الارباح من خمسات | khamsat mostaql (Arabic freelance platforms) |
 | [ ] | fiverr-guide | الربح من فايفر للمبتدئين | فايفر، fiverr become a seller | how to make money on fiverr |
 | [ ] | upwork-guide | الربح من ابورك | upwork jordan، upwork connects | how to make money on upwork |
 | [ ] | paid-surveys | الربح من الاستطلاعات | هل الربح من الاستطلاعات حقيقي، مواقع الربح من الاستطلاعات | do paid surveys really pay |

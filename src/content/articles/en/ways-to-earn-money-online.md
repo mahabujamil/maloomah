@@ -15,6 +15,7 @@ keywords: ["how to make money online", "make money online for beginners", "freel
 - The first months are usually **slow**, and results build gradually.
 - You're always selling either a **skill**, **content** or a **product**; there's no money from nothing.
 - You don't need big capital to start; see our guide on [how to make money online for free](/en/articles/make-money-online-without-capital/).
+- No computer? See [how to make money from your phone](/en/articles/make-money-from-phone/) for what a smartphone alone can do.
 
 ## 8 real ways to make money online
 
@@ -22,7 +23,7 @@ keywords: ["how to make money online", "make money online for beginners", "freel
 
 You offer your services to clients around the world through specialised platforms:
 
-- **Arabic platforms:** such as **Mostaql** for projects and **Khamsat** for small services.
+- **Arabic platforms:** such as **Mostaql** for projects and **Khamsat** for small services. Our [Khamsat and Mostaql guide](/en/articles/khamsat-and-mostaql-guide/) covers signing up and withdrawing earnings.
 - **Global platforms:** such as **Upwork** and **Fiverr**.
 
 In-demand skills include design, content writing, translation, programming, video editing, digital marketing and social media management.
