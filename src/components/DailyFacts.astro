@@ -32,38 +32,33 @@ const shareUrl = new URL(localePath(lang, '/did-you-know/'), SITE.url).href;
 
 <section class="section daily-facts" data-daily data-day={buildDay} data-sets={SETS} data-title={ui.dykPrefix} data-from={ui.sheetFrom} data-url={shareUrl}>
   <div class="container">
-    <div class="daily-box">
-      <div class="daily-head">
-        <div class="daily-title">
-          <span class="daily-icon"><Icon name="bulb" size={26} /></span>
-          <div>
-            <h2>{ui.dailyTitle}</h2>
-            <p>{ui.dailyText}</p>
-          </div>
-        </div>
-        <div class="daily-actions">
-          <button class="btn btn-primary daily-more" type="button">
-            <Icon name="refresh" size={18} />
-            <span>{ui.sheetMore}</span>
-          </button>
-          <button class="btn btn-ghost" type="button" data-copy-all="[data-daily]" data-copied={ui.dykCopiedAll}>
-            <Icon name="copy" size={18} />
-            <span>{ui.dailyCopyAll}</span>
-          </button>
-          <button class="btn btn-ghost daily-share" type="button">
-            <Icon name="share" size={18} />
-            <span>{ui.sheetShare}</span>
-          </button>
-        </div>
+    <div class="daily-head">
+      <div>
+        <h2>{ui.dailyTitle}</h2>
+        <p>{ui.dailyText}</p>
       </div>
-      <div class="dyk-grid daily-grid" aria-live="polite">
-        {sets.map((set, k) => set.map((fact, i) => <FactCard fact={fact} lang={lang} num={i + 1} set={k} hidden={k !== 0} />))}
+      <div class="daily-actions">
+        <button class="btn btn-primary daily-more" type="button">
+          <Icon name="refresh" size={18} />
+          <span>{ui.sheetMore}</span>
+        </button>
+        <button class="btn btn-ghost" type="button" data-copy-all="[data-daily]" data-copied={ui.dykCopiedAll}>
+          <Icon name="copy" size={18} />
+          <span>{ui.dailyCopyAll}</span>
+        </button>
+        <button class="btn btn-ghost daily-share" type="button">
+          <Icon name="share" size={18} />
+          <span>{ui.sheetShare}</span>
+        </button>
       </div>
-      <a class="section-link daily-all" href={localePath(lang, '/did-you-know/')}>
-        {ui.dykAllFacts}
-        <Icon name="arrow" size={18} class="flip-rtl" />
-      </a>
     </div>
+    <div class="dyk-grid daily-grid" aria-live="polite">
+      {sets.map((set, k) => set.map((fact, i) => <FactCard fact={fact} lang={lang} num={i + 1} set={k} hidden={k !== 0} />))}
+    </div>
+    <a class="section-link daily-all" href={localePath(lang, '/did-you-know/')}>
+      {ui.dykAllFacts}
+      <Icon name="arrow" size={18} class="flip-rtl" />
+    </a>
   </div>
 </section>
 
@@ -76,27 +71,27 @@ const shareUrl = new URL(localePath(lang, '/did-you-know/'), SITE.url).href;
     const days = Math.floor(Date.now() / 86_400_000) - (Number(box.dataset.day) || 0);
     let set = ((days % sets) + sets) % sets;
     const show = () => {
-      for (const card of cards) card.hidden = Number(card.dataset.set) !== set;
-      grid?.classList.remove('swap');
-      void grid?.offsetWidth;
-      grid?.classList.add('swap');
+    for (const card of cards) card.hidden = Number(card.dataset.set) !== set;
+    grid?.classList.remove('swap');
+    void grid?.offsetWidth;
+    grid?.classList.add('swap');
     };
     if (set !== 0) show();
     box.querySelector('.daily-more')?.addEventListener('click', () => {
-      set = (set + 1) % sets;
-      show();
+    set = (set + 1) % sets;
+    show();
     });
     // Phones open the system share sheet; browsers without it fall back to WhatsApp.
     box.querySelector('.daily-share')?.addEventListener('click', async () => {
-      const facts = cards.filter((c) => !c.hidden).map((c, i) => `${i + 1}. ${c.dataset.copyText}`);
-      const text = `${facts.join('\n\n')}\n\n${box.dataset.from} ${box.dataset.url}`;
-      if (navigator.share) {
-        try {
-          await navigator.share({ title: box.dataset.title, text });
-        } catch {}
-        return;
-      }
-      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    const facts = cards.filter((c) => !c.hidden).map((c, i) => `${i + 1}. ${c.dataset.copyText}`);
+    const text = `${facts.join('\n\n')}\n\n${box.dataset.from} ${box.dataset.url}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: box.dataset.title, text });
+      } catch {}
+      return;
+    }
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
   });
 </script>

@@ -127,18 +127,23 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 | `src/pages/` | Routes: Arabic at `/`, English under `/en/` |
 | `src/styles/global.css` | All styling. Uses logical CSS properties so RTL and LTR share one stylesheet |
 
-## Design decisions (made by Mahmoud, 2026-10-23)
+## Design decisions (made by Mahmoud)
 
-- **Font:** Cairo, via `@fontsource/cairo`, imported in `BaseLayout.astro`.
-- **Colours:** the emerald palette (`--brand` #059669 and `--brand-2` #10b981, with amber `--accent`), chosen by Mahmoud. The interface must not use pink or violet anymore. Category colours stay varied.
+- **Template «منصّة دروس» (chosen by Mahmoud on 2026-11-06).** He said the old look was "very bad". I showed him 4 mock-ups (https://claude.ai/artifact/U8D1NUP6PKbn9NyXdxUz4S) and he picked option 2, so the whole site now follows it. Don't switch to a different layout style without asking.
+  - **Font:** Tajawal, via `@fontsource/tajawal` (400/500/700/800), imported in `BaseLayout.astro`. Cairo was removed.
+  - **Colours:** navy `--brand` #0b2545 with yellow `--accent` #ffc93c and one blue `--brand-2`/`--brand-ink` #1f5fd6 for links. The navy "band" tokens (`--band`, `--band-2`, `--band-soft`) sit behind the home hero, every page header (`.page-hero`, `.dyk-hero`) and the footer. In dark mode `--brand` turns yellow and `--on-brand` navy, so primary buttons stay readable.
+  - **One colour for labels:** chips, fact cards and subject cards no longer use the per-category rainbow. Chips are navy text on soft yellow. Category colours are only used for the generated cover art of articles without a photo. No pink or violet anywhere.
+  - **Header:** one row with logo, nav (الرئيسية, المواد الدراسية → `/#subjects`, هل تعلم؟, الدروس → `/articles/`, من نحن), search, language, dark-mode toggle, and the yellow «ابدأ التعلّم» button. The active link has a yellow underline. The old category bar under the header was removed.
+  - **Fact cards** (`FactCard.astro`) are flashcards: a navy strip with the number (yellow circle), subject and stage, the text, and a yellow «نسخ المعلومة» button.
 - **Pagination:** `/articles/` and the category pages show `PAGE_SIZE` (24) per page, with numbered links to every page. Old articles must never become unreachable. The home page section «من أرشيف معلومة» shows 6 older articles, reshuffled every day.
-- **Template:** keep the current design and improve it. Don't switch to a different layout style without asking.
-- **20 categories,** defined in `src/site.ts`. Since 2026-11-06 the 11 study categories (`STUDY_CATEGORY_IDS`) come first: they fill the header bar and the home «المواد الدراسية» grid. The other 9 (`OTHER_CATEGORY_IDS`) appear in the home «أقسام منوعة» row and the footer.
-- **Home page (redesigned by Mahmoud's request on 2026-11-06, learning site):**
-  - The hero has the heading, search, «اختر مرحلتك» stage buttons (linking to `/did-you-know/?level=<stage>#browse`) and stats.
-  - Beside the hero, the «تعلّم حسب المادة» panel holds the 16 subject tiles.
-  - Then come «هل تعلم؟ معلومات اليوم» (8 facts, each with a copy button), «المواد الدراسية» with the «أقسام منوعة» chips, «أحدث الدروس والمقالات», «ترند اليوم» and the archive.
-  - Inspired by Arab learning platforms; the design is our own.
+- **20 categories,** defined in `src/site.ts`. The 11 study categories (`STUDY_CATEGORY_IDS`) come first, then the other 9 (`OTHER_CATEGORY_IDS`). All 20 appear in the home «أقسام الدروس» chip row and the footer.
+- **Home page, top to bottom (`src/views/HomeView.astro`):**
+  - Navy hero: kicker, «كل يوم / معلومة تفرق», text and search on one side; the white «اختر مرحلتك وابدأ» card with the 3 stages on the other (links to `/did-you-know/?level=<stage>#browse`).
+  - White stats strip overlapping the hero: facts, lessons and subjects.
+  - «هل تعلم؟ معلومات اليوم» (`DailyFacts.astro`): 8 facts with «معلومات أخرى», «نسخ الكل» and «مشاركة».
+  - «المواد الدراسية» (`id="subjects"`): 16 subject cards linking to `/did-you-know/<subject>/`, then the «أقسام الدروس» chips.
+  - «أحدث الدروس» (6 lesson rows, `LessonRow.astro`), «ترند اليوم», «من أرشيف معلومة» (6 lesson rows).
+  - Yellow teacher band «معلم أو مشرف إذاعة؟» linking to `/did-you-know/`.
 - **The «هل تعلم؟» students section** is organised by subject, with a school-stage badge on every fact. Arabic pages show English-language facts in English with the Arabic translation, because «هل تعلم بالانجليزي مترجمة» is a popular search.
 
 ## Content growth plan

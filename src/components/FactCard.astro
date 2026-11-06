@@ -27,7 +27,6 @@ const copyText = `${ui.dykPrefix} ${main}${translation ? `\n(${translation})` : 
 
 <article
   class="dyk-card"
-  style={`--c1:${subject.colors[0]};--c2:${subject.colors[1]}`}
   data-subject={fact.subject}
   data-level={fact.level}
   data-copy-text={copyText}
@@ -38,13 +37,10 @@ const copyText = `${ui.dykPrefix} ${main}${translation ? `\n(${translation})` : 
     {num !== undefined && <span class="dyk-num">{num}</span>}
     {
       showSubject && (
-        <span class="dyk-subject">
-          <Icon name={subject.icon} size={14} />
-          {subject.name[lang]}
-        </span>
+        <span class="dyk-subject">{subject.name[lang]}</span>
       )
     }
-    <span class="dyk-level" style={`--lc:${level.color}`}>{level.name[lang]}</span>
+    <span class="dyk-level">{level.name[lang]}</span>
   </div>
   <p class="dyk-text" lang={bilingual ? 'en' : undefined} dir={bilingual ? 'ltr' : undefined}>{main}</p>
   {translation && <p class="dyk-translation"><span>{ui.dykTranslation}:</span> {translation}</p>}

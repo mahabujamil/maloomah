@@ -1,0 +1,27 @@
+---
+// A lesson as a wide row (thumbnail + category + title), used by the home page lists.
+import Cover from './Cover.astro';
+import Icon from './Icon.astro';
+import { articleUrl, categoryUrl, slugOf, type Article } from '../lib/content';
+import { CATEGORIES, t, type Lang } from '../site';
+
+interface Props {
+  article: Article;
+  lang: Lang;
+}
+const { article, lang } = Astro.props;
+const ui = t(lang);
+const slug = slugOf(article);
+const { title, category } = article.data;
+---
+
+<article class="lesson-row">
+  <div class="lesson-thumb">
+    <Cover category={category} lang={lang} slug={slug} iconSize={48} showLabel={false} widths={[200, 400]} sizes="170px" />
+  </div>
+  <div class="lesson-body">
+    <a class="chip" href={categoryUrl(lang, category)}>{CATEGORIES[category].name[lang]}</a>
+    <h3><a href={articleUrl(lang, slug)}>{title}</a></h3>
+    <span class="lesson-go" aria-hidden="true">{ui.readLesson} <Icon name="arrow" size={16} class="flip-rtl" /></span>
+  </div>
+</article>

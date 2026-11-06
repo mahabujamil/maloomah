@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import Logo from './Logo.astro';
-import { CATEGORIES, SITE, STUDY_CATEGORY_IDS, localePath, t, type CategoryId, type Lang } from '../site';
+import { SITE, localePath, t, type CategoryId, type Lang } from '../site';
 
 interface Props {
   lang: Lang;
@@ -11,33 +11,30 @@ interface Props {
 }
 const { lang, switchHref, current, currentCategory } = Astro.props;
 const ui = t(lang);
+const home = localePath(lang, '/');
+// Template «منصّة دروس» (2026-11-06): one row, the active link underlined in yellow, a yellow
+// «ابدأ التعلّم» button. «المواد الدراسية» jumps to the subjects section of the home page.
 const nav = [
-  { key: 'home', label: ui.home, href: localePath(lang, '/') },
-  { key: 'articles', label: ui.articles, href: localePath(lang, '/articles/') },
+  { key: 'home', label: ui.home, href: home },
+  { key: 'subjects', label: ui.navSubjects, href: `${home}#subjects` },
   { key: 'dyk', label: ui.dykNav, href: localePath(lang, '/did-you-know/') },
+  { key: 'articles', label: ui.navLessons, href: localePath(lang, '/articles/') },
   { key: 'about', label: ui.about, href: localePath(lang, '/about/') },
 ] as const;
+const active = currentCategory ? 'articles' : current;
 ---
 
 <header class="site-header">
   <div class="container header-row">
-    <a class="logo" href={localePath(lang, '/')} aria-label={SITE.name[lang]}>
-      <Logo id="header" class="logo-mark" />
-      <span class="logo-text">
-        {SITE.name[lang]}
-        <small>{SITE.tagline[lang]}</small>
-      </span>
+    <a class="logo" href={home} aria-label={SITE.name[lang]}>
+      <Logo class="logo-mark" />
+      <span class="logo-text">{SITE.name[lang]}</span>
     </a>
 
     <nav class="main-nav" aria-label={ui.menu}>
       {
         nav.map((item) => (
-          <a
-            href={item.href}
-            class:list={{ 'nav-dyk': item.key === 'dyk' }}
-            aria-current={current === item.key ? 'page' : undefined}
-          >
-            {item.key === 'dyk' && <Icon name="bulb" size={16} />}
+          <a href={item.href} aria-current={active === item.key ? 'page' : undefined}>
             {item.label}
           </a>
         ))
@@ -49,7 +46,6 @@ const nav = [
         <Icon name="search" />
       </a>
       <a class="lang-btn" href={switchHref} hreflang={lang === 'ar' ? 'en' : 'ar'} lang={lang === 'ar' ? 'en' : 'ar'}>
-        <Icon name="globe" size={18} />
         <span class="lang-full">{ui.otherLangName}</span>
         <span class="lang-short">{ui.otherLangShort}</span>
       </a>
@@ -57,6 +53,7 @@ const nav = [
         <Icon name="moon" class="icon-moon" />
         <Icon name="sun" class="icon-sun" />
       </button>
+      <a class="btn btn-accent header-cta" href={`${home}#subjects`}>{ui.ctaStart}</a>
       <button class="icon-btn menu-btn" type="button" aria-label={ui.menu} aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
         <Icon name="menu" />
       </button>
@@ -71,32 +68,14 @@ const nav = [
     <nav aria-label={ui.menu}>
       {
         nav.map((item) => (
-          <a href={item.href} class:list={{ 'nav-dyk': item.key === 'dyk' }}>
-            {item.key === 'dyk' && <Icon name="bulb" size={16} />}
+          <a href={item.href} aria-current={active === item.key ? 'page' : undefined}>
             {item.label}
           </a>
         ))
       }
       <a href={localePath(lang, '/contact/')}>{ui.contact}</a>
     </nav>
-  </div>
-
-  <div class="cat-bar">
-    <nav class="container cat-bar-inner" aria-label={ui.categories}>
-      {
-        STUDY_CATEGORY_IDS.map((id) => (
-          <a
-            class="chip"
-            style={`--c1:${CATEGORIES[id].colors[0]}`}
-            href={localePath(lang, `/category/${id}/`)}
-            aria-current={currentCategory === id ? 'page' : undefined}
-          >
-            <Icon name={id} size={15} />
-            {CATEGORIES[id].name[lang]}
-          </a>
-        ))
-      }
-    </nav>
+    <a class="btn btn-accent mobile-cta" href={`${home}#subjects`}>{ui.ctaStart}</a>
   </div>
 </header>
 
@@ -118,5 +97,12 @@ const nav = [
   menuBtn?.addEventListener('click', () => {
     const open = menu?.classList.toggle('open') ?? false;
     menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  // Close the phone menu after picking «المواد الدراسية» (an in-page link on the home page).
+  menu?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a[href*="#"]')) {
+      menu.classList.remove('open');
+      menuBtn?.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>

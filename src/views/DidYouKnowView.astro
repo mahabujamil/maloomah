@@ -101,18 +101,16 @@ const jsonLd = [
           <div class="section-head">
             <h2>{ui.dykSubjects}</h2>
           </div>
-          <div class="dyk-subjects">
+          <div class="subject-grid">
             {SUBJECT_IDS.map((id) => (
-              <a
-                class="cat-tile"
-                href={localePath(lang, `/did-you-know/${id}/`)}
-                style={`--c1:${SUBJECTS[id].colors[0]};--c2:${SUBJECTS[id].colors[1]}`}
-              >
-                <span class="cat-icon">
-                  <Icon name={SUBJECTS[id].icon} size={24} />
+              <a class="subject-card" href={localePath(lang, `/did-you-know/${id}/`)}>
+                <span class="subject-icon">
+                  <Icon name={SUBJECTS[id].icon} size={26} />
                 </span>
-                <span class="cat-name">{SUBJECTS[id].name[lang]}</span>
-                <span class="cat-count">{ui.dykFacts(factsBySubject(id).length)}</span>
+                <span class="subject-text">
+                  <strong>{SUBJECTS[id].name[lang]}</strong>
+                  <span class="subject-meta">{ui.dykFacts(factsBySubject(id).length)}</span>
+                </span>
               </a>
             ))}
           </div>

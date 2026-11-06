@@ -1,10 +1,12 @@
 ---
+// Home page in the «منصّة دروس» template Mahmoud picked on 2026-11-06 (navy + yellow):
+// navy hero with the stage card, stats strip, 8 daily facts, subject cards, lesson rows, teacher band.
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ArticleCard from '../components/ArticleCard.astro';
 import DailyFacts from '../components/DailyFacts.astro';
 import Icon from '../components/Icon.astro';
+import LessonRow from '../components/LessonRow.astro';
 import TrendingBlock from '../components/TrendingBlock.astro';
-import { LEVELS, LEVEL_IDS, SUBJECTS, SUBJECT_IDS, factsBySubject } from '../data/did-you-know';
+import { LEVEL_IDS, SUBJECTS, SUBJECT_IDS, factsBySubject } from '../data/did-you-know';
 import { TRENDING, isTrending } from '../data/trending';
 import { getArticles, slugOf } from '../lib/content';
 import { CATEGORIES, OTHER_CATEGORY_IDS, SITE, STUDY_CATEGORY_IDS, localePath, otherLang, t, type Lang } from '../site';
@@ -26,7 +28,6 @@ const archive = articles
   .filter((a) => !shown.has(slugOf(a)))
   .sort((a, b) => hash(slugOf(a)) - hash(slugOf(b)))
   .slice(0, 6);
-const countBy = (id: string) => articles.filter((a) => a.data.category === id).length;
 // Rounded down to the hundred, so the "+" stays true as facts are added.
 const factTotal = SUBJECT_IDS.reduce((n, id) => n + factsBySubject(id).length, 0);
 const factsShown = factTotal >= 100 ? Math.floor(factTotal / 100) * 100 : factTotal;
@@ -62,59 +63,52 @@ const jsonLd = [
   current="home"
 >
   <section class="hero">
+    <span class="hero-deco hero-deco-ring" aria-hidden="true"></span>
+    <span class="hero-deco hero-deco-dot" aria-hidden="true"></span>
     <div class="container hero-grid">
       <div>
-        <span class="kicker reveal"><span class="dot"><Icon name="sparkle" size={14} /></span>{ui.heroKicker}</span>
+        <span class="hero-kicker reveal">{ui.heroKicker}</span>
         <h1 class="reveal reveal-2">
           {ui.heroTitleA}
           <br />
-          <span class="gradient-text">{ui.heroTitleB}</span>
+          <span class="hero-hl">{ui.heroTitleB}</span>
         </h1>
         <p class="hero-text reveal reveal-2">{ui.heroText}</p>
         <form class="search-field hero-search reveal reveal-3" action={localePath(lang, '/search/')} method="get" role="search">
           <Icon name="search" />
           <input type="search" name="q" placeholder={ui.searchPlaceholder} aria-label={ui.search} />
-          <button class="btn btn-primary" type="submit">{ui.search}</button>
+          <button class="btn btn-accent" type="submit">{ui.search}</button>
         </form>
-        <div class="stage-pick reveal reveal-3">
-          <span class="stage-label">{ui.stagePick}</span>
-          {
-            LEVEL_IDS.map((level) => (
-              <a class="stage-btn" href={localePath(lang, `/did-you-know/?level=${level}#browse`)} style={`--c1:${LEVELS[level].color}`}>
-                <Icon name="school" size={17} />
-                {LEVELS[level].name[lang]}
-              </a>
-            ))
-          }
-        </div>
-        <div class="stats reveal reveal-4">
-          <div class="stat"><strong><bdi>{factsShown}+</bdi></strong><span>{ui.statFacts}</span></div>
-          <div class="stat"><strong><bdi>{articles.length}+</bdi></strong><span>{ui.statArticles}</span></div>
-          <div class="stat"><strong>{SUBJECT_IDS.length}</strong><span>{ui.statSubjects}</span></div>
-        </div>
       </div>
-      <aside class="subject-panel reveal reveal-3" aria-labelledby="subject-panel-title">
-        <div class="subject-panel-head">
-          <h2 id="subject-panel-title">{ui.subjectPanelTitle}</h2>
-          <p>{ui.subjectPanelText}</p>
-        </div>
-        <div class="subject-panel-grid">
-          {
-            SUBJECT_IDS.map((id) => (
-              <a class="subject-pill" href={localePath(lang, `/did-you-know/${id}/`)} style={`--c1:${SUBJECTS[id].colors[0]};--c2:${SUBJECTS[id].colors[1]}`}>
-                <span class="subject-pill-icon"><Icon name={SUBJECTS[id].icon} size={22} /></span>
-                <span class="subject-pill-name">{SUBJECTS[id].name[lang]}</span>
-              </a>
-            ))
-          }
-        </div>
+      <aside class="stage-card reveal reveal-3" aria-labelledby="stage-card-title">
+        <h2 id="stage-card-title">{ui.stageCardTitle}</h2>
+        {
+          LEVEL_IDS.map((level) => (
+            <a class="stage-row" href={localePath(lang, `/did-you-know/?level=${level}#browse`)}>
+              <span class="stage-mark" aria-hidden="true">{ui.stages[level].mark}</span>
+              <span class="stage-info">
+                <strong>{ui.stages[level].name}</strong>
+                <span>{ui.stages[level].text}</span>
+              </span>
+              <Icon name="arrow" size={20} class="flip-rtl stage-arrow" />
+            </a>
+          ))
+        }
       </aside>
     </div>
   </section>
 
+  <div class="container">
+    <div class="stats-strip reveal reveal-4">
+      <div><strong><bdi>{factsShown}+</bdi></strong><span>{ui.statFacts}</span></div>
+      <div><strong><bdi>{articles.length}+</bdi></strong><span>{ui.statArticles}</span></div>
+      <div><strong>{SUBJECT_IDS.length}</strong><span>{ui.statSubjects}</span></div>
+    </div>
+  </div>
+
   <DailyFacts lang={lang} />
 
-  <section class="section">
+  <section class="section" id="subjects">
     <div class="container">
       <div class="section-head">
         <div>
@@ -122,40 +116,30 @@ const jsonLd = [
           <p>{ui.studyText}</p>
         </div>
       </div>
-      <div class="cat-grid study-grid">
+      <div class="subject-grid">
         {
-          STUDY_CATEGORY_IDS.map((id) => {
-            const cat = CATEGORIES[id];
-            return (
-              <a class="cat-tile" href={localePath(lang, `/category/${id}/`)} style={`--c1:${cat.colors[0]};--c2:${cat.colors[1]}`}>
-                <span class="cat-icon"><Icon name={id} size={24} /></span>
-                <span class="cat-name">{cat.name[lang]}</span>
-                <span class="cat-desc">{cat.description[lang]}</span>
-                <span class="cat-count">{ui.articlesIn(countBy(id))}</span>
-              </a>
-            );
-          })
+          SUBJECT_IDS.map((id) => (
+            <a class="subject-card" href={localePath(lang, `/did-you-know/${id}/`)}>
+              <span class="subject-icon"><Icon name={SUBJECTS[id].icon} size={26} /></span>
+              <span class="subject-text">
+                <strong>{SUBJECTS[id].name[lang]}</strong>
+                <span class="subject-go">{ui.subjectBrowse} <Icon name="arrow" size={15} class="flip-rtl" /></span>
+              </span>
+            </a>
+          ))
         }
-        <a class="cat-tile" href={localePath(lang, "/did-you-know/")} style="--c1:#d97706;--c2:#f59e0b">
-          <span class="cat-icon"><Icon name="bulb" size={24} /></span>
-          <span class="cat-name">{ui.dykNav}</span>
-          <span class="cat-desc">{ui.dykHomeText}</span>
-          <span class="cat-count">{ui.dykFacts(factTotal)}</span>
-        </a>
       </div>
-      <div class="other-cats">
-        <h3>{ui.otherCategories}</h3>
-        <div class="other-cats-row">
-          {
-            OTHER_CATEGORY_IDS.map((id) => (
-              <a class="chip" style={`--c1:${CATEGORIES[id].colors[0]}`} href={localePath(lang, `/category/${id}/`)}>
-                <Icon name={id} size={15} />
-                {CATEGORIES[id].name[lang]}
-              </a>
-            ))
-          }
-        </div>
-      </div>
+      <nav class="lesson-cats" aria-labelledby="lesson-cats-title">
+        <h3 id="lesson-cats-title">{ui.lessonCategories}:</h3>
+        {
+          [...STUDY_CATEGORY_IDS, ...OTHER_CATEGORY_IDS].map((id) => (
+            <a class="chip" href={localePath(lang, `/category/${id}/`)}>
+              <Icon name={id} size={15} />
+              {CATEGORIES[id].name[lang]}
+            </a>
+          ))
+        }
+      </nav>
     </div>
   </section>
 
@@ -164,12 +148,12 @@ const jsonLd = [
       <div class="section-head">
         <h2>{ui.latestLessons}</h2>
         <a class="section-link" href={localePath(lang, '/articles/')}>
-          {ui.viewAll}
+          {ui.allLessons}
           <Icon name="arrow" size={18} class="flip-rtl" />
         </a>
       </div>
-      <div class="grid grid-3">
-        {latest.map((article) => <ArticleCard article={article} lang={lang} />)}
+      <div class="lesson-grid">
+        {latest.map((article) => <LessonRow article={article} lang={lang} />)}
       </div>
     </div>
   </section>
@@ -186,18 +170,27 @@ const jsonLd = [
               <p>{ui.archiveText}</p>
             </div>
             <a class="section-link" href={localePath(lang, '/articles/')}>
-              {ui.allArticles}
+              {ui.allLessons}
               <Icon name="arrow" size={18} class="flip-rtl" />
             </a>
           </div>
-          <div class="grid grid-3">
-            {archive.map((article) => (
-              <ArticleCard article={article} lang={lang} />
-            ))}
+          <div class="lesson-grid">
+            {archive.map((article) => <LessonRow article={article} lang={lang} />)}
           </div>
         </div>
       </section>
     )
   }
-</BaseLayout>
 
+  <section class="section">
+    <div class="container">
+      <div class="teacher-band">
+        <div>
+          <h2>{ui.teacherTitle}</h2>
+          <p>{ui.teacherText}</p>
+        </div>
+        <a class="btn" href={localePath(lang, '/did-you-know/')}>{ui.teacherBtn}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
