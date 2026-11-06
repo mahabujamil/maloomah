@@ -1,0 +1,101 @@
+<!doctype html>
+<!--
+  One-time setup for the /admin/ dashboard login, run on Mahmoud's own computer (open this file in Chrome).
+  It makes an RSA key pair, locks the private key with the chosen username + password (PBKDF2 → AES-GCM),
+  and downloads maloomah-admin-key.json, which goes to public/admin/key.json. The password never leaves the page.
+  scripts/admin-data.mjs encrypts the daily numbers with the public key; only the login can open them.
+-->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إعداد دخول لوحة معلومة</title>
+<style>
+  :root { --bg: #f4f7f5; --card: #fff; --fg: #10231b; --muted: #5b6e66; --line: #d9e3de; --brand: #059669; --bad: #c2410c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--fg); font: 16px/1.8 "Segoe UI", Tahoma, sans-serif; padding: 24px 16px; }
+  main { width: 100%; max-width: 440px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 14px; }
+  h1 { margin: 0; font-size: 22px; }
+  p { margin: 0; color: var(--muted); font-size: 14px; }
+  label { display: grid; gap: 4px; font-size: 14px; font-weight: 600; }
+  input { font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; direction: ltr; text-align: left; }
+  input:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+  button { font: inherit; font-weight: 700; padding: 12px; border: 0; border-radius: 10px; background: var(--brand); color: #fff; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: wait; }
+  .msg { font-size: 14px; min-height: 1.5em; }
+  .msg.bad { color: var(--bad); }
+  .done { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 10px; padding: 12px; color: #065f46; font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>اختار اسم المستخدم وكلمة السر</h1>
+  <p>هدول اللي رح تدخل فيهم على لوحة الموقع maloomah.com/admin. ما بينحفظوا بأي مكان، فاحفظهم عندك منيح.</p>
+  <label>اسم المستخدم
+    <input id="user" autocomplete="off" spellcheck="false">
+  </label>
+  <label>كلمة السر (10 حروف أو أرقام على الأقل)
+    <input id="pass" type="password" autocomplete="new-password">
+  </label>
+  <label>اكتب كلمة السر مرة ثانية
+    <input id="pass2" type="password" autocomplete="new-password">
+  </label>
+  <button id="go" type="button">حفظ</button>
+  <div class="msg" id="msg"></div>
+</main>
+<script>
+  const ITER = 600000;
+  const $ = (id) => document.getElementById(id);
+  const b64 = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
+  const say = (text, bad) => { $('msg').textContent = text; $('msg').className = 'msg' + (bad ? ' bad' : ''); };
+
+  async function wrappingKey(user, pass, salt) {
+    const material = new TextEncoder().encode(user.trim().toLowerCase() + '\n' + pass);
+    const base = await crypto.subtle.importKey('raw', material, 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey({ name: 'PBKDF2', hash: 'SHA-256', salt, iterations: ITER }, base, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+  }
+
+  $('go').addEventListener('click', async () => {
+    const user = $('user').value, pass = $('pass').value;
+    if (user.trim().length < 3) return say('اسم المستخدم لازم يكون 3 حروف على الأقل.', true);
+    if (pass.length < 10) return say('كلمة السر لازم تكون 10 حروف أو أرقام على الأقل.', true);
+    if (pass !== $('pass2').value) return say('كلمتين السر مش متطابقات.', true);
+    if (!window.crypto || !crypto.subtle) return say('افتح هالصفحة من متصفح Chrome.', true);
+    $('go').disabled = true;
+    say('لحظة، عم نجهّز المفتاح…');
+    try {
+      const pair = await crypto.subtle.generateKey({ name: 'RSA-OAEP', modulusLength: 3072, publicExponent: new Uint8Array([1, 0, 1]), hash: 'SHA-256' }, true, ['encrypt', 'decrypt']);
+      const pkcs8 = await crypto.subtle.exportKey('pkcs8', pair.privateKey);
+      const spki = await crypto.subtle.exportKey('spki', pair.publicKey);
+      const salt = crypto.getRandomValues(new Uint8Array(16));
+      const iv = crypto.getRandomValues(new Uint8Array(12));
+      const key = await wrappingKey(user, pass, salt);
+      const wrapped = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, pkcs8);
+      // Check the login opens it before handing the file over.
+      const again = await wrappingKey(user, pass, salt);
+      await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, again, wrapped);
+      const file = {
+        v: 1,
+        created: new Date().toISOString(),
+        kdf: { name: 'PBKDF2', hash: 'SHA-256', iterations: ITER, salt: b64(salt) },
+        wrap: { name: 'AES-GCM', iv: b64(iv), data: b64(wrapped) },
+        publicKey: { name: 'RSA-OAEP', hash: 'SHA-256', spki: b64(spki) },
+      };
+      const blob = new Blob([JSON.stringify(file, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'maloomah-admin-key.json';
+      document.body.append(a);
+      a.click();
+      a.remove();
+      $('user').value = $('pass').value = $('pass2').value = '';
+      $('msg').className = 'done';
+      $('msg').textContent = 'تمام! انحفظ ملف اسمه maloomah-admin-key.json بمجلد التنزيلات. ارجع لـ Claude واكتبله «خلصت».';
+    } catch (e) {
+      $('go').disabled = false;
+      say('صار خطأ، جرّب مرة ثانية.', true);
+    }
+  });
+</script>
+</body>
+</html>

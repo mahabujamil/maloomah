@@ -27,7 +27,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: { defaultLocale: 'ar', locales: { ar: 'ar', en: 'en' } },
-      filter: (page) => !/\/search\/$/.test(page),
+      filter: (page) => !/\/(search|admin)\/$/.test(page),
       serialize(item) {
         item.lastmod = lastmod.get(item.url) ?? buildTime;
         return item;

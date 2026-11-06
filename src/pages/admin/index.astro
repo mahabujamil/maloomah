@@ -1,0 +1,886 @@
+---
+// Mahmoud's private dashboard. The numbers live encrypted in /admin/data.json (made daily by
+// scripts/admin-data.mjs); this page asks for the username + password, opens them in the browser and
+// draws the dashboard. Nothing readable is in the HTML, and the page is kept out of Google and the sitemap.
+import '@fontsource/cairo/arabic-400.css';
+import '@fontsource/cairo/arabic-600.css';
+import '@fontsource/cairo/arabic-700.css';
+import '@fontsource/cairo/latin-400.css';
+import '@fontsource/cairo/latin-600.css';
+import '@fontsource/cairo/latin-700.css';
+import '../../styles/global.css';
+import { CATEGORIES } from '../../site';
+import { SUBJECTS } from '../../data/did-you-know';
+
+// Names for page paths in the tables (public names, no numbers).
+const names = {
+  categories: Object.fromEntries(Object.entries(CATEGORIES).map(([id, c]) => [id, c.name.ar])),
+  subjects: Object.fromEntries(Object.entries(SUBJECTS).map(([id, s]) => [id, s.name.ar])),
+};
+---
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>لوحة الإدارة | معلومة</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#059669" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+    <script type="application/json" id="adm-names" set:html={JSON.stringify(names)} />
+  </head>
+  <body class="adm">
+    <main class="adm-login" id="adm-login">
+      <form class="adm-login-card" id="adm-form" autocomplete="on">
+        <a class="adm-logo" href="/">معلومة</a>
+        <h1>لوحة الإدارة</h1>
+        <p>ادخل باسم المستخدم وكلمة السر عشان تشوف أرقام الموقع.</p>
+        <label>
+          اسم المستخدم
+          <input id="adm-user" name="username" autocomplete="username" dir="ltr" required />
+        </label>
+        <label>
+          كلمة السر
+          <input id="adm-pass" name="password" type="password" autocomplete="current-password" dir="ltr" required />
+        </label>
+        <label class="adm-check"><input id="adm-remember" type="checkbox" checked /> خلّيني داخل على هالجهاز</label>
+        <button class="adm-btn" id="adm-go" type="submit">دخول</button>
+        <p class="adm-error" id="adm-error" role="alert" hidden></p>
+      </form>
+    </main>
+
+    <div class="adm-app" id="adm-app" hidden>
+      <header class="adm-top">
+        <div>
+          <h1>لوحة معلومة</h1>
+          <p id="adm-updated"></p>
+        </div>
+        <div class="adm-top-actions">
+          <a class="adm-chip" href="/" target="_blank" rel="noopener">فتح الموقع</a>
+          <button class="adm-chip" id="adm-logout" type="button">خروج</button>
+        </div>
+      </header>
+      <div id="adm-dash"></div>
+    </div>
+
+    <style is:global>
+      :root { --adm-bad: #c2410c; --adm-sky: #0284c7; }
+      @media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --adm-bad: #fb923c; --adm-sky: #38bdf8; } }
+      :root[data-theme='dark'] { --adm-bad: #fb923c; --adm-sky: #38bdf8; }
+
+      .adm { min-height: 100vh; }
+      .adm [hidden] { display: none !important; }
+      .adm-login { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; }
+      .adm-login-card { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px 28px; display: grid; gap: 14px; }
+      .adm-logo { font-weight: 700; color: var(--brand); text-decoration: none; font-size: 1.1rem; }
+      .adm-login-card h1 { font-size: 1.6rem; }
+      .adm-login-card p { margin: 0; color: var(--text-soft); font-size: .95rem; }
+      .adm-login-card label { display: grid; gap: 6px; font-weight: 600; font-size: .95rem; }
+      .adm-login-card input:not([type='checkbox']) { font: inherit; padding: 11px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); text-align: left; }
+      .adm-login-card input:focus-visible { outline: 3px solid var(--ring); outline-offset: 1px; }
+      .adm-check { display: flex !important; align-items: center; gap: 8px; font-weight: 400 !important; }
+      .adm-btn { font-weight: 700; padding: 12px; border: 0; border-radius: var(--radius-sm); background: var(--brand); color: #fff; }
+      .adm-btn:disabled { opacity: .65; cursor: wait; }
+      .adm-error { color: var(--adm-bad) !important; font-weight: 600; }
+
+      .adm-app { max-width: 1240px; margin-inline: auto; padding: 24px 16px 48px; display: grid; gap: 28px; }
+      .adm-top { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+      .adm-top h1 { font-size: 1.7rem; }
+      .adm-top p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
+      .adm-top-actions { display: flex; gap: 8px; }
+      .adm-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: .9rem; text-decoration: none; white-space: nowrap; }
+      .adm-chip:hover { border-color: var(--brand); }
+      .adm-chip.on { background: var(--brand); border-color: var(--brand); color: #fff; }
+      .adm-chip:focus-visible, .adm-table th button:focus-visible, .adm-search:focus-visible { outline: 3px solid var(--ring); outline-offset: 1px; }
+      .adm-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .adm-nav { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+
+      #adm-dash { display: grid; gap: 36px; }
+      .adm-sec { display: grid; gap: 16px; scroll-margin-top: 16px; }
+      .adm-sec > h2 { font-size: 1.35rem; }
+      .adm-lead { margin: 0; font-size: 1.05rem; line-height: 2; max-width: 75ch; }
+      .adm-lead b { color: var(--brand-ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .adm-note { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.8; }
+
+      .adm-tiles { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+      .adm-tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
+      .adm-tile-label { color: var(--text-soft); font-size: .88rem; font-weight: 600; }
+      .adm-num { font-size: 1.9rem; font-weight: 700; line-height: 1.3; font-variant-numeric: tabular-nums; direction: ltr; text-align: right; }
+      .adm-def { color: var(--muted); font-size: .8rem; line-height: 1.7; }
+      .adm-delta { font-size: .82rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+      .adm-delta small { font-weight: 400; color: var(--muted); }
+      .adm-delta.up { color: var(--brand); }
+      .adm-delta.down { color: var(--adm-bad); }
+
+      .adm-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+      .adm-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+      .adm-card.wide { grid-column: 1 / -1; }
+      .adm-card h3 { font-size: 1.05rem; }
+
+      .adm-chart { position: relative; min-height: 210px; }
+      .adm-chart svg { display: block; width: 100%; height: auto; direction: ltr; overflow: visible; }
+      .adm-chart text { fill: var(--muted); font-size: 11px; font-family: var(--font); }
+      .adm-tip { position: absolute; top: 0; z-index: 2; pointer-events: none; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); padding: 6px 10px; font-size: .8rem; white-space: nowrap; display: grid; }
+      .adm-tip span { color: var(--muted); }
+
+      .adm-search { font: inherit; font-size: .88rem; padding: 7px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); width: 15rem; max-width: 100%; }
+      .adm-tablebox { max-height: 30rem; overflow: auto; border-top: 1px solid var(--border); }
+      .adm-table { width: 100%; border-collapse: collapse; font-size: .86rem; font-variant-numeric: tabular-nums; }
+      .adm-table th { position: sticky; top: 0; z-index: 1; background: var(--surface); padding: 0; border-bottom: 1px solid var(--border); text-align: start; color: var(--text-soft); }
+      .adm-table th button { background: none; border: 0; padding: 9px 6px; width: 100%; text-align: inherit; font-weight: 600; color: inherit; }
+      .adm-table th[aria-sort='descending'] button::after { content: ' ↓'; }
+      .adm-table th[aria-sort='ascending'] button::after { content: ' ↑'; }
+      .adm-table td { padding: 8px 6px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+      .adm-table .n { text-align: end; white-space: nowrap; }
+      .adm-table td.t { overflow-wrap: anywhere; min-width: 9rem; }
+      .adm-table a { color: inherit; text-decoration: none; }
+      .adm-table a:hover { color: var(--brand); text-decoration: underline; }
+      .adm-table .sub { display: block; color: var(--muted); font-size: .75rem; direction: ltr; text-align: right; }
+      .adm-cellbar { display: inline-flex; align-items: center; gap: 8px; }
+      .adm-cellbar i { display: block; height: 6px; border-radius: 3px; background: var(--brand-2); }
+      .adm-empty td { text-align: center; color: var(--muted); padding: 20px 6px; }
+
+      .adm-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: .88rem; }
+      .adm-bars li { display: grid; grid-template-columns: minmax(6.5rem, 11rem) 1fr auto; gap: 10px; align-items: center; }
+      .adm-bars .track { position: relative; height: 10px; border-radius: 5px; background: var(--surface-2); overflow: hidden; }
+      .adm-bars .track i { display: block; height: 100%; border-radius: 5px; background: var(--brand); }
+      .adm-bars .v { font-variant-numeric: tabular-nums; min-width: 4.5em; text-align: end; color: var(--text-soft); }
+      .adm-bars .goal { position: absolute; inset-block: 0; width: 2px; background: var(--accent); }
+      .adm-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: .8rem; color: var(--muted); }
+      .adm-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-inline-end: 6px; vertical-align: middle; }
+
+      .adm-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font-size: .9rem; }
+      .adm-list li { display: flex; gap: 10px; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); }
+      .adm-list a { color: inherit; text-decoration: none; }
+      .adm-list a:hover { color: var(--brand); }
+      .adm-list small { color: var(--muted); white-space: nowrap; }
+      .adm-wait { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius-sm); padding: 18px; line-height: 1.9; }
+      .adm-foot { color: var(--muted); font-size: .85rem; line-height: 1.9; margin: 0; }
+
+      @media (max-width: 560px) {
+        .adm-bars li { grid-template-columns: 6.5rem 1fr auto; }
+        .adm-search { width: 100%; }
+        .adm-hide-sm { display: none; }
+        .adm-num { font-size: 1.6rem; }
+      }
+    </style>
+
+    <script>
+      const STORE = 'maloomah-admin';
+      const $ = (id) => document.getElementById(id);
+      const fromB64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+      const toB64 = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
+      const NAMES = JSON.parse($('adm-names').textContent || '{}');
+
+      // ---------- Login and decryption ----------
+      async function getJson(url) {
+        const res = await fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) throw Object.assign(new Error(url), { status: res.status });
+        return res.json();
+      }
+      async function deriveKey(user, pass, kdf) {
+        const material = new TextEncoder().encode(user.trim().toLowerCase() + '\n' + pass);
+        const base = await crypto.subtle.importKey('raw', material, 'PBKDF2', false, ['deriveKey']);
+        return crypto.subtle.deriveKey(
+          { name: 'PBKDF2', hash: kdf.hash, salt: fromB64(kdf.salt), iterations: kdf.iterations },
+          base,
+          { name: 'AES-GCM', length: 256 },
+          true,
+          ['decrypt'],
+        );
+      }
+      async function open(wrapKey, keyFile) {
+        const pkcs8 = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(keyFile.wrap.iv) }, wrapKey, fromB64(keyFile.wrap.data));
+        const priv = await crypto.subtle.importKey('pkcs8', pkcs8, { name: 'RSA-OAEP', hash: 'SHA-256' }, false, ['decrypt']);
+        let box;
+        try {
+          box = await getJson('/admin/data.json');
+        } catch (e) {
+          if (e.status === 404) return null;
+          throw e;
+        }
+        const raw = await crypto.subtle.decrypt({ name: 'RSA-OAEP' }, priv, fromB64(box.key));
+        const aes = await crypto.subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+        const zipped = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(box.iv) }, aes, fromB64(box.data));
+        const text = await new Response(new Blob([zipped]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+        return JSON.parse(text);
+      }
+      const storage = () => {
+        try {
+          return localStorage.getItem(STORE) ? localStorage : sessionStorage;
+        } catch {
+          return null;
+        }
+      };
+      function remember(raw, persist) {
+        try {
+          (persist ? localStorage : sessionStorage).setItem(STORE, toB64(raw));
+        } catch {}
+      }
+      function forget() {
+        try {
+          localStorage.removeItem(STORE);
+          sessionStorage.removeItem(STORE);
+        } catch {}
+      }
+      function showError(text) {
+        $('adm-error').textContent = text;
+        $('adm-error').hidden = false;
+      }
+      function enter(data) {
+        $('adm-login').hidden = true;
+        $('adm-app').hidden = false;
+        if (data) render(data);
+        else $('adm-dash').replaceChildren(h('p', { class: 'adm-wait' }, 'دخلت بنجاح، بس لسا ما في أرقام. أول تحديث للأرقام بيوصل بكرا الصبح.'));
+      }
+
+      let keyFile = null;
+      (async () => {
+        try {
+          keyFile = await getJson('/admin/key.json');
+        } catch {
+          showError('اللوحة لسا ما انفعّلت.');
+          $('adm-go').disabled = true;
+          return;
+        }
+        let saved = null;
+        try {
+          saved = storage()?.getItem(STORE);
+        } catch {}
+        if (!saved) return;
+        try {
+          const wrapKey = await crypto.subtle.importKey('raw', fromB64(saved), 'AES-GCM', true, ['decrypt']);
+          enter(await open(wrapKey, keyFile));
+        } catch {
+          forget();
+        }
+      })();
+
+      $('adm-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!keyFile) return;
+        $('adm-error').hidden = true;
+        $('adm-go').disabled = true;
+        $('adm-go').textContent = 'لحظة…';
+        try {
+          const wrapKey = await deriveKey($('adm-user').value, $('adm-pass').value, keyFile.kdf);
+          let data;
+          try {
+            data = await open(wrapKey, keyFile);
+          } catch (err) {
+            if (err instanceof DOMException) throw Object.assign(new Error('login'), { login: true });
+            throw err;
+          }
+          remember(await crypto.subtle.exportKey('raw', wrapKey), $('adm-remember').checked);
+          $('adm-pass').value = '';
+          enter(data);
+        } catch (err) {
+          showError(err.login ? 'اسم المستخدم أو كلمة السر غلط.' : 'ما قدرنا نفتح اللوحة، تأكد من الإنترنت وجرّب مرة ثانية.');
+        } finally {
+          $('adm-go').disabled = false;
+          $('adm-go').textContent = 'دخول';
+        }
+      });
+      $('adm-logout').addEventListener('click', () => {
+        forget();
+        location.reload();
+      });
+
+      // ---------- Small DOM helpers ----------
+      function h(tag, attrs, ...kids) {
+        const el = document.createElement(tag);
+        for (const [k, v] of Object.entries(attrs || {})) {
+          if (v == null || v === false) continue;
+          if (k === 'class') el.className = v;
+          else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+          else el.setAttribute(k, v === true ? '' : v);
+        }
+        for (const kid of kids.flat(3)) if (kid != null && kid !== false) el.append(kid instanceof Node ? kid : String(kid));
+        return el;
+      }
+      function s(tag, attrs, ...kids) {
+        const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+        for (const [k, v] of Object.entries(attrs || {})) if (v != null) el.setAttribute(k, v);
+        for (const kid of kids.flat()) if (kid != null) el.append(kid instanceof Node ? kid : String(kid));
+        return el;
+      }
+
+      // ---------- Formats and names ----------
+      const nf = new Intl.NumberFormat('en-US');
+      const int = (v) => (v == null ? '—' : nf.format(Math.round(v)));
+      const pct = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
+      const pos = (v) => (v == null || !v ? '—' : v.toFixed(1));
+      const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+      const dShort = new Intl.DateTimeFormat('ar-EG-u-nu-latn', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+      const dLong = new Intl.DateTimeFormat('ar-EG-u-nu-latn', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' });
+      const dStamp = new Intl.DateTimeFormat('ar-EG-u-nu-latn', { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit', timeZone: 'Asia/Amman' });
+      const day = (iso) => new Date(`${iso}T00:00:00Z`);
+      const range = (x) => (x?.start && x?.end ? `من ${dShort.format(day(x.start))} لـ ${dShort.format(day(x.end))}` : '');
+
+      // Search Console gives ISO alpha-3 country codes, Analytics gives English names; both become Arabic names.
+      const A3 = Object.fromEntries(
+        'ala:AX,and:AD,ago:AO,ata:AQ,atg:AG,arm:AM,abw:AW,aut:AT,bhs:BS,bgd:BD,brb:BB,blr:BY,blz:BZ,ben:BJ,bes:BQ,bih:BA,brn:BN,bdi:BI,cpv:CV,cym:KY,tcd:TD,chl:CL,chn:CN,com:KM,cog:CG,cod:CD,cok:CK,cuw:CW,dnk:DK,slv:SV,gnq:GQ,est:EE,swz:SZ,flk:FK,fro:FO,guf:GF,pyf:PF,atf:TF,grl:GL,grd:GD,glp:GP,gin:GN,gnb:GW,guy:GY,irq:IQ,irl:IE,isr:IL,jam:JM,kaz:KZ,prk:KP,kor:KR,lbr:LR,lby:LY,mac:MO,mdg:MG,mdv:MV,mlt:MT,mtq:MQ,myt:YT,mex:MX,fsm:FM,mne:ME,moz:MZ,niu:NU,mnp:MP,pak:PK,plw:PW,png:PG,pry:PY,pcn:PN,pol:PL,prt:PT,maf:MF,spm:PM,wsm:WS,sen:SN,srb:RS,syc:SC,svk:SK,svn:SI,slb:SB,sgs:GS,sur:SR,swe:SE,tza:TZ,tun:TN,tur:TR,tkm:TM,ukr:UA,are:AE,ury:UY,esh:EH,xkk:XK'
+          .split(',')
+          .map((p) => p.split(':')),
+      );
+      const arRegion = new Intl.DisplayNames(['ar'], { type: 'region' });
+      const enRegion = new Intl.DisplayNames(['en'], { type: 'region' });
+      const EN = {};
+      for (let i = 65; i < 91; i++)
+        for (let j = 65; j < 91; j++) {
+          const k = String.fromCharCode(i, j);
+          try {
+            const n = enRegion.of(k);
+            if (n && n !== k) EN[n.toLowerCase()] = k;
+          } catch {}
+        }
+      Object.assign(EN, { palestine: 'PS', turkey: 'TR', 'türkiye': 'TR', 'hong kong': 'HK', macao: 'MO', macau: 'MO', 'myanmar (burma)': 'MM', 'south korea': 'KR', 'north korea': 'KP', russia: 'RU', czechia: 'CZ', "côte d'ivoire": 'CI', 'côte d’ivoire': 'CI' });
+      const fromSc = (c) => {
+        c = String(c || '').toLowerCase();
+        if (!c || c === 'zzz') return null;
+        return c.length === 3 ? A3[c] || c.slice(0, 2).toUpperCase() : c.toUpperCase();
+      };
+      const fromGa = (n) => EN[String(n || '').toLowerCase()] || null;
+      const countryName = (a2, fallback) => {
+        if (!a2) return fallback && fallback !== '(not set)' ? fallback : 'غير معروف';
+        if (a2 === 'PS') return 'فلسطين';
+        try {
+          return arRegion.of(a2);
+        } catch {
+          return a2;
+        }
+      };
+      const DEVICE = { mobile: 'موبايل', desktop: 'كمبيوتر', tablet: 'تابلت', 'smart tv': 'تلفزيون ذكي', smart_tv: 'تلفزيون ذكي' };
+      const device = (d) => DEVICE[String(d || '').toLowerCase()] || d || 'غير معروف';
+      const CHANNEL = {
+        'organic search': 'بحث Google وغيره (مجاني)',
+        direct: 'دخول مباشر',
+        'organic social': 'سوشال ميديا',
+        referral: 'روابط من مواقع ثانية',
+        'paid search': 'إعلانات بحث',
+        'paid social': 'إعلانات سوشال',
+        email: 'إيميل',
+        'organic video': 'فيديو',
+        display: 'إعلانات صورية',
+        unassigned: 'غير مصنّف',
+        'organic shopping': 'تسوق',
+      };
+      const channel = (c) => CHANNEL[String(c || '').toLowerCase()] || c || 'غير معروف';
+
+      const PAGE_NAMES = { '/': 'الصفحة الرئيسية', '/articles/': 'كل المقالات', '/did-you-know/': 'هل تعلم؟', '/about/': 'من نحن', '/contact/': 'اتصل بنا', '/privacy/': 'سياسة الخصوصية', '/terms/': 'شروط الاستخدام', '/search/': 'البحث' };
+      function pageTitle(path, titles) {
+        if (titles[path]) return titles[path];
+        const en = path.startsWith('/en/');
+        const p = en ? path.slice(3) : path;
+        const tag = en ? ' (إنجليزي)' : '';
+        if (PAGE_NAMES[p]) return PAGE_NAMES[p] + tag;
+        let m = p.match(/^\/did-you-know\/([^/]+)\/$/);
+        if (m) return `هل تعلم؟ ${NAMES.subjects?.[m[1]] ?? m[1]}${tag}`;
+        m = p.match(/^\/category\/([^/]+)\/(?:\d+\/)?$/);
+        if (m) return `قسم ${NAMES.categories?.[m[1]] ?? m[1]}${tag}`;
+        m = p.match(/^\/articles\/(\d+)\/$/);
+        if (m) return `كل المقالات، صفحة ${m[1]}${tag}`;
+        return path;
+      }
+
+      // ---------- Building blocks ----------
+      const tile = (label, value, def, extra) =>
+        h('div', { class: 'adm-tile' }, h('span', { class: 'adm-tile-label' }, label), h('b', { class: 'adm-num' }, value), extra, def && h('span', { class: 'adm-def' }, def));
+      function delta(now, prev) {
+        if (prev == null || now == null) return null;
+        if (!prev) return now ? h('span', { class: 'adm-delta up' }, 'جديد هالأسبوع') : null;
+        const c = (now - prev) / prev;
+        const sign = c > 0 ? '▲ +' : c < 0 ? '▼ −' : '';
+        return h('span', { class: `adm-delta ${c > 0 ? 'up' : c < 0 ? 'down' : ''}` }, `${sign}${Math.abs(Math.round(c * 100))}%`, h('small', null, ' عن الأسبوع اللي قبله'));
+      }
+      const card = (title, note, ...body) => h('div', { class: 'adm-card' }, h('h3', null, title), note && h('p', { class: 'adm-note' }, note), body);
+      const wide = (el) => (el.classList.add('wide'), el);
+      const sec = (id, title, ...body) => h('section', { class: 'adm-sec', id }, h('h2', null, title), body);
+      const wait = (text) => h('p', { class: 'adm-wait' }, text);
+
+      function bars(rows, { label, value, fmt = int, color, goal }) {
+        const max = Math.max(1, goal || 0, ...rows.map((r) => r[value] || 0));
+        return h(
+          'ul',
+          { class: 'adm-bars' },
+          rows.map((r) =>
+            h(
+              'li',
+              null,
+              h('span', null, label(r)),
+              h(
+                'span',
+                { class: 'track' },
+                h('i', { style: `width:${(((r[value] || 0) / max) * 100).toFixed(1)}%${color ? `;background:${color}` : ''}` }),
+                goal ? h('b', { class: 'goal', style: `inset-inline-start:${((goal / max) * 100).toFixed(1)}%` }) : null,
+              ),
+              h('span', { class: 'v' }, fmt(r[value] || 0, r)),
+            ),
+          ),
+        );
+      }
+
+      // A sortable, searchable table. cols: {key, label, num, fmt, text, sub, link, bar, sm}
+      function table(rows, cols, { sort, search, limit = 400, empty = 'ما في أرقام لهالفترة' } = {}) {
+        let state = { key: sort, dir: -1 };
+        let q = '';
+        const tbody = h('tbody');
+        const ths = cols.map((c) =>
+          h(
+            'th',
+            { class: `${c.num ? 'n' : ''} ${c.sm ? 'adm-hide-sm' : ''}` },
+            h('button', { type: 'button', onclick: () => ((state = { key: c.key, dir: state.key === c.key ? -state.dir : c.num ? -1 : 1 }), draw()) }, c.label),
+          ),
+        );
+        function draw() {
+          const col = cols.find((c) => c.key === state.key) || cols[0];
+          let list = rows.slice();
+          if (q) list = list.filter((r) => cols.some((c) => !c.num && `${c.text ? c.text(r) : r[c.key] ?? ''} ${c.sub ? c.sub(r) : ''}`.toLowerCase().includes(q)));
+          const val = (r) => (col.text && !col.num ? col.text(r) : r[col.key]);
+          list.sort((a, b) => {
+            const va = val(a), vb = val(b);
+            if (col.num) return ((va ?? -Infinity) - (vb ?? -Infinity)) * state.dir;
+            return String(va ?? '').localeCompare(String(vb ?? ''), 'ar') * state.dir;
+          });
+          ths.forEach((th, i) => th.setAttribute('aria-sort', cols[i].key === state.key ? (state.dir < 0 ? 'descending' : 'ascending') : 'none'));
+          tbody.replaceChildren();
+          if (!list.length) {
+            tbody.append(h('tr', { class: 'adm-empty' }, h('td', { colspan: cols.length }, q ? 'ما في نتائج لبحثك' : empty)));
+            return;
+          }
+          const max = {};
+          for (const c of cols) if (c.bar) max[c.key] = Math.max(1, ...list.map((r) => r[c.key] || 0));
+          for (const r of list.slice(0, limit)) {
+            tbody.append(
+              h(
+                'tr',
+                null,
+                cols.map((c) => {
+                  const text = c.fmt ? c.fmt(r[c.key], r) : c.text ? c.text(r) : r[c.key] ?? '—';
+                  let content = c.link ? h('a', { href: c.link(r), target: '_blank', rel: 'noopener' }, text) : text;
+                  if (c.sub) content = [content, h('span', { class: 'sub' }, c.sub(r))];
+                  const cls = `${c.num ? 'n' : 't'} ${c.sm ? 'adm-hide-sm' : ''}`;
+                  if (c.bar && r[c.key] != null)
+                    return h('td', { class: cls }, h('span', { class: 'adm-cellbar' }, h('span', null, content), h('i', { style: `width:${Math.max(2, ((r[c.key] || 0) / max[c.key]) * 56)}px` })));
+                  return h('td', { class: cls }, content);
+                }),
+              ),
+            );
+          }
+        }
+        draw();
+        const input = search
+          ? h('input', { type: 'search', class: 'adm-search', placeholder: search, 'aria-label': search, oninput: (e) => ((q = e.target.value.trim().toLowerCase()), draw()) })
+          : null;
+        return [input, h('div', { class: 'adm-tablebox' }, h('table', { class: 'adm-table' }, h('thead', null, h('tr', null, ths)), tbody))];
+      }
+
+      // Daily chart: bars for clicks, a filled line for impressions, a line for the ranking (1 at the top).
+      function niceStep(span) {
+        const raw = span / 4 || 1;
+        const p = 10 ** Math.floor(Math.log10(raw));
+        return [1, 2, 5, 10].map((m) => m * p).find((x) => x >= raw);
+      }
+      function chart(rows, key, kind) {
+        const box = h('div', { class: 'adm-chart' });
+        const color = kind === 'clicks' ? 'var(--brand)' : kind === 'impr' ? 'var(--adm-sky)' : 'var(--accent)';
+        const label = kind === 'clicks' ? 'زيارة' : kind === 'impr' ? 'مرة ظهور' : 'الترتيب';
+        let lastW = 0;
+        const draw = () => {
+          const W = Math.max(280, Math.round(box.clientWidth || 600));
+          if (W === lastW) return;
+          lastW = W;
+          box.replaceChildren();
+          const H = 210, T = 12, B = 26;
+          const isPos = kind === 'pos';
+          const ok = (r) => (isPos ? r.impressions > 0 && r.position > 0 : true);
+          if (!rows.some(ok)) return box.append(h('p', { class: 'adm-note' }, 'ما في أرقام لهالفترة'));
+          const vals = rows.filter(ok).map((r) => r[key]);
+          let lo, hi, ticks;
+          if (isPos) {
+            hi = Math.max(10, Math.ceil(Math.max(...vals)));
+            const step = niceStep(hi - 1);
+            hi = Math.ceil(hi / step) * step;
+            lo = 1;
+            ticks = [1];
+            for (let t = step; t <= hi; t += step) ticks.push(t);
+          } else {
+            const step = niceStep(Math.max(...vals, 1));
+            lo = 0;
+            hi = Math.ceil(Math.max(...vals, 1) / step) * step;
+            ticks = [];
+            for (let t = 0; t <= hi; t += step) ticks.push(t);
+          }
+          const y = (v) => (isPos ? T + ((H - T - B) * (v - lo)) / (hi - lo) : T + (H - T - B) * (1 - (v - lo) / (hi - lo)));
+          const tickText = (t) => (isPos ? String(t) : compact.format(t));
+          const left = 12 + 7 * Math.max(...ticks.map((t) => tickText(t).length));
+          const n = rows.length;
+          const band = (W - left - 6) / n;
+          const cx = (i) => left + band * (i + 0.5);
+          const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img' });
+          box.append(svg);
+          for (const t of ticks) {
+            svg.append(s('line', { x1: left, x2: W - 6, y1: y(t), y2: y(t), stroke: 'var(--border)', 'stroke-width': 1 }));
+            svg.append(s('text', { x: left - 8, y: y(t), dy: '0.32em', 'text-anchor': 'end' }, tickText(t)));
+          }
+          const every = Math.max(1, Math.ceil(n / Math.max(2, Math.floor((W - left) / 64))));
+          rows.forEach((r, i) => {
+            if ((n - 1 - i) % every) return;
+            const t = s('text', { y: H - 6, 'text-anchor': 'middle' }, dShort.format(day(r.date)));
+            svg.append(t);
+            const half = t.getComputedTextLength() / 2 + 1;
+            t.setAttribute('x', Math.max(half, Math.min(W - half, cx(i))));
+          });
+          const marks = [];
+          if (kind === 'clicks') {
+            const bw = Math.max(2, band * 0.68);
+            rows.forEach((r, i) => {
+              const top = y(r[key]);
+              const rect = s('rect', { x: cx(i) - bw / 2, width: bw, y: top, height: Math.max(0, y(0) - top), rx: Math.min(3, bw / 2), fill: color });
+              svg.append(rect);
+              marks[i] = rect;
+            });
+          } else {
+            const pts = rows.map((r, i) => (ok(r) ? [cx(i), y(r[key])] : null));
+            const segs = [];
+            let cur = [];
+            for (const p of pts) p ? cur.push(p) : cur.length && (segs.push(cur), (cur = []));
+            if (cur.length) segs.push(cur);
+            for (const seg of segs) {
+              const d = seg.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join('');
+              if (!isPos) svg.append(s('path', { d: `${d}L${seg.at(-1)[0].toFixed(1)},${y(0)}L${seg[0][0].toFixed(1)},${y(0)}Z`, fill: color, 'fill-opacity': 0.12 }));
+              svg.append(s('path', { d, fill: 'none', stroke: color, 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+            }
+            pts.forEach((p, i) => {
+              if (!p) return;
+              const dot = s('circle', { cx: p[0], cy: p[1], r: 3, fill: color, opacity: 0 });
+              svg.append(dot);
+              marks[i] = dot;
+            });
+            const last = pts.findLast((p) => p);
+            if (last) svg.append(s('circle', { cx: last[0], cy: last[1], r: 4, fill: color }));
+          }
+          const tip = h('div', { class: 'adm-tip', hidden: true });
+          box.append(tip);
+          const hot = s('rect', { x: left, y: 0, width: W - left, height: H, fill: 'transparent' });
+          svg.append(hot);
+          const reset = () => {
+            tip.hidden = true;
+            marks.forEach((m) => m && m.setAttribute('opacity', kind === 'clicks' ? 1 : 0));
+          };
+          hot.addEventListener('pointermove', (e) => {
+            const rect = svg.getBoundingClientRect();
+            const vx = ((e.clientX - rect.left) / rect.width) * W;
+            const i = Math.max(0, Math.min(n - 1, Math.floor((vx - left) / band)));
+            const r = rows[i];
+            marks.forEach((m, j) => m && m.setAttribute('opacity', j === i ? 1 : kind === 'clicks' ? 0.45 : 0));
+            tip.replaceChildren(h('span', null, dLong.format(day(r.date))), h('b', null, ok(r) ? (isPos ? `${label}: ${pos(r[key])}` : `${int(r[key])} ${label}`) : 'ما ظهر الموقع هاليوم'));
+            tip.hidden = false;
+            const scale = rect.width / W;
+            tip.style.left = `${Math.max(0, Math.min(box.clientWidth - tip.offsetWidth, cx(i) * scale - tip.offsetWidth / 2))}px`;
+          });
+          hot.addEventListener('pointerleave', reset);
+        };
+        new ResizeObserver(() => draw()).observe(box);
+        requestAnimationFrame(draw);
+        return box;
+      }
+
+      // ---------- The dashboard ----------
+      function render(D) {
+        const dash = $('adm-dash');
+        dash.replaceChildren();
+        $('adm-updated').textContent = `آخر تحديث للأرقام: ${dStamp.format(new Date(D.generated))}`;
+        const titles = D.site?.titles || {};
+        const daily = (D.sc.daily?.rows || []).slice().sort((a, b) => (a.date < b.date ? -1 : 1));
+        const sum = (list, k) => list.reduce((t, r) => t + (r[k] || 0), 0);
+        const totals = (list) => {
+          const impressions = sum(list, 'impressions');
+          const clicks = sum(list, 'clicks');
+          const weighted = list.reduce((t, r) => t + (r.position || 0) * (r.impressions || 0), 0);
+          return { clicks, impressions, ctr: impressions ? clicks / impressions : null, position: impressions ? weighted / impressions : null };
+        };
+        const wk = daily.length >= 14 ? [totals(daily.slice(-7)), totals(daily.slice(-14, -7))] : null;
+
+        // Merge Search Console and Analytics rows by country and by page.
+        const byCountry = new Map();
+        const crow = (k, name) => byCountry.get(k) || byCountry.set(k, { key: k, name, users: null, sessions: null, impressions: null, clicks: null, position: null }).get(k);
+        for (const r of D.sc.country?.rows || []) {
+          const a2 = fromSc(r.country);
+          const row = crow(a2 || 'zz', countryName(a2));
+          row.impressions = (row.impressions || 0) + r.impressions;
+          row.clicks = (row.clicks || 0) + r.clicks;
+          row.position = r.position;
+        }
+        for (const r of D.ga.country?.rows || []) {
+          const a2 = fromGa(r.country);
+          const row = crow(a2 || `ga:${r.country}`, countryName(a2, r.country));
+          row.users = (row.users || 0) + (r.activeUsers || 0);
+          row.sessions = (row.sessions || 0) + (r.sessions || 0);
+        }
+        const countries = [...byCountry.values()];
+        const byPage = new Map();
+        const prow = (p) => byPage.get(p) || byPage.set(p, { key: p, path: p, views: null, users: null, impressions: null, clicks: null, position: null }).get(p);
+        for (const r of D.sc.page?.rows || []) {
+          let p = r.page;
+          try {
+            p = decodeURIComponent(new URL(r.page).pathname);
+          } catch {}
+          Object.assign(prow(p), { impressions: r.impressions, clicks: r.clicks, position: r.position });
+        }
+        for (const r of D.ga.pages?.rows || []) {
+          if (r.hostName && !/maloomah\.com$/.test(r.hostName)) continue;
+          let p = r.pagePath || '/';
+          try {
+            p = decodeURIComponent(p);
+          } catch {}
+          if (!p.endsWith('/') && !/\.[a-z0-9]+$/i.test(p)) p += '/';
+          if (p.startsWith('/admin/')) continue;
+          const row = prow(p);
+          row.views = (row.views || 0) + (r.screenPageViews || 0);
+          row.users = (row.users || 0) + (r.activeUsers || 0);
+        }
+        const pages = [...byPage.values()];
+
+        const gaRows = (x) => x?.rows || [];
+        const sessions = sum(gaRows(D.ga.channel), 'sessions');
+        const engaged = sum(gaRows(D.ga.channel), 'engagedSessions');
+        const nvr = (kind) => sum(gaRows(D.ga.nvr).filter((r) => String(r.newVsReturning).toLowerCase() === kind), 'activeUsers');
+        const visitors = nvr('new') + nvr('returning');
+        const hasGa = gaRows(D.ga.channel).length > 0;
+        const win = totals(D.sc.country?.rows || []);
+        const seen = countries.filter((c) => c.impressions || c.users);
+        const top = [...countries].sort((a, b) => (b.users || 0) - (a.users || 0) || (b.impressions || 0) - (a.impressions || 0))[0];
+
+        // Summary
+        dash.append(
+          h(
+            'p',
+            { class: 'adm-lead' },
+            `${range(D.sc.country)}: ظهر الموقع بنتائج Google `,
+            h('b', null, int(win.impressions)),
+            ' مرة، ودخل منها ',
+            h('b', null, int(win.clicks)),
+            ' زائر',
+            hasGa ? ['، وزار الموقع من كل المصادر ', h('b', null, int(visitors)), ' شخص'] : '',
+            '، من ',
+            h('b', null, int(seen.length)),
+            ' دولة. أكثر دولة: ',
+            h('b', null, top ? top.name : '—'),
+            '.',
+          ),
+        );
+
+        const nav = h(
+          'nav',
+          { class: 'adm-nav', 'aria-label': 'أقسام اللوحة' },
+          [
+            ['adm-google', 'Google'],
+            ['adm-visitors', 'الزوار والمتابعين'],
+            ['adm-countries', 'الدول'],
+            ['adm-queries', 'كلمات البحث'],
+            ['adm-pages', 'الصفحات'],
+            ['adm-content', 'محتوى الموقع'],
+          ].map(([id, text]) => h('a', { class: 'adm-chip', href: `#${id}` }, text)),
+        );
+        dash.append(nav);
+
+        // Google section with a period switch for the daily numbers.
+        const periodBox = h('div', { style: 'display:grid;gap:16px' });
+        const PERIODS = [['7', 'آخر 7 أيام'], ['28', 'آخر 28 يوم'], ['90', 'آخر 3 شهور'], ['all', 'كل الفترة']];
+        let period = '28';
+        const chips = PERIODS.map(([id, text]) =>
+          h('button', { type: 'button', class: 'adm-chip', 'aria-pressed': 'false', onclick: () => ((period = id), drawPeriod()) }, text),
+        );
+        function drawPeriod() {
+          chips.forEach((c, i) => {
+            const on = PERIODS[i][0] === period;
+            c.classList.toggle('on', on);
+            c.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+          const last = daily.at(-1)?.date;
+          const list = period === 'all' || !last ? daily : daily.filter((r) => (day(last) - day(r.date)) / 864e5 < Number(period));
+          const t = totals(list);
+          periodBox.replaceChildren(
+            h(
+              'div',
+              { class: 'adm-tiles' },
+              tile('الزيارات من بحث Google', int(t.clicks), 'كم مرة ضغط حدا على رابط الموقع من نتائج Google.', wk && delta(wk[0].clicks, wk[1].clicks)),
+              tile('مرات الظهور بـ Google', int(t.impressions), 'كم مرة طلع الموقع قدام الناس بنتائج البحث، حتى لو ما ضغطوا عليه.', wk && delta(wk[0].impressions, wk[1].impressions)),
+              tile('نسبة النقر', pct(t.ctr), 'من كل 100 مرة ظهر فيها الموقع، كم مرة ضغطوا عليه.'),
+              tile('متوسط الترتيب', pos(t.position), 'رقم 1 يعني أول نتيجة. كل ما قلّ أحسن، وأول صفحة بـ Google من 1 لـ 10.'),
+            ),
+            h(
+              'div',
+              { class: 'adm-grid' },
+              card('الزيارات من Google كل يوم', null, chart(list, 'clicks', 'clicks')),
+              card('مرات الظهور كل يوم', 'لما يطلع الخط لفوق يعني Google عم يعرض الموقع أكثر.', chart(list, 'impressions', 'impr')),
+              card('ترتيب الموقع كل يوم', 'كل ما طلع الخط لفوق يعني الترتيب صار أحسن (أقرب لرقم 1).', chart(list, 'position', 'pos')),
+            ),
+          );
+        }
+        dash.append(sec('adm-google', 'الموقع على بحث Google', h('div', { class: 'adm-row' }, chips), periodBox));
+        drawPeriod();
+
+        // Visitors (Analytics)
+        const devSc = gaRows(D.sc.device);
+        const devTotal = sum(devSc, 'impressions');
+        dash.append(
+          sec(
+            'adm-visitors',
+            'الزوار والمتابعين',
+            hasGa
+              ? [
+                  h('p', { class: 'adm-note' }, `من Google Analytics، ${range(D.ga.channel)}. هون كل الزوار، مش بس اللي جايين من بحث Google.`),
+                  h(
+                    'div',
+                    { class: 'adm-tiles' },
+                    tile('الزيارات', int(sessions), 'كل مرة حدا فتح الموقع، من أي مكان.'),
+                    tile('زوار جدد', int(nvr('new')), 'ناس دخلوا الموقع لأول مرة.'),
+                    tile('زوار رجعوا (المتابعين)', int(nvr('returning')), 'ناس زاروا الموقع قبل ورجعوا. هدول أقرب إشي للمتابعين.'),
+                    tile('نسبة التفاعل', pct(sessions ? engaged / sessions : null), 'زيارات قعد فيها الزائر أكثر من 10 ثواني أو فتح أكثر من صفحة.'),
+                  ),
+                  h(
+                    'div',
+                    { class: 'adm-grid' },
+                    card('من وين وصلوا للموقع؟', 'عدد الزيارات حسب المصدر.', bars([...gaRows(D.ga.channel)].sort((a, b) => b.sessions - a.sessions), { label: (r) => channel(r.sessionDefaultChannelGroup), value: 'sessions' })),
+                    card('الأجهزة', 'عدد الزوار حسب نوع الجهاز.', bars([...gaRows(D.ga.device)].sort((a, b) => b.activeUsers - a.activeUsers), { label: (r) => device(r.deviceCategory), value: 'activeUsers', color: 'var(--adm-sky)' })),
+                    wide(
+                      card(
+                        'المصادر بالتفصيل',
+                        'الموقع أو التطبيق اللي جاب الزائر، مثل google / organic يعني بحث Google، و(direct) يعني دخل مباشرة.',
+                        table(gaRows(D.ga.source), [
+                          { key: 'sessionSourceMedium', label: 'المصدر' },
+                          { key: 'sessions', label: 'الزيارات', num: true, fmt: int, bar: true },
+                          { key: 'activeUsers', label: 'الزوار', num: true, fmt: int },
+                          { key: 'engagementRate', label: 'نسبة التفاعل', num: true, fmt: pct, sm: true },
+                        ], { sort: 'sessions' }),
+                      ),
+                    ),
+                  ),
+                ]
+              : wait('Google Analytics لسا عم يجمع أول أرقام الزوار، وبتظهر هون لحالها بأول تحديث بعد ما توصل.'),
+            devSc.length
+              ? card(
+                  'الأجهزة على بحث Google',
+                  `نسبة مرات الظهور حسب نوع الجهاز، ${range(D.sc.device)}.`,
+                  bars([...devSc].sort((a, b) => b.impressions - a.impressions), { label: (r) => device(r.device), value: 'impressions', fmt: (v) => `${pct(devTotal ? v / devTotal : 0)} · ${int(v)}` }),
+                )
+              : null,
+          ),
+        );
+
+        // Countries
+        dash.append(
+          sec(
+            'adm-countries',
+            'من وين الناس؟',
+            wide(
+              card(
+                'الدول',
+                `كل الدول اللي زارت الموقع أو شافته بـ Google، ${range(D.sc.country)}. اضغط على عنوان أي عمود عشان ترتّب.`,
+                table(countries, [
+                  { key: 'name', label: 'الدولة', text: (r) => r.name },
+                  { key: 'users', label: 'الزوار', num: true, fmt: int, bar: hasGa },
+                  { key: 'impressions', label: 'مرات الظهور بـ Google', num: true, fmt: int, bar: !hasGa },
+                  { key: 'clicks', label: 'زيارات من Google', num: true, fmt: int },
+                  { key: 'position', label: 'الترتيب', num: true, fmt: pos, sm: true },
+                ], { sort: hasGa ? 'users' : 'impressions', search: 'دوّر على دولة' }),
+              ),
+            ),
+          ),
+        );
+
+        // Queries
+        const qcols = [
+          { key: 'query', label: 'كلمة البحث' },
+          { key: 'impressions', label: 'مرات الظهور', num: true, fmt: int, bar: true },
+          { key: 'clicks', label: 'الزيارات', num: true, fmt: int },
+          { key: 'ctr', label: 'نسبة النقر', num: true, fmt: pct, sm: true },
+          { key: 'position', label: 'الترتيب', num: true, fmt: pos },
+        ];
+        dash.append(
+          sec(
+            'adm-queries',
+            'شو بيدوّروا الناس على Google؟',
+            h(
+              'div',
+              { class: 'adm-grid' },
+              wide(card('كلمات البحث اللي جابت الموقع', `${range(D.sc.query)}، الكلمات اللي ظهر فيها الموقع 3 مرات أو أكثر.`, table(gaRows(D.sc.query), qcols, { sort: 'impressions', search: 'دوّر على كلمة' }))),
+              wide(
+                card(
+                  'فرص قريبة: كلمات إحنا فيها بين المركز 5 والمركز 20',
+                  'Google بيعرض موقعنا بهالكلمات بس مش بأول النتائج. لو قوّينا المقالات اللي بتطلع فيها، بتطلع لأول الصفحة وبتجيب زوار أكثر بكثير.',
+                  table(gaRows(D.sc.opps), qcols.filter((c) => c.key !== 'ctr'), { sort: 'impressions' }),
+                ),
+              ),
+            ),
+          ),
+        );
+
+        // Pages
+        dash.append(
+          sec(
+            'adm-pages',
+            'الصفحات',
+            wide(
+              card(
+                'كل الصفحات',
+                `مرات القراءة والزوار من Google Analytics، ومرات الظهور والترتيب من بحث Google، ${range(D.sc.page)}.`,
+                table(pages, [
+                  { key: 'path', label: 'الصفحة', text: (r) => pageTitle(r.path, titles), sub: (r) => r.path, link: (r) => r.path },
+                  { key: 'views', label: 'مرات القراءة', num: true, fmt: int, bar: hasGa },
+                  { key: 'users', label: 'الزوار', num: true, fmt: int, sm: true },
+                  { key: 'impressions', label: 'ظهور بـ Google', num: true, fmt: int, bar: !hasGa },
+                  { key: 'clicks', label: 'زيارات من Google', num: true, fmt: int, sm: true },
+                  { key: 'position', label: 'الترتيب', num: true, fmt: pos },
+                ], { sort: hasGa ? 'views' : 'impressions', search: 'دوّر على صفحة' }),
+              ),
+            ),
+          ),
+        );
+
+        // Content
+        const site = D.site || {};
+        const cats = [...(site.categories || [])].sort((a, b) => b.count - a.count);
+        dash.append(
+          sec(
+            'adm-content',
+            'محتوى الموقع',
+            h(
+              'div',
+              { class: 'adm-tiles' },
+              tile('مقالات بالعربي', int(site.articles?.ar), 'كل مقال إله نسخة إنجليزية.'),
+              tile('مقالات بالإنجليزي', int(site.articles?.en)),
+              tile('معلومات «هل تعلم؟»', int(site.facts), 'للطلاب، بكل المواد والمراحل.'),
+              tile('أقسام وصلت 30 مقال', `${cats.filter((c) => c.count >= 30).length} / ${cats.length}`, 'الهدف: 30 مقال على الأقل بكل قسم.'),
+            ),
+            h(
+              'div',
+              { class: 'adm-grid' },
+              card('عدد المقالات بكل قسم', 'الخط البرتقالي هو هدف الـ30 مقال.', bars(cats, { label: (r) => r.name, value: 'count', goal: 30 })),
+              card(
+                'آخر المقالات',
+                null,
+                h(
+                  'ul',
+                  { class: 'adm-list' },
+                  (site.latest || []).map((a) => h('li', null, h('a', { href: `/articles/${a.slug}/`, target: '_blank', rel: 'noopener' }, a.title), h('small', null, `${a.category} · ${a.date ? dShort.format(day(a.date)) : ''}`))),
+                ),
+              ),
+            ),
+          ),
+        );
+
+        dash.append(h('p', { class: 'adm-foot' }, 'الأرقام بتتحدث لحالها كل يوم الصبح. أرقام Google بتتأخر يومين لثلاثة، فآخر يومين بالرسومات ممكن يكونوا ناقصين.'));
+      }
+    </script>
+  </body>
+</html>

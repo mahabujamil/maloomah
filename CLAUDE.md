@@ -75,6 +75,22 @@ A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4
 - Network: on 2026-10-25 Mahmoud added `*.wikimedia.org`, `trends.google.com` and `suggestqueries.google.com` to the **Default** cloud environment's allowed domains (claude.ai/code → environment selector → Default → ⚙️ → Network access). Google Trends, autocomplete and the Wikimedia photo tool were verified working there on 2026-10-25, so the routine adds photos itself. As a safety net during local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
 - Its sandbox Node is too old for Astro. It fetches Node 24 with `npm pack node-linux-x64@24`, which is already in its prompt.
 
+## Admin dashboard (`/admin/`, added 2026-11-06)
+
+Mahmoud asked for a dashboard on the site itself, behind a username and password: https://maloomah.com/admin/. The site has no server, so the login is real encryption, not a page that only hides its content:
+
+- **Numbers:** `public/admin/data.json` holds the Search Console and Analytics numbers plus site stats. They are gzipped and AES-256-GCM encrypted with a fresh key each day, and that key is wrapped with the RSA-OAEP public key in `public/admin/key.json`.
+- **Opening them:** the private key is in `key.json` too, locked with PBKDF2 (600,000 rounds) of Mahmoud's username and password. `src/pages/admin/index.astro` asks for them, opens the data in the browser and draws the dashboard.
+- **Not stored anywhere:** the password. Neither the repo nor the routine knows it.
+- **Changing or resetting the login:** open `scripts/admin-setup.html` on Mahmoud's computer in Chrome. It downloads a new `maloomah-admin-key.json`; copy that to `public/admin/key.json`, push, then run the data routine once. Old `data.json` files can't be opened with a new key.
+- **Daily data:** a cloud routine, "معلومة — تحديث لوحة الإدارة" (`ROUTINE_ID`), runs every day at 09:30 Asia/Amman with the OpenSEO connector attached. It saves 12 OpenSEO answers to `/tmp/admin-raw/`, runs `node scripts/admin-data.mjs /tmp/admin-raw` and pushes only `public/admin/data.json`. Its prompt lists the exact calls.
+- **Search Console:** daily rows cover up to 90 days; countries, queries, pages and devices cover the last 28 days. Analytics covers 28 days, from 2026-11-04 when the GA4 stream started.
+- **Keep it private:**
+  - The page is `noindex, nofollow`, is filtered out of the sitemap in `astro.config.mjs`, and loads no Analytics or AdSense.
+  - Never put readable numbers in the HTML, and never commit the raw OpenSEO answers.
+- **Don't break `key.json` or `data.json`** in other work. The daily editor routine must not touch `public/admin/`.
+- **The second dashboard:** the live claude.ai Dashboard artifact (https://claude.ai/artifact/FXKpj12LYY19BS4JSUPdb9) still exists as a backup view.
+
 ## «ترند اليوم» (home page trending block)
 
 `src/data/trending.ts` controls it. Put the hottest article slugs first and update `TRENDING_UPDATED` whenever new trend articles go live. Trending articles get a 🔥 badge everywhere. The "most searched now" chips use each article's first `keywords` entry.
