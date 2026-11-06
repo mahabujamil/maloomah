@@ -83,7 +83,7 @@ Mahmoud asked for a dashboard on the site itself, behind a username and password
 - **Opening them:** the private key is in `key.json` too, locked with PBKDF2 (600,000 rounds) of Mahmoud's username and password. `src/pages/admin/index.astro` asks for them, opens the data in the browser and draws the dashboard.
 - **Not stored anywhere:** the password. Neither the repo nor the routine knows it.
 - **Changing or resetting the login:** open `scripts/admin-setup.html` on Mahmoud's computer in Chrome. It downloads a new `maloomah-admin-key.json`; copy that to `public/admin/key.json`, push, then run the data routine once. Old `data.json` files can't be opened with a new key.
-- **Daily data:** a cloud routine, "معلومة — تحديث لوحة الإدارة" (`ROUTINE_ID`), runs every day at 09:30 Asia/Amman with the OpenSEO connector attached. It saves 12 OpenSEO answers to `/tmp/admin-raw/`, runs `node scripts/admin-data.mjs /tmp/admin-raw` and pushes only `public/admin/data.json`. Its prompt lists the exact calls.
+- **Daily data:** a cloud routine, "معلومة — تحديث لوحة الإدارة" (`trig_018y1FdZbDq4SzsHzdzqX4mh`), runs every day at 09:30 Asia/Amman with the OpenSEO connector attached. It saves 12 OpenSEO answers to `/tmp/admin-raw/`, runs `node scripts/admin-data.mjs /tmp/admin-raw` and pushes only `public/admin/data.json`. Its prompt lists the exact calls.
 - **Search Console:** daily rows cover up to 90 days; countries, queries, pages and devices cover the last 28 days. Analytics covers 28 days, from 2026-11-04 when the GA4 stream started.
 - **Keep it private:**
   - The page is `noindex, nofollow`, is filtered out of the sitemap in `astro.config.mjs`, and loads no Analytics or AdSense.
