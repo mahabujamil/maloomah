@@ -121,8 +121,8 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 | `src/content/articles/ar/<slug>.md` and `src/content/articles/en/<slug>.md` | Articles. **The same slug in both folders = translations of each other.** |
 | `content-plan/make-money-online.md` | The make-money-online keyword queue the daily routine works through (2 articles a day) |
 | `src/content/pages/<lang>/` | About, contact, privacy and terms pages |
-| `src/data/facts.ts` | General facts for the home page «هل تعلم؟» sheet (`src/components/FactSheet.astro`). The sheet mixes them with the students' facts and shows 4 a day, with copy and share buttons. Mahmoud approved this design on 2026-10-29 |
-| `src/data/did-you-know.ts` and `src/data/dyk/<subject>.json` | The «هل تعلم؟» fact bank. Mahmoud asked for about 1,000 facts on 2026-10-29. It has 16 subjects of about 62 facts each, every one tagged by school stage. Subject names, titles and colours live in `did-you-know.ts`. The facts live in one JSON file per subject, each entry `["primary" \| "middle" \| "secondary", "Arabic", "English"]`. They're shown on `/did-you-know/<subject>/`, in a daily mix on the hub, in the home page tabs and in the home «هل تعلم؟» sheet. New facts must be verified and must not duplicate existing ones |
+| `src/data/facts.ts` | General facts that used to feed the old home «هل تعلم؟» sheet. Since 2026-11-06 nothing shows them: the sheet was replaced by `src/components/DailyFacts.astro` |
+| `src/data/did-you-know.ts` and `src/data/dyk/<subject>.json` | The «هل تعلم؟» fact bank. Mahmoud asked for about 1,000 facts on 2026-10-29. It has 16 subjects of about 62 facts each, every one tagged by school stage. Subject names, titles and colours live in `did-you-know.ts`. The facts live in one JSON file per subject, each entry `["primary" \| "middle" \| "secondary", "Arabic", "English"]`. They're shown on `/did-you-know/<subject>/`, in a daily mix on the hub, and in the home «هل تعلم؟ معلومات اليوم» section (`src/components/DailyFacts.astro`). That section shows 8 facts from 8 subjects with mixed stages. Each fact has its own copy button, and the section has «معلومات أخرى», «نسخ الكل» and «مشاركة». Mahmoud asked for it on 2026-11-06. New facts must be verified and must not duplicate existing ones |
 | `src/views/` | Page templates shared by both languages |
 | `src/pages/` | Routes: Arabic at `/`, English under `/en/` |
 | `src/styles/global.css` | All styling. Uses logical CSS properties so RTL and LTR share one stylesheet |
@@ -134,7 +134,11 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 - **Pagination:** `/articles/` and the category pages show `PAGE_SIZE` (24) per page, with numbered links to every page. Old articles must never become unreachable. The home page section «من أرشيف معلومة» shows 6 older articles, reshuffled every day.
 - **Template:** keep the current design and improve it. Don't switch to a different layout style without asking.
 - **20 categories,** defined in `src/site.ts`. Since 2026-11-06 the 11 study categories (`STUDY_CATEGORY_IDS`) come first: they fill the header bar and the home «المواد الدراسية» grid. The other 9 (`OTHER_CATEGORY_IDS`) appear in the home «أقسام منوعة» row and the footer.
-- **Home page order (2026-11-06, learning site):** hero with the «هل تعلم؟» sheet, «ابدأ من هنا» (one tile per school stage, linking to `/did-you-know/?level=<stage>#browse`, plus school radio), «هل تعلم؟ للطلاب», «المواد الدراسية», «أحدث الدروس والمقالات», «ترند اليوم», then the archive.
+- **Home page (redesigned by Mahmoud's request on 2026-11-06, learning site):**
+  - The hero has the heading, search, «اختر مرحلتك» stage buttons (linking to `/did-you-know/?level=<stage>#browse`) and stats.
+  - Beside the hero, the «تعلّم حسب المادة» panel holds the 16 subject tiles.
+  - Then come «هل تعلم؟ معلومات اليوم» (8 facts, each with a copy button), «المواد الدراسية» with the «أقسام منوعة» chips, «أحدث الدروس والمقالات», «ترند اليوم» and the archive.
+  - Inspired by Arab learning platforms; the design is our own.
 - **The «هل تعلم؟» students section** is organised by subject, with a school-stage badge on every fact. Arabic pages show English-language facts in English with the Arabic translation, because «هل تعلم بالانجليزي مترجمة» is a popular search.
 
 ## Content growth plan

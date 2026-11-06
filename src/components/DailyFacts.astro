@@ -1,0 +1,102 @@
+---
+// Home page «هل تعلم؟ معلومات اليوم»: 8 facts at a time from 8 different subjects, each with its own copy
+// button, plus «معلومات أخرى» (next 8), «نسخ الكل» and «مشاركة». Mahmoud asked for this on 2026-11-06.
+import FactCard from './FactCard.astro';
+import Icon from './Icon.astro';
+import { LEVEL_IDS, SUBJECT_IDS, factsBySubject } from '../data/did-you-know';
+import { SITE, localePath, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const PER_SET = 8;
+const SETS = 10;
+
+// Walk the subjects in turn so each set of 8 covers 8 different subjects, and rotate the school stage
+// card by card so every set mixes primary, middle and secondary. The starting point moves with each
+// daily rebuild, so the whole bank of ~1,000 facts takes its turn on the home page.
+const buildDay = Math.floor(Date.now() / 86_400_000);
+const sets = Array.from({ length: SETS }, (_, k) =>
+  Array.from({ length: PER_SET }, (_, j) => {
+    const p = buildDay * PER_SET + k * PER_SET + j;
+    const all = factsBySubject(SUBJECT_IDS[p % SUBJECT_IDS.length]);
+    const byLevel = all.filter((x) => x.level === LEVEL_IDS[(j + k) % LEVEL_IDS.length]);
+    const list = byLevel.length ? byLevel : all;
+    return list[Math.floor(p / SUBJECT_IDS.length) % list.length];
+  }),
+);
+const shareUrl = new URL(localePath(lang, '/did-you-know/'), SITE.url).href;
+---
+
+<section class="section daily-facts" data-daily data-day={buildDay} data-sets={SETS} data-title={ui.dykPrefix} data-from={ui.sheetFrom} data-url={shareUrl}>
+  <div class="container">
+    <div class="daily-box">
+      <div class="daily-head">
+        <div class="daily-title">
+          <span class="daily-icon"><Icon name="bulb" size={26} /></span>
+          <div>
+            <h2>{ui.dailyTitle}</h2>
+            <p>{ui.dailyText}</p>
+          </div>
+        </div>
+        <div class="daily-actions">
+          <button class="btn btn-primary daily-more" type="button">
+            <Icon name="refresh" size={18} />
+            <span>{ui.sheetMore}</span>
+          </button>
+          <button class="btn btn-ghost" type="button" data-copy-all="[data-daily]" data-copied={ui.dykCopiedAll}>
+            <Icon name="copy" size={18} />
+            <span>{ui.dailyCopyAll}</span>
+          </button>
+          <button class="btn btn-ghost daily-share" type="button">
+            <Icon name="share" size={18} />
+            <span>{ui.sheetShare}</span>
+          </button>
+        </div>
+      </div>
+      <div class="dyk-grid daily-grid" aria-live="polite">
+        {sets.map((set, k) => set.map((fact, i) => <FactCard fact={fact} lang={lang} num={i + 1} set={k} hidden={k !== 0} />))}
+      </div>
+      <a class="section-link daily-all" href={localePath(lang, '/did-you-know/')}>
+        {ui.dykAllFacts}
+        <Icon name="arrow" size={18} class="flip-rtl" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-daily]').forEach((box) => {
+    const cards = [...box.querySelectorAll<HTMLElement>('.dyk-card')];
+    const grid = box.querySelector<HTMLElement>('.daily-grid');
+    const sets = Number(box.dataset.sets) || 1;
+    // The page opens on the build day's set; if it hasn't been rebuilt since, move on one set per day.
+    const days = Math.floor(Date.now() / 86_400_000) - (Number(box.dataset.day) || 0);
+    let set = ((days % sets) + sets) % sets;
+    const show = () => {
+      for (const card of cards) card.hidden = Number(card.dataset.set) !== set;
+      grid?.classList.remove('swap');
+      void grid?.offsetWidth;
+      grid?.classList.add('swap');
+    };
+    if (set !== 0) show();
+    box.querySelector('.daily-more')?.addEventListener('click', () => {
+      set = (set + 1) % sets;
+      show();
+    });
+    // Phones open the system share sheet; browsers without it fall back to WhatsApp.
+    box.querySelector('.daily-share')?.addEventListener('click', async () => {
+      const facts = cards.filter((c) => !c.hidden).map((c, i) => `${i + 1}. ${c.dataset.copyText}`);
+      const text = `${facts.join('\n\n')}\n\n${box.dataset.from} ${box.dataset.url}`;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: box.dataset.title, text });
+        } catch {}
+        return;
+      }
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
+  });
+</script>

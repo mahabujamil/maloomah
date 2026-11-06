@@ -7,8 +7,13 @@ interface Props {
   fact: Fact;
   lang: Lang;
   showSubject?: boolean;
+  /** Position badge (the home «هل تعلم؟ اليوم» section numbers its cards 1–8). */
+  num?: number;
+  /** Which rotating set the card belongs to on the home page; hidden sets wait for «معلومات أخرى». */
+  set?: number;
+  hidden?: boolean;
 }
-const { fact, lang, showSubject = true } = Astro.props;
+const { fact, lang, showSubject = true, num, set, hidden } = Astro.props;
 const ui = t(lang);
 const subject = SUBJECTS[fact.subject];
 const level = LEVELS[fact.level];
@@ -26,8 +31,11 @@ const copyText = `${ui.dykPrefix} ${main}${translation ? `\n(${translation})` : 
   data-subject={fact.subject}
   data-level={fact.level}
   data-copy-text={copyText}
+  data-set={set}
+  hidden={hidden}
 >
   <div class="dyk-card-top">
+    {num !== undefined && <span class="dyk-num">{num}</span>}
     {
       showSubject && (
         <span class="dyk-subject">
