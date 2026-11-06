@@ -24,7 +24,7 @@ keywords: ["how to make money online", "make money online for beginners", "freel
 You offer your services to clients around the world through specialised platforms:
 
 - **Arabic platforms:** such as **Mostaql** for projects and **Khamsat** for small services. Our [Khamsat and Mostaql guide](/en/articles/khamsat-and-mostaql-guide/) covers signing up and withdrawing earnings.
-- **Global platforms:** such as **Upwork** and **Fiverr**.
+- **Global platforms:** such as **Upwork** and **Fiverr** (see our [Fiverr guide](/en/articles/fiverr-guide/) and [Upwork guide](/en/articles/upwork-guide/)).
 
 In-demand skills include design, content writing, translation, programming, video editing, digital marketing and social media management.
 

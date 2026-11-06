@@ -36,7 +36,7 @@ google-adsense-guide · youtube-monetization · tiktok-monetization · home-busi
 make-money-from-crypto · what-is-twitch · hot-vs-cold-crypto-wallet · facebook-monetization ·
 make-money-with-ai · instagram-monetization · snapchat-monetization ·
 make-money-online-without-capital · are-money-making-apps-real · make-money-from-phone ·
-khamsat-and-mostaql-guide
+khamsat-and-mostaql-guide · fiverr-guide · upwork-guide
 
 ## Queue (highest priority first)
 
@@ -50,8 +50,8 @@ khamsat-and-mostaql-guide
 | [x] 2026-11-04 | are-money-making-apps-real | تطبيقات الربح من مشاهدة الاعلانات | الربح من مشاهدة الاعلانات، الربح من مشاهدة الفيديوهات، تطبيقات الربح الحقيقي، كيف تكشف مواقع الربح الوهمية | are money making apps legit |
 | [x] 2026-11-05 | make-money-from-phone | الربح من الهاتف للمبتدئين | الربح من الهاتف المحمول، تطبيقات الربح من الهاتف | make money from your phone |
 | [x] 2026-11-05 | khamsat-and-mostaql-guide | خمسات ومستقل | خمسات، مستقل للعمل الحر، سحب الارباح من مستقل، سحب الارباح من خمسات | khamsat mostaql (Arabic freelance platforms) |
-| [ ] | fiverr-guide | الربح من فايفر للمبتدئين | فايفر، fiverr become a seller | how to make money on fiverr |
-| [ ] | upwork-guide | الربح من ابورك | upwork jordan، upwork connects | how to make money on upwork |
+| [x] 2026-11-06 | fiverr-guide | الربح من فايفر للمبتدئين | فايفر، fiverr become a seller | how to make money on fiverr |
+| [x] 2026-11-06 | upwork-guide | الربح من ابورك | upwork jordan، upwork connects | how to make money on upwork |
 | [ ] | paid-surveys | الربح من الاستطلاعات | هل الربح من الاستطلاعات حقيقي، مواقع الربح من الاستطلاعات | do paid surveys really pay |
 | [ ] | online-jobs-for-students | شغل اونلاين للطلاب | اعمال اونلاين للطلاب، اعمال اونلاين للمراهقين | online jobs for students |
 | [ ] | work-from-home-jobs | العمل من المنزل عبر الإنترنت | شغل اونلاين من البيت، العمل من المنزل الكتابة باللغة العربية، work from home jobs in jordan | work from home jobs |
