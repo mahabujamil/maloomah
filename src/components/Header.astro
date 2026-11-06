@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import Logo from './Logo.astro';
-import { CATEGORIES, CATEGORY_IDS, SITE, localePath, t, type CategoryId, type Lang } from '../site';
+import { CATEGORIES, SITE, STUDY_CATEGORY_IDS, localePath, t, type CategoryId, type Lang } from '../site';
 
 interface Props {
   lang: Lang;
@@ -84,7 +84,7 @@ const nav = [
   <div class="cat-bar">
     <nav class="container cat-bar-inner" aria-label={ui.categories}>
       {
-        CATEGORY_IDS.map((id) => (
+        STUDY_CATEGORY_IDS.map((id) => (
           <a
             class="chip"
             style={`--c1:${CATEGORIES[id].colors[0]}`}

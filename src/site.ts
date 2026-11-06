@@ -8,12 +8,12 @@ export const SITE = {
   url: 'https://maloomah.com',
   name: { ar: 'معلومة', en: 'Maloomah' },
   tagline: {
-    ar: 'معرفة موثوقة بلغة بسيطة',
-    en: 'Trusted knowledge, simply explained',
+    ar: 'موقع تعليمي للطلاب والمعلمين',
+    en: 'Learning made simple for students',
   },
   description: {
-    ar: 'معلومة: مدونة عربية تشرح العلوم والصحة والتقنية والتاريخ والمال وغيرها بأسلوب واضح وموثوق، مع نسخة إنجليزية لكل مقال.',
-    en: 'Maloomah is a bilingual knowledge blog that explains science, health, technology, history, money and more in clear, trustworthy language.',
+    ar: 'معلومة موقع تعليمي للطلاب والمعلمين: معلومات هل تعلم للإذاعة المدرسية، وشرح مبسّط للعلوم واللغة العربية والتاريخ والجغرافيا، بالعربية والإنجليزية.',
+    en: 'Maloomah is a learning site for students and teachers: fun facts for school assemblies and simple lessons in science, language, history and geography.',
   },
   email: 'contact@maloomah.com',
   // Fill these in once the accounts exist (see CLAUDE.md). Empty = feature switched off.
@@ -25,29 +25,35 @@ export const SITE = {
 /** Articles per page on /articles/ and category pages. Every page links to every other page. */
 export const PAGE_SIZE = 24;
 
-// Order = order in the header bar, home grid and footer (most searched first).
-export const CATEGORY_IDS = [
+// Maloomah is a learning site for students (Mahmoud's decision, 2026-11-06).
+// The study categories come first: they fill the header bar and the home «المواد الدراسية» grid.
+// The rest stay reachable from the home «أقسام منوعة» row, the footer and every article.
+export const STUDY_CATEGORY_IDS = [
   'science',
+  'space',
+  'body',
+  'culture',
+  'history',
+  'geography',
+  'education',
+  'inventions',
+  'animals',
+  'environment',
+  'people',
+] as const;
+export const OTHER_CATEGORY_IDS = [
   'health',
   'technology',
   'food',
-  'education',
-  'business',
-  'history',
-  'geography',
-  'space',
-  'animals',
-  'body',
-  'environment',
-  'inventions',
-  'people',
-  'money',
   'psychology',
   'family',
+  'money',
+  'business',
   'sports',
   'cars',
-  'culture',
 ] as const;
+// Order = order in the footer and on /articles/.
+export const CATEGORY_IDS = [...STUDY_CATEGORY_IDS, ...OTHER_CATEGORY_IDS] as const;
 export type CategoryId = (typeof CATEGORY_IDS)[number];
 
 type Category = {
@@ -233,6 +239,18 @@ const UI = {
     readMore: 'اقرأ المقال',
     minRead: (n: number) => (n <= 2 ? `قراءة في ${n === 1 ? 'دقيقة' : 'دقيقتين'}` : `قراءة في ${n} دقائق`),
     latest: 'أحدث المقالات',
+    latestLessons: 'أحدث الدروس والمقالات',
+    studyTitle: 'المواد الدراسية',
+    studyText: 'شرح مبسّط ومعلومات موثوقة لكل مادة، تفيد الطالب في الدراسة والمعلم في التحضير.',
+    otherCategories: 'أقسام منوعة',
+    startTitle: 'ابدأ من هنا',
+    startStage: (stage: string) =>
+      `معلومات المرحلة ${stage === 'إعدادي' ? 'الإعدادية' : stage === 'ثانوي' ? 'الثانوية' : 'الابتدائية'}`,
+    startStageText: 'معلومات «هل تعلم» مناسبة لعمر الطالب',
+    startRadio: 'فقرة هل تعلم للإذاعة',
+    startRadioText: 'انسخ المعلومات جاهزة بضغطة واحدة',
+    statFacts: 'معلومة هل تعلم',
+    statSubjects: 'مادة دراسية',
     featured: 'مقال مميّز',
     sheetSub: 'أربع معلومات جديدة كل يوم',
     sheetMore: 'معلومات أخرى',
@@ -257,15 +275,15 @@ const UI = {
     menu: 'القائمة',
     toggleTheme: 'تبديل الوضع الليلي',
     skip: 'انتقل إلى المحتوى',
-    heroKicker: 'مدونة معرفية بالعربية والإنجليزية',
+    heroKicker: 'موقع تعليمي للطلاب والمعلمين',
     heroTitleA: 'كل يوم',
     heroTitleB: 'معلومة تفرق',
     heroText:
-      'مقالات واضحة وموثوقة في العلوم والصحة والتقنية والتاريخ والمال والمزيد. نشرح لك الأشياء كما هي، بدون تعقيد.',
+      'شرح مبسّط وموثوق لدروس العلوم واللغة العربية والتاريخ والجغرافيا، ومعلومات «هل تعلم» جاهزة للإذاعة المدرسية، مرتبة حسب المادة والمرحلة الدراسية.',
     statArticles: 'مقال',
     statCategories: 'أقسام',
     statLangs: 'لغتان',
-    footerText: 'معلومة مدونة مستقلة تقدّم معرفة موثوقة بلغة بسيطة، بالعربية والإنجليزية.',
+    footerText: 'معلومة موقع تعليمي مستقل للطلاب والمعلمين، يقدّم معلومات موثوقة بلغة بسيطة، بالعربية والإنجليزية.',
     footerSections: 'الأقسام',
     footerSite: 'الموقع',
     rights: 'جميع الحقوق محفوظة',
@@ -334,6 +352,17 @@ const UI = {
     readMore: 'Read article',
     minRead: (n: number) => `${n} min read`,
     latest: 'Latest articles',
+    latestLessons: 'Latest lessons and articles',
+    studyTitle: 'School subjects',
+    studyText: 'Simple explanations and reliable facts for every subject, for students studying and teachers preparing.',
+    otherCategories: 'More topics',
+    startTitle: 'Start here',
+    startStage: (stage: string) => `Facts for ${stage.toLowerCase()} students`,
+    startStageText: '"Did you know?" facts that suit each student’s age',
+    startRadio: 'Facts for school assemblies',
+    startRadioText: 'Copy ready-made facts in one click',
+    statFacts: 'fun facts',
+    statSubjects: 'school subjects',
     featured: 'Featured',
     sheetSub: 'Four new facts every day',
     sheetMore: 'More facts',
@@ -358,15 +387,15 @@ const UI = {
     menu: 'Menu',
     toggleTheme: 'Toggle dark mode',
     skip: 'Skip to content',
-    heroKicker: 'A bilingual knowledge blog',
+    heroKicker: 'A learning site for students and teachers',
     heroTitleA: 'Every day,',
     heroTitleB: 'something worth knowing',
     heroText:
-      'Clear, trustworthy articles on science, health, technology, history, money and more. We explain things as they are, without the jargon.',
+      'Simple, trustworthy lessons in science, language, history and geography, plus "Did you know?" facts ready for school assemblies, sorted by subject and school stage.',
     statArticles: 'articles',
     statCategories: 'categories',
     statLangs: 'languages',
-    footerText: 'Maloomah is an independent blog sharing trusted knowledge in plain language, in Arabic and English.',
+    footerText: 'Maloomah is an independent learning site for students and teachers, sharing reliable knowledge in plain language, in Arabic and English.',
     footerSections: 'Categories',
     footerSite: 'Site',
     rights: 'All rights reserved',

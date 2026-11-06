@@ -123,7 +123,7 @@ const jsonLd = [
 
   {
     !subject && (
-      <section class="section dyk-browser" data-dyk-browser>
+      <section class="section dyk-browser" id="browse" data-dyk-browser>
         <div class="container">
           <div class="section-head">
             <div>
@@ -247,5 +247,11 @@ const jsonLd = [
       btn.parentElement?.querySelectorAll('.dyk-chip').forEach((b) => b.classList.toggle('active', b === btn));
       apply();
     });
+    // Links like /did-you-know/?level=primary (from the home «ابدأ من هنا» tiles) open with that filter on.
+    const params = new URLSearchParams(location.search);
+    for (const [key, attr] of [['level', 'data-filter-level'], ['subject', 'data-filter-subject']] as const) {
+      const value = params.get(key);
+      if (value) browser.querySelector<HTMLButtonElement>(`.dyk-chip[${attr}="${CSS.escape(value)}"]`)?.click();
+    }
   }
 </script>

@@ -1,26 +1,39 @@
 ---
 title: "About Maloomah"
-description: "Meet Maloomah: an independent knowledge blog sharing trustworthy information in plain language, in Arabic and English."
+description: "Meet Maloomah: a learning site for students and teachers, founded by Mahmoud to share reliable facts and simple lessons in Arabic and English."
 ---
 
-## Maloomah: because knowledge belongs to everyone
+## Maloomah: a learning companion for students
 
-**Maloomah** (Arabic for "a piece of information") is an independent knowledge blog with a simple goal: to explain things as they are, in clear and enjoyable language, without jargon or hype.
+**Maloomah** (Arabic for "a piece of information") is an independent learning site for students, teachers and parents. It was founded by **Mahmoud** in October 2026 with a simple goal: to give students one place where they can find correct information, explained in plain language.
 
-We write about science, space, health, technology, history, geography, money, psychology, sports and culture, and we publish every article in both Arabic and English so knowledge can reach as many readers as possible.
+We believe students learn best when they understand the "why" and the "how", not when they only memorise. So we explain ideas with everyday examples, and we publish every article in both Arabic and English.
 
-## What makes Maloomah different?
+## What you'll find on Maloomah
 
-- **Accuracy first:** we rely on scientific sources and trusted institutions, and we clearly separate established facts from theories.
-- **Simplicity:** we explain complex ideas with everyday examples.
-- **Practical value:** we want every reader to leave each article with something they can use or share.
-- **Regular updates:** we review and update articles when new information appears.
+- **"Did you know?" facts for school assemblies:** more than 900 short, reliable facts across 16 subjects, from science, math and Arabic to history, geography and space. Every fact is tagged with the school stage it suits (primary, middle or secondary), and you can copy it in one click.
+- **Simple lessons for school subjects:** articles on science, space, the human body, language, history and geography, with tables, frequently asked questions and a key takeaway at the end.
+- **General knowledge:** inventions that changed the world, inspiring people, animals and the environment, written for students and useful for teachers preparing a lesson.
+
+## Who is it for?
+
+- **Students:** to understand a lesson and prepare a school-assembly segment or a short project.
+- **Teachers:** to find reliable facts and ready examples for lessons and activities.
+- **Parents:** to help their children study and answer their many questions.
+
+## How we prepare our content
+
+- **We research before we write:** every fact is checked against at least two reliable sources, such as encyclopaedias, scientific institutions and official websites.
+- **We separate facts from estimates:** when a figure is an estimate or still debated, we say so clearly.
+- **We write for students:** plain language, short paragraphs and clear headings.
+- **We review and update:** we revisit older articles when something changes, and every article shows its last-updated date.
 
 ## Our editorial policy
 
-- Health and finance articles are for general education and are not a substitute for advice from a doctor or qualified professional.
-- If you spot a mistake in any article, we'd be glad to hear from you via our [contact page](/en/contact/), and we'll correct it as soon as possible.
+- Our content is educational. Health articles are general awareness and are no substitute for a doctor, and money articles are not investment advice.
+- We don't publish political or sectarian content, crime news or rumours, and everything we publish should suit students and families.
+- If you spot a mistake, tell us through our [contact page](/en/contact/) or at **contact@maloomah.com**. We'll correct it as soon as possible, and we'll thank you for it.
 
-## Join the journey
+## Start learning
 
-Follow what's new, and share the articles you enjoy with friends. Every fact you share might make a difference to someone else.
+Start with our ["Did you know?" facts for students](/en/did-you-know/), or browse [all articles](/en/articles/). If you enjoy a fact, share it with your classmates: knowledge grows when we share it.

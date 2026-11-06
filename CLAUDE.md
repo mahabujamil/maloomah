@@ -1,6 +1,6 @@
 # Maloomah (معلومة): project guide for Claude
 
-A bilingual (Arabic + English) knowledge blog at **https://maloomah.com**, built with Astro and hosted on GitHub Pages.
+A bilingual (Arabic + English) **learning site for students and teachers** at **https://maloomah.com**, built with Astro and hosted on GitHub Pages. It started as a general knowledge blog and became a learning site on 2026-11-06 (Owner's rule 3).
 
 **Owner:** Mahmoud (GitHub: `mahabujamil`). He speaks Levantine Arabic, so reply to him in Arabic. He is not a developer: run the commands yourself, explain results in plain language, and avoid jargon.
 
@@ -28,13 +28,19 @@ A bilingual (Arabic + English) knowledge blog at **https://maloomah.com**, built
      - Keep layouts mobile-friendly, with no horizontal scrolling.
      - Never break canonical, hreflang, structured data, the sitemap, RSS or `robots.txt`.
    - **Before every push:** `npm run build`, then `node scripts/audit.mjs`. Every count it prints must be 0.
-3. **Make money online is the top priority.** Mahmoud set this on 2026-10-30. Publish **2 "make money online" articles every day** (category `business`), on top of the rest of the daily routine.
-   - Work through the queue in `content-plan/make-money-online.md`: it lists the real search queries to target, in priority order. Tick each row when published and add new rows from fresh keyword research when the queue runs low.
-   - Aim to rank first: cover the whole cluster of related queries in headings and FAQs, verify current platform requirements on official pages, and add the year to the title only when the article has current-year requirements.
-   - Stay honest: real methods, realistic expectations, scam warnings. No gambling, trading signals, investment advice, pay-to-join schemes or religious rulings.
-   - These articles go into the «ترند اليوم» block, right after the day's trend articles.
-   - When choosing an article to refresh, prefer the older make-money-online articles, since platform rules change often.
-   - **For the daily routine:** this rule adds a fourth daily job to the routine's prompt, on top of the trends, the category builder and the refresh. The routine may also change `content-plan/make-money-online.md` (to tick rows and add new ones) and the two `ways-to-earn-money-online` files (only to link to new money articles), and its commit message should list the money articles too. Its final message to Mahmoud must list the 2 money articles with links and say how many rows remain in the queue.
+3. **Maloomah is a learning site for students and teachers.** Mahmoud decided this on 2026-11-06, after AdSense rejected the site for "low-value content". This replaces the old "2 make-money-online articles a day" rule from 2026-10-30.
+   - **Why this niche:** Search Console shows the site's real traction is students. The top pages are `/did-you-know/science/` and `/did-you-know/arabic/`, and the top queries are «هل تعلم عن العلوم للصف الثاني الاعدادي» and «هل تعلم عن اللغة العربية للإذاعة المدرسية», mostly from Egypt. Make-money articles were ranking 50–90.
+   - **Write only for students, teachers and parents.** Good shapes are:
+     - school-radio material («إذاعة مدرسية عن …», «فقرة هل تعلم عن …»), especially for occasions in the next 2–3 weeks
+     - essay topics («موضوع تعبير عن …»), with an intro, body and conclusion
+     - simple lessons and explainers for school subjects: science, space, the human body, Arabic language and grammar, history, geography, animals and the environment
+     - general-knowledge questions with answers («أسئلة ثقافية مع الأجوبة»), famous scientists and inventors, «كم / لماذا / ما هو / من اخترع»
+   - **Fewer, deeper articles:** 3 new articles a day, about 900–1500 words per language. Never thin, near-duplicate or mass-produced pages.
+   - **Categories:** use the study categories in `STUDY_CATEGORY_IDS` in `src/site.ts`. The other categories (`OTHER_CATEGORY_IDS`) stay online but get no new articles, except a refresh.
+   - **Religious text in school-radio pieces:** quote a Quran verse only word for word from quran.com, with its surah and verse number. Quote a hadith only if its text and grading are verified on sunnah.com or dorar.net; otherwise leave it out. Never give religious rulings.
+   - **Never delete old articles.** Off-niche articles (money, cars, sports, recipes and so on) stay online and keep their links.
+   - **AdSense:** don't request a new review until about 2026-12-01, so the site can build up real visitors first.
+   - **For the daily routine:** its prompt (`trig_01Ny4m6t5mQCaC4Afm8rReE1`) was rewritten for this rule on 2026-11-06. `content-plan/make-money-online.md` is kept for reference but is no longer worked through.
    - Check English descriptions with a real character count (Python `len`); bash `wc`/`${#var}` count bytes in this sandbox.
    - The cloud checkout can be on a detached HEAD. Push with `git push origin HEAD:main` after `git fetch origin main && git rebase origin/main`.
 
@@ -69,7 +75,7 @@ Every article should have a photo at `src/assets/articles/<slug>.jpg`, with its 
 
 ## Daily cloud routine (auto-publishing)
 
-A Claude Code cloud routine, "معلومة — ترند اليوم" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. It researches trends (Google Trends for Jordan, Saudi Arabia, Egypt and Kuwait) and writes 2–3 bilingual articles. Since 2026-10-29 it also writes **3 "category builder" articles** each day, one in each of the 3 categories with the fewest articles. Since 2026-10-30 it also writes **2 make-money-online articles** each day from `content-plan/make-money-online.md`. It also **refreshes one older article**, re-checking its time-sensitive facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review.
+A Claude Code cloud routine, "معلومة — دروس يومية للطلاب (نشر يومي)" (`trig_01Ny4m6t5mQCaC4Afm8rReE1`, renamed from «ترند اليوم» on 2026-11-06, managed at https://claude.ai/code/routines/trig_01Ny4m6t5mQCaC4Afm8rReE1), runs every day at 07:00 Asia/Amman. Since 2026-11-06 (Owner's rule 3) it writes **3 deeper bilingual learning articles** a day for students and teachers, adds **6 verified «هل تعلم؟» facts** to the fact bank, and **refreshes one older article**, re-checking its facts and setting `updated:` only when something really changed. It then updates `src/data/trending.ts`, builds, and **pushes straight to `main`**. Mahmoud chose auto-publish without review. (Before 2026-11-06 it wrote about 7 articles a day: trends, category builders and make-money-online pieces.)
 
 - Because of this, **always `git pull` before local work**; `main` changes every morning.
 - Network: on 2026-10-25 Mahmoud added `*.wikimedia.org`, `trends.google.com` and `suggestqueries.google.com` to the **Default** cloud environment's allowed domains (claude.ai/code → environment selector → Default → ⚙️ → Network access). Google Trends, autocomplete and the Wikimedia photo tool were verified working there on 2026-10-25, so the routine adds photos itself. As a safety net during local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
@@ -127,12 +133,13 @@ On these Windows machines the Bash tool may not have Node on PATH. If so, prefix
 - **Colours:** the emerald palette (`--brand` #059669 and `--brand-2` #10b981, with amber `--accent`), chosen by Mahmoud. The interface must not use pink or violet anymore. Category colours stay varied.
 - **Pagination:** `/articles/` and the category pages show `PAGE_SIZE` (24) per page, with numbered links to every page. Old articles must never become unreachable. The home page section «من أرشيف معلومة» shows 6 older articles, reshuffled every day.
 - **Template:** keep the current design and improve it. Don't switch to a different layout style without asking.
-- **20 categories,** defined in `src/site.ts`, with the most searched first.
+- **20 categories,** defined in `src/site.ts`. Since 2026-11-06 the 11 study categories (`STUDY_CATEGORY_IDS`) come first: they fill the header bar and the home «المواد الدراسية» grid. The other 9 (`OTHER_CATEGORY_IDS`) appear in the home «أقسام منوعة» row and the footer.
+- **Home page order (2026-11-06, learning site):** hero with the «هل تعلم؟» sheet, «ابدأ من هنا» (one tile per school stage, linking to `/did-you-know/?level=<stage>#browse`, plus school radio), «هل تعلم؟ للطلاب», «المواد الدراسية», «أحدث الدروس والمقالات», «ترند اليوم», then the archive.
 - **The «هل تعلم؟» students section** is organised by subject, with a school-stage badge on every fact. Arabic pages show English-language facts in English with the Arabic translation, because «هل تعلم بالانجليزي مترجمة» is a popular search.
 
 ## Content growth plan
 
-Mahmoud's long-term goal is about 100 articles per category. **The first milestone (set 2026-10-29) is at least 30 articles in every category.** Always fill the categories with the fewest articles first; check with `grep -h '^category:' src/content/articles/ar/*.md | sort | uniq -c | sort -n`. **Grow in batches of about 20–30 quality articles per session, never thousands at once.** Google's spam policies target mass-produced, low-value content, which could sink the whole site and block AdSense approval.
+Since 2026-11-06 growth is only in the **study categories** (`STUDY_CATEGORY_IDS`), aiming for at least 30 articles in each, then about 100. Fill the study categories with the fewest articles first; check with `grep -h '^category:' src/content/articles/ar/*.md | sort | uniq -c | sort -n`. **Grow in batches of about 20–30 quality articles per session, never thousands at once.** Google's spam policies target mass-produced, low-value content, which could sink the whole site and block AdSense approval.
 
 - Run keyword research first (`node scripts/keywords.mjs ...`) and pick the real queries people type.
 - Prioritise categories with few articles and the highest-volume queries.
@@ -190,4 +197,4 @@ maloomah.com is also the developer website of Mahmoud's Android app «الذاك
 - [x] `sitemap-index.xml` submitted in Search Console (27 Oct 2026, success)
 - [x] Google Analytics: measurement ID `G-G3KTSCJWHL` (stream «موقع معلومة», account ABU JAMIL ANALYTICS) added to `SITE.googleAnalyticsId` (2026-11-04)
 - [x] Google AdSense code added: `SITE.adsenseClient = 'ca-pub-8690671273411786'` (loads on every page) and `public/ads.txt` (2026-10-23)
-- [ ] AdSense approval is pending. Keep adding solid articles, since about 25–30 makes approval much more likely. Once approved, either turn on Auto ads in the AdSense dashboard, or create ad units and pass their slot IDs to `<AdSlot slot="..."/>` in `src/views/ArticleView.astro`
+- [ ] **AdSense rejected the site on 2026-11-06 for "low-value content"** (site 2 weeks old, about 7 auto-published articles a day). Response: the learning-site niche (Owner's rule 3), 3 deeper articles a day, and a fuller «من نحن» page naming Mahmoud as the founder. Request a new review around 2026-12-01, not before. Earlier note: AdSense approval was pending. Keep adding solid articles, since about 25–30 makes approval much more likely. Once approved, either turn on Auto ads in the AdSense dashboard, or create ad units and pass their slot IDs to `<AdSlot slot="..."/>` in `src/views/ArticleView.astro`
