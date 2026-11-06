@@ -41,6 +41,11 @@ const year = new Date().getFullYear();
           <li><a href={localePath(lang, '/contact/')}>{ui.contact}</a></li>
           <li><a href={localePath(lang, '/privacy/')}>{ui.privacy}</a></li>
           <li><a href={localePath(lang, '/terms/')}>{ui.terms}</a></li>
+          <li>
+            <a href={lang === 'ar' ? 'https://calcloom.com/ar/' : 'https://calcloom.com/'} lang={lang === 'ar' ? 'ar' : 'en'}>
+              {lang === 'ar' ? 'حاسبات ومحوّلات مجانية' : 'Free calculators and converters'}
+            </a>
+          </li>
           <li><a href={localePath(lang, '/rss.xml')}>RSS</a></li>
         </ul>
       </div>
