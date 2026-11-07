@@ -17,14 +17,13 @@ This order fits a morning assembly of about 10 to 12 minutes. Teachers can drop 
 | --- | --- | --- | --- |
 | 1 | Introduction | 1 min | Host |
 | 2 | Quran recitation | 2 min | A student who recites well |
-| 3 | Morning talk | 2 min | One student |
-| 4 | "Did you know?" | 1.5 min | Two students taking turns |
-| 5 | Short story | 2 min | A confident reader |
-| 6 | Sayings about tolerance | 1 min | Three students |
-| 7 | Assembly quiz | 2 min | Host |
-| 8 | Closing | 1 min | Host |
-
-> **Teacher's note:** for the recitation segment, the student chooses suitable verses together with the Islamic education teacher and reads them directly from the mushaf.
+| 3 | Hadith | 1 min | One student |
+| 4 | Morning talk | 2 min | One student |
+| 5 | "Did you know?" | 1.5 min | Two students taking turns |
+| 6 | Short story | 2 min | A confident reader |
+| 7 | Sayings about tolerance | 1 min | Three students |
+| 8 | Assembly quiz | 2 min | Host |
+| 9 | Closing | 1 min | Host |
 
 ## Introduction
 
@@ -32,6 +31,24 @@ This order fits a morning assembly of about 10 to 12 minutes. Teachers can drop 
 > Dear head teacher, dear teachers and fellow students, we hope you are all well.
 > Today we want to talk about a quality that turns a school into one home and a classroom into a small family: **tolerance**. On 16 November the world celebrates the International Day for Tolerance, and we can celebrate it every day, whenever we smile at a classmate, apologise for a mistake, or forgive someone who has hurt us.
 > We begin our assembly with a recitation from the Holy Quran by our classmate …
+
+## Quran verses about tolerance
+
+The student recites one or more of these verses in Arabic, ideally reading from the mushaf. The meanings below are from the Saheeh International translation on quran.com:
+
+> "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Aware." (Surah Al-Hujurat, 49:13)
+
+> "And not equal are the good deed and the bad. Repel [evil] by that [deed] which is better; and thereupon, the one whom between you and him is enmity [will become] as though he was a devoted friend." (Surah Fussilat, 41:34)
+
+> "Who spend [in the cause of Allah] during ease and hardship and who restrain anger and who pardon the people - and Allah loves the doers of good." (Surah Al Imran, 3:134)
+
+## Hadith about tolerance
+
+> Jabir ibn Abdullah reported that the Prophet (peace be upon him) said, in meaning: "May Allah have mercy on a man who is easy-going when he sells, when he buys and when he asks for what he is owed." (Sahih al-Bukhari 2076)
+
+> Abu Hurairah reported that the Prophet (peace be upon him) said, in meaning: "Charity does not decrease wealth; Allah increases a servant who forgives only in honour; and no one humbles himself for Allah's sake but Allah raises him." (Sahih Muslim 2588)
+
+**In short:** the first hadith prays for mercy on people who are gentle and easy to deal with. The second teaches that forgiving others never makes you weaker; it raises your honour.
 
 ## Morning talk on tolerance
 
