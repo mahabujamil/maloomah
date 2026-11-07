@@ -1,9 +1,11 @@
 ---
-title: "The Dead Sea: Why You Can't Sink, and Amazing Facts About the Lowest Place on Earth"
+title: "The Dead Sea: Why You Can't Sink, and Amazing Facts"
 description: "Why do people float in the Dead Sea? What makes it so salty, and why is it shrinking? Amazing facts about the lowest point on land, plus tips for a safe swim."
 category: geography
 date: 2026-10-23
+updated: 2026-11-07
 tags: ["Dead Sea", "Jordan", "travel", "geography"]
+keywords: ["dead sea", "why can't you sink in the dead sea", "dead sea jordan", "dead sea facts", "lowest point on earth"]
 featured: true
 ---
 
@@ -16,6 +18,18 @@ The Dead Sea lies in the **Jordan Rift Valley**, bordered by Jordan to the east 
 - Its shore lies **more than 430 metres below sea level**, and it gets lower every year.
 - Its northern basin is about 50 kilometres long and reaches a depth of about 300 metres.
 - It is less than an hour's drive from Amman, the capital of Jordan.
+
+### Dead Sea quick-facts card (for students)
+
+| Fact | Approximate value |
+| --- | --- |
+| Type | Landlocked salt lake with no outlet |
+| Location | The Jordan Rift Valley |
+| Shore elevation | More than 430 metres below sea level |
+| Maximum depth | About 300 metres |
+| Salinity | About 34% (roughly ten times saltier than the ocean) |
+| Main water source | The Jordan River, valleys and springs |
+| Rate of decline | About one metre a year |
 
 ## Why is it so salty?
 
@@ -45,7 +59,7 @@ Its shores are also home to major industries extracting **potash and bromine**.
 
 ## The Dead Sea is shrinking
 
-The Dead Sea's level is dropping by **more than one metre every year**, and it has lost a large part of its surface area since the 1960s. The main reasons are:
+The Dead Sea's level is dropping by **about one metre every year** (some studies estimate 0.7 to 1 metre a year), and it has lost a large part of its surface area since the 1960s. The main reasons are:
 
 1. **Diverting water from the Jordan River and its tributaries** for drinking and farming, so very little now reaches it.
 2. **Evaporation ponds** used by the mineral industries.
@@ -78,6 +92,18 @@ Yes, even though floating is easy. Swallowing or inhaling its extremely salty wa
 
 Spring and autumn are best. Summer is extremely hot, with temperatures that can exceed 40 °C.
 
+### Is the Dead Sea a sea or a lake?
+
+Scientifically it is a **salt lake**, because it is a closed body of water that does not connect to any sea or ocean. People have simply called it a sea since ancient times.
+
+### Why do people float in the Dead Sea? (A short answer for students)
+
+The huge amount of salt dissolved in its water makes the water denser than the human body, so the water pushes you upwards with a force greater than your weight, and you float easily.
+
+### How does the lowest point on land compare with the highest?
+
+The lowest point on land is the shore of the Dead Sea, more than 430 metres below sea level, while the highest is the summit of Mount Everest. Read: [What is the highest mountain in the world?](/en/articles/highest-mountain-in-the-world/)
+
 ## Key takeaway
 
-The Dead Sea is a landlocked, extremely salty lake at the lowest point on land. Its salt makes the water dense enough to float in effortlessly, and its minerals have made it a destination for wellness and tourism. But it shrinks year after year and needs real solutions to survive.
+The Dead Sea is a landlocked, extremely salty lake at the lowest point on land. Its salt makes the water dense enough to float in effortlessly, and its minerals have made it a destination for wellness and tourism. But it shrinks year after year and needs real solutions to survive. For more amazing geography facts, browse our [geography "Did you know?" page](/en/did-you-know/geography/).

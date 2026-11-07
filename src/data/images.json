@@ -215,6 +215,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "essay-about-water": {
+    "alt": {
+      "ar": "قناة ماء تجري بين الأعشاب الخضراء وتروي الحقول الزراعية",
+      "en": "A water channel flowing through green grass and irrigating farmland"
+    },
+    "title": "Irrigation and Water (20190828-NRCS-LSC-0427)",
+    "creator": "USDAgov",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Irrigation_and_Water_(20190828-NRCS-LSC-0427).jpg"
+  },
   "facebook-monetization": {
     "alt": {
       "ar": "هاتف ذكي تظهر على شاشته تطبيقات التواصل الاجتماعي ومنها فيسبوك",
@@ -515,6 +527,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
   },
+  "human-digestive-system": {
+    "alt": {
+      "ar": "رسم توضيحي لأعضاء الجهاز الهضمي للإنسان: المريء والمعدة والأمعاء والكبد",
+      "en": "Diagram of the human digestive system: oesophagus, stomach, intestines and liver"
+    },
+    "title": "Digestive system with liver",
+    "creator": "Gordon Flynn",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Digestive_system_with_liver.png"
+  },
   "human-heart-facts": {
     "alt": {
       "ar": "رسم تشريحي توضيحي لقلب الإنسان من الخارج مع الأوعية الدموية الكبرى",
@@ -766,6 +790,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Salep_on_a_wooden_table.jpg"
+  },
+  "school-radio-about-tolerance": {
+    "alt": {
+      "ar": "مصافحة بين يدين مختلفتين في لون البشرة رمزاً للتسامح والأخوة",
+      "en": "A handshake between two hands of different skin colours, a symbol of tolerance and friendship"
+    },
+    "title": "Hermandad - friendship",
+    "creator": "Rufino",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hermandad_-_friendship.jpg"
   },
   "screen-time-for-kids": {
     "alt": {
