@@ -215,6 +215,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "essay-about-pollution": {
+    "alt": {
+      "ar": "دخان كثيف يتصاعد من مداخن مصنع ويلوث الهواء",
+      "en": "Thick smoke rising from factory chimneys and polluting the air"
+    },
+    "title": "Smoke stacks1a35072v",
+    "creator": "Alfred T. Palmer",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Smoke_stacks1a35072v.jpg"
+  },
   "essay-about-water": {
     "alt": {
       "ar": "قناة ماء تجري بين الأعشاب الخضراء وتروي الحقول الزراعية",
@@ -803,6 +815,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Hermandad_-_friendship.jpg"
   },
+  "school-radio-about-world-childrens-day": {
+    "alt": {
+      "ar": "أقلام تلوين ملونة يستخدمها الأطفال في الرسم",
+      "en": "Coloured pencils that children use for drawing"
+    },
+    "title": "Crayons Conté",
+    "creator": "Popolon",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Crayons_Cont%C3%A9.jpg"
+  },
   "screen-time-for-kids": {
     "alt": {
       "ar": "طفل يستخدم جهازا لوحيا وقلما إلكترونيا",
@@ -1138,6 +1162,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Bodleian_MS._Huntington_214_roll332_frame36.jpg"
+  },
+  "who-is-ibn-khaldun": {
+    "alt": {
+      "ar": "تمثال ابن خلدون في شارع الحبيب بورقيبة وسط مدينة تونس",
+      "en": "Statue of Ibn Khaldun on Habib Bourguiba Avenue in central Tunis"
+    },
+    "title": "Statue Ibn Khaldoun",
+    "creator": "M Dhifallah",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Statue_Ibn_Khaldoun.jpg"
   },
   "who-is-ibn-sina": {
     "alt": {

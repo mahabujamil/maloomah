@@ -20,6 +20,7 @@
   ["primary","النقاط في العربية تميّز بين الحروف المتشابهة في الشكل، مثل ب وت وث.","Dots in Arabic tell apart letters that share the same shape, such as ب, ت and ث."],
   ["primary","ترتيب «أبجد هوز» ترتيب قديم للحروف العربية، واستُخدم أيضاً لكتابة الأعداد فيما يسمى حساب الجُمّل.","The 'abjad' order is an old order of the Arabic letters, also used to write numbers in a system called hisab al-jummal."],
   ["primary","كلمة «صفر» العربية هي أصل كلمتي cipher و zero في اللغات الأوروبية.","The Arabic word 'sifr' is the origin of the European words 'cipher' and 'zero'."],
+  ["primary","تكتب العربية الفاصلة والسؤال بشكل مقلوب عن الإنجليزية: الفاصلة «،» وعلامة الاستفهام «؟».","Arabic writes the comma and the question mark facing the other way from English: «،» and «؟»."],
   ["middle","يتحدث العربية نحو 400 مليون إنسان، وهي من أكثر لغات العالم انتشاراً.","Around 400 million people speak Arabic, making it one of the most widely spoken languages in the world."],
   ["middle","تُسمى العربية «لغة الضاد» لأن حرف الضاد من الأصوات المميزة لها.","Arabic is called \"the language of the ḍād\" because the letter ض is one of its most distinctive sounds."],
   ["middle","تُكتب العربية من اليمين إلى اليسار، لكن الأعداد تُكتب فيها والمنازل الكبرى على اليسار.","Arabic is written from right to left, but numbers are written with the largest place value on the left."],
@@ -43,6 +44,7 @@
   ["middle","في العربية نوعان من الهمزة: همزة الوصل التي تسقط في درج الكلام، وهمزة القطع التي تُنطق دائماً.","Arabic has two kinds of hamza: hamzat al-waṣl, which drops out in connected speech, and hamzat al-qaṭ', which is always pronounced."],
   ["middle","كانت العربية لغة العلم قروناً، وتُرجمت كتب ابن سينا والخوارزمي منها إلى اللاتينية.","Arabic was the language of science for centuries, and the books of Ibn Sina and al-Khwarizmi were translated from it into Latin."],
   ["middle","بويع أحمد شوقي «أميراً للشعراء» عام 1927.","Ahmad Shawqi was proclaimed 'Prince of Poets' in 1927."],
+  ["middle","اشتهر معجم «القاموس المحيط» للفيروزآبادي حتى صارت كلمة «قاموس» تُطلق على كل معجم لغوي.","Al-Fayruzabadi's dictionary 'al-Qamus al-Muhit' became so famous that the word 'qamus' (ocean) came to mean any dictionary in Arabic."],
   ["secondary","أقدم معجم عربي معروف هو معجم «العين» للخليل بن أحمد الفراهيدي.","The oldest known Arabic dictionary is \"Kitab al-Ayn\" by al-Khalil ibn Ahmad al-Farahidi."],
   ["secondary","الخليل بن أحمد الفراهيدي هو واضع علم العروض الذي يدرس أوزان الشعر العربي.","Al-Khalil ibn Ahmad al-Farahidi founded the science of Arabic prosody, the study of poetic metres."],
   ["secondary","أصبحت العربية إحدى اللغات الرسمية الست في الأمم المتحدة عام 1973.","Arabic became one of the six official languages of the United Nations in 1973."],
@@ -60,5 +62,6 @@
   ["secondary","يُصاغ اسم الفاعل من الفعل الثلاثي على وزن «فاعل»، مثل «كاتب» من «كتب».","The active participle of a three-letter verb follows the pattern fā'il, as in kātib (writer) from kataba (to write)."],
   ["secondary","يستخدم المتحدثون بالعربية الفصحى في الكتابة والمواقف الرسمية، واللهجات المحلية في الحياة اليومية.","Arabic speakers use Modern Standard Arabic for writing and formal settings, and local dialects in daily life."],
   ["secondary","رأى ابن خلدون في «المقدمة» أن اللغة ملَكة تُكتسب بالممارسة والتكرار.","In the 'Muqaddimah', Ibn Khaldun argued that language is a skill acquired through practice and repetition."],
-  ["secondary","يرى أغلب الباحثين أن الخط العربي تطوّر من الخط النبطي، الذي تطور بدوره من الخط الآرامي.","Most scholars believe the Arabic script developed from the Nabataean script, which itself came from Aramaic."]
+  ["secondary","يرى أغلب الباحثين أن الخط العربي تطوّر من الخط النبطي، الذي تطور بدوره من الخط الآرامي.","Most scholars believe the Arabic script developed from the Nabataean script, which itself came from Aramaic."],
+  ["secondary","يُعدّ بديع الزمان الهمذاني مبتكر فن المقامات في القرن الرابع الهجري، ثم بلغ به الحريري ذروته.","Badi' al-Zaman al-Hamadhani is credited with creating the maqama, a genre of rhymed-prose tales, in the 10th century, and al-Hariri later took it to its peak."]
 ]

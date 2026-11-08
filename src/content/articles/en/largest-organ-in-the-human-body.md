@@ -3,6 +3,7 @@ title: "What Is the Largest Organ in the Human Body? Skin or Liver?"
 description: "What's the largest organ in the human body, and the largest internal organ? Learn about the skin and liver and what they do, plus a table of amazing body records."
 category: body
 date: 2026-10-23
+updated: 2026-11-08
 tags: ["human body", "organs", "health facts", "anatomy"]
 keywords: ["largest organ in the human body", "largest internal organ", "human body facts", "largest gland in the body"]
 ---
@@ -14,8 +15,15 @@ If someone asked you for the largest organ in the human body, you might think of
 We may not think of skin as an organ, but scientifically it is a complete organ made of several tissues that carry out vital jobs. And it is by far the body's largest:
 
 - In adults it covers about **1.5 to 2 square metres**.
-- It weighs **several kilograms**, depending on body size.
-- It has three main layers: the outer **epidermis**, then the **dermis**, then the fatty **subcutaneous layer**.
+- It weighs **roughly 3.5 to 5 kilograms**, close to **15%** of body weight, depending on body size and how it is measured.
+
+### The three layers of the skin
+
+| Layer | Where it is | Main job |
+| --- | --- | --- |
+| **Epidermis** | The outer layer we can see | Keeps germs out, and contains the cells that give skin its colour |
+| **Dermis** | Beneath the epidermis | Gives skin its strength and stretch, and holds blood vessels, nerve endings, hair roots and sweat glands |
+| **Subcutaneous layer** | The deepest layer | Made mostly of fat, it keeps the body warm and cushions it against knocks |
 
 ### What the skin does
 
@@ -62,6 +70,8 @@ One of its most remarkable abilities is **regenerating itself**: it can regrow e
 - **For your skin:** drink water, use sunscreen, and avoid too much midday sun.
 - **For your liver:** keep a healthy weight, cut down on sugar and processed fats, don't take medicines without advice, and avoid alcohol.
 
+For more amazing facts about the body, read [how many bones are in the human body](/en/articles/how-many-bones-in-the-human-body/), or browse [Did You Know facts about the human body](/en/did-you-know/body/).
+
 ## Frequently asked questions
 
 ### Is skin really an organ?
@@ -75,6 +85,14 @@ The liver, which weighs about 1.5 kilograms in adults.
 ### What is the largest gland in the human body?
 
 Also the liver: it's both the largest internal organ and the largest gland.
+
+### How much does human skin weigh?
+
+An adult's skin weighs roughly 3.5 to 5 kilograms, close to 15% of body weight. Figures vary between sources depending on body size and whether the fatty layer under the skin is counted.
+
+### What are the layers of the skin?
+
+The skin has three layers: the outer epidermis, then the dermis, then the fatty subcutaneous layer.
 
 ## Key takeaway
 
