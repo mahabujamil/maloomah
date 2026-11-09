@@ -20,6 +20,7 @@
   ["primary","يحدث الصدى عندما يرتد الصوت عن سطح صلب ويعود إلى أذنيك.","An echo happens when sound bounces off a hard surface and comes back to your ears."],
   ["primary","الأحافير بقايا أو آثار كائنات حية قديمة حُفظت في الصخور.","Fossils are the remains or traces of ancient living things preserved in rock."],
   ["primary","تجد الخفافيش طريقها في الظلام بإطلاق أصوات والاستماع إلى صداها.","Bats find their way in the dark by making sounds and listening to the echoes."],
+  ["primary","ينتج الصوت عن اهتزاز الأجسام، فعندما تضرب الطبل يهتز جلده فيصدر الصوت.","Sound is made by things vibrating: when you hit a drum, its skin vibrates and makes the sound."],
   ["middle","الصوت لا ينتقل في الفراغ، لذلك يكون الفضاء صامتاً تماماً.","Sound cannot travel through a vacuum, so space is completely silent."],
   ["middle","نرى البرق قبل أن نسمع الرعد لأن الضوء أسرع من الصوت بنحو 900 ألف مرة.","We see lightning before we hear thunder because light travels about 900,000 times faster than sound."],
   ["middle","الماس والغرافيت الموجود في أقلام الرصاص مكوّنان من العنصر نفسه: الكربون.","Diamond and the graphite in pencils are made of the same element: carbon."],
@@ -43,6 +44,7 @@
   ["middle","تتركز كتلة الذرة كلها تقريباً في نواتها الصغيرة جداً.","Almost all the mass of an atom is packed into its tiny nucleus."],
   ["middle","تملك الخلية النباتية جداراً خلوياً وبلاستيدات خضراء لا توجد في الخلية الحيوانية.","Plant cells have a cell wall and chloroplasts, which animal cells do not have."],
   ["middle","تُرصد الزلازل وتُقاس بجهاز يسمى السيزموغراف (مرسمة الزلازل).","Earthquakes are recorded and measured with an instrument called a seismograph."],
+  ["middle","عندما اقترح أندرس سلسيوس مقياسه للحرارة عام 1742 جعل الصفر لغليان الماء والمئة لتجمده، ثم عُكس المقياس بعد وفاته.","When Anders Celsius proposed his temperature scale in 1742, he set 0 for boiling water and 100 for freezing; the scale was flipped after his death."],
   ["secondary","الهيدروجين هو العنصر الأكثر وفرة في الكون.","Hydrogen is the most abundant element in the universe."],
   ["secondary","لو فُرد الحمض النووي (DNA) الموجود في خلية بشرية واحدة، لبلغ طوله نحو مترين.","If you stretched out the DNA in a single human cell, it would be about two metres long."],
   ["secondary","تبيّن معادلة أينشتاين الشهيرة E = mc² أن الكتلة والطاقة وجهان لشيء واحد.","Einstein's famous equation E = mc² shows that mass and energy are two forms of the same thing."],
@@ -60,5 +62,6 @@
   ["secondary","الغرافين طبقة واحدة من ذرات الكربون، وهو من أقوى المواد التي اختبرها العلماء.","Graphene is a single layer of carbon atoms and one of the strongest materials scientists have ever tested."],
   ["secondary","يتمدد الماء عندما يتجمد، ولهذا قد تنفجر أنابيب المياه في البرد الشديد.","Water expands when it freezes, which is why water pipes can burst in severe cold."],
   ["secondary","الإنزيمات بروتينات تسرّع التفاعلات الكيميائية داخل أجسام الكائنات الحية.","Enzymes are proteins that speed up chemical reactions inside living things."],
-  ["secondary","يقدّر العلماء أن جسم الإنسان البالغ يتكوّن من نحو 37 تريليون خلية.","Scientists estimate that an adult human body is made of about 37 trillion cells."]
+  ["secondary","يقدّر العلماء أن جسم الإنسان البالغ يتكوّن من نحو 37 تريليون خلية.","Scientists estimate that an adult human body is made of about 37 trillion cells."],
+  ["secondary","اكتشف العالم البريطاني جوزيف جون طومسون الإلكترون عام 1897 من تجاربه على أشعة المهبط.","British physicist J. J. Thomson discovered the electron in 1897 through his experiments with cathode rays."]
 ]

@@ -20,6 +20,7 @@
   ["primary","كان غاليليو من أوائل من استخدموا التلسكوب لدراسة السماء، بين عامي 1609 و1610.","Galileo was one of the first people to study the sky with a telescope, in 1609 and 1610."],
   ["primary","للمريخ قمران صغيران اسمهما فوبوس وديموس.","Mars has two small moons called Phobos and Deimos."],
   ["primary","البقعة الحمراء العظيمة على كوكب المشتري عاصفة عملاقة أكبر من الأرض.","Jupiter's Great Red Spot is a giant storm bigger than Earth."],
+  ["primary","الأرض هي الكوكب الوحيد المعروف حتى اليوم الذي توجد عليه حياة.","Earth is the only planet known so far to have life on it."],
   ["middle","المشتري أكبر كواكب المجموعة الشمسية، ويمكن أن يتسع لأكثر من 1300 كوكب بحجم الأرض.","Jupiter is the largest planet in the solar system; more than 1,300 Earths could fit inside it."],
   ["middle","الزهرة أسخن كواكب المجموعة الشمسية، مع أن عطارد أقرب منها إلى الشمس.","Venus is the hottest planet in the solar system, even though Mercury is closer to the Sun."],
   ["middle","يستغرق ضوء الشمس نحو 8 دقائق و20 ثانية ليصل إلى الأرض.","Sunlight takes about 8 minutes and 20 seconds to reach Earth."],
@@ -42,6 +43,7 @@
   ["middle","الزهرة هو ألمع كوكب في سمائنا ليلاً، ويسمى أحياناً نجمة الصباح أو نجمة المساء.","Venus is the brightest planet in our night sky and is sometimes called the morning or evening star."],
   ["middle","تيتان أكبر أقمار زحل، وله غلاف جوي كثيف وبحيرات من الميثان السائل.","Titan, Saturn's largest moon, has a thick atmosphere and lakes of liquid methane."],
   ["middle","يرجّح العلماء وجود محيط من الماء تحت القشرة الجليدية لقمر يوروبا التابع للمشتري.","Scientists think there is an ocean of water beneath the icy crust of Jupiter's moon Europa."],
+  ["middle","غانيميد، أحد أقمار المشتري، هو أكبر قمر في المجموعة الشمسية، وهو أكبر من كوكب عطارد.","Ganymede, one of Jupiter's moons, is the largest moon in the solar system, and it is bigger than the planet Mercury."],
   ["secondary","تدور محطة الفضاء الدولية حول الأرض مرة كل 90 دقيقة تقريباً.","The International Space Station orbits the Earth about once every 90 minutes."],
   ["secondary","تشكّل الشمس نحو 99.8% من كتلة المجموعة الشمسية كلها.","The Sun makes up about 99.8% of the mass of the entire solar system."],
   ["secondary","قد تبقى آثار أقدام رواد الفضاء على القمر ملايين السنين، لعدم وجود رياح أو أمطار هناك.","Astronauts' footprints on the Moon could last for millions of years, because there is no wind or rain there."],
@@ -60,5 +62,6 @@
   ["secondary","اكتشف يوهانس كبلر في أوائل القرن السابع عشر أن الكواكب تدور حول الشمس في مدارات إهليلجية.","In the early 17th century Johannes Kepler discovered that planets orbit the Sun in ellipses."],
   ["secondary","أكّد العلماء وجود أكثر من 5 آلاف كوكب يدور حول نجوم أخرى غير الشمس.","Scientists have confirmed more than 5,000 planets orbiting stars other than the Sun."],
   ["secondary","تبعد الأرض عن الشمس نحو 150 مليون كيلومتر، وهي المسافة التي تسمى الوحدة الفلكية.","Earth is about 150 million kilometres from the Sun, a distance called one astronomical unit."],
-  ["secondary","إشعاع الخلفية الكونية الميكروي بقايا ضوء انطلق بعد نحو 380 ألف سنة من الانفجار العظيم.","The cosmic microwave background is leftover light released about 380,000 years after the Big Bang."]
+  ["secondary","إشعاع الخلفية الكونية الميكروي بقايا ضوء انطلق بعد نحو 380 ألف سنة من الانفجار العظيم.","The cosmic microwave background is leftover light released about 380,000 years after the Big Bang."],
+  ["secondary","فالنتينا تيريشكوفا أول امرأة تصل إلى الفضاء، على متن المركبة فوستوك 6 عام 1963.","Valentina Tereshkova became the first woman in space, aboard Vostok 6 in 1963."]
 ]

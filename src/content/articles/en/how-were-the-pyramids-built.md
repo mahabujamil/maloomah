@@ -1,9 +1,11 @@
 ---
 title: "How Were the Pyramids Built? What We Know About the Great Pyramid"
-description: "How did ancient Egyptians build the Great Pyramid about 4,500 years ago? Facts about the stones, the workers and transport, plus the main theories archaeologists discuss."
+description: "How were the pyramids built about 4,500 years ago? Facts about the stones, the workers and transport on the Nile, plus the main theories archaeologists discuss."
 category: history
 date: 2026-10-23
+updated: 2026-11-09
 tags: ["ancient Egypt", "pyramids", "civilizations", "archaeology"]
+keywords: ["how were the pyramids built", "who built the pyramids", "how were the pyramids of giza built", "three pyramids of giza", "did slaves build the pyramids"]
 ---
 
 About 4,500 years ago, without cranes or modern machines, the ancient Egyptians raised more than two million stone blocks to build the Great Pyramid of Giza. How did they do it? Scientists have not uncovered every detail, but archaeological discoveries in recent decades have answered many of the big questions.
@@ -39,7 +41,7 @@ The papyrus is direct evidence that the Nile was the "highway" for building mate
 
 > **Did you know?** A wall painting in the tomb of the Egyptian official Djehutihotep shows a worker pouring water in front of a sledge carrying a colossal statue. Physics experiments in 2014 showed that wetting sand by the right amount greatly reduces friction, making heavy loads far easier to pull.
 
-## How did they lift the stones?
+## How were the pyramids built? Theories about lifting the stones
 
 This is still debated. The main theories are:
 
@@ -56,6 +58,18 @@ Most likely, the builders combined several methods depending on the stage of con
 
 The sides of the Great Pyramid line up with the four cardinal directions (north, south, east and west) with remarkable accuracy, off by only a small fraction of a degree. Researchers believe the Egyptians used observations of the stars or the Sun to achieve this.
 
+## The three pyramids of Giza
+
+The Great Pyramid stands on the Giza plateau beside two other large pyramids, built by kings of the same Fourth Dynasty. Heights are approximate:
+
+| Pyramid | King | Approx. original height | What stands out |
+| --- | --- | --- | --- |
+| Great Pyramid | Khufu | about 146 m | The largest and oldest of the three |
+| Second pyramid | Khafre (Khufu's son) | about 143 m | Looks taller than Khufu's because it stands on higher ground; some of its casing survives near the top |
+| Third pyramid | Menkaure | about 65 m | The smallest of the three; parts of its lower casing were granite |
+
+Near Khafre's pyramid stands the **Great Sphinx**, which many archaeologists believe was carved during Khafre's reign. For the bigger picture of the civilization that built these monuments, read our lesson on [ancient Egyptian civilization and its achievements](/en/articles/ancient-egyptian-civilization/).
+
 ## What about alien theories?
 
 There is no scientific evidence for them. Instead, Egyptian civilisation left clear evidence of human work: quarries, tools, workers' villages and administrative records like the Diary of Merer. Crediting this achievement to anyone else robs the ancient Egyptians of what they accomplished.
@@ -69,6 +83,10 @@ They were monumental royal tombs, linked to beliefs about the king's journey to 
 ### How long did it take to build the Great Pyramid?
 
 Ancient accounts say about 20 years, and many researchers consider that a reasonable estimate.
+
+### Did slaves build the pyramids of Giza?
+
+The archaeological evidence doesn't support it. The workers' village and cemeteries near the pyramids show organised crews who received food and medical care, and some were even buried in tombs close to the pyramids, an honour not normally given to slaves.
 
 ### How many pyramids are there in Egypt?
 
