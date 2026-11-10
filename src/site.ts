@@ -306,7 +306,7 @@ const UI = {
     keyTakeaway: 'الخلاصة',
     viewAll: 'عرض الكل',
     dykNav: 'هل تعلم؟',
-    dykTitle: 'هل تعلم؟ معلومات قصيرة للإذاعة المدرسية',
+    dykTitle: 'هل تعلم للإذاعة المدرسية: أكثر من 1000 معلومة قصيرة',
     dykLead:
       'معلومات مدهشة وموثوقة لطلاب المدارس، مرتبة حسب المادة والمرحلة الدراسية. اختر ما يناسبك وانسخه بضغطة واحدة لفقرة هل تعلم في الإذاعة المدرسية.',
     dykHomeTitle: 'هل تعلم؟ للطلاب',
@@ -326,6 +326,35 @@ const UI = {
     dykTranslation: 'الترجمة',
     dykTip: 'نصيحة للإذاعة المدرسية: اختر من 5 إلى 7 معلومات من مواد مختلفة، وابدأ كل واحدة بعبارة «هل تعلم أنّ».',
     dykOtherSubjects: 'مواد أخرى',
+    dykRadioTitle: (about: string) => `فقرة هل تعلم عن ${about} للإذاعة المدرسية جاهزة`,
+    dykRadioText: 'مقدمة و6 معلومات وخاتمة، تتجدد المعلومات كل يوم. انسخها كما هي أو اختر منها ما يناسبك.',
+    dykRadioIntroLabel: 'المقدمة:',
+    dykRadioIntro: (about: string) =>
+      `بسم الله الرحمن الرحيم، صباح الخير أيها الطلاب والمعلمون. نقدم لكم فقرة «هل تعلم» عن ${about}، معلومات قصيرة تفتح لنا أبواب المعرفة.`,
+    dykRadioOutroLabel: 'الخاتمة:',
+    dykRadioOutro: 'كانت هذه فقرة «هل تعلم»، نرجو أن تكون قد أضافت إلى معلوماتكم شيئًا جديدًا. والسلام عليكم ورحمة الله وبركاته.',
+    dykFaqTitle: 'أسئلة شائعة',
+    dykRadioMixLink: 'إذاعة مدرسية منوعة جاهزة من كل المواد ←',
+    dykRadioMixTitle: 'إذاعة مدرسية منوعة جاهزة',
+    dykRadioMixText: 'تشكيلة من كل المواد تتجدد كل يوم، مع المقدمة والخاتمة وترتيب الفقرات.',
+    dykFaq: (about: string, total: number, p: number, m: number, s: number) => [
+      {
+        q: `كيف أقدّم فقرة هل تعلم عن ${about} في الإذاعة المدرسية؟`,
+        a: `ابدأ بمقدمة قصيرة، ثم اقرأ من 5 إلى 7 معلومات تبدأ كل واحدة منها بعبارة «هل تعلم أنّ»، واختم بجملة شكر. تستغرق الفقرة نحو دقيقتين، وتجد في أعلى الصفحة فقرة جاهزة بالمقدمة والخاتمة.`,
+      },
+      {
+        q: `هل معلومات هل تعلم عن ${about} مناسبة لكل المراحل الدراسية؟`,
+        a: `نعم. في الصفحة ${total} معلومة مقسمة حسب المرحلة: ${p} للمرحلة الابتدائية (من الصف الأول إلى السادس)، و${m} للمرحلة الإعدادية (من الصف الأول إلى الثالث الإعدادي)، و${s} للمرحلة الثانوية. ويمكن للمعلم أن يختار منها ما يناسب صفه.`,
+      },
+      {
+        q: 'هل يمكنني نسخ المعلومات؟',
+        a: 'نعم. لكل معلومة زر نسخ، ولكل مرحلة زر «نسخ الفقرة كاملة» ينسخ معلوماتها مرقّمة وجاهزة للقراءة.',
+      },
+      {
+        q: 'هل المعلومات موثوقة؟',
+        a: 'نختار معلومات معروفة ومتفقًا عليها ونراجعها قبل نشرها، ونتجنب الأرقام غير المؤكدة. وإذا لاحظت خطأ يمكنك مراسلتنا من صفحة اتصل بنا.',
+      },
+    ],
     dykMixTitle: 'مختارات اليوم',
     dykMixText: 'معلومة من كل مادة لكل مرحلة دراسية، تتجدد كل يوم. وتجد كل المعلومات في صفحة كل مادة.',
     trendTitle: 'ترند اليوم',
@@ -431,7 +460,7 @@ const UI = {
     keyTakeaway: 'Key takeaway',
     viewAll: 'View all',
     dykNav: 'Did you know?',
-    dykTitle: 'Did You Know? Fun Facts for Students',
+    dykTitle: 'Did You Know? 1,000+ Fun Facts for Students',
     dykLead:
       'Amazing, reliable facts for school students, sorted by subject and school stage. Pick the ones you like and copy them in one click for class or school assemblies.',
     dykHomeTitle: 'Did you know? For students',
@@ -451,6 +480,35 @@ const UI = {
     dykTranslation: 'Translation',
     dykTip: 'Tip for school assemblies: pick 5 to 7 facts from different subjects and start each one with "Did you know that...".',
     dykOtherSubjects: 'Other subjects',
+    dykRadioTitle: (about: string) => `A ready school assembly segment: did you know facts about ${about}`,
+    dykRadioText: 'An opening, 6 facts and a closing line. The facts change every day; copy them as they are or pick your favourites.',
+    dykRadioIntroLabel: 'Opening:',
+    dykRadioIntro: (about: string) =>
+      `Good morning, students and teachers. Here is our "Did you know?" segment about ${about}: short facts that open new doors of knowledge.`,
+    dykRadioOutroLabel: 'Closing:',
+    dykRadioOutro: 'That was our "Did you know?" segment. We hope you learned something new today. Thank you for listening.',
+    dykFaqTitle: 'Frequently asked questions',
+    dykRadioMixLink: 'A ready mixed school assembly from every subject →',
+    dykRadioMixTitle: 'Ready mixed school assembly',
+    dykRadioMixText: 'A mix from every subject that changes daily, with an opening, a closing and the running order.',
+    dykFaq: (about: string, total: number, p: number, m: number, s: number) => [
+      {
+        q: `How do I present a "Did you know?" segment about ${about} at a school assembly?`,
+        a: `Start with a short opening, read 5 to 7 facts that each begin with "Did you know that...", and end with a thank-you line. It takes about two minutes, and there is a ready-made segment at the top of this page.`,
+      },
+      {
+        q: `Are these facts about ${about} suitable for every school stage?`,
+        a: `Yes. This page has ${total} facts sorted by stage: ${p} for primary, ${m} for middle school and ${s} for secondary.`,
+      },
+      {
+        q: 'Can I copy the facts?',
+        a: 'Yes. Every fact has a copy button, and each stage has a "Copy all" button that copies its facts as a numbered list.',
+      },
+      {
+        q: 'Are the facts reliable?',
+        a: 'We choose well-established facts, review them before publishing and avoid uncertain numbers. If you spot a mistake, please tell us through the contact page.',
+      },
+    ],
     dykMixTitle: "Today's picks",
     dykMixText: 'One fact per subject for each school stage, refreshed every day. Every fact is on its subject page.',
     trendTitle: 'Trending today',

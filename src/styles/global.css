@@ -1321,3 +1321,43 @@ a.chip:hover { border-color: var(--accent); }
   :root:not([data-theme='light']) .stage-card,
   :root:not([data-theme='light']) .stats-strip { border: 1px solid var(--border); }
 }
+
+/* Ready school-assembly segment on «هل تعلم؟» subject pages and the mixed school-radio page */
+.dyk-radio-line {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  border-inline-start: 4px solid var(--accent);
+  color: var(--text);
+  line-height: 1.9;
+}
+.dyk-radio .dyk-grid + .dyk-radio-line { margin-top: 16px; }
+.dyk-radio-more { margin: 8px 0 0; font-weight: 700; }
+.dyk-radio-more a { color: var(--brand-ink); }
+.dyk-radio-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+}
+.dyk-radio-banner > span { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.dyk-radio-banner strong { font-size: 1.1rem; }
+.dyk-order { margin: 0; padding-inline-start: 1.4em; line-height: 2; }
+.dyk-order li { margin-bottom: 4px; }
+.dyk-faq h2 { margin-bottom: 12px; }
+.dyk-faq-item {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.dyk-faq-item h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.dyk-faq-item p { margin: 0; color: var(--text-soft); line-height: 1.9; }

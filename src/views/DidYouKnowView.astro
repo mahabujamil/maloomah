@@ -40,6 +40,13 @@ const title = info ? info.title[lang] : ui.dykTitle;
 const description = info ? info.description[lang] : ui.dykLead;
 const colors = info?.colors ?? ['#f59e0b', '#059669'];
 const home = localePath(lang, '/');
+// Subject pages open with a ready school-assembly segment: 6 facts that rotate daily (spread across the list so
+// they mix stages), plus an FAQ answered from the page's own numbers.
+const radio = subject ? [0, 1, 2, 3, 4, 5].map((k) => facts[(day * 7 + k * 11) % facts.length]) : [];
+const countOf = (level: string) => facts.filter((x) => x.level === level).length;
+const faq = info
+  ? ui.dykFaq(info.about[lang], facts.length, countOf('primary'), countOf('middle'), countOf('secondary'))
+  : [];
 
 const crumbs = [
   { label: ui.breadcrumbHome, href: home },
@@ -56,6 +63,19 @@ const jsonLd = [
     url: new URL(localePath(lang, pagePath), SITE.url).href,
     audience: { '@type': 'EducationalAudience', educationalRole: 'student' },
   },
+  ...(faq.length
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faq.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        },
+      ]
+    : []),
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -98,6 +118,14 @@ const jsonLd = [
     !subject && (
       <section class="section" style="padding-bottom:12px">
         <div class="container">
+          <a class="dyk-radio-banner" href={localePath(lang, '/did-you-know/school-radio/')}>
+            <Icon name="sparkle" size={22} />
+            <span>
+              <strong>{ui.dykRadioMixTitle}</strong>
+              <span>{ui.dykRadioMixText}</span>
+            </span>
+            <Icon name="arrow" size={18} class="flip-rtl" />
+          </a>
           <div class="section-head">
             <h2>{ui.dykSubjects}</h2>
           </div>
@@ -169,6 +197,35 @@ const jsonLd = [
   }
 
   {
+    info && (
+      <section class="section dyk-radio" data-radio>
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>{ui.dykRadioTitle(info.about[lang])}</h2>
+              <p>{ui.dykRadioText}</p>
+            </div>
+            <button class="btn btn-primary" type="button" data-copy-all="[data-radio]" data-copied={ui.dykCopiedAll}>
+              <Icon name="copy" size={16} />
+              <span>{ui.dykCopyAll}</span>
+            </button>
+          </div>
+          <p class="dyk-radio-line"><strong>{ui.dykRadioIntroLabel}</strong> {ui.dykRadioIntro(info.about[lang])}</p>
+          <div class="dyk-grid">
+            {radio.map((fact, i) => (
+              <FactCard fact={fact} lang={lang} showSubject={false} num={i + 1} />
+            ))}
+          </div>
+          <p class="dyk-radio-line"><strong>{ui.dykRadioOutroLabel}</strong> {ui.dykRadioOutro}</p>
+          <p class="dyk-radio-more">
+            <a href={localePath(lang, '/did-you-know/school-radio/')}>{ui.dykRadioMixLink}</a>
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  {
     subject &&
       LEVEL_IDS.map((level) => {
         const list = facts.filter((x) => x.level === level);
@@ -193,6 +250,22 @@ const jsonLd = [
           )
         );
       })
+  }
+
+  {
+    faq.length > 0 && (
+      <section class="section dyk-faq">
+        <div class="container">
+          <h2>{ui.dykFaqTitle}</h2>
+          {faq.map((f) => (
+            <div class="dyk-faq-item">
+              <h3>{f.q}</h3>
+              <p>{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
   }
 
   {

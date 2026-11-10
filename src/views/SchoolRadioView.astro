@@ -1,0 +1,272 @@
+---
+// «إذاعة مدرسية منوعة»: a ready mixed school-assembly page built from the «هل تعلم؟» fact bank.
+// It mixes subjects and stages and rotates every day (the site rebuilds each morning), with an opening,
+// a closing, the usual running order of an assembly, and an FAQ. All content is in the static HTML.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FactCard from '../components/FactCard.astro';
+import Icon from '../components/Icon.astro';
+import { DID_YOU_KNOW, LEVELS, LEVEL_IDS, SUBJECTS, SUBJECT_IDS, factsBySubject } from '../data/did-you-know';
+import { SITE, localePath, otherLang, t, type Lang } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const pagePath = '/did-you-know/school-radio/';
+const day = Math.floor(Date.now() / 86_400_000);
+const rotate = <T,>(list: readonly T[], by: number) => list.map((_, i) => list[(i + by) % list.length]);
+
+// Today's mix: 10 facts from 10 different subjects, any stage.
+const todaySubjects = rotate(SUBJECT_IDS, day % SUBJECT_IDS.length).slice(0, 10);
+const today = todaySubjects.map((id, i) => {
+  const list = factsBySubject(id);
+  return list[(day * 3 + i * 5) % list.length];
+});
+// One mix per stage: 8 subjects each, a different slice of subjects per stage.
+const byLevel = LEVEL_IDS.map((level, li) => ({
+  level,
+  facts: rotate(SUBJECT_IDS, (day + li * 5) % SUBJECT_IDS.length)
+    .slice(0, 8)
+    .map((id) => {
+      const list = factsBySubject(id).filter((x) => x.level === level);
+      return list[(day + li) % list.length];
+    })
+    .filter(Boolean),
+}));
+
+const C = {
+  ar: {
+    title: 'إذاعة مدرسية منوعة جاهزة: هل تعلم من كل المواد',
+    description:
+      'إذاعة مدرسية منوعة جاهزة بالمقدمة والخاتمة: فقرة هل تعلم منوعة من العلوم واللغة العربية والفضاء وغيرها، تتجدد كل يوم ومرتبة حسب المرحلة الدراسية.',
+    crumb: 'إذاعة مدرسية منوعة',
+    todayTitle: 'فقرة هل تعلم المنوعة لهذا اليوم',
+    todayText: '10 معلومات من 10 مواد مختلفة، مع مقدمة وخاتمة. تتجدد التشكيلة كل يوم.',
+    intro:
+      'بسم الله الرحمن الرحيم، صباح الخير أيها الطلاب والمعلمون. نقدم لكم فقرة «هل تعلم» المنوعة، معلومات قصيرة من مواد مختلفة تفتح لنا أبواب المعرفة.',
+    outro: 'كانت هذه فقرة «هل تعلم» المنوعة، نرجو أن تكون قد أضافت إلى معلوماتكم شيئًا جديدًا. والسلام عليكم ورحمة الله وبركاته.',
+    levelTitle: (name: string) => `منوعات هل تعلم لطلاب المرحلة ${name}`,
+    levelNames: { primary: 'الابتدائية', middle: 'الإعدادية', secondary: 'الثانوية' } as Record<string, string>,
+    orderTitle: 'ترتيب فقرات الإذاعة المدرسية',
+    orderText: 'هذا هو الترتيب الشائع في أغلب المدارس، ويمكنك تعديله حسب تعليمات مدرستك:',
+    order: [
+      ['المقدمة', 'ترحيب قصير بالطلاب والمعلمين وتعريف بموضوع الإذاعة.'],
+      ['القرآن الكريم', 'تلاوة آيات قصيرة يختارها المعلم المشرف.'],
+      ['الحديث الشريف', 'حديث قصير مع شرح مبسّط من كتب الحديث المعتمدة.'],
+      ['كلمة الصباح', 'كلمة قصيرة عن موضوع الإذاعة أو مناسبة اليوم.'],
+      ['هل تعلم', 'من 5 إلى 10 معلومات قصيرة، وتجدها جاهزة في هذه الصفحة.'],
+      ['فقرة منوعة', 'لغز أو سؤال للطلاب أو معلومة عن مناسبة اليوم.'],
+      ['الخاتمة', 'شكر للمستمعين وتحية ختامية.'],
+    ],
+    subjectsTitle: 'إذاعة مدرسية حسب المادة',
+    subjectsText: 'لكل مادة صفحة فيها أكثر من 60 معلومة وفقرة جاهزة خاصة بها:',
+    faqTitle: 'أسئلة شائعة',
+    faq: [
+      {
+        q: 'ما هي الإذاعة المدرسية المنوعة؟',
+        a: 'هي إذاعة لا تلتزم بموضوع واحد، وتجمع معلومات من مواد مختلفة مثل العلوم واللغة العربية والفضاء والتاريخ، فتناسب أي يوم دراسي.',
+      },
+      {
+        q: 'كم معلومة أختار لفقرة هل تعلم؟',
+        a: 'يكفي في الغالب من 5 إلى 10 معلومات قصيرة، أي نحو دقيقتين إلى ثلاث دقائق من القراءة.',
+      },
+      {
+        q: 'هل تتغير المعلومات في هذه الصفحة؟',
+        a: `نعم، تتجدد التشكيلة كل يوم من بنك يضم أكثر من ${Math.floor(DID_YOU_KNOW.length / 100) * 100} معلومة، فتجد كل يوم فقرة جديدة.`,
+      },
+      {
+        q: 'كيف أنسخ الفقرة؟',
+        a: 'اضغط زر «نسخ الفقرة كاملة» فوق أي قسم، فتُنسخ المعلومات مرقّمة وجاهزة للطباعة أو القراءة.',
+      },
+    ],
+  },
+  en: {
+    title: 'Mixed School Assembly Ideas: Did You Know Facts',
+    description:
+      'A ready mixed school assembly with an opening and closing: did you know facts from science, language, space and more, refreshed every day and sorted by school stage.',
+    crumb: 'Mixed school assembly',
+    todayTitle: "Today's mixed did you know segment",
+    todayText: '10 facts from 10 different subjects, with an opening and a closing. The mix changes every day.',
+    intro:
+      'Good morning, students and teachers. Here is our mixed "Did you know?" segment: short facts from different subjects that open new doors of knowledge.',
+    outro: 'That was our mixed "Did you know?" segment. We hope you learned something new today. Thank you for listening.',
+    levelTitle: (name: string) => `Mixed did you know facts for ${name} students`,
+    levelNames: { primary: 'primary', middle: 'middle school', secondary: 'secondary' } as Record<string, string>,
+    orderTitle: 'The running order of a school assembly',
+    orderText: 'This is a common order in many schools; adjust it to your school’s guidance:',
+    order: [
+      ['Opening', 'A short welcome to students and teachers and the theme of the day.'],
+      ['Reading', 'A short reading chosen by the supervising teacher.'],
+      ['Morning talk', 'A short talk about the theme or an occasion of the day.'],
+      ['Did you know?', '5 to 10 short facts, ready on this page.'],
+      ['Something fun', 'A riddle or a question for the students.'],
+      ['Closing', 'A thank-you and a closing greeting.'],
+    ],
+    subjectsTitle: 'School assembly facts by subject',
+    subjectsText: 'Each subject has a page with more than 60 facts and its own ready segment:',
+    faqTitle: 'Frequently asked questions',
+    faq: [
+      {
+        q: 'What is a mixed school assembly?',
+        a: 'It is an assembly that is not tied to one topic. It mixes facts from different subjects such as science, language, space and history, so it suits any school day.',
+      },
+      {
+        q: 'How many facts should a did you know segment have?',
+        a: 'Usually 5 to 10 short facts, about two to three minutes of reading.',
+      },
+      {
+        q: 'Do the facts on this page change?',
+        a: `Yes. The mix changes every day, drawn from a bank of more than ${Math.floor(DID_YOU_KNOW.length / 100) * 100} facts.`,
+      },
+      {
+        q: 'How do I copy the segment?',
+        a: 'Press "Copy all" above any section to copy its facts as a numbered list, ready to print or read.',
+      },
+    ],
+  },
+}[lang];
+
+const home = localePath(lang, '/');
+const crumbs = [
+  { label: ui.breadcrumbHome, href: home },
+  { label: ui.dykNav, href: localePath(lang, '/did-you-know/') },
+  { label: C.crumb },
+];
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: C.title,
+    description: C.description,
+    inLanguage: lang,
+    url: new URL(localePath(lang, pagePath), SITE.url).href,
+    audience: { '@type': 'EducationalAudience', educationalRole: 'student' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: C.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.label,
+      ...(c.href ? { item: new URL(c.href, SITE.url).href } : {}),
+    })),
+  },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title={C.title}
+  description={C.description}
+  alternatePath={localePath(otherLang(lang), pagePath)}
+  jsonLd={jsonLd}
+  current="dyk"
+>
+  <section class="dyk-hero" style="--c1:#f59e0b;--c2:#059669">
+    <div class="container">
+      <Breadcrumbs items={crumbs} />
+      <div class="dyk-hero-row">
+        <span class="hero-icon"><Icon name="sparkle" size={32} /></span>
+        <h1>{C.title}</h1>
+      </div>
+      <p class="lead">{C.description}</p>
+      <p class="dyk-tip"><Icon name="sparkle" size={16} />{ui.dykTip}</p>
+    </div>
+  </section>
+
+  <section class="section dyk-radio" data-radio-today>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{C.todayTitle}</h2>
+          <p>{C.todayText}</p>
+        </div>
+        <button class="btn btn-primary" type="button" data-copy-all="[data-radio-today]" data-copied={ui.dykCopiedAll}>
+          <Icon name="copy" size={16} />
+          <span>{ui.dykCopyAll}</span>
+        </button>
+      </div>
+      <p class="dyk-radio-line"><strong>{ui.dykRadioIntroLabel}</strong> {C.intro}</p>
+      <div class="dyk-grid">
+        {today.map((fact, i) => <FactCard fact={fact} lang={lang} num={i + 1} />)}
+      </div>
+      <p class="dyk-radio-line"><strong>{ui.dykRadioOutroLabel}</strong> {C.outro}</p>
+    </div>
+  </section>
+
+  {
+    byLevel.map(({ level, facts }) => (
+      <section class="section dyk-level-section" data-level-section>
+        <div class="container">
+          <div class="section-head">
+            <h2>{C.levelTitle(C.levelNames[level])}</h2>
+            <button class="btn btn-ghost" type="button" data-copy-all="[data-level-section]" data-copied={ui.dykCopiedAll}>
+              <Icon name="copy" size={16} />
+              <span>{ui.dykCopyAll}</span>
+            </button>
+          </div>
+          <div class="dyk-grid">
+            {facts.map((fact) => (
+              <FactCard fact={fact} lang={lang} />
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section">
+    <div class="container prose-block">
+      <h2>{C.orderTitle}</h2>
+      <p>{C.orderText}</p>
+      <ol class="dyk-order">
+        {C.order.map(([name, text]) => (
+          <li>
+            <strong>{name}:</strong> {text}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{C.subjectsTitle}</h2>
+          <p>{C.subjectsText}</p>
+        </div>
+      </div>
+      <div class="dyk-filter-row">
+        {SUBJECT_IDS.map((id) => (
+          <a class="chip" style={`--c1:${SUBJECTS[id].colors[0]}`} href={localePath(lang, `/did-you-know/${id}/`)}>
+            <Icon name={SUBJECTS[id].icon} size={14} />
+            {SUBJECTS[id].name[lang]}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section dyk-faq">
+    <div class="container">
+      <h2>{C.faqTitle}</h2>
+      {
+        C.faq.map((f) => (
+          <div class="dyk-faq-item">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
