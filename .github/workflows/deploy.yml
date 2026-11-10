@@ -1,4 +1,5 @@
-# Builds the site and publishes it to GitHub Pages on every push to main.
+# Builds the site and publishes it to GitHub Pages on every push to main,
+# then tells IndexNow search engines (Bing, Yandex and others) about new and changed pages.
 name: Deploy to GitHub Pages
 
 on:
@@ -15,17 +16,32 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  SITE_URL: https://maloomah.com
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 50
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Prepare IndexNow list
+        run: node scripts/indexnow.mjs prepare
+        env:
+          BEFORE: ${{ github.event.before }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: indexnow
+          path: indexnow-urls.txt
+          if-no-files-found: ignore
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
@@ -40,3 +56,18 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - uses: actions/download-artifact@v4
+        with:
+          name: indexnow
+        continue-on-error: true
+      - run: node scripts/indexnow.mjs submit
