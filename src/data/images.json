@@ -251,6 +251,18 @@
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Smoke_stacks1a35072v.jpg"
   },
+  "essay-about-reading": {
+    "alt": {
+      "ar": "كتاب مفتوح على طاولة خشبية وبجانبه تفاحة",
+      "en": "An open book on a wooden table with an apple"
+    },
+    "title": "Open book with apples placed on a wooden table in a bright indoor setting",
+    "creator": "Shixart1985",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Open_book_with_apples_placed_on_a_wooden_table_in_a_bright_indoor_setting.jpg"
+  },
   "essay-about-water": {
     "alt": {
       "ar": "قناة ماء تجري بين الأعشاب الخضراء وتروي الحقول الزراعية",
@@ -827,6 +839,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Salep_on_a_wooden_table.jpg"
   },
+  "school-radio-about-cleanliness": {
+    "alt": {
+      "ar": "غسل اليدين بالماء والصابون تحت الصنبور",
+      "en": "Washing hands with soap and water under a tap"
+    },
+    "title": "Washing hands with soap (3)",
+    "creator": "Beat Ruest",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Washing_hands_with_soap_(3).jpg"
+  },
   "school-radio-about-science": {
     "alt": {
       "ar": "مجهر وأنابيب اختبار ودوارق ملونة في مختبر العلوم المدرسي",
@@ -1162,6 +1186,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg"
+  },
+  "who-invented-the-airplane": {
+    "alt": {
+      "ar": "طائرة الأخوين رايت في أول طيران لها يوم 17 ديسمبر 1903",
+      "en": "The Wright brothers' Flyer on its first flight on 17 December 1903"
+    },
+    "title": "First flight3",
+    "creator": "John T. Daniels",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:First_flight3.jpg"
   },
   "who-invented-the-light-bulb": {
     "alt": {
