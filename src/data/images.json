@@ -275,6 +275,18 @@
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Irrigation_and_Water_(20190828-NRCS-LSC-0427).jpg"
   },
+  "essay-about-winter": {
+    "alt": {
+      "ar": "أشجار مغطاة بالثلج تحت سماء زرقاء صافية في يوم شتوي",
+      "en": "Snow-covered trees under a clear blue sky on a winter day"
+    },
+    "title": "Winter auf dem Melpertser Rasenberg",
+    "creator": "Jörg Braukmann",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Winter_auf_dem_Melpertser_Rasenberg.jpg"
+  },
   "facebook-monetization": {
     "alt": {
       "ar": "هاتف ذكي تظهر على شاشته تطبيقات التواصل الاجتماعي ومنها فيسبوك",
@@ -599,6 +611,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
     "source": "https://commons.wikimedia.org/wiki/File:Heart_oblique_external.jpg"
   },
+  "human-respiratory-system": {
+    "alt": {
+      "ar": "رسم توضيحي لأعضاء الجهاز التنفسي للإنسان: الأنف والبلعوم والحنجرة والقصبة الهوائية والرئتان",
+      "en": "Diagram of the main organs of the human respiratory system: nose, pharynx, larynx, trachea and lungs"
+    },
+    "title": "2301 Major Respiratory Organs",
+    "creator": "OpenStax College",
+    "creatorUrl": "",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2301_Major_Respiratory_Organs.jpg"
+  },
   "hybrid-vs-electric-car": {
     "alt": {
       "ar": "سيارة كهربائية موصولة بمحطة شحن",
@@ -838,6 +862,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Salep_on_a_wooden_table.jpg"
+  },
+  "school-radio-about-arabic-language": {
+    "alt": {
+      "ar": "لوحة مزخرفة بالخط العربي لمطلع قصيدة «بانت سعاد» لكعب بن زهير، تجسّد جمال اللغة العربية",
+      "en": "A decorated Arabic calligraphy panel with the opening of Ka‘b ibn Zuhayr’s poem «Banat Su‘ad», showing the beauty of the Arabic language"
+    },
+    "title": "Banat Souad calligraphy",
+    "creator": "Unknown author",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Banat_Souad_calligraphy.png"
   },
   "school-radio-about-cleanliness": {
     "alt": {

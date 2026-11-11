@@ -20,6 +20,7 @@
   ["primary","اخترع الطبيب الفرنسي رينيه لاينك السماعة الطبية عام 1816.","The French doctor René Laennec invented the stethoscope in 1816."],
   ["primary","جاءت أوراق الملاحظات اللاصقة من صمغ ضعيف اعتُبر في البداية تجربة فاشلة.","Sticky notes came from a weak glue that was first thought to be a failed experiment."],
   ["primary","استخدم الناس عود الأراك (السواك) لتنظيف الأسنان منذ زمن بعيد.","People have used the arak twig (miswak) to clean their teeth since ancient times."],
+  ["primary","اخترع إيرل ديكسون الضماد اللاصق (اللزقة الطبية) نحو عام 1920، لأن زوجته كانت تجرح أصابعها كثيراً في المطبخ.","Earle Dickson invented the adhesive bandage around 1920 because his wife often cut her fingers in the kitchen."],
   ["middle","اكتشف ألكسندر فلمنغ البنسلين، أول مضاد حيوي، عام 1928.","Alexander Fleming discovered penicillin, the first antibiotic, in 1928."],
   ["middle","حسّن جيمس واط المحرك البخاري في ستينيات وسبعينيات القرن الثامن عشر، فساعد على قيام الثورة الصناعية.","James Watt improved the steam engine in the 1760s and 1770s, helping to power the Industrial Revolution."],
   ["middle","طوّر صموئيل مورس شفرة مورس للتلغراف في ثلاثينيات وأربعينيات القرن التاسع عشر.","Samuel Morse developed Morse code for the telegraph in the 1830s and 1840s."],
@@ -41,6 +42,7 @@
   ["middle","فاز مخترعو الصمام الثنائي الباعث للضوء الأزرق (LED) بجائزة نوبل في الفيزياء عام 2014، لأنه جعل الإضاءة الموفرة ممكنة.","The inventors of the blue LED won the 2014 Nobel Prize in Physics, because it made energy-saving white lighting possible."],
   ["middle","استُخدمت طواحين الهواء في بلاد فارس قبل أكثر من ألف عام لطحن الحبوب وضخ المياه.","Windmills were used in Persia more than a thousand years ago to grind grain and pump water."],
   ["middle","عمل أول كابل تلغراف دائم عبر المحيط الأطلسي عام 1866.","The first lasting telegraph cable across the Atlantic began working in 1866."],
+  ["middle","اخترع العالم دانيال غابرييل فهرنهايت ميزان الحرارة الزئبقي عام 1714.","The scientist Daniel Gabriel Fahrenheit invented the mercury thermometer in 1714."],
   ["secondary","اختُرع الترانزستور في مختبرات بيل عام 1947، وهو أساس الإلكترونيات الحديثة.","The transistor was invented at Bell Labs in 1947 and is the foundation of modern electronics."],
   ["secondary","اخترع جاك كيلبي وروبرت نويس الدائرة المتكاملة (الرقاقة) في عامي 1958 و1959.","Jack Kilby and Robert Noyce invented the integrated circuit (the chip) in 1958 and 1959."],
   ["secondary","بنى ثيودور ميمان أول جهاز ليزر عام 1960.","Theodore Maiman built the first laser in 1960."],
@@ -60,5 +62,6 @@
   ["secondary","صمّم فينت سيرف وبوب كان بروتوكولات TCP/IP التي تقوم عليها الإنترنت في سبعينيات القرن العشرين.","Vint Cerf and Bob Kahn designed the TCP/IP protocols that the internet runs on, in the 1970s."],
   ["secondary","بدأت أول محطة نووية في العالم تزويد شبكة الكهرباء بالطاقة عام 1954 في مدينة أوبنينسك الروسية.","The world's first nuclear power plant to supply an electricity grid started in 1954 in Obninsk, Russia."],
   ["secondary","فاز تشارلز كاو بجائزة نوبل في الفيزياء عام 2009 لأبحاثه الرائدة في نقل الضوء عبر الألياف البصرية.","Charles Kao won the 2009 Nobel Prize in Physics for pioneering work on sending light through optical fibres."],
-  ["secondary","وُلدت أول طفلة بتقنية أطفال الأنابيب عام 1978.","The first baby conceived by in-vitro fertilisation (IVF) was born in 1978."]
+  ["secondary","وُلدت أول طفلة بتقنية أطفال الأنابيب عام 1978.","The first baby conceived by in-vitro fertilisation (IVF) was born in 1978."],
+  ["secondary","لاحظ العالم الدنماركي هانز كريستيان أورستد عام 1820 أن التيار الكهربائي يحرّف إبرة البوصلة، فكشف الصلة بين الكهرباء والمغناطيسية.","In 1820 the Danish scientist Hans Christian Ørsted noticed that an electric current deflects a compass needle, revealing the link between electricity and magnetism."]
 ]

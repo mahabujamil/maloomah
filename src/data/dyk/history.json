@@ -19,6 +19,7 @@
   ["primary","بُنيت الأهرامات المصرية مقابر للفراعنة.","The Egyptian pyramids were built as tombs for the pharaohs."],
   ["primary","كان الفينيقيون بحّارة وتجاراً مهرة عاشوا على الساحل الشرقي للبحر المتوسط.","The Phoenicians were skilled sailors and traders who lived on the eastern Mediterranean coast."],
   ["primary","كانت البتراء ملتقى لقوافل التجارة التي تنقل البخور والتوابل.","Petra was a meeting point for trade caravans carrying incense and spices."],
+  ["primary","أسس الإسكندر الأكبر مدينة الإسكندرية في مصر نحو عام 332 أو 331 قبل الميلاد، وسُمّيت باسمه.","Alexander the Great founded the city of Alexandria in Egypt around 332 or 331 BC, and it was named after him."],
   ["middle","بُني الهرم الأكبر في الجيزة قبل نحو 4500 عام، وهو العجيبة الوحيدة الباقية من عجائب الدنيا السبع القديمة.","The Great Pyramid of Giza was built about 4,500 years ago and is the only surviving wonder of the ancient world."],
   ["middle","بُني سور الصين العظيم على مراحل امتدت أكثر من ألفي عام.","The Great Wall of China was built in stages over more than 2,000 years."],
   ["middle","أسست فاطمة الفهرية جامعة القرويين في فاس عام 859م، وتُعد أقدم مؤسسة تعليمية ما زالت تعمل.","Fatima al-Fihri founded al-Qarawiyyin in Fez in 859 CE; it is considered the oldest educational institution still operating."],
@@ -42,6 +43,7 @@
   ["middle","أنتجت مدينة أوغاريت في سوريا نحو عام 1400 قبل الميلاد واحدة من أقدم الأبجديات المعروفة.","Around 1400 BC the city of Ugarit in Syria produced one of the oldest known alphabets."],
   ["middle","افتُتح الخط الحديدي الحجازي عام 1908، وربط دمشق بالمدينة المنورة.","The Hejaz Railway opened in 1908, linking Damascus with Medina."],
   ["middle","حكم المماليك مصر وبلاد الشام من عام 1250 حتى 1517.","The Mamluks ruled Egypt and the Levant from 1250 to 1517."],
+  ["middle","نُقل معبدا أبو سمبل في مصر قطعةً قطعة بين عامي 1964 و1968 إلى موقع أعلى، لإنقاذهما من الغرق في بحيرة السد العالي.","Between 1964 and 1968 Egypt's Abu Simbel temples were cut into blocks and rebuilt on higher ground to save them from the waters of the Aswan High Dam's lake."],
   ["secondary","طوّر يوهان غوتنبرغ آلة الطباعة بالحروف المتحركة في أوروبا نحو عام 1440.","Johannes Gutenberg developed the movable-type printing press in Europe around 1440."],
   ["secondary","افتُتحت قناة السويس عام 1869، وهي تربط البحر المتوسط بالبحر الأحمر.","The Suez Canal opened in 1869, linking the Mediterranean Sea to the Red Sea."],
   ["secondary","على عكس الشائع، لا يمكن رؤية سور الصين العظيم بالعين المجردة من القمر.","Contrary to popular belief, the Great Wall of China cannot be seen with the naked eye from the Moon."],
@@ -60,5 +62,6 @@
   ["secondary","طوّر علماء الحضارة الإسلامية الأسطرلاب، واستُخدم لقياس ارتفاع النجوم ومعرفة الوقت والاتجاه.","Scholars of the Islamic world refined the astrolabe, which was used to measure the height of stars and to find the time and direction."],
   ["secondary","قاد الرحالة الصيني تشنغ خه في مطلع القرن الخامس عشر رحلات بحرية ضخمة عبر المحيط الهندي.","In the early 15th century the Chinese admiral Zheng He led huge sea voyages across the Indian Ocean."],
   ["secondary","ضمّت مكتبة آشور بانيبال في نينوى آلاف الألواح الطينية المكتوبة بالخط المسماري.","The Library of Ashurbanipal in Nineveh held thousands of clay tablets written in cuneiform."],
-  ["secondary","يوصف منسا موسى، ملك مالي في القرن الرابع عشر، بأنه من أغنى الأشخاص في التاريخ.","Mansa Musa, the 14th-century king of Mali, is often described as one of the richest people in history."]
+  ["secondary","يوصف منسا موسى، ملك مالي في القرن الرابع عشر، بأنه من أغنى الأشخاص في التاريخ.","Mansa Musa, the 14th-century king of Mali, is often described as one of the richest people in history."],
+  ["secondary","اكتُشف في مدينة إيبلا القديمة (تل مرديخ) في سوريا في سبعينيات القرن العشرين أرشيف ملكي يضم آلاف الألواح الطينية المكتوبة بالخط المسماري.","In the 1970s archaeologists found a royal archive of thousands of cuneiform clay tablets at the ancient city of Ebla (Tell Mardikh) in Syria."]
 ]
