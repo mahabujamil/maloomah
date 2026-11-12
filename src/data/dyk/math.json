@@ -20,6 +20,7 @@
   ["primary","مجموع أي عددين فرديين يكون دائماً عدداً زوجياً.","The sum of any two odd numbers is always even."],
   ["primary","كل عدد ينتهي بالرقم 0 أو 5 يقبل القسمة على 5.","Every number ending in 0 or 5 can be divided by 5."],
   ["primary","يقبل العدد القسمة على 3 إذا كان مجموع أرقامه يقبل القسمة على 3.","A number can be divided by 3 if the sum of its digits can be divided by 3."],
+  ["primary","الصفر هو العدد الوحيد الذي ليس موجباً ولا سالباً.","Zero is the only number that is neither positive nor negative."],
   ["middle","العدد 2 هو العدد الأولي الزوجي الوحيد.","2 is the only even prime number."],
   ["middle","العدد باي (π) يساوي تقريباً 3.14159، وأرقامه بعد الفاصلة لا تنتهي ولا تتكرر.","Pi (π) is about 3.14159, and its digits after the decimal point never end and never repeat."],
   ["middle","كلمة «الجبر» عربية، وجاءت من كتاب الخوارزمي «المختصر في حساب الجبر والمقابلة».","The word \"algebra\" comes from Arabic, from al-Khwarizmi's book on \"al-jabr wa'l-muqabala\"."],
@@ -42,6 +43,7 @@
   ["middle","حاصل ضرب 7 × 11 × 13 يساوي 1001، لذلك إذا كتبت عدداً من ثلاثة أرقام مرتين مثل 123123 حصلت على مضاعف للعدد 1001.","7 × 11 × 13 = 1001, so writing a three-digit number twice, like 123123, always gives a multiple of 1001."],
   ["middle","كلمة «جيومتري» (الهندسة) تعني في اليونانية «قياس الأرض».","The word 'geometry' means 'measuring the earth' in Greek."],
   ["middle","كل زاوية داخلية في السداسي المنتظم قياسها 120 درجة.","Each interior angle of a regular hexagon measures 120 degrees."],
+  ["middle","شريط موبيوس شريط ورقي نلويه نصف لفة ثم نلصق طرفيه، فيصبح له وجه واحد وحافة واحدة فقط.","A Möbius strip, made by giving a paper strip a half twist and joining its ends, has only one side and one edge."],
   ["secondary","يحتفل محبو الرياضيات بيوم «باي» في 14 مارس، لأن التاريخ يُكتب 3/14.","Maths lovers celebrate Pi Day on 14 March, because the date is written 3/14."],
   ["secondary","الشكل السداسي يملأ المساحة دون فراغات وبأقل محيط، ولهذا يبني النحل خلاياه سداسية.","Hexagons fill a surface with no gaps using the least perimeter, which is why bees build hexagonal cells."],
   ["secondary","العدد 0.999... (تسعة متكررة إلى ما لا نهاية) يساوي 1 تماماً.","The number 0.999... (nines repeating forever) is exactly equal to 1."],
@@ -60,5 +62,6 @@
   ["secondary","يستخدم النظام الثنائي رقمين فقط هما 0 و1، وعليه تقوم الحواسيب كلها.","The binary system uses only two digits, 0 and 1, and every computer is built on it."],
   ["secondary","الغوغول هو العدد 1 وبعده 100 صفر، ومن تحريف هذه الكلمة جاء اسم شركة غوغل.","A googol is 1 followed by 100 zeros, and the name Google came from a misspelling of the word."],
   ["secondary","تقوم طرق التشفير الحديثة على الإنترنت، مثل RSA، على صعوبة تحليل الأعداد الكبيرة إلى عواملها الأولية.","Modern internet encryption, such as RSA, relies on how hard it is to split huge numbers into their prime factors."],
-  ["secondary","فرضية ريمان عن توزيع الأعداد الأولية طُرحت عام 1859 وما زالت بلا برهان، وعليها جائزة قدرها مليون دولار.","The Riemann hypothesis about how prime numbers are spread out was proposed in 1859, is still unproved, and carries a one-million-dollar prize."]
+  ["secondary","فرضية ريمان عن توزيع الأعداد الأولية طُرحت عام 1859 وما زالت بلا برهان، وعليها جائزة قدرها مليون دولار.","The Riemann hypothesis about how prime numbers are spread out was proposed in 1859, is still unproved, and carries a one-million-dollar prize."],
+  ["secondary","لا توجد إلا خمسة مجسمات منتظمة محدّبة، تسمى المجسمات الأفلاطونية: رباعي الأوجه والمكعب وثماني الأوجه واثنا عشري الأوجه وعشروني الأوجه.","There are only five regular convex solids, the Platonic solids: the tetrahedron, cube, octahedron, dodecahedron and icosahedron."]
 ]

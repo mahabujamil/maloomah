@@ -20,6 +20,7 @@
   ["primary","رسم ليوناردو دافنشي لوحة «الموناليزا» الشهيرة.","Leonardo da Vinci painted the famous 'Mona Lisa'."],
   ["primary","الأسبوع سبعة أيام في معظم أنحاء العالم.","A week has seven days in most of the world."],
   ["primary","يتحدث سكان البرازيل اللغة البرتغالية.","People in Brazil speak Portuguese."],
+  ["primary","علم اليابان دائرة حمراء على خلفية بيضاء، والدائرة ترمز إلى الشمس.","Japan's flag is a red circle on a white background, and the circle stands for the Sun."],
   ["middle","مُنحت جوائز نوبل لأول مرة عام 1901.","The Nobel Prizes were first awarded in 1901."],
   ["middle","متحف اللوفر في باريس هو أكثر متاحف العالم زيارة.","The Louvre in Paris is the most visited museum in the world."],
   ["middle","«بيغ بن» هو اسم الجرس الكبير داخل برج الساعة في لندن، وليس اسم البرج نفسه.","'Big Ben' is the name of the great bell inside London's clock tower, not of the tower itself."],
@@ -41,6 +42,7 @@
   ["middle","بُنيت مدينة البندقية الإيطالية على أكثر من 100 جزيرة صغيرة.","The Italian city of Venice is built on more than 100 small islands."],
   ["middle","الأوريغامي فن ياباني لطيّ الورق وتشكيله.","Origami is the Japanese art of folding paper into shapes."],
   ["middle","تُعدّ «كليلة ودمنة» من أشهر كتب الحكايات على ألسنة الحيوانات، وترجمها ابن المقفع إلى العربية في القرن الثامن.","'Kalila wa Dimna' is one of the most famous books of animal fables, translated into Arabic by Ibn al-Muqaffa in the 8th century."],
+  ["middle","اليوم الدولي للأشخاص ذوي الإعاقة هو 3 ديسمبر من كل عام، وقد أعلنته الأمم المتحدة عام 1992.","The International Day of Persons with Disabilities is on 3 December every year; the UN proclaimed it in 1992."],
   ["secondary","الاتحاد البريدي العالمي، الذي تأسس عام 1874، من أقدم المنظمات الدولية.","The Universal Postal Union, founded in 1874, is one of the oldest international organisations."],
   ["secondary","ظهر النظام المتري في فرنسا في تسعينيات القرن الثامن عشر.","The metric system was introduced in France in the 1790s."],
   ["secondary","يمتد خط التاريخ الدولي تقريباً على طول خط الطول 180 درجة في المحيط الهادئ.","The International Date Line roughly follows the 180° line of longitude in the Pacific Ocean."],
@@ -60,5 +62,6 @@
   ["secondary","يقام مهرجان جرش للثقافة والفنون في الأردن منذ عام 1981.","The Jerash Festival of Culture and Arts has been held in Jordan since 1981."],
   ["secondary","انطلقت ويكيبيديا عام 2001، وأصبحت متاحة بأكثر من 300 لغة.","Wikipedia was launched in 2001 and is now available in more than 300 languages."],
   ["secondary","أُدرج الخط العربي على قائمة اليونسكو للتراث الثقافي غير المادي عام 2021.","Arabic calligraphy was added to UNESCO's list of Intangible Cultural Heritage in 2021."],
-  ["secondary","سُمّي الأسبوع في كثير من اللغات الأوروبية بأسماء الكواكب السبعة التي عرفها القدماء، كالشمس والقمر.","In many European languages, the days of the week are named after the seven heavenly bodies known in ancient times, such as the Sun and the Moon."]
+  ["secondary","سُمّي الأسبوع في كثير من اللغات الأوروبية بأسماء الكواكب السبعة التي عرفها القدماء، كالشمس والقمر.","In many European languages, the days of the week are named after the seven heavenly bodies known in ancient times, such as the Sun and the Moon."],
+  ["secondary","ضمّت أول قائمة لمواقع التراث العالمي لليونسكو عام 1978 اثني عشر موقعاً، أولها جزر غالاباغوس.","UNESCO's first World Heritage List in 1978 had 12 sites, and the Galápagos Islands were number one."]
 ]

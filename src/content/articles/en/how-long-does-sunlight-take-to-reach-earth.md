@@ -3,10 +3,12 @@ title: "How Long Does Sunlight Take to Reach Earth?"
 description: "Sunlight reaches Earth in about 8 minutes and 20 seconds. See how scientists calculate it, why it changes during the year, and why we always see the past."
 category: space
 date: 2026-10-23
+updated: 2026-11-12
 tags: ["the Sun", "speed of light", "solar system", "astronomy"]
+keywords: ["how long does it take light from the sun to reach earth", "how long does sunlight take to reach earth", "how long does it take light from the sun to reach mars", "how long does it take light from the sun to reach neptune", "how long does it take light from the sun to reach pluto", "speed of light"]
 ---
 
-When you look at the setting Sun (without staring straight at it!), you are not seeing it as it is right now, but as it was about eight minutes ago. That is not a trick: light is incredibly fast, but it still needs time to cross the distance.
+**How long does sunlight take to reach Earth?** About 8 minutes and 20 seconds. When you look at the setting Sun (without staring straight at it!), you are not seeing it as it is right now, but as it was about eight minutes ago. That is not a trick: light is incredibly fast, but it still needs time to cross the distance.
 
 ## The short answer: about 8 minutes and 20 seconds
 
@@ -15,6 +17,23 @@ On average, the centre of the Earth is about **149.6 million kilometres** from t
 The speed of light in a vacuum is about **299,792 kilometres per second**. Divide the distance by the speed and you get:
 
 149,600,000 ÷ 299,792 ≈ **499 seconds**, or roughly **8 minutes and 19 seconds**.
+
+## How long does sunlight take to reach each planet?
+
+The farther a planet is from the Sun, the longer sunlight takes to get there. These times are based on each planet's average distance from the Sun, so they are approximate and shift a little along each orbit:
+
+| Planet | Average distance from the Sun | Approx. sunlight travel time |
+| --- | --- | --- |
+| Mercury | 0.39 AU | 3.2 minutes |
+| Venus | 0.72 AU | 6 minutes |
+| Earth | 1 AU | 8.3 minutes |
+| Mars | 1.52 AU | 12.7 minutes |
+| Jupiter | 5.2 AU | 43 minutes |
+| Saturn | 9.5 AU | 1 hour 19 minutes |
+| Uranus | 19.2 AU | 2 hours 40 minutes |
+| Neptune | 30.1 AU | 4 hours 10 minutes |
+
+**Pluto**, a dwarf planet rather than one of the eight planets, gets sunlight after about **5.5 hours** on average. To find out why it was dropped from the list of planets, read [how many planets are in the solar system](/en/articles/how-many-planets-in-the-solar-system/).
 
 ## Why does the number change during the year?
 
@@ -58,6 +77,14 @@ No. It reaches Mercury, the closest planet, in about 3 minutes, but needs more t
 ### What is a "light-year"?
 
 It is a unit of distance, not time: the distance light travels in one year, about 9.46 trillion kilometres.
+
+### What is the speed of light per second?
+
+The speed of light in a vacuum is exactly **299,792,458 metres per second**, about **300,000 km per second**, which students usually write as **3 × 10⁸ m/s**. At that speed, light could travel around the Earth about 7.5 times in one second.
+
+### How does the speed of light compare with the speed of sound?
+
+Sound travels through air at about **343 metres per second** (at 20 °C), so light is roughly **874,000 times faster**. That is why we see a lightning flash before we hear the thunder. For more facts, visit the [space "Did you know?" page](/en/did-you-know/space/).
 
 ## Key takeaway
 
