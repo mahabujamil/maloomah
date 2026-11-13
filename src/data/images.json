@@ -239,6 +239,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "essay-about-honesty": {
+    "alt": {
+      "ar": "قلم حبر يكتب على ورقة مسطّرة، رمزاً لكتابة موضوع تعبير عن الصدق",
+      "en": "A fountain pen writing on lined paper, for an essay about honesty"
+    },
+    "title": "Writing-1209121 1920",
+    "creator": "Free-Photos",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Writing-1209121_1920.jpg"
+  },
   "essay-about-pollution": {
     "alt": {
       "ar": "دخان كثيف يتصاعد من مداخن مصنع ويلوث الهواء",
@@ -851,6 +863,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Bali_003_-_Ubud_-_famous_lukaw_coffee.jpg"
   },
+  "ozone-layer": {
+    "alt": {
+      "ar": "الغلاف الجوي للأرض يظهر شريطاً أزرق رقيقاً كما يُرى من الفضاء، وفيه طبقة الأوزون",
+      "en": "Earth's atmosphere seen from space as a thin blue band, home of the ozone layer"
+    },
+    "title": "ISS-51 Moon, Earth's limb and the thin blue atmosphere",
+    "creator": "NASA",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:ISS-51_Moon,_Earth%27s_limb_and_the_thin_blue_atmosphere.jpg"
+  },
   "phases-of-the-moon": {
     "alt": {
       "ar": "رسم توضيحي لأطوار القمر الثمانية خلال الشهر القمري",
@@ -946,6 +970,18 @@
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Hermandad_-_friendship.jpg"
+  },
+  "school-radio-about-volunteering": {
+    "alt": {
+      "ar": "متطوعون يزرعون الأشجار في حقل أخضر خلال يوم عمل تطوعي",
+      "en": "Volunteers planting trees in a green field during a volunteer day"
+    },
+    "title": "Volunteers Planting Trees on the Ankeny National Wildlife Refuge - DPLA - 34d3d852428a6bd0c316855d00d1d8ea",
+    "creator": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Volunteers_Planting_Trees_on_the_Ankeny_National_Wildlife_Refuge_-_DPLA_-_34d3d852428a6bd0c316855d00d1d8ea.jpg"
   },
   "school-radio-about-world-childrens-day": {
     "alt": {
