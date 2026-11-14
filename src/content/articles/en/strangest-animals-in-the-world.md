@@ -1,13 +1,29 @@
 ---
-title: "The Strangest Animals in the World: 10 Creatures You Won't Believe Are Real"
+title: "Strangest Animals in the World: 10 Unbelievable Creatures"
 description: "Meet the strangest animals on Earth, on land and in the sea: from the egg-laying platypus to the tardigrade that survives space, with weird facts about each one."
 category: animals
 date: 2026-10-23
+updated: 2026-11-14
 tags: ["weird animals", "animal kingdom", "sea creatures", "nature"]
 keywords: ["strangest animals in the world", "weirdest animals", "weird animal facts", "strangest sea creatures"]
 ---
 
-Nature is full of surprises. Some animals look like they've stepped out of a science-fiction film, yet they're completely real and share this planet with us. Here's a list of the strangest animals in the world, with the science behind what makes them so unusual.
+Nature is full of surprises. Some animals look like they've stepped out of a science-fiction film, yet they're completely real and share this planet with us. Here's a list of the strangest animals in the world, with the science behind what makes them so unusual and a quick summary table before the details.
+
+## The strangest animals in the world at a glance
+
+| Animal | Where it lives | Strangest feature |
+| --- | --- | --- |
+| Axolotl | Lakes near Mexico City | Regrows lost limbs |
+| Platypus | Rivers of eastern Australia | A mammal that lays eggs |
+| Aye-aye | Forests of Madagascar | Taps on trees with a long finger to find food |
+| Blobfish | The deep ocean off Australia and New Zealand | Changes shape out of deep water |
+| Pangolin | Forests of Asia and Africa | The only mammal covered in scales |
+| Mantis shrimp | Warm seas | One of the fastest strikes in the animal kingdom |
+| Tardigrade | Almost everywhere, even in moss | Survives drought, cold and radiation |
+| Naked mole-rat | Underground in East Africa | Lives for more than 30 years |
+| Star-nosed mole | Wetlands of eastern North America | Eats food in under a quarter of a second |
+| Leafy seadragon | Coasts of southern Australia | Disguises itself as seaweed |
 
 ## 1. The axolotl: the salamander that regrows body parts
 
@@ -46,7 +62,7 @@ Sadly, it is among the most poached and illegally trafficked mammals in the worl
 
 The **mantis shrimp** looks small and colourful, but it delivers one of the fastest strikes in the animal kingdom, powerful enough to smash snail shells in an instant.
 
-Its eyes are among the most complex in nature, with 12 to 16 types of colour-detecting cells, while humans have just 3.
+Its eyes are among the most complex in nature, with about 12 types of colour-detecting cells, while humans have just 3. Yet experiments show it is no better than us at telling similar colours apart: it seems to recognise colours quickly rather than compare them finely.
 
 > **Did you know?** A mantis shrimp punches so fast that it creates tiny bubbles in the water that collapse with a second shockwave, so its prey gets hit twice!
 
@@ -70,6 +86,8 @@ This mole has **22 fleshy tentacles** around its nose in a star shape, packed wi
 
 The **leafy seadragon** lives off southern Australia. Its body is covered in leaf-like flaps that let it vanish among the seaweed. It's a relative of the seahorse and, like seahorses, the male carries the eggs until they hatch.
 
+For more amazing facts about living things, browse the [animals "Did you know?" page](/en/did-you-know/animals/), and test yourself with our [animal quiz questions and answers](/en/articles/animal-quiz-questions-and-answers/).
+
 ## Frequently asked questions
 
 ### What is the strangest animal in the world?
@@ -83,6 +101,14 @@ Some of the strangest sea creatures are the blobfish, the mantis shrimp and the 
 ### Why do some animals look so strange?
 
 Because each odd feature is usually a clever adaptation to the animal's environment, such as camouflage, hunting in the dark or surviving harsh conditions.
+
+### Is the tardigrade really indestructible?
+
+No. Calling it "indestructible" is a popular exaggeration. It can survive very harsh conditions while dormant, but it dies if exposed to them for too long or while active, and its natural lifespan is usually short.
+
+### Is the platypus a bird because it lays eggs?
+
+No, the platypus is a **mammal**: it feeds its young on milk and its body is covered in fur. Together with the echidnas, it is one of the few egg-laying mammals, called monotremes.
 
 ## Key takeaway
 

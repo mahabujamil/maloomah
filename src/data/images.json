@@ -983,6 +983,18 @@
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Volunteers_Planting_Trees_on_the_Ankeny_National_Wildlife_Refuge_-_DPLA_-_34d3d852428a6bd0c316855d00d1d8ea.jpg"
   },
+  "school-radio-about-winter": {
+    "alt": {
+      "ar": "أشجار مغطاة بالثلج في فصل الشتاء",
+      "en": "Snow-covered trees in winter"
+    },
+    "title": "Snow Scene at Shipka Pass 1",
+    "creator": "Psy guy",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Snow_Scene_at_Shipka_Pass_1.JPG"
+  },
   "school-radio-about-world-childrens-day": {
     "alt": {
       "ar": "أقلام تلوين ملونة يستخدمها الأطفال في الرسم",
@@ -1030,6 +1042,18 @@
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Looking_through_a_smartphone_camera_at_the_reenactment_of_Washington%27s_Crossing_-_Dec_2024.jpg"
+  },
+  "space-quiz-questions-and-answers": {
+    "alt": {
+      "ar": "كواكب المجموعة الشمسية مصطفة بجانب الشمس",
+      "en": "The planets of the solar system lined up beside the Sun"
+    },
+    "title": "Solar System collage background",
+    "creator": "NASA and ESA",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Solar_System_collage_background.png"
   },
   "strangest-animals-in-the-world": {
     "alt": {
@@ -1342,6 +1366,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Bodleian_MS._Huntington_214_roll332_frame36.jpg"
+  },
+  "who-is-ibn-battuta": {
+    "alt": {
+      "ar": "زقاق قديم بدرج حجري في مدينة طنجة مسقط رأس ابن بطوطة",
+      "en": "An old stepped alley in Tangier, Ibn Battuta's birthplace"
+    },
+    "title": "Ancien Medina, Tangier, Morocco - panoramio (13)",
+    "creator": "logopop",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ancien_Medina,_Tangier,_Morocco_-_panoramio_(13).jpg"
   },
   "who-is-ibn-khaldun": {
     "alt": {
