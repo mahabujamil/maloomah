@@ -251,6 +251,18 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Writing-1209121_1920.jpg"
   },
+  "essay-about-love-of-homeland": {
+    "alt": {
+      "ar": "تلال خضراء تكسوها أشجار الزيتون تعبّر عن جمال الوطن وأرضه",
+      "en": "Green hills covered with olive trees, a picture of the beauty of one's homeland"
+    },
+    "title": "Melito di Porto Salvo - Paesaggio lungo la strada di Pentedattilo - 3",
+    "creator": "Benjamin Smith",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Melito_di_Porto_Salvo_-_Paesaggio_lungo_la_strada_di_Pentedattilo_-_3.jpg"
+  },
   "essay-about-pollution": {
     "alt": {
       "ar": "دخان كثيف يتصاعد من مداخن مصنع ويلوث الهواء",
@@ -514,6 +526,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Bones_of_skeletal_system.jpg"
+  },
+  "how-many-continents-in-the-world": {
+    "alt": {
+      "ar": "خريطة العالم تظهر القارات السبع بألوان مختلفة",
+      "en": "World map showing the seven continents in different colours"
+    },
+    "title": "World Map with continents and borders",
+    "creator": "ChristianPluto",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:World_Map_with_continents_and_borders.png"
   },
   "how-many-planets-in-the-solar-system": {
     "alt": {
@@ -958,6 +982,18 @@
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Laboratory_equipment_of_modern_chemistry_classroom.jpg"
+  },
+  "school-radio-about-the-teacher": {
+    "alt": {
+      "ar": "فصل دراسي مرتب فيه سبورة خضراء ومقاعد الطلاب قبل بدء الحصة",
+      "en": "A tidy classroom with a green chalkboard and student desks before the lesson begins"
+    },
+    "title": "Classroom2",
+    "creator": "Darklanlan",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Classroom2.jpg"
   },
   "school-radio-about-tolerance": {
     "alt": {
