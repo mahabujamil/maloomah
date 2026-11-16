@@ -21,6 +21,7 @@
   ["primary","يمكن إعادة تدوير الزجاج مرات كثيرة دون أن تقل جودته.","Glass can be recycled again and again without losing quality."],
   ["primary","زراعة الأشجار تحمي التربة من الانجراف بالرياح والأمطار.","Planting trees protects the soil from being washed or blown away."],
   ["primary","يحتفل العالم بيوم المياه العالمي في 22 مارس من كل عام، للتذكير بأهمية الحفاظ على الماء العذب.","World Water Day is marked every year on 22 March, to remind us how important it is to protect fresh water."],
+  ["primary","يحتفل العالم باليوم العالمي للتربة في 5 ديسمبر من كل عام.","World Soil Day is celebrated on 5 December every year."],
   ["middle","تحمينا طبقة الأوزون من الأشعة فوق البنفسجية الضارة القادمة من الشمس.","The ozone layer protects us from the Sun's harmful ultraviolet rays."],
   ["middle","أدى بروتوكول مونتريال عام 1987 إلى التخلص التدريجي من المواد التي تدمر طبقة الأوزون.","The 1987 Montreal Protocol led to the gradual phase-out of chemicals that damage the ozone layer."],
   ["middle","لولا ظاهرة الاحتباس الحراري الطبيعية لبلغ متوسط حرارة الأرض نحو 18 درجة تحت الصفر.","Without the natural greenhouse effect, Earth's average temperature would be about −18 °C."],
@@ -43,6 +44,7 @@
   ["middle","تحوّل الألواح الشمسية ضوء الشمس مباشرة إلى كهرباء.","Solar panels turn sunlight directly into electricity."],
   ["middle","محمية ضانا للمحيط الحيوي هي أكبر محمية طبيعية في الأردن.","Dana Biosphere Reserve is the largest nature reserve in Jordan."],
   ["middle","يوافق 2 فبراير اليوم العالمي للأراضي الرطبة، وهو ذكرى توقيع اتفاقية رامسار لحماية الأراضي الرطبة في مدينة رامسار الإيرانية عام 1971.","World Wetlands Day on 2 February marks the signing of the Ramsar Convention to protect wetlands, in the Iranian city of Ramsar in 1971."],
+  ["middle","تقول منظمة الأغذية والزراعة (فاو) إن نحو 95% من غذائنا يأتي من التربة.","The UN Food and Agriculture Organization (FAO) says about 95% of our food comes from soil."],
   ["secondary","تهدف اتفاقية باريس للمناخ عام 2015 إلى إبقاء ارتفاع حرارة الأرض أقل بكثير من درجتين مئويتين.","The 2015 Paris Agreement aims to keep global warming well below 2 °C."],
   ["secondary","البصمة الكربونية هي كمية الغازات الدفيئة الناتجة عن نشاط شخص أو منتج أو دولة.","A carbon footprint is the amount of greenhouse gases produced by a person, a product or a country."],
   ["secondary","في دورة النيتروجين تحوّل بكتيريا خاصة نيتروجين الهواء إلى مركبات تستطيع النباتات امتصاصها.","In the nitrogen cycle, special bacteria turn nitrogen from the air into compounds plants can absorb."],
@@ -63,5 +65,6 @@
   ["secondary","تُعدّ مزرعة رياح الطفيلة في الأردن من أوائل مزارع الرياح الكبيرة في المنطقة.","The Tafila wind farm in Jordan is one of the first large wind farms in the region."],
   ["secondary","التنوع الحيوي يعني تنوع الكائنات الحية في مكان ما، وكلما زاد كان النظام البيئي أقوى على مواجهة التغيرات.","Biodiversity means the variety of living things in a place, and the greater it is, the better an ecosystem copes with change."],
   ["secondary","تتحول الأراضي الزراعية إلى صحراء بسبب الرعي الجائر والجفاف وسوء استخدام المياه، وهو ما يسمى التصحر.","Overgrazing, drought and poor water use can turn farmland into desert, a process called desertification."],
-  ["secondary","يقدّر برنامج الأمم المتحدة للبيئة أن ما بين 19 و23 مليون طن من البلاستيك تتسرب كل عام إلى البحيرات والأنهار والبحار.","The UN Environment Programme estimates that 19 to 23 million tonnes of plastic leak into lakes, rivers and seas every year."]
+  ["secondary","يقدّر برنامج الأمم المتحدة للبيئة أن ما بين 19 و23 مليون طن من البلاستيك تتسرب كل عام إلى البحيرات والأنهار والبحار.","The UN Environment Programme estimates that 19 to 23 million tonnes of plastic leak into lakes, rivers and seas every year."],
+  ["secondary","أعلنت الأمم المتحدة عام 2015 «السنة الدولية للتربة» لتذكير العالم بأهمية حماية التربة.","The United Nations declared 2015 the International Year of Soils to remind the world how important it is to protect soil."]
 ]

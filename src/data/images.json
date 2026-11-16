@@ -635,6 +635,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
   },
+  "human-body-quiz-questions-and-answers": {
+    "alt": {
+      "ar": "مجسم تعليمي للرئتين والقلب في جسم الإنسان",
+      "en": "Teaching model of the human lungs and heart"
+    },
+    "title": "Didactic model of respiratory system",
+    "creator": "Wagner Souza e Silva",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Didactic_model_of_respiratory_system-FMVZ_USP-12.jpeg"
+  },
   "human-digestive-system": {
     "alt": {
       "ar": "رسم توضيحي لأعضاء الجهاز الهضمي للإنسان: المريء والمعدة والأمعاء والكبد",
@@ -958,6 +970,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Washing_hands_with_soap_(3).jpg"
+  },
+  "school-radio-about-health-and-nutrition": {
+    "alt": {
+      "ar": "خضار وفواكه طازجة ملوّنة تمثل الغذاء الصحي المتوازن",
+      "en": "Fresh colourful vegetables representing a healthy balanced diet"
+    },
+    "title": "Healthy Food - Colourful Fruit and Veg - 50191699151",
+    "creator": "formulatehealth",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Healthy_Food_-_Colourful_Fruit_and_Veg_-_50191699151.jpg"
   },
   "school-radio-about-people-with-disabilities": {
     "alt": {
@@ -1294,6 +1318,18 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Mobile_Payment.jpg"
+  },
+  "what-is-photosynthesis": {
+    "alt": {
+      "ar": "أوراق شجر خضراء تحت ضوء الشمس حيث تحدث عملية البناء الضوئي",
+      "en": "Green leaves in sunlight, where photosynthesis takes place"
+    },
+    "title": "In the sunlight (18765990541)",
+    "creator": "Susanne Nilsson",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:In_the_sunlight_(18765990541).jpg"
   },
   "what-is-the-nba": {
     "alt": {

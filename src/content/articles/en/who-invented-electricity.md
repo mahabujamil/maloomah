@@ -1,8 +1,9 @@
 ---
 title: "Who Invented Electricity? The Full Story From Amber to the Light Bulb"
-description: "Who invented electricity, and who discovered it first? No single person did: it took centuries of discoveries, from Thales and Franklin to Volta, Faraday, Edison and Tesla."
+description: "Who invented electricity? No single person did: it took centuries of discoveries, from Thales and Franklin to Volta, Faraday, Edison and Tesla."
 category: inventions
 date: 2026-10-23
+updated: 2026-11-16
 tags: ["electricity", "inventions", "history of science", "scientists"]
 keywords: ["who invented electricity", "who discovered electricity", "history of electricity", "inventor of electricity"]
 ---
@@ -23,6 +24,10 @@ In **1600**, English physician **William Gilbert** published a book on magnetism
 
 In **1752**, American **Benjamin Franklin** carried out his famous kite experiment during a thunderstorm to show that **lightning is electricity**. His research led to the **lightning rod**, which still protects buildings today.
 
+Interestingly, Franklin first proposed a different test using a tall metal rod. Scientists in France carried it out in **May 1752**, before news of his kite reached them, and drew electric sparks from storm clouds. The kite experiment itself probably took place in **June 1752**, though nobody knows the exact date.
+
+**Safety note for students:** flying a kite in a thunderstorm is **extremely dangerous** and can kill. Never try to repeat this experiment, and never fly a kite near power lines.
+
 ## Alessandro Volta: the first battery
 
 In **1800**, Italian scientist **Alessandro Volta** built the "voltaic pile", **the first battery** to produce a steady electric current. The unit of electrical voltage, the **volt**, is named after him.
@@ -38,6 +43,23 @@ In **1879**, American inventor **Thomas Edison** developed a practical, long-las
 ## Nikola Tesla: alternating current
 
 Edison used **direct current (DC)**, but engineer **Nikola Tesla** developed **alternating current (AC)** systems and motors, working with businessman **George Westinghouse**. After a famous rivalry known as the "War of the Currents", AC won because it's easier to transmit over long distances, and it's what power grids still use today.
+
+## A timeline of electricity
+
+This table sums up the key milestones, which makes it handy for revision before a test:
+
+| Year | Event | Who |
+| --- | --- | --- |
+| About 600 BC | Static electricity noticed by rubbing amber | Thales of Miletus |
+| 1600 | A book on magnetism coins the word "electricus" | William Gilbert |
+| 1752 | Shows that lightning is electricity; invents the lightning rod | Benjamin Franklin |
+| 1800 | The first battery (the voltaic pile) | Alessandro Volta |
+| 1831 | Discovers electromagnetic induction, the basis of generators | Michael Faraday |
+| 1879 | A practical, long-lasting incandescent bulb | Thomas Edison (and Joseph Swan in Britain) |
+| 1882 | Pearl Street power station opens in New York | Thomas Edison |
+| Late 1880s | Alternating-current systems and motors | Nikola Tesla and George Westinghouse |
+
+For the full story of the bulb, read our lesson [who invented the light bulb?](/en/articles/who-invented-the-light-bulb/)
 
 ## Other scientists worth remembering
 
@@ -57,10 +79,18 @@ There isn't one, because electricity is a natural phenomenon. But the key names 
 
 It's a set of ancient clay jars found near Baghdad, which some people think might have produced a weak electric current. But there is no conclusive evidence, and most researchers believe the jars had other uses.
 
+### Did Benjamin Franklin invent electricity?
+
+No. Franklin didn't invent electricity, but he showed that lightning is a form of it, invented the lightning rod, and introduced terms we still use, such as **positive** and **negative** charge.
+
+### Why are electrical units named after scientists?
+
+To honour them: the **volt** (unit of voltage) after Volta, the **ampere** (unit of current) after Ampère, and the **ohm** (unit of resistance) after Ohm.
+
 ### When did electricity reach people's homes?
 
 It began spreading in big cities in the late 19th century, then took many decades to reach most parts of the world.
 
 ## Key takeaway
 
-Electricity wasn't invented by one person. It's a shared story of discovery that began with a piece of amber more than 2,600 years ago, passed through Franklin, Volta and Faraday, and reached our homes thanks to Edison and Tesla. Every time you flip a light switch, remember the centuries of scientific curiosity behind it.
+Electricity wasn't invented by one person. It's a shared story of discovery that began with a piece of amber more than 2,600 years ago, passed through Franklin, Volta and Faraday, and reached our homes thanks to Edison and Tesla. Every time you flip a light switch, remember the centuries of scientific curiosity behind it. For more short facts about inventors, visit our [inventions "Did you know?" page](/en/did-you-know/inventions/).
