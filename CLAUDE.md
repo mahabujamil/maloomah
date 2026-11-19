@@ -18,7 +18,7 @@ A bilingual (Arabic + English) **learning site for students and teachers** at **
    - **Articles:**
      - Do keyword research first and use the real search queries in `keywords`.
      - Put the main keyword in the title (about 60 characters or fewer), in the description (120–160 characters), in the first paragraph and in at least one `##` heading.
-     - Include an FAQ section and 1–3 internal links.
+     - Answer the questions readers ask (in the form rule 4 describes) and add 1–3 internal links.
      - Add a photo with descriptive alt text in both languages.
      - Publish both languages under the same slug.
    - **Pages and design:**
@@ -43,6 +43,16 @@ A bilingual (Arabic + English) **learning site for students and teachers** at **
    - **For the daily routine:** its prompt (`trig_01Ny4m6t5mQCaC4Afm8rReE1`) was rewritten for this rule on 2026-11-06. `content-plan/make-money-online.md` is kept for reference but is no longer worked through.
    - Check English descriptions with a real character count (Python `len`); bash `wc`/`${#var}` count bytes in this sandbox.
    - The cloud checkout can be on a detached HEAD. Push with `git push origin HEAD:main` after `git fetch origin main && git rebase origin/main`.
+
+4. **Every article must read like an experienced teacher wrote it, not a machine.** Mahmoud set this on 2026-11-19 and asked for every existing article to be rewritten this way, without exception. It applies to new articles, refreshes and both languages.
+   - **Why:** all 129 articles shared one template. They had the same kind of hook, about 20 bold phrases each, a fixed «أسئلة شائعة» block and a fixed «الخلاصة» ending, plus stock phrases. That reads as machine-written and undermines trust (AdSense rejected the site for "low-value content").
+   - **Structure follows the topic, not a template.** Openings differ: a question, a classroom or home scene, a surprising fact, or the direct answer. There is no fixed ending, so don't close with «الخلاصة» / "Key takeaway". Reader questions are welcome, but give the section a heading that fits the topic (for example «أسئلة يسألها الطلاب عن الكواكب») or answer them inside the sections; not every article needs one. Essays keep their natural «الخاتمة».
+   - **Bold sparingly:** only the direct answer and 2–4 key terms per article (`style-check` allows 1.2 bold phrases per 1,000 characters).
+   - **Write like a good teacher talks, in correct فصحى:** mix short and long sentences, explain why and not just what, link ideas with real transitions, and use concrete examples from students' lives (school, home, Arab cities; rule 1 still applies). Prefer prose paragraphs when ideas connect, and keep lists for real steps or items. Use tables only for genuinely tabular data.
+   - **Avoid stock phrases** such as «في هذا المقال», «إليك», «جهّزنا لك», «لا شك أن», «تجدر الإشارة», «رحلة» used as a metaphor, and «ختاماً» outside essays. In English avoid "delve", "in this article", "journey", "moreover", "in conclusion", "whether you're" and similar. Use em dashes rarely. The full list is in `scripts/style-check.mjs`.
+   - **Human style, not fake humans.** Never invent personal experiences, teacher names, quotes, studies or claims of human review. Facts, numbers, sources, Quran and hadith quotations, keywords, internal links and frontmatter stay exactly accurate. When rewriting, keep `title`, `description`, `keywords` and the slug, and set `updated` to the rewrite date.
+   - **English is written fresh,** in natural English, not mirrored sentence by sentence from the Arabic.
+   - **Check:** `node scripts/style-check.mjs <slug>` must print `clean` for both languages before a new or rewritten article is pushed. `node scripts/style-check.mjs` shows how many articles are still machine-like, and `--list N` prints the next N to rewrite (worst first).
 
 ## Two computers, one repo
 
@@ -170,14 +180,15 @@ Since 2026-11-06 growth is only in the **study categories** (`STUDY_CATEGORY_IDS
    featured: false         # one featured article is shown big on the home page
    draft: false            # true = only visible in npm run dev
    ```
-4. Body format, matching the existing articles:
-   - A short hook intro with no heading
+4. Body format (owner rule 4: vary it with the topic, never one fixed template):
+   - An intro with no heading that opens in a way suited to the topic
    - 4–7 `##` sections; their headings feed the table of contents
    - One `> **هل تعلم؟** ...` / `> **Did you know?** ...` callout
-   - A `## أسئلة شائعة` / `## Frequently asked questions` section with `###` questions (good for long-tail search)
-   - Final `## الخلاصة` / `## Key takeaway`
-   - Use tables where data fits naturally
+   - Reader questions as `###` under a heading that fits the topic, or answered inside the sections (good for long-tail search)
+   - No fixed closing section; end where the topic naturally ends
+   - Use tables only where data is genuinely tabular
    - Put the main keyword in the title, the description, the first paragraph and at least one `##` heading, written naturally and not stuffed.
+   - Run `node scripts/style-check.mjs <slug>`; both languages must print `clean`.
 5. Arabic articles use Modern Standard Arabic (فصحى). In Arabic text, put a space after «و» when the next word is English (`Upwork و Fiverr`, not `وFiverr`). Otherwise the bidi rendering glues them together. The English version is a natural translation, not word for word.
 6. **Accuracy is non-negotiable.** Only state facts you are confident about, hedge estimates ("about", "نحو"), and never invent studies or statistics. Health and money articles automatically get a disclaimer.
 7. Run `npm run build`, then commit and push.
