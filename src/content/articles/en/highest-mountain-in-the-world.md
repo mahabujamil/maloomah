@@ -3,35 +3,38 @@ title: "Highest Mountain in the World: Mount Everest Facts"
 description: "What is the highest mountain in the world? Mount Everest's exact height, where it is, who climbed it first, the 10 highest peaks, and the one taller from base."
 category: geography
 date: 2026-10-31
+updated: 2026-11-19
 tags: ["mountains", "Everest", "geography", "Himalayas"]
 keywords: ["highest mountain in the world", "highest mountain in the world location", "highest mountain in the world list", "highest mountain in the world from base to peak", "mount everest height"]
 ---
 
-Ask any student to name the **highest mountain in the world** and they'll answer straight away: Everest. But how high is it exactly? Where is it? And why do some scientists say another mountain is "taller"? This guide brings together the key facts about the roof of the world, plus the 10 highest peaks and the tallest mountain in the Arab world.
+Everest. Almost every student knows that the **highest mountain in the world** is Everest, and they're right. The harder questions come next. How high is it, to the metre? Which country is it in? And why do some scientists insist that a mountain in Hawaii is actually taller? The answers below take those one at a time, then look at the ten highest peaks on Earth and the tallest mountain in the Arab world.
 
-## What is the highest mountain in the world?
+## What is the highest mountain in the world, and how tall is it?
 
-The highest mountain above sea level is **Mount Everest**, at **8,848.86 metres** (29,031.7 feet). Nepal and China announced this figure jointly in **December 2020** after new surveys, replacing the long-quoted 8,848 metres.
+Measured above sea level, the highest mountain is **Mount Everest**, at **8,848.86 metres** (29,031.7 feet). That figure is fairly new. Nepal and China announced it together in December 2020 after fresh surveys, and it replaced the 8,848 metres that textbooks had quoted for decades.
 
-Its summit is covered in snow all year round, and the air there is very thin: about a third of the oxygen available at sea level. That's why most climbers use bottled oxygen.
+Snow covers the summit all year, but the cold is not the worst of it. The air up there is so thin that it holds only about a third of the oxygen you breathe at sea level. That single fact explains why most climbers carry bottled oxygen.
 
-## Where is Mount Everest?
+## Where is Mount Everest located?
 
-Everest is in the **Himalayas** in Asia, on the **border between Nepal and the Tibet region of China**. The border runs right across its summit.
+Everest stands in the Himalayas, in Asia, on the border between Nepal and the Tibet region of China. The border line runs straight across the summit, so a climber standing on top is standing in two countries at once.
 
-- **Nepali name:** Sagarmatha.
-- **Tibetan name:** Chomolungma.
-- **English name:** given in the 19th century after George Everest, a former British Surveyor General of India.
+The mountain has several names. Nepalis call it Sagarmatha, and Tibetans call it Chomolungma. The English name dates from the 19th century and honours George Everest, a former British Surveyor General of India.
+
+People sometimes ask which mountain held the title before Everest. Until the British survey measured Everest in the 1850s, Kangchenjunga was thought to be the highest mountain in the world. Today it ranks third.
 
 ## Who first climbed Mount Everest?
 
-The first confirmed ascent was by New Zealander **Edmund Hillary** and Sherpa **Tenzing Norgay** on **29 May 1953**, as part of a British expedition. Thousands of climbers have reached the top since, but it remains dangerous because of extreme cold, low oxygen and avalanches.
+The first confirmed ascent was made on 29 May 1953 by New Zealander Edmund Hillary and Sherpa Tenzing Norgay, members of a British expedition. Thousands of climbers have reached the top since then, yet the climb is still dangerous: extreme cold, low oxygen and avalanches all lie along the route.
+
+How long does it take? Commercial expeditions usually last about two months. The distance alone wouldn't need that long, but the human body needs weeks to acclimatise to the altitude before anyone can safely attempt the summit.
 
 > **Did you know?** The Himalayas are still rising slowly, because the Indian tectonic plate keeps pushing into the Asian plate, as it has for millions of years. That slow-motion collision is what built the Himalayas in the first place.
 
 ## The 10 highest mountains in the world
 
-All ten are in Asia, in the Himalaya and Karakoram ranges:
+Put the ten highest mountains on a world map and they cluster together in one corner of Asia, across the Himalaya and Karakoram ranges:
 
 | Rank | Mountain | Approx. height (m) | Location |
 | --- | --- | --- | --- |
@@ -46,40 +49,18 @@ All ten are in Asia, in the Himalaya and Karakoram ranges:
 | 9 | Nanga Parbat | 8,126 | Pakistan |
 | 10 | Annapurna | 8,091 | Nepal |
 
-**K2** is widely considered harder and more dangerous to climb than Everest, even though it's lower.
+Everest's height is rounded here to 8,849 metres. The number two, K2, is a good reminder that height isn't everything: it's widely considered harder and more dangerous to climb than Everest, even though it's lower.
 
 ## Is any mountain taller than Everest?
 
-It depends how you measure:
+This is where the question gets interesting, because the answer depends on what you measure. From sea level, which is how heights are normally given, Everest is the undisputed highest.
 
-- **From sea level:** Everest is the undisputed highest.
-- **From base to peak:** **Mauna Kea** in Hawaii starts on the floor of the Pacific Ocean and is over 10,000 metres tall in total, but most of it is underwater and only about 4,200 metres rises above sea level.
-- **Farthest from Earth's centre:** the summit of **Chimborazo** in Ecuador, because the Earth bulges slightly at the equator.
+Measure from base to peak, though, and Mauna Kea in Hawaii wins. It rises from the floor of the Pacific Ocean and stands over 10,000 metres tall in total. Most of it is hidden underwater, and only about 4,200 metres pokes above sea level, which is why it's often called the tallest mountain in the world underwater.
 
-At the opposite extreme, the lowest point on land is on the shores of the [Dead Sea](/en/articles/dead-sea/).
+There's a third way to measure: which summit is farthest from the centre of the Earth? That record belongs to Chimborazo, a volcano in Ecuador. The Earth isn't a perfect sphere. It bulges slightly at the equator, and that bulge lifts Chimborazo's peak farther out than Everest's.
+
+At the opposite extreme, the lowest point on land lies on the shores of the [Dead Sea](/en/articles/dead-sea/).
 
 ## What is the highest mountain in the Arab world?
 
-The highest peak in the Arab world is **Mount Toubkal** in Morocco's Atlas Mountains, at about **4,167 metres**. Other well-known Arab peaks include Mount Hermon on the Lebanon–Syria border and Jabal an-Nabi Shu'ayb in Yemen, the highest point on the Arabian Peninsula at about 3,666 metres.
-
-## Frequently asked questions
-
-### In which country is the highest mountain in the world?
-
-Everest sits on the border of two countries: Nepal and China (the Tibet region).
-
-### What was the highest mountain before Everest was discovered?
-
-Before the British survey measured Everest in the 1850s, **Kangchenjunga** was thought to be the world's highest mountain.
-
-### How long does it take to climb Mount Everest?
-
-Commercial expeditions usually take about two months, because climbers need weeks to acclimatise to the altitude before a summit attempt.
-
-### What is the highest mountain in the world underwater?
-
-Mauna Kea, measured from its base on the ocean floor, is the tallest mountain on Earth, though most of it is hidden beneath the Pacific.
-
-## Key takeaway
-
-The highest mountain in the world is Mount Everest, at 8,848.86 metres, on the Nepal–China border in the Himalayas. Hillary and Tenzing first reached its summit in 1953. Measured from base to peak, Hawaii's Mauna Kea is taller, and the Arab world's highest peak is Toubkal in Morocco.
+The Arab world's highest peak is Mount Toubkal, in the Atlas Mountains of Morocco, at about 4,167 metres. Further east, Mount Hermon sits on the border between Lebanon and Syria. On the Arabian Peninsula the highest point is Jabal an-Nabi Shu'ayb in Yemen, at about 3,666 metres.
