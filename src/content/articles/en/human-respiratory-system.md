@@ -3,23 +3,26 @@ title: "Human Respiratory System: Parts, Functions and Breathing"
 description: "The human respiratory system explained simply for students: its parts from nose to alveoli, upper and lower tracts, how breathing works and gas exchange."
 category: body
 date: 2026-11-11
+updated: 2026-11-20
 tags: ["Respiratory system", "Lungs", "Human body", "Science", "Student lessons"]
 keywords: ["respiratory system", "human respiratory system", "respiratory system parts", "respiratory system function", "upper and lower respiratory system", "respiratory system for kids"]
 ---
 
-We breathe thousands of times a day without thinking about it, yet every breath is an amazing journey through the **human respiratory system**. It brings in the oxygen that every cell in the body needs and removes the carbon dioxide those cells produce. In this lesson you'll learn the parts of the respiratory system and what each one does, the difference between the upper and lower respiratory tract, how breathing in and out works and how gases are exchanged in the lungs, plus simple tips for keeping your lungs healthy.
+Try holding your breath while you read this paragraph. Within a few seconds you'll feel an urge to breathe that you can't ignore, and you'll gulp in air without deciding to. That urge comes from the **human respiratory system**, the set of organs that brings in the oxygen every cell in your body needs and gets rid of the carbon dioxide those cells produce. We breathe thousands of times a day without noticing, but each breath passes through a chain of parts working in a set order, from the nose to the deepest corners of the lungs. Below we follow that route step by step, sort out the upper and lower respiratory tract, see how breathing in and out works and how gases are swapped in the lungs, and finish with a few simple ways to look after your lungs.
 
-## What is the respiratory system?
+## What does the human respiratory system do?
 
-The **respiratory system** is the group of organs that moves air into and out of the body, passes oxygen into the blood and gets rid of carbon dioxide. It works hand in hand with the **circulatory system**: the lungs load oxygen into the blood, and the heart pumps that blood to every cell. To learn more about that amazing pump, read our [human heart facts](/en/articles/human-heart-facts/).
+The respiratory system moves air into and out of the body, passes oxygen into the blood and gets rid of carbon dioxide. Its main function, in other words, is a delivery and collection service. It can't finish the job alone, though. The lungs load oxygen into the blood, and then the circulatory system takes over, with the heart pumping that blood out to every cell. To learn more about that pump, read our [human heart facts](/en/articles/human-heart-facts/).
 
-Cells need oxygen to "burn" food and release energy in a process called **cellular respiration**:
+Why do cells want oxygen in the first place? They use it to "burn" food and release energy, in a process called cellular respiration:
 
 > glucose + oxygen → carbon dioxide + water + energy
 
+That equation also explains why every breath out carries carbon dioxide. It's the leftover from the food your cells have just used.
+
 ## Parts of the respiratory system and their functions
 
-Air follows an orderly route from the nose all the way to the tiny air sacs deep inside the lungs:
+Air follows an orderly route from the nose all the way to the tiny air sacs deep inside the lungs. The table lists the parts in the order air meets them:
 
 | Part | What it does |
 | --- | --- |
@@ -34,34 +37,40 @@ Air follows an orderly route from the nose all the way to the tiny air sacs deep
 | Lungs | Two spongy organs inside the rib cage that contain the airways and alveoli |
 | Diaphragm | A dome-shaped muscle below the lungs; the main muscle of breathing |
 
-The **right lung** has three lobes, while the **left lung** has only two and is slightly smaller, leaving room for the heart.
+The epiglottis is the one people notice most, usually by accident. If someone laughs with a mouthful of food and starts coughing, it's often because that flap didn't close in time and a crumb slipped towards the airway. The cough is the body pushing it back out.
+
+Your two lungs aren't a matching pair, either. The right lung has three lobes, while the left has only two and is a little smaller. The reason is the heart, which sits slightly to the left of the chest and needs the space.
 
 ## The upper and lower respiratory system
 
-Scientists usually split the respiratory system into two parts:
+Scientists usually divide the respiratory system into two parts.
 
-- **Upper respiratory tract:** the nose and nasal cavity, the sinuses, the pharynx and the larynx. Its main job is to clean, warm and moisten air before it reaches the lungs.
-- **Lower respiratory tract:** the trachea, bronchi, bronchioles, alveoli and lungs. This is where air reaches the place where gases are exchanged.
+The upper respiratory tract is made up of the nose and nasal cavity, the sinuses, the pharynx and the larynx. Its job is to prepare the air before it reaches the lungs by cleaning, warming and moistening it. On a cold winter morning in Amman or Damascus, the air you pull in through your nose is noticeably warmer and damper by the time it gets to your chest.
 
-That's why doctors call the common cold an "upper respiratory infection": it mostly affects the nose and throat.
+The lower respiratory tract covers the trachea, bronchi, bronchioles, alveoli and lungs. This is where air finally arrives at the place where gases are exchanged.
+
+That split is why a doctor might call your cold an "upper respiratory infection". A common cold mostly affects the nose and throat and stays out of the lungs.
 
 ## How do we breathe? Inhaling and exhaling
 
-Breathing has two repeating stages:
+Here's a puzzle: the lungs have no muscles of their own, so how do they fill up? The answer is the **diaphragm**, a dome-shaped muscle that separates the chest from the abdomen, helped by the muscles between the ribs. Breathing has two stages that repeat for your whole life:
 
-1. **Inhaling (breathing in):** the diaphragm contracts, moves down and flattens, while the muscles between the ribs pull the ribs up and out. The chest gets bigger, the pressure inside the lungs drops, and air rushes in from outside.
-2. **Exhaling (breathing out):** the diaphragm relaxes back into its dome shape and the ribs return to their place. The chest gets smaller, the pressure inside the lungs rises, and air is pushed out.
+1. Inhaling (breathing in): the diaphragm contracts, moves down and flattens, while the muscles between the ribs pull the ribs up and out. The chest gets bigger, the pressure inside the lungs drops, and air rushes in from outside.
+2. Exhaling (breathing out): the diaphragm relaxes back into its dome shape and the ribs return to their place. The chest gets smaller, the pressure inside the lungs rises, and air is pushed out.
 
-An adult at rest breathes about **12 to 20 times a minute**, and children breathe faster. The rate rises when we run and play, because our muscles need more oxygen. The brain controls breathing automatically: it monitors the amount of carbon dioxide in the blood and speeds up breathing when it rises.
+A syringe works the same way. Pull the plunger back and the space inside grows, so liquid is drawn in; push it and the liquid comes out. Air always moves from higher pressure to lower pressure.
 
-**Try it:** put your hand on your chest and take a deep breath. You'll feel your chest rise and widen as you breathe in, then fall as you breathe out.
+An adult at rest breathes about **12 to 20 times a minute**, and children breathe faster. After a few laps of the school field in PE you'll be breathing much harder, because your muscles need more oxygen. The brain controls breathing automatically: it keeps track of carbon dioxide in the blood and makes you breathe faster when the level rises. That's exactly what happened when you held your breath at the start.
+
+Try it: put your hand on your chest and take a deep breath. You'll feel your chest rise and widen as you breathe in, then fall as you breathe out.
 
 ## Gas exchange in the alveoli
 
-Inside the lungs there are hundreds of millions of **alveoli**; references put the number at roughly 300 to 500 million. Each one has a very thin wall wrapped in a net of tiny blood vessels called **capillaries**.
+At the very end of the bronchioles sit the smallest and most important parts of the whole system. The lungs hold hundreds of millions of **alveoli**; references put the number at roughly 300 to 500 million. Each one has a very thin wall wrapped in a net of tiny blood vessels called capillaries.
 
-- **Oxygen** moves from the air in the alveolus into the blood by diffusion, and haemoglobin in red blood cells carries it around the body.
-- **Carbon dioxide** moves from the blood into the alveolus and leaves the body when we breathe out.
+The swap happens in two directions at once. Oxygen moves from the air in the alveolus into the blood by diffusion, and haemoglobin in red blood cells carries it around the body. At the same time, carbon dioxide moves from the blood into the alveolus and leaves the body when we breathe out. Because the wall is so thin, both gases can cross it very quickly.
+
+Comparing the air going in with the air coming out shows the result:
 
 | Gas | In inhaled air (approx.) | In exhaled air (approx.) |
 | --- | --- | --- |
@@ -69,41 +78,26 @@ Inside the lungs there are hundreds of millions of **alveoli**; references put t
 | Carbon dioxide | 0.04% | 4% |
 | Water vapour | Low, varies with weather | Higher, which is why breath fogs a mirror |
 
+Two things are worth spotting. Exhaled air still contains plenty of oxygen, because the body doesn't take it all from a single breath. And carbon dioxide rises many times over. You can see the water vapour for yourself by breathing on a cold window.
+
 > **Did you know?** If you could spread out the walls of all the alveoli in an adult's lungs, they would cover tens of square metres, about 70 m² according to many references, roughly the size of a large classroom! This huge surface is the secret behind fast gas exchange.
 
 ## How to keep your respiratory system healthy
 
-- **Stay away from smoking** and second-hand smoke, which damage the lungs and the tiny hairs that clean the airways.
-- **Exercise regularly** to strengthen your breathing muscles and your heart.
-- **Breathe through your nose** when you can, because it filters and warms the air.
-- **Air out rooms** by opening windows, especially in winter.
-- **Wash your hands** and cover your mouth and nose with a tissue or your elbow when you sneeze or cough, to slow the spread of germs.
-- **Wear a mask** in very dusty places or when cleaning up dust.
+The most important rule is to stay away from smoking and second-hand smoke, which damage the lungs and the tiny hairs that sweep the airways clean.
+
+Regular exercise strengthens your breathing muscles and your heart. It also helps to breathe through your nose when you can, since, as we saw with the upper tract, it filters and warms the air.
+
+The air at home and in class matters too. Open the windows to air out rooms, especially in winter, when everything stays shut and stale air builds up. To slow the spread of germs, wash your hands and cover your mouth and nose with a tissue or your elbow when you sneeze or cough. And in very dusty places, or when you're helping to clean up dust, wearing a mask protects your airways.
 
 To continue your tour of the human body, read our lesson on the [human digestive system](/en/articles/human-digestive-system/) and browse the [human body did-you-know page](/en/did-you-know/body/).
 
-## Frequently asked questions
+## Questions students ask about breathing
 
 ### What are the parts of the respiratory system in order?
 
 The nose and nasal cavity, then the pharynx, larynx, trachea, bronchi, bronchioles and finally the alveoli inside the lungs. The diaphragm and the muscles between the ribs make breathing happen.
 
-### What is the main function of the respiratory system?
-
-To take oxygen into the body and pass it into the blood, and to remove carbon dioxide, a waste gas produced by the cells.
-
 ### What is the difference between breathing and cellular respiration?
 
-**Breathing** (ventilation) is moving air into and out of the lungs. **Cellular respiration** happens inside cells, which use oxygen to break down food and release energy, producing carbon dioxide and water.
-
-### Why is the left lung smaller than the right?
-
-Because the heart sits slightly to the left side of the chest, the left lung is a little smaller and has only two lobes, while the right lung has three.
-
-### What is the main muscle used for breathing?
-
-The **diaphragm**, a dome-shaped muscle that separates the chest from the abdomen. The muscles between the ribs help it.
-
-## Key takeaway
-
-The **human respiratory system** starts at the nose and ends at the alveoli inside the lungs, where oxygen enters the blood and carbon dioxide leaves it. We breathe in when the diaphragm contracts and the chest widens, and breathe out when it relaxes. Keeping away from smoke, exercising and letting fresh air into our rooms all help keep our lungs healthy.
+Breathing (ventilation) is moving air into and out of the lungs, which is what you're doing right now. Cellular respiration happens inside cells, which use oxygen to break down food and release energy, producing carbon dioxide and water.

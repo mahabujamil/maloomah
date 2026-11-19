@@ -3,52 +3,50 @@ title: "What Is the Largest Organ in the Human Body? Skin or Liver?"
 description: "What's the largest organ in the human body, and the largest internal organ? Learn about the skin and liver and what they do, plus a table of amazing body records."
 category: body
 date: 2026-10-23
-updated: 2026-11-08
+updated: 2026-11-20
 tags: ["human body", "organs", "health facts", "anatomy"]
 keywords: ["largest organ in the human body", "largest internal organ", "human body facts", "largest gland in the body"]
 ---
 
-If someone asked you for the largest organ in the human body, you might think of the liver, the lungs or the intestines. But the right answer is closer than you think. It's covering you right now from head to toe: your **skin**.
+Ask a class to name the largest organ in the human body and the guesses come quickly: the liver, the lungs, maybe the intestines. All of them miss something that is touching every student in the room from scalp to toes. The answer is your **skin**. If you only count the organs inside the body, though, the answer changes, and that second question trips people up just as often.
 
 ## The skin: the largest organ in the human body
 
-We may not think of skin as an organ, but scientifically it is a complete organ made of several tissues that carry out vital jobs. And it is by far the body's largest:
+It feels odd to call skin an organ, since we tend to think of it as wrapping. In biology, however, an organ is a group of tissues working together to perform a specific function. Skin fits that definition perfectly: it is a complete organ built from several tissues that carry out vital jobs, and it is by far the biggest one we have.
 
-- In adults it covers about **1.5 to 2 square metres**.
-- It weighs **roughly 3.5 to 5 kilograms**, close to **15%** of body weight, depending on body size and how it is measured.
+Spread out, an adult's skin covers about 1.5 to 2 square metres, roughly the area of a bedroom door. It weighs roughly 3.5 to 5 kilograms, close to 15% of body weight. You will see different figures in different books, because they depend on body size and on how the skin is measured, in particular whether the fatty layer underneath is counted.
 
 ### The three layers of the skin
 
+Under a microscope, skin turns out to be three distinct layers stacked on top of each other, each with its own work to do:
+
 | Layer | Where it is | Main job |
 | --- | --- | --- |
-| **Epidermis** | The outer layer we can see | Keeps germs out, and contains the cells that give skin its colour |
-| **Dermis** | Beneath the epidermis | Gives skin its strength and stretch, and holds blood vessels, nerve endings, hair roots and sweat glands |
-| **Subcutaneous layer** | The deepest layer | Made mostly of fat, it keeps the body warm and cushions it against knocks |
+| Epidermis | The outer layer we can see | Keeps germs out, and contains the cells that give skin its colour |
+| Dermis | Beneath the epidermis | Gives skin its strength and stretch, and holds blood vessels, nerve endings, hair roots and sweat glands |
+| Subcutaneous layer | The deepest layer | Made mostly of fat, it keeps the body warm and cushions it against knocks |
 
-### What the skin does
+### What the skin does for you
 
-1. **Protection:** a shield that keeps germs and harmful substances out.
-2. **Temperature control:** through sweating and widening or narrowing blood vessels.
-3. **Sensation:** millions of nerve endings sense touch, heat and pain.
-4. **Making vitamin D:** when exposed to sunlight.
-5. **Preventing water loss** from the body.
+Protection comes first. Skin is a shield that keeps germs and harmful substances out, and it also stops the body from losing water. Without it, we would dry out fast.
+
+It also controls temperature. After a football match in the school yard on a hot afternoon, you sweat and your face goes red. That redness is blood vessels near the surface widening to get rid of heat. On a cold morning they narrow to hold heat in.
+
+Then there is sensation. Millions of nerve endings in the skin pick up touch, heat and pain, which is why your hand jerks away from a hot cup of tea before you have even thought about it. And one job surprises most students: skin makes vitamin D when it is exposed to sunlight.
 
 > **Did you know?** Your skin constantly renews its outer layer, shedding huge numbers of dead cells every day without you noticing. The surface of the epidermis is renewed roughly every few weeks.
 
-## The liver: the largest internal organ
+## The liver: the largest internal organ and gland
 
-If the question is about the **largest internal organ**, the answer is the **liver**. In adults it weighs about **1.5 kilograms** and sits in the upper right part of the abdomen, just under the diaphragm.
+If the question is about the largest internal organ, the answer is the **liver**. In adults it weighs about 1.5 kilograms and sits in the upper right part of the abdomen, just under the diaphragm. It also holds a second title as the largest gland in the body.
 
-The liver is also the **largest gland in the body**, and it performs hundreds of functions, including:
+The liver performs hundreds of functions. It filters toxins out of the blood and breaks down medicines, which is why doctors sometimes check liver health before prescribing strong drugs. It produces bile, which helps digest fats, so a plate of oily food gives it real work to do. It stores sugar as glycogen, along with some vitamins and iron. And it makes important proteins, including the ones that help your blood clot when you cut yourself.
 
-- **Filtering the blood** of toxins and breaking down medicines.
-- **Producing bile**, which helps digest fats.
-- **Storing sugar** as glycogen, along with some vitamins and iron.
-- **Making important proteins**, including ones that help blood clot.
-
-One of its most remarkable abilities is **regenerating itself**: it can regrow even after a large part is removed, which is why a living person can donate part of their liver.
+Its most remarkable trick is **regenerating itself**. The liver can regrow even after a large part of it has been removed, and that is the reason a living person can donate part of their liver to someone who needs it.
 
 ## Human body records
+
+Skin and liver are not the only record holders. Here are the best-known ones, handy for any general knowledge quiz:
 
 | Record | Body part |
 | --- | --- |
@@ -62,38 +60,26 @@ One of its most remarkable abilities is **regenerating itself**: it can regrow e
 
 ## What about the brain and lungs?
 
-- The **brain** weighs about **1.3 to 1.4 kilograms** in adults, a little less than the liver, yet it uses about a fifth of the body's energy.
-- The **lungs** are large in volume but light, because they're full of air. The right lung is slightly bigger than the left, which leaves room for the heart.
+Plenty of people assume the brain must outweigh the liver, given everything it controls. It doesn't. An adult brain weighs about 1.3 to 1.4 kilograms, a little less than the liver. What it lacks in weight it makes up for in appetite, using about a fifth of the body's energy.
+
+The lungs are deceptive in a different way. They take up a lot of space but weigh little, because they are full of air, so they never top the list. The right lung is also slightly bigger than the left, since the left one leaves room for the heart.
 
 ## How to look after your skin and liver
 
-- **For your skin:** drink water, use sunscreen, and avoid too much midday sun.
-- **For your liver:** keep a healthy weight, cut down on sugar and processed fats, don't take medicines without advice, and avoid alcohol.
+Neither organ asks for much. For your skin, drink water, use sunscreen and avoid too much midday sun, which is worth remembering on summer school trips. For your liver, keep a healthy weight, cut down on sugar and processed fats, don't take medicines without advice, and avoid alcohol.
 
-For more amazing facts about the body, read [how many bones are in the human body](/en/articles/how-many-bones-in-the-human-body/), or browse [Did You Know facts about the human body](/en/did-you-know/body/).
+Both organs work quietly every day, one protecting us and the other cleaning our blood, and we rarely give them a thought until something goes wrong. For more surprising facts about the body, read [how many bones are in the human body](/en/articles/how-many-bones-in-the-human-body/), or browse [Did You Know facts about the human body](/en/did-you-know/body/).
 
-## Frequently asked questions
+## Questions students ask about the body's organs
 
-### Is skin really an organ?
+### Is skin really an organ, or just a covering?
 
-Yes. In biology, an organ is a group of tissues working together to perform a specific function, and the skin fits that definition perfectly.
-
-### What is the largest internal organ in the human body?
-
-The liver, which weighs about 1.5 kilograms in adults.
+It really is an organ, because it is a group of tissues working together to perform specific functions, as described at the start of this lesson.
 
 ### What is the largest gland in the human body?
 
-Also the liver: it's both the largest internal organ and the largest gland.
+The liver. It is both the largest internal organ and the largest gland.
 
-### How much does human skin weigh?
+### Why do books give different weights for skin?
 
-An adult's skin weighs roughly 3.5 to 5 kilograms, close to 15% of body weight. Figures vary between sources depending on body size and whether the fatty layer under the skin is counted.
-
-### What are the layers of the skin?
-
-The skin has three layers: the outer epidermis, then the dermis, then the fatty subcutaneous layer.
-
-## Key takeaway
-
-The largest organ in the human body is the **skin**, and the largest internal organ is the **liver**. Both work quietly every day to protect and clean our bodies, so they deserve some care through simple healthy habits.
+Some sources include the fatty layer under the skin and others leave it out, and body size varies from person to person. That is why you will find figures anywhere from about 3.5 to 5 kilograms.
