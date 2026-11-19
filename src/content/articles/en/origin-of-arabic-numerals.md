@@ -3,51 +3,49 @@ title: "Origin of Arabic Numerals: How 1, 2, 3 Reached the World"
 description: "The origin of Arabic numerals: how 1, 2, 3 travelled from India to Baghdad, al-Andalus and Europe, the role of al-Khwarizmi and zero, and a numeral table."
 category: culture
 date: 2026-10-23
-updated: 2026-11-15
+updated: 2026-11-20
 tags: ["Arabic language", "history of science", "mathematics", "al-Khwarizmi"]
 keywords: ["origin of arabic numerals", "where do arabic numerals come from", "hindu-arabic numerals history", "eastern arabic numerals", "are arabic numerals from india"]
 ---
 
-In much of the Arab East, people write numbers like this: ١ ٢ ٣, and call them "Arabic numbers", while calling 1, 2, 3 "English numbers". The irony is that the rest of the world calls 1, 2, 3 **"Arabic numerals"**! So what's the story?
+Here is a small puzzle. Across much of the Arab East, schoolchildren write numbers as ١ ٢ ٣ and call them "Arabic numbers", while 1, 2, 3 are known locally as "English numbers". Yet almost everywhere else, 1, 2, 3 are called "Arabic numerals". The origin of Arabic numerals explains the mix-up: **the system was born in India, developed by Arab and Muslim scholars, and carried by them to Europe and the rest of the world.** Both sets of shapes belong to the same family.
 
 ## It started in India
 
-These numerals trace back to **India**. Early forms of some digits appear in Indian Brahmi inscriptions from around the 3rd century BCE.
+Early forms of some digits appear in Indian Brahmi inscriptions from around the 3rd century BCE. The shapes themselves weren't the real achievement, though; plenty of civilisations had their own counting symbols. What India gave the world was an idea: the **decimal place-value system with zero**.
 
-But the bigger breakthrough wasn't the shapes; it was the **decimal place-value system with zero**, where a digit's value depends on its position, so the 2 in 20 means something different from the 2 in 200. In 628 CE, the Indian mathematician **Brahmagupta** set out rules for calculating with zero as a number.
+Place value means a digit is worth different amounts depending on where it sits. The 2 in 20 stands for twenty, and the 2 in 200 stands for two hundred, even though it's the same symbol. That only works if you have a way to mark an empty slot, and that's the job zero does. In 628 CE the Indian mathematician Brahmagupta went a step further and set out rules for calculating with zero as a number in its own right.
 
-## The Arabs adopt and develop the numerals
+## From India to Baghdad
 
-In the Abbasid era, Baghdad was a global centre of science and translation, and Indian knowledge of arithmetic and astronomy reached it.
+During the Abbasid era, Baghdad was a world centre of science and translation, and Indian knowledge of arithmetic and astronomy found its way there. Scholars in the city didn't simply copy what arrived; they explained it, organised it and built on it.
 
-Enter [**Muhammad ibn Musa al-Khwarizmi**](/en/articles/who-is-al-khwarizmi/) (about 780–850 CE), who wrote a book around 825 CE on calculating with the Indian numerals. When it was translated into Latin, his name was written "Algoritmi", and from that name came the word **"algorithm"**, the same word we use in programming today.
-
-His other book, *The Compendious Book on Calculation by Completion and Balancing* (al-jabr wa'l-muqabala), gave us the word **"algebra"**.
+The best known of them is [Muhammad ibn Musa al-Khwarizmi](/en/articles/who-is-al-khwarizmi/) (about 780–850 CE). Around 825 CE he wrote a book on calculating with the Indian numerals. When it was translated into Latin, his name came out as "Algoritmi", and that is where the word "algorithm" comes from, the same word every beginner programmer learns today. His other book, *The Compendious Book on Calculation by Completion and Balancing* (al-jabr wa'l-muqabala), gave European languages the word "algebra". Two of the most common words in a modern maths or computing class trace back to one man in Baghdad.
 
 > **Did you know?** The English word "zero" comes from the Arabic word **"sifr"** (empty), which passed into Latin as "zephirum", then Italian, then English. "Cipher" comes from "sifr" too.
 
-## Two branches: Eastern and Western
+## Eastern Arabic numerals and their Western cousins
 
-As the numerals spread through the Islamic world, they developed into two forms:
+As the numerals spread across the huge Islamic world, they drifted into two main styles, much as handwriting changes from one region to another:
 
 | Type | Shapes | Where they were used |
 | --- | --- | --- |
-| **Eastern Arabic numerals** (also called Indian) | ٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ | The Arab East, with slightly different forms in Persian and Urdu |
-| **Ghubar (Western Arabic) numerals** | 0 1 2 3 4 5 6 7 8 9 | North Africa and al-Andalus; they evolved into the digits used worldwide today |
+| Eastern Arabic numerals (also called Indian) | ٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ | The Arab East, with slightly different forms in Persian and Urdu |
+| Ghubar (Western Arabic) numerals | 0 1 2 3 4 5 6 7 8 9 | North Africa and al-Andalus; they evolved into the digits used worldwide today |
 
-They were called "ghubar" (dust) numerals because calculators worked on boards covered with dust or sand.
+The **ghubar numerals** take their name from the Arabic word for dust, because people doing sums worked on boards covered with dust or sand.
 
-So both forms have roots in Arab-Islamic civilisation, and it isn't accurate to call 1, 2, 3 "English".
+So a pupil in Morocco writing 1, 2, 3 and a pupil in Jordan writing ١ ٢ ٣ are both using Arabic numerals. Calling either one "English" doesn't fit the history.
 
-## The journey to Europe
+## How the numerals reached Europe
 
-The ghubar numerals travelled from al-Andalus and North Africa into Europe. One of their most famous champions was **Leonardo of Pisa**, better known as **Fibonacci**, who learned arithmetic in the city of **Béjaïa** in Algeria, where his father worked. In **1202** he wrote *Liber Abaci* (The Book of Calculation) to show Europeans the advantages of these numerals.
+The ghubar numerals crossed into Europe from al-Andalus and North Africa. One of their most famous promoters was Leonardo of Pisa, better known as Fibonacci. He learned arithmetic in the city of Béjaïa in Algeria, where his father worked, and in 1202 he wrote *Liber Abaci* (The Book of Calculation) to persuade Europeans that these numerals were better.
 
-The switch wasn't quick: Roman numerals stayed in use for centuries, but the spread of printing in the 15th century helped the new numerals take hold.
+Old habits die hard, and Roman numerals stayed in use for centuries afterwards. What finally helped the new digits stick was the spread of printing in the 15th century.
 
 ## Comparison table: Eastern Arabic, Western Arabic and Roman numerals
 
-This table helps you read numbers in all three forms and convert between them:
+Use this table to read a number in all three systems and convert between them:
 
 | Value | Eastern Arabic | Western Arabic (worldwide) | Roman |
 | --- | --- | --- | --- |
@@ -63,36 +61,28 @@ This table helps you read numbers in all three forms and convert between them:
 | Nine | ٩ | 9 | IX |
 | Ten | ١٠ | 10 | X |
 
-Notice that ten is written with two digits, one and zero, in both Arabic systems, because they use place value. Roman numerals need a separate symbol (X) instead.
+Look at the last row. In both Arabic systems, ten is just a one followed by a zero, because place value does the work and no new symbol is needed. Roman numerals have to invent one (X).
 
 ## Why was zero a revolution?
 
-Try writing the year 2026 in Roman numerals: **MMXXVI**. Now try multiplying it by 37! Roman numerals have no zero and no place value, which makes arithmetic very awkward.
+Try it yourself. Write the year 2026 in Roman numerals and you get MMXXVI. Now multiply that by 37 on paper. The column method you learned at school, units under units and tens under tens, simply doesn't work, because Roman numerals have no zero and no place value. Arithmetic becomes very awkward.
 
-Place value with zero made calculation easy, paving the way for modern mathematics, accounting and science, and later for computers, which run entirely on numbers.
+With place value and zero, adding, multiplying and dividing turn into clear steps that a primary-school child can follow. That is why the system paved the way for modern mathematics, accounting and science, and later for computers, which run entirely on numbers.
 
-## A fun fact: which way numbers are written
+## Which way are numbers written in Arabic?
 
-Although Arabic is written from right to left, numbers are written with the largest place value on the left, just as in European languages. The year two thousand and twenty-six is written ٢٠٢٦ or 2026 either way.
+Arabic text runs from right to left, so students sometimes expect numbers to do the same. They don't. Numbers are written with the largest place value on the left, just as in European languages, so the year two thousand and twenty-six is ٢٠٢٦ or 2026, with the thousands on the left either way.
 
-## Frequently asked questions
+## Questions students ask about where numerals come from
 
-### Why do scholars call them "Hindu-Arabic numerals"?
+### Are Arabic numerals from India?
 
-Because the name gives credit to both civilisations: India, which created the system, and the Arabs, who developed it and carried it to the world.
+Yes, at root they are. The Eastern form (١ ٢ ٣) and the Western form (1 2 3) both go back to the same Indian origin, and both were developed and spread by Arab and Muslim scholars. That's why historians prefer the name "Hindu-Arabic numerals": it credits India, which created the system, and the Arabs, who developed it and carried it to the world. It's fair to call either form "Arabic", but calling 1, 2, 3 "English numbers" is a common mistake.
 
 ### Who invented zero?
 
-Several ancient civilisations, such as the Babylonians and the Maya, used symbols for an "empty place". But treating zero **as a number** with its own arithmetic rules developed in India, then spread through Arab and Muslim scholars.
+Several ancient civilisations, including the Babylonians and the Maya, used symbols to mark an "empty place". Treating zero as a number with its own arithmetic rules, however, developed in India, and it then spread through Arab and Muslim scholars.
 
-### Is it true that each digit's shape is based on its number of angles?
+### Is each digit's shape based on how many angles it has?
 
-No. A popular image online claims that 1 has one angle, 2 has two angles and so on, but historians of mathematics consider this a **popular myth** with no evidence behind it. The shapes of the digits changed gradually over many centuries, starting from ancient Indian scripts and passing through many forms before settling on the ones we use today.
-
-### Are ١ ٢ ٣ Indian or Arabic numerals?
-
-Both the Eastern form (١ ٢ ٣) and the Western form (1 2 3) go back to the same Indian origin, and both were developed by Arab and Muslim scholars. So it's fair to call either form "Arabic" or "Hindu-Arabic" numerals. Calling 1, 2, 3 "English numbers" is a common mistake.
-
-## Key takeaway
-
-The numerals the world uses today were born in India, developed and passed on by Arab and Muslim scholars, and reached Europe through al-Andalus and North Africa. Whether you write ١٢٣ or 123, you're using a shared heritage in which Arab civilisation played a major part.
+No. A popular image online claims that 1 has one angle, 2 has two, and so on up to 9, but historians of mathematics regard this as a **popular myth** with no evidence behind it. The digits changed gradually over many centuries, starting from ancient Indian scripts and passing through many forms before settling into the ones we use. So whether a page says ١٢٣ or 123, it is drawing on a shared heritage that began in India and owes a great deal to Arab civilisation for carrying it forward.

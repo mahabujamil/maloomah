@@ -3,6 +3,7 @@ title: "Lentil Soup Recipe: Creamy Middle Eastern Red Lentil Soup"
 description: "An easy lentil soup recipe in the Middle Eastern style: creamy red or yellow lentils with carrot, cumin and lemon, plus tips for a silky texture and nutrition facts."
 category: food
 date: 2026-10-23
+updated: 2026-11-20
 tags: ["soups", "easy recipes", "lentils", "winter food"]
 keywords: ["lentil soup recipe", "red lentil soup", "middle eastern lentil soup", "lentil soup benefits"]
 recipe:
@@ -35,9 +36,9 @@ recipe:
     - "Season with salt and pepper, simmer for 2 more minutes and serve hot with lemon and toasted bread."
 ---
 
-When the weather turns cold, few things beat a bowl of **lentil soup**. Across the Middle East it's a winter staple and a Ramadan classic: warming, filling and very cheap to make. This lentil soup recipe gives you the smooth, creamy restaurant-style version, with no cream at all.
+A cup of lentils, an onion and a carrot will feed a family of five, and that is a big part of why **lentil soup** is the first pot on the stove in so many Middle Eastern kitchens once the weather turns. It's warming, filling, cheap, and as much a part of Ramadan evenings as of winter ones. This lentil soup recipe makes the smooth, creamy version you get in restaurants, and it does it without a drop of cream. The texture comes down to a few small habits, which are explained below.
 
-## Ingredients
+## Lentil soup ingredients
 
 Serves 4 to 5:
 
@@ -54,28 +55,32 @@ Serves 4 to 5:
 - Salt and black pepper
 - Lemon wedges and toasted bread to serve
 
+The potato and tomato are both up to you. Add the potato if you like a thicker soup, and the tomato if you want a little brightness and a warmer colour.
+
 ## How to make lentil soup, step by step
 
-1. **Rinse the lentils** several times until the water runs clear. This removes excess starch and reduces foam.
-2. **Sauté the vegetables:** heat the oil, soften the onion, then add the garlic, carrot and potato and cook for about 3 minutes.
-3. **Add the lentils and spices:** stir in the cumin and turmeric for a minute until fragrant.
-4. **Simmer:** pour in the water or stock, add the tomato, bring to the boil, then cover and simmer on low heat for 25 to 30 minutes, stirring now and then.
-5. **Blend:** once the lentils and carrot are completely soft, blend with a stick blender until silky.
-6. **Season and serve:** add salt and pepper, simmer for 2 more minutes, and serve hot with a squeeze of lemon.
+1. Rinse the lentils several times until the water runs clear. This washes off excess starch, so the pot foams less later.
+2. Heat the oil and soften the onion, then add the garlic, carrot and potato and cook for about 3 minutes.
+3. Stir in the lentils with the cumin and turmeric and give it a minute, until the spices smell toasty.
+4. Pour in the water or stock, add the tomato and bring it to the boil. Then cover, turn the heat down and simmer for 25 to 30 minutes, stirring now and then.
+5. Once the lentils and carrot are completely soft, blend with a stick blender until silky.
+6. Season with salt and pepper, let it bubble for 2 more minutes, and serve hot with a squeeze of lemon.
 
-## Tips for the perfect lentil soup
+All told it takes about 50 minutes, and most of that is the pot simmering on its own.
 
-- **Use split red or yellow lentils.** They cook fast and break down easily. Brown or green lentils take longer and give a darker, earthier soup.
-- **Salt at the end.** Many cooks find lentils soften more readily when salt goes in late.
-- **Skim the foam** that rises in the first few minutes of boiling for a cleaner taste.
-- **For creaminess without cream,** a small potato does the job.
-- **Thickened overnight?** That's normal. Just add hot water when reheating.
+## Getting a silky red lentil soup
+
+The lentils you choose matter more than anything else. Split red or yellow lentils have had their skins removed, so they cook fast and collapse into the liquid. Brown or green lentils hold their shape, take longer, and give you a darker, earthier soup that's good in its own right but a different dish.
+
+Leave the salt until the end. Many cooks find lentils soften more readily when it goes in late. In the first few minutes of boiling a pale foam rises to the top; skim it off with a spoon and the soup tastes cleaner.
+
+For creaminess, the small potato is all you need. Its starch thickens the soup once blended without changing the flavour. And if the leftovers have set almost solid by the next day, don't worry. That's normal, and a splash of hot water while reheating brings them back.
 
 > **Did you know?** Lentils are among the oldest crops humans have grown. Remains of them have been found at archaeological sites in the Near East dating back thousands of years.
 
 ## Lentil soup nutrition and benefits
 
-Lentils are humble but nutritious. Roughly, 100 grams of cooked lentils provide:
+Lentils look humble, but they carry a lot. Roughly, 100 grams of cooked lentils provide:
 
 | Nutrient | Approximate amount |
 | --- | --- |
@@ -85,35 +90,24 @@ Lentils are humble but nutritious. Roughly, 100 grams of cooked lentils provide:
 | Iron | about 3.3 mg |
 | Folate | about 180 mcg |
 
-The mix of fibre and plant protein makes lentil soup filling for hours, and it's a natural fit for vegetarian diets. Serving it with lemon is a smart habit too: vitamin C helps the body absorb the iron found in plant foods.
+Those numbers explain why a bowl keeps you full for hours: fibre and plant protein are digested slowly. They also make the soup an easy fit for vegetarian diets. The lemon on the side earns its place as well, because **vitamin C** helps the body absorb the **iron found in plant foods**.
 
 ## Toppings and serving ideas
 
-- A drizzle of olive oil and a pinch of cumin
-- Toasted or fried pitta bread pieces
-- Crispy fried onions or chopped parsley
-- A pinch of chilli flakes for heat
+The simplest finish is a drizzle of olive oil and a pinch of cumin on top. Pieces of pitta, toasted in the oven or fried, add crunch that holds up for a few minutes in the hot soup. Crispy fried onions or chopped parsley work well too, and a pinch of chilli flakes suits anyone who likes some heat.
 
-Want something sweet to finish? Try our [semolina basbousa recipe](/en/articles/basbousa-recipe/).
+Want something sweet to finish the meal? Try our [semolina basbousa recipe](/en/articles/basbousa-recipe/).
 
-## Frequently asked questions
+## Questions people ask before their first pot
 
 ### Do I need to soak red lentils?
 
-No. Split red and yellow lentils don't need soaking; a good rinse is enough. Whole lentils can benefit from soaking to shorten the cooking time.
+No. Split red and yellow lentils don't need soaking, and a good rinse is enough. Whole lentils can benefit from soaking, which shortens the cooking time.
 
 ### What's the difference between red and yellow lentils in soup?
 
-Both work well and cook quickly. Red lentils usually turn golden-orange once cooked, and the taste is very similar.
+Very little. Both cook quickly and taste much the same. Red lentils usually turn a golden orange once cooked, so the colour is the main thing you'll notice.
 
 ### How long does lentil soup keep in the fridge?
 
-About 3 to 4 days in an airtight container. It also freezes well for longer storage.
-
-### Why does my lentil soup get so thick?
-
-Lentils keep absorbing liquid after cooking. Add hot water or stock when you reheat until it's the consistency you like.
-
-## Key takeaway
-
-Creamy lentil soup takes about 50 minutes: rinse the lentils, soften onion and carrot, simmer everything with cumin and turmeric, then blend until smooth. It's cheap, warming and packed with plant protein and fibre, which makes it a perfect cold-weather meal.
+About 3 to 4 days in an airtight container, and it freezes well for longer. Expect it to thicken as it sits, since lentils keep absorbing liquid after cooking. Add hot water or stock when you reheat until it's the consistency you like.
