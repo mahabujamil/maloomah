@@ -3,31 +3,28 @@ title: "What Is a Thunderstorm? How It Forms and How to Stay Safe"
 description: "What is a thunderstorm, how does it form, what are its three stages, why do we see lightning before we hear thunder, and how do you stay safe indoors and out?"
 category: science
 date: 2026-10-25
+updated: 2026-11-19
 tags: ["thunderstorm", "lightning", "weather", "safety"]
 keywords: ["what is a thunderstorm", "thunderstorm", "how do thunderstorms form", "thunderstorm safety", "lightning and thunder"]
 ---
 
-When the weather turns, searches for "thunderstorm warning" spike. But what is a thunderstorm, exactly? How can one build up in the sky in less than an hour, why does the flash always come before the boom, and what should you actually do when one rolls in? Here's a clear explanation.
+A flash lights up the whole room. Then nothing for a few seconds, then a boom that rattles the window. Most of us have counted through that gap at some point. So what is a thunderstorm, really, and why does the light always arrive before the sound? The answers are simpler than they look, and they also explain what you should do when one rolls in.
 
 ## What is a thunderstorm?
 
-A **thunderstorm** is a storm that produces **lightning and thunder**. Most also bring heavy rain and strong gusts, and some drop hail. They grow inside a towering cloud called a **cumulonimbus**, which can stretch many kilometres upwards and often spreads out at the top into a flat "anvil".
+**A thunderstorm is a storm that produces lightning and thunder.** Most also bring heavy rain and strong gusts, and some drop hail. They grow inside a towering cloud called a **cumulonimbus**, which can reach many kilometres up and often flattens out at the top into a shape like a blacksmith's anvil.
 
-Lightning is the defining feature. Thunder is simply the sound lightning makes, so however hard it pours, a storm without lightning isn't a thunderstorm.
+Lightning is what makes it a thunderstorm. Thunder is just the noise lightning makes, so a storm with no lightning isn't a thunderstorm, however hard it rains.
 
 ## How do thunderstorms form?
 
-Every thunderstorm needs three ingredients:
+Think of a thunderstorm as a recipe with three ingredients. The first is moisture: plenty of water vapour in the lower atmosphere to build clouds and rain. The second is unstable air, meaning warm air near the ground sitting under cooler air. Warm air is lighter, so once it starts rising it keeps going, a bit like bubbles in a pan of boiling water. The third is lift, something to give the air its first push upward. That might be a cold front shoving under warmer air, wind forced up the side of a mountain, or the afternoon sun baking the ground.
 
-1. **Moisture:** enough water vapour in the lower atmosphere to build clouds and rain.
-2. **Unstable air:** warm air near the ground with cooler air above it, so rising warm air keeps rising.
-3. **Lift:** something that pushes air upwards, such as a cold front, air forced up a mountainside, or the sun heating the ground.
-
-As warm, moist air rises, it cools and its water vapour condenses into cloud. Inside the cloud, water droplets and ice particles collide constantly, and this separates electric charge: positive charge tends to collect near the top of the cloud and negative charge near the bottom. When the imbalance becomes large enough, it discharges in a giant spark: **lightning**.
+As the warm, moist air climbs, it cools and its water vapour condenses into cloud. Inside, water droplets and ice particles keep crashing into each other, and those collisions pull electric charges apart. Positive charge tends to gather near the top of the cloud and negative charge near the bottom. When the difference grows too big for the air to hold back, it releases in one giant spark: **lightning**.
 
 ## The three stages of a thunderstorm
 
-Meteorologists describe the life of a simple thunderstorm cell in three stages. The whole cycle usually takes around 30 to 60 minutes.
+A simple thunderstorm cell doesn't live long, usually somewhere around 30 to 60 minutes. Meteorologists split that life into three stages.
 
 | Stage | What happens |
 | --- | --- |
@@ -35,53 +32,48 @@ Meteorologists describe the life of a simple thunderstorm cell in three stages. 
 | Mature | Rain starts and creates a downdraft beside the updraft. This is the most dangerous stage, with frequent lightning, strong winds, and possible hail or flash flooding |
 | Dissipating | Downdrafts overpower the updraft and cut off the supply of warm, moist air, so the rain gradually eases |
 
-Several cells can cluster together into larger storms that last for hours.
+The storm effectively puts itself out. Falling rain drags cool air down, and that cool air blocks the warm air that was feeding the cloud. Sometimes, though, several cells cluster together and form bigger storms that last for hours.
 
 > **Did you know?** A lightning bolt heats the air around it to roughly 27,000 °C (about 50,000 °F) in a fraction of a second, around five times hotter than the surface of the sun. That sudden, explosive expansion of air is what we hear as thunder.
 
-## Why do we see lightning before we hear thunder?
+## Lightning and thunder: why the flash comes first
 
-Lightning and thunder happen at the same moment, but **light travels far faster than sound**. The flash reaches you almost instantly, while sound takes about 3 seconds to cover one kilometre (about 5 seconds per mile).
+Lightning and thunder happen at the same instant. The difference is speed: **light travels far faster than sound**. The flash reaches your eyes almost immediately, while sound needs about 3 seconds to cover one kilometre (about 5 seconds per mile).
 
-That gives you an easy way to judge distance: **count the seconds between the flash and the thunder, then divide by 3** for kilometres (or by 5 for miles). Nine seconds means the strike was roughly 3 km away.
+That's why counting works. Count the seconds between the flash and the thunder, then divide by 3 for kilometres or by 5 for miles. Nine seconds means the strike was roughly 3 km away.
 
-One important catch: if you can hear thunder at all, you're probably close enough to be struck.
+There's a catch worth remembering, though. If you can hear thunder at all, you're probably close enough to be struck.
+
+The sound itself changes with distance too. A nearby strike gives a sharp crack, because the noise from the whole bolt reaches you at once. A distant one rumbles, because sound from different parts of the long lightning channel arrives at slightly different times.
 
 ## Thunderstorm safety tips
 
-The US National Weather Service sums it up in four words: **"When thunder roars, go indoors."** There is no truly safe place outside during a thunderstorm.
+The US National Weather Service puts it in four words: **"When thunder roars, go indoors."** Nowhere outside is truly safe during a thunderstorm.
 
-**If you're outdoors:**
+If you're outdoors:
 
 - Get inside a solid building or a hard-topped car with the windows closed.
 - Stay away from lone trees, poles, metal fences and exposed high ground.
 - Get out of pools, lakes and the sea immediately.
-- Small shelters, tents, picnic huts and open-sided structures don't protect you from lightning.
+- Don't count on small shelters, tents, picnic huts or open-sided structures; they don't protect you from lightning.
 
-**If you're indoors:**
+If you're indoors:
 
 - Keep away from windows and doors.
 - Avoid using devices plugged into the mains, and protect sensitive electronics by unplugging them beforehand or using a surge protector.
-- Avoid showering or washing dishes, because metal plumbing can carry current.
+- Hold off on showering or washing dishes, because metal plumbing can carry current.
 
-**After the storm:** wait about 30 minutes after the last lightning or thunder before going back outside. Keep clear of fallen power lines and never drive or walk through flooded roads.
+Once the storm passes, give it time. Wait about 30 minutes after the last lightning or thunder before going back outside, keep clear of fallen power lines, and never drive or walk through flooded roads.
 
-If someone is struck by lightning, they don't carry an electrical charge and are safe to touch. Call emergency services straight away and give first aid if you're trained.
+If someone is struck by lightning, you can touch them safely; their body doesn't hold an electrical charge. Call emergency services straight away and give first aid if you're trained.
 
 ## Thunderstorms versus similar weather
 
-- **Ordinary rainstorm:** rain with no lightning or thunder.
-- **Thunderstorm:** usually rain, and always lightning and thunder.
-- **Sandstorm or dust storm:** strong winds carrying sand and dust, often with no rain at all.
-- **Tornado:** a violently rotating column of air that can form from some very strong thunderstorms.
+People often mix these up, but the differences are easy to keep straight. An ordinary rainstorm is rain with no lightning or thunder. A thunderstorm usually brings rain and always brings lightning and thunder. A sandstorm or dust storm is a different animal: strong winds carrying sand and dust, often without a drop of rain. And a tornado is a violently rotating column of air that can spin out of some very strong thunderstorms.
 
-Curious why the sky is blue on clear days? Read [Why is the sky blue?](/en/articles/why-is-the-sky-blue/) For how extreme weather links to a warming planet, see [What is climate change?](/en/articles/climate-change/)
+Curious why the sky turns such a clear blue after a storm? Read [Why is the sky blue?](/en/articles/why-is-the-sky-blue/) For how extreme weather links to a warming planet, see [What is climate change?](/en/articles/climate-change/)
 
-## Frequently asked questions
-
-### What is a thunderstorm in simple terms?
-
-It's a storm that forms in a tall cumulonimbus cloud and produces lightning and thunder, usually with heavy rain and strong winds, and sometimes hail.
+## Questions students ask about thunderstorms
 
 ### How long does a thunderstorm last?
 
@@ -89,16 +81,8 @@ A single storm cell usually lasts 30 minutes to an hour, but storms made of seve
 
 ### Is a car safe in a thunderstorm?
 
-A hard-topped metal car is much safer than standing outside, because the metal body channels the current around the occupants and into the ground. It isn't the rubber tyres that protect you, despite the popular myth.
+A hard-topped metal car is much safer than standing outside, because the metal body channels the current around the people inside and into the ground. Despite the popular myth, the rubber tyres have nothing to do with it.
 
 ### Can lightning strike the same place twice?
 
-Yes. That's a myth. Tall buildings and towers are struck many times every year.
-
-### Why does thunder sometimes crack and sometimes rumble?
-
-Nearby lightning sounds like a sharp crack. With distant lightning, sound arrives from different parts of the long lightning channel at slightly different times, so you hear a long, rolling rumble.
-
-## Key takeaway
-
-A thunderstorm needs moisture, unstable air and something to lift that air, and it passes through three stages, the most dangerous being the mature stage. Because light outruns sound, you see lightning first and can estimate its distance by dividing the seconds by 3. Above all: when thunder roars, go indoors, and wait about 30 minutes after the last rumble before heading back out.
+Yes. The saying that it never does is a myth. Tall buildings and towers are struck many times every year.
