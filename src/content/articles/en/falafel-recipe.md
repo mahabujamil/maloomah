@@ -3,6 +3,7 @@ title: "Falafel Recipe: Crispy Homemade Falafel with Chickpeas"
 description: "An authentic falafel recipe with soaked dried chickpeas: the secret to crispy falafel that won't fall apart, plus air fryer, baked and freezing tips."
 category: food
 date: 2026-11-05
+updated: 2026-11-19
 tags: ["easy recipes", "falafel", "street food", "vegetarian"]
 keywords: ["falafel recipe", "authentic falafel recipe", "falafel recipe easy", "air fryer falafel", "baked falafel", "falafel with canned chickpeas"]
 recipe:
@@ -37,21 +38,21 @@ recipe:
     - "Fry in batches for 3–4 minutes until deep golden brown, drain on paper towels and serve hot."
 ---
 
-Falafel is one of the most popular street foods in the Arab world, and a weekend breakfast favourite in many homes. This falafel recipe shows you how to make crispy, golden falafel at home with a fluffy green centre, plus the one secret that stops it falling apart in the oil.
+Ask anyone who grew up in Amman, Beirut or Cairo what a weekend breakfast smells like, and falafel will come up fast. The good news is that this falafel recipe needs nothing more than dried chickpeas, a pile of herbs and a few spices. The part most home cooks get wrong is a single ingredient choice, and once you understand it you'll get falafel that is crisp and golden outside, fluffy and green inside, and doesn't fall apart in the oil.
 
 ## Levantine falafel vs. Egyptian ta'ameya
 
-**Levantine falafel**, the kind found in Jordan, Palestine, Syria and Lebanon, is made from dried chickpeas, sometimes mixed with fava beans. In Egypt it is called **ta'ameya** and is traditionally made from **split, skinned fava beans**, with plenty of parsley, coriander and dill, which gives it a bright green, softer inside.
+In Jordan, Palestine, Syria and Lebanon, falafel is made from dried chickpeas, sometimes mixed with fava beans. Egyptians call theirs **ta'ameya** and traditionally make it from split, skinned fava beans with lots of parsley, coriander and dill, which is why it is bright green and softer inside.
 
-The method is almost identical for both: soak the beans, grind them raw with herbs and spices, then fry. To make ta'ameya, simply swap the chickpeas for the same weight of dried split fava beans and follow the same steps.
+The method barely changes between the two. You soak the beans, grind them raw with herbs and spices, and fry. If you want ta'ameya, use the same weight of dried split fava beans in place of the chickpeas and follow the same steps.
 
 > **Did you know?** Nobody knows for sure where falafel was first made, and historians still debate it. Many believe the fava bean ta'ameya of Egypt came first and that the recipe later travelled to the Levant, where chickpeas became the main ingredient. The origin of the word "falafel" is also uncertain; one common theory links it to the Arabic word for pepper, *filfil*.
 
 ## Falafel ingredients
 
-These amounts make about 24 small patties.
+This makes about 24 small patties.
 
-- 250 g **dried** chickpeas (about 1¼ cups)
+- 250 g dried chickpeas (about 1¼ cups)
 - 1 medium onion, quartered
 - 4 garlic cloves
 - 1 cup parsley and ½ cup fresh coriander (cilantro)
@@ -62,30 +63,35 @@ These amounts make about 24 small patties.
 - 1 tablespoon sesame seeds for the top (optional)
 - Vegetable oil for frying
 
+Notice the word **dried**. Not cooked, not canned. That one detail decides if your falafel holds together, and the reason is explained below.
+
 ## How to make falafel, step by step (authentic falafel recipe)
 
-1. **Soak the chickpeas** in a large bowl with plenty of cold water. Leave them for 12–24 hours. They should be soft enough to break with your fingers, but still raw.
-2. **Drain and dry** them thoroughly with a clean towel.
-3. **Grind in batches** in a food processor with the onion, garlic and herbs. Use the pulse button until the texture looks like coarse, damp sand, not a smooth paste like hummus.
-4. **Add the spices** and salt and mix well.
-5. **Rest the mixture**, covered, in the fridge for 30–60 minutes so it firms up and is easier to shape.
-6. **Stir in the baking soda** right before frying.
-7. **Heat the oil** in a deep pan to 175–180 °C (about 350 °F). No thermometer? Drop in a small piece of the mixture: if it rises to the surface within a few seconds with steady bubbles, the oil is ready.
-8. **Shape the patties** with a falafel scoop or two spoons, and sprinkle with sesame seeds.
-9. **Fry in small batches** for 3–4 minutes, turning, until deep golden brown, then drain on paper towels.
+1. Soak the chickpeas in a large bowl with plenty of cold water for 12–24 hours. They're ready when you can break one between your fingers, even though it is still raw.
+2. Drain them and dry them thoroughly with a clean towel.
+3. Grind them in batches in a food processor with the onion, garlic and herbs. Pulse rather than blend, stopping when the texture looks like coarse, damp sand. You don't want a smooth paste like hummus.
+4. Add the spices and salt and mix well.
+5. Cover the mixture and rest it in the fridge for 30–60 minutes so it firms up and is easier to shape.
+6. Stir in the baking soda right before frying.
+7. Heat the oil in a deep pan to 175–180 °C (about 350 °F). If you don't have a thermometer, drop in a small piece of the mixture. When it rises to the surface within a few seconds surrounded by steady bubbles, the oil is ready.
+8. Shape the patties with a falafel scoop or two spoons, and sprinkle them with sesame seeds.
+9. Fry in small batches for 3–4 minutes, turning them, until deep golden brown, then drain on paper towels.
 
-Serve hot in pita with tahini sauce, tomatoes and pickles, or alongside a warm bowl of [lentil soup](/en/articles/lentil-soup-recipe/).
+Falafel is best eaten hot, tucked into pita with tahini sauce, tomatoes and pickles, or served next to a warm bowl of [lentil soup](/en/articles/lentil-soup-recipe/).
 
-## The secret to crispy falafel
+## The secret to crispy falafel (and why it falls apart)
 
-- **Raw soaked chickpeas only:** never use cooked or canned chickpeas. They are already cooked and full of water, so they make a soft paste that breaks up and soaks up oil.
-- **A coarse grind:** a sandy texture gives a crunchy crust and a light inside.
-- **The right oil temperature:** oil that is too cool makes greasy falafel; oil that is too hot burns the outside before the middle cooks.
-- **Don't crowd the pan:** too many patties at once drop the oil temperature sharply.
+The biggest factor is using raw soaked chickpeas. Cooked or canned chickpeas are already soft and full of water, so they turn into a loose paste that breaks up in hot oil and soaks a lot of it up. Soaked raw chickpeas still have their structure, so the mixture binds and the inside cooks while the patty fries.
+
+Texture comes next. A coarse, sandy grind leaves tiny gaps in the mixture, which gives you a crunchy crust and a light centre. Grind it too fine and you get something dense and doughy.
+
+Then there's the oil. If it's too cool, the falafel turns greasy; if it's too hot, the outside burns before the middle is done. This is also why you shouldn't crowd the pan: dropping in too many patties at once makes the temperature fall sharply.
+
+So if your falafel falls apart, work through the likely causes. Were the chickpeas cooked or canned? Were they dried properly after soaking? Was the mixture ground too fine, or the oil not hot enough? Chilling the mixture helps it hold together, and if it is still too soft after that, add a spoonful of flour or chickpea flour.
 
 ## Air fryer falafel and baked falafel
 
-For a lighter falafel recipe that is easy and uses less oil, both options work well, though neither is quite as crisp as deep frying:
+If you'd like an easy falafel recipe that uses less oil, the air fryer and the oven both do a good job, although neither gets quite as crisp as deep frying. Here's how the three methods compare:
 
 | Method | Temperature | Time | Tip |
 | --- | --- | --- | --- |
@@ -93,30 +99,24 @@ For a lighter falafel recipe that is easy and uses less oil, both options work w
 | Air fryer | about 190 °C | 12–15 minutes | Spray with a little oil and flip halfway |
 | Oven | 200 °C | 20–25 minutes | Use an oiled tray and flip halfway |
 
-Shape them into slightly flattened patties rather than balls so they cook evenly. Air fryers vary, so check yours after 10 minutes.
+For either one, make slightly flattened patties instead of balls. Heat reaches the middle of a flatter patty sooner, so it cooks evenly. Air fryers vary a lot in power, so check yours after 10 minutes.
 
 ## How to store and freeze falafel
 
-The best approach is to **freeze the patties raw**: shape them without the baking soda, freeze them on a tray until solid, then move them to an airtight bag. They keep well for about 2–3 months and fry well straight from frozen.
+When you make a big batch, **freeze the patties raw**. Shape them without the baking soda, freeze them on a tray until solid, then move them to an airtight bag. They keep well for about 2–3 months and can go straight from the freezer into the oil.
 
-## Frequently asked questions
-
-### Why does my falafel fall apart when frying?
-
-Usually because the chickpeas were cooked or canned, weren't dried well after soaking, were ground too fine, or the oil wasn't hot enough. Chilling the mixture helps it hold together; if it is still too soft, add a spoonful of flour or chickpea flour.
+## Questions people ask before their first batch
 
 ### Can I make falafel with canned chickpeas?
 
-It isn't recommended for frying. Canned chickpeas are cooked, soft and waterlogged, so the mixture won't hold. If you must use them, bake the patties with some added flour, but the result will be closer to a soft chickpea patty than real falafel.
+Not for frying. Canned chickpeas are cooked, soft and waterlogged, so the mixture won't hold. If canned is all you have, bake the patties with some added flour, but expect something closer to a soft chickpea patty than real falafel.
 
 ### Do I need baking soda in falafel?
 
-No, but a little makes the inside lighter and puffier. Add it just before frying, and don't overdo it, or it can taste soapy.
+No, but a little makes the inside lighter and puffier. Add it just before frying and keep the amount small, because too much can taste soapy.
 
 ### How many calories are in a falafel?
 
-A small fried patty from this recipe has roughly 85 calories. Air-fried or baked falafel has fewer, because it absorbs much less oil.
+A small fried patty from this recipe has **roughly 85 calories**. Air-fried or baked falafel has fewer, because it absorbs much less oil.
 
-## Key takeaway
-
-The secret to a great falafel recipe is simple: dried, soaked and never cooked chickpeas, a coarse grind, a chilled mixture and oil at 175–180 °C. And if you'd like something sweet to finish, try [easy basbousa](/en/articles/basbousa-recipe/).
+For something sweet to finish the meal, try [easy basbousa](/en/articles/basbousa-recipe/).
