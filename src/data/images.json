@@ -959,6 +959,18 @@
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Banat_Souad_calligraphy.png"
   },
+  "school-radio-about-bullying": {
+    "alt": {
+      "ar": "ممر مدرسة هادئ تصطف على جانبه خزائن الطلاب الزرقاء",
+      "en": "A quiet school corridor lined with blue student lockers"
+    },
+    "title": "Northwestern A-Wing",
+    "creator": "Maryland Pride",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Northwestern_A-Wing.jpg"
+  },
   "school-radio-about-cleanliness": {
     "alt": {
       "ar": "غسل اليدين بالماء والصابون تحت الصنبور",
@@ -1199,6 +1211,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Black_hole_-_Messier_87.jpg"
   },
+  "what-is-a-food-chain": {
+    "alt": {
+      "ar": "طائر بلشون رمادي يصطاد سمكة من الماء، مثال على حلقة في سلسلة غذائية مائية",
+      "en": "A grey heron catching a fish from the water, one link in an aquatic food chain"
+    },
+    "title": "Day 25 Grey Heron (Ardea cinerea) catching a fish ... (53476681689)",
+    "creator": "Bernard DUPONT from FRANCE",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Day_25_Grey_Heron_(Ardea_cinerea)_catching_a_fish_..._(53476681689).jpg"
+  },
   "what-is-a-low-pressure-system": {
     "alt": {
       "ar": "غيوم رمادية كثيفة تغطي السماء فوق واحة صحراوية قبيل هطول المطر",
@@ -1402,6 +1426,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:First_flight3.jpg"
+  },
+  "who-invented-the-internet": {
+    "alt": {
+      "ar": "كابلات شبكة ملوّنة موصولة بمحوّلات إنترنت داخل غرفة خوادم",
+      "en": "Colourful network cables plugged into internet switches in a server room"
+    },
+    "title": "EthernetSwitch",
+    "creator": "Raysonho @ Open Grid Scheduler / Grid Engine",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:EthernetSwitch.jpg"
   },
   "who-invented-the-light-bulb": {
     "alt": {

@@ -1,8 +1,9 @@
 ---
 title: "Effective Study Methods: 10 Techniques Proven by Science"
-description: "The study methods that research shows actually work: active recall, spaced repetition, the Pomodoro technique and more, plus tips to focus and how to study the night before an exam."
+description: "Effective study methods backed by research: active recall, spaced repetition, Pomodoro and more, plus focus tips and how to study the night before an exam."
 category: education
 date: 2026-10-23
+updated: 2026-11-19
 tags: ["studying", "learning", "exams", "study skills"]
 keywords: ["effective study methods", "how to study effectively", "how to focus while studying", "how to study the night before an exam", "study techniques"]
 ---
@@ -11,14 +12,24 @@ Have you ever spent hours rereading a textbook and highlighting lines, only to f
 
 ## First: popular methods that don't work well
 
-In a well-known 2013 scientific review, researchers rated ten common study techniques and found that:
+In a well-known 2013 review published in the journal *Psychological Science in the Public Interest*, psychologist John Dunlosky and his colleagues examined hundreds of studies on ten common study techniques and rated how useful each one is. They found that:
 
 - **Rereading** many times has limited benefit.
 - **Highlighting and underlining** feels productive, but on its own does little to improve memory.
 
 That's because these methods make the material **familiar** to your eyes, so you think you know it, when you haven't actually practised **recalling** it.
 
-## 10 study methods proven to work
+Here is a summary of how the review rated the techniques:
+
+| Rating | Techniques |
+| --- | --- |
+| **High usefulness** | Practice testing (testing yourself), spaced practice |
+| **Moderate usefulness** | Interleaving (mixing problem types), asking "why?" (elaborative interrogation), explaining to yourself |
+| **Low usefulness** | Rereading, highlighting, summarising, keyword memory tricks, picturing the text |
+
+"Low" doesn't mean useless: a good summary still helps you organise ideas. It just isn't enough on its own, so pair it with testing yourself.
+
+## 10 effective study methods proven to work
 
 ### 1. Active recall (test yourself)
 
@@ -30,7 +41,7 @@ Review material at increasing intervals: after a day, then three days, then a we
 
 ### 3. The Pomodoro technique
 
-Study for **25 minutes with full focus**, then take a **5-minute break**. After four sessions, take a longer break of 15–30 minutes. It prevents burnout and makes getting started easier.
+This technique was developed by Italian Francesco Cirillo in the late 1980s, and named after his tomato-shaped kitchen timer ("pomodoro" is Italian for tomato). Study for **25 minutes with full focus**, then take a **5-minute break**. After four sessions, take a longer break of 15–30 minutes. It prevents burnout and makes getting started easier. If you keep putting off studying, read our guide on [how to stop procrastinating](/en/articles/how-to-stop-procrastinating/).
 
 ### 4. Mix up problem types (interleaving)
 
@@ -54,13 +65,27 @@ Keep your phone in another room while studying. Notifications break your focus, 
 
 ### 9. Sleep well
 
-Sleep isn't time lost from studying; it's when **your brain consolidates what you learned**. Pulling an all-nighter before an exam weakens focus and memory.
+Sleep isn't time lost from studying; it's when **your brain consolidates what you learned**. Pulling an all-nighter before an exam weakens focus and memory. To find out how many hours you need at your age, read [how much sleep do you need](/en/articles/how-much-sleep-do-you-need/).
 
 ### 10. Plan, and do past papers
 
 Split the syllabus across days and set a small goal for each session. In the last two weeks, **do past exam papers** under timed conditions, as if it were the real exam.
 
 > **Did you know?** The idea that each student has one "learning style", visual or auditory, and should only study that way isn't backed by strong scientific evidence. It's better to use all the effective methods and mix reading, drawing, explaining and problem-solving.
+
+## A sample spaced-repetition plan
+
+Suppose you study a new lesson on Sunday. You could review it like this:
+
+| When | What to do | Time needed |
+| --- | --- | --- |
+| Sunday (day 1) | Study the lesson and write a short summary | 45 minutes |
+| Monday (day 2) | Write what you remember on a blank page, then check | 10 minutes |
+| Wednesday (day 4) | Answer 5 to 10 questions on the lesson | 15 minutes |
+| The next Sunday (day 8) | Explain the lesson out loud as if teaching it | 10 minutes |
+| Two weeks later | A quick quiz, then review only your mistakes | 10 minutes |
+
+Each review is short, but together they fix the lesson in your memory far better than one long session.
 
 ## How to focus while studying
 
@@ -86,6 +111,14 @@ There's no single number for everyone. Two hours of focused study with active re
 ### What's the best time to study?
 
 Whenever you're most alert and can stick to it every day. Many people prefer mornings for a clear head, but consistency matters most.
+
+### Is highlighting a waste of time?
+
+Not completely, but on its own it does little for memory. If you highlight, keep it to key words, then close the book and try to recall what the highlighted parts said.
+
+### What is the single best study method?
+
+Research points to testing yourself (active recall), especially when it is spread out over several days (spaced repetition). Using both together is one of the most effective ways to study.
 
 ## Key takeaway
 

@@ -21,6 +21,7 @@
   ["primary","كل عدد ينتهي بالرقم 0 أو 5 يقبل القسمة على 5.","Every number ending in 0 or 5 can be divided by 5."],
   ["primary","يقبل العدد القسمة على 3 إذا كان مجموع أرقامه يقبل القسمة على 3.","A number can be divided by 3 if the sum of its digits can be divided by 3."],
   ["primary","الصفر هو العدد الوحيد الذي ليس موجباً ولا سالباً.","Zero is the only number that is neither positive nor negative."],
+  ["primary","المثلث أبسط المضلعات، فلا يمكن رسم شكل مغلق بخطوط مستقيمة بأقل من ثلاثة أضلاع.","The triangle is the simplest polygon: you can't draw a closed shape with straight lines using fewer than three sides."],
   ["middle","العدد 2 هو العدد الأولي الزوجي الوحيد.","2 is the only even prime number."],
   ["middle","العدد باي (π) يساوي تقريباً 3.14159، وأرقامه بعد الفاصلة لا تنتهي ولا تتكرر.","Pi (π) is about 3.14159, and its digits after the decimal point never end and never repeat."],
   ["middle","كلمة «الجبر» عربية، وجاءت من كتاب الخوارزمي «المختصر في حساب الجبر والمقابلة».","The word \"algebra\" comes from Arabic, from al-Khwarizmi's book on \"al-jabr wa'l-muqabala\"."],
@@ -44,6 +45,7 @@
   ["middle","كلمة «جيومتري» (الهندسة) تعني في اليونانية «قياس الأرض».","The word 'geometry' means 'measuring the earth' in Greek."],
   ["middle","كل زاوية داخلية في السداسي المنتظم قياسها 120 درجة.","Each interior angle of a regular hexagon measures 120 degrees."],
   ["middle","شريط موبيوس شريط ورقي نلويه نصف لفة ثم نلصق طرفيه، فيصبح له وجه واحد وحافة واحدة فقط.","A Möbius strip, made by giving a paper strip a half twist and joining its ends, has only one side and one edge."],
+  ["middle","العدد 6 هو أصغر «عدد تام»، لأن مجموع قواسمه الأصغر منه (1 و2 و3) يساوي 6 نفسه.","6 is the smallest 'perfect number', because its divisors smaller than itself (1, 2 and 3) add up to exactly 6."],
   ["secondary","يحتفل محبو الرياضيات بيوم «باي» في 14 مارس، لأن التاريخ يُكتب 3/14.","Maths lovers celebrate Pi Day on 14 March, because the date is written 3/14."],
   ["secondary","الشكل السداسي يملأ المساحة دون فراغات وبأقل محيط، ولهذا يبني النحل خلاياه سداسية.","Hexagons fill a surface with no gaps using the least perimeter, which is why bees build hexagonal cells."],
   ["secondary","العدد 0.999... (تسعة متكررة إلى ما لا نهاية) يساوي 1 تماماً.","The number 0.999... (nines repeating forever) is exactly equal to 1."],
@@ -63,5 +65,6 @@
   ["secondary","الغوغول هو العدد 1 وبعده 100 صفر، ومن تحريف هذه الكلمة جاء اسم شركة غوغل.","A googol is 1 followed by 100 zeros, and the name Google came from a misspelling of the word."],
   ["secondary","تقوم طرق التشفير الحديثة على الإنترنت، مثل RSA، على صعوبة تحليل الأعداد الكبيرة إلى عواملها الأولية.","Modern internet encryption, such as RSA, relies on how hard it is to split huge numbers into their prime factors."],
   ["secondary","فرضية ريمان عن توزيع الأعداد الأولية طُرحت عام 1859 وما زالت بلا برهان، وعليها جائزة قدرها مليون دولار.","The Riemann hypothesis about how prime numbers are spread out was proposed in 1859, is still unproved, and carries a one-million-dollar prize."],
-  ["secondary","لا توجد إلا خمسة مجسمات منتظمة محدّبة، تسمى المجسمات الأفلاطونية: رباعي الأوجه والمكعب وثماني الأوجه واثنا عشري الأوجه وعشروني الأوجه.","There are only five regular convex solids, the Platonic solids: the tetrahedron, cube, octahedron, dodecahedron and icosahedron."]
+  ["secondary","لا توجد إلا خمسة مجسمات منتظمة محدّبة، تسمى المجسمات الأفلاطونية: رباعي الأوجه والمكعب وثماني الأوجه واثنا عشري الأوجه وعشروني الأوجه.","There are only five regular convex solids, the Platonic solids: the tetrahedron, cube, octahedron, dodecahedron and icosahedron."],
+  ["secondary","العدد 1729 أصغر عدد يمكن كتابته مجموعاً لمكعبين بطريقتين مختلفتين: 1³ + 12³ و 9³ + 10³، ويُعرف بعدد هاردي ورامانوجان.","1729 is the smallest number that can be written as the sum of two cubes in two different ways: 1³ + 12³ and 9³ + 10³. It is known as the Hardy–Ramanujan number."]
 ]
