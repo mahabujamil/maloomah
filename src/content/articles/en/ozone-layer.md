@@ -3,36 +3,39 @@ title: "Ozone Layer: What It Is, Where It Is and How It Protects Us"
 description: "The ozone layer explained for students: what it is, which layer of the atmosphere holds it, how it blocks UV rays, what the ozone hole is and how it is healing."
 category: environment
 date: 2026-11-13
+updated: 2026-11-20
 tags: ["Ozone layer", "Atmosphere", "Ozone hole", "Environment", "Science"]
 keywords: ["ozone layer", "ozone layer is found in", "ozone layer in which layer of atmosphere", "ozone layer depletion", "ozone layer hole", "ozone layer healing"]
 ---
 
-The **ozone layer** is an invisible shield wrapped around Earth tens of kilometres above our heads. Without it, much more of the Sun's harmful ultraviolet radiation would reach the ground. This simple lesson explains what the ozone layer is, which layer of the atmosphere it is found in, how it protects the planet, the story of the "ozone hole" and how the layer has started to heal, with revision tables and FAQs for exams and school projects.
+Step into the school yard on a summer afternoon and you can feel the Sun on your face. What you can't see is the shield that takes the worst of its rays before they reach you. That shield is the **ozone layer**, a thin band of gas wrapped around Earth tens of kilometres above our heads. Without it, far more of the Sun's harmful ultraviolet radiation would reach the ground. Below we look at what it is made of, where it sits, how it got its famous "hole", and why its recovery is one of the best news stories in environmental science.
 
 ## What is the ozone layer?
 
-**Ozone** is a gas whose molecule is made of **three oxygen atoms** (chemical formula O₃), while the oxygen we breathe has only two (O₂). Its name comes from a Greek word meaning "to smell", because it has a sharp, distinctive odour. The German-Swiss chemist **Christian Schönbein** gave it this name around 1840.
+Ozone is a gas made of molecules with three oxygen atoms, written O₃. The oxygen we breathe has only two (O₂). That one extra atom changes how the gas behaves. The name comes from a Greek word meaning "to smell", since ozone has a sharp, distinctive odour, and it was given by the German-Swiss chemist Christian Schönbein around 1840.
 
-The **ozone layer** is the region of the atmosphere where ozone is far more concentrated than elsewhere. Despite the word "layer", the ozone is very thin and mixed with ordinary air: if all of it were gathered and squeezed to the pressure at sea level, it would be only about **3 millimetres** thick!
+The ozone layer is simply the part of the atmosphere where ozone is much more concentrated than anywhere else. Don't picture a solid sheet, though. The ozone up there is spread thinly through ordinary air. If you collected all of it and squeezed it down to the pressure we have at sea level, it would form a layer only about 3 millimetres thick!
 
-Ozone forms naturally up there. Ultraviolet light splits oxygen molecules (O₂) into single atoms, and each atom then joins another oxygen molecule to make ozone (O₃).
+It is made naturally, too. Ultraviolet light hits oxygen molecules (O₂) and splits them into single atoms. Each loose atom then latches onto another oxygen molecule, and the result is ozone (O₃). In other words, sunlight builds the very shield that protects us from part of it.
 
 ## Which layer of the atmosphere is the ozone layer found in?
 
-The ozone layer is found in the **stratosphere**, the second layer of the atmosphere above the troposphere where we live. Most of the ozone sits roughly **15 to 35 kilometres** above the ground, and its height and thickness vary a little with place and season. NASA notes that about **90%** of the ozone in the atmosphere is in the stratosphere.
+The ozone layer is found in the **stratosphere**. That is the second layer of the atmosphere, sitting above the troposphere, where we live and where clouds and weather happen. Most of the ozone lies roughly 15 to 35 kilometres above the ground, though its height and thickness shift a little with location and season. According to NASA, about 90% of all the ozone in the atmosphere is in the stratosphere.
+
+Here is where it fits among the main layers:
 
 | Atmospheric layer | Approximate height | What it is known for |
 | --- | --- | --- |
 | Troposphere | Ground to about 10–15 km | Where we live, and where clouds and rain form |
-| **Stratosphere** | About 10–15 km to 50 km | **Home of the ozone layer** |
+| Stratosphere | About 10–15 km to 50 km | Home of the ozone layer |
 | Mesosphere | About 50 to 85 km | Where most meteors burn up |
 | Thermosphere | Above about 85 km | Where the International Space Station orbits |
 
-> **Quick exam answer:** "The ozone layer is found in the stratosphere": **true**.
+A true-or-false question that often turns up in tests says, "The ozone layer is found in the stratosphere." The answer is true.
 
-## How does the ozone layer protect Earth?
+## How does the ozone layer protect Earth from UV rays?
 
-The Sun sends several kinds of **ultraviolet (UV) radiation** our way. The three best known are:
+Sunlight carries several kinds of **ultraviolet (UV) radiation**. The three you will hear about most are treated very differently by the ozone layer:
 
 | Type of UV | What the ozone layer does to it |
 | --- | --- |
@@ -40,27 +43,25 @@ The Sun sends several kinds of **ultraviolet (UV) radiation** our way. The three
 | UVB | The ozone layer absorbs most of it, and a small share gets through |
 | UVA (least harmful) | Most of it reaches the ground |
 
-This is how the ozone layer **protects Earth from the harmful effects of ultraviolet radiation**. Too much UV can cause sunburn and raises the risk of skin cancer and cataracts, and it also harms plants and the tiny sea creatures at the base of ocean food chains.
+By soaking up UV this way, the ozone layer protects Earth from its harmful effects. Why does that matter? Too much UV can cause sunburn and raises the risk of skin cancer and cataracts. The damage doesn't stop with people, either. UV also harms plants and the tiny sea creatures at the bottom of ocean food chains, and when they suffer, so do the fish that feed on them and everything further up.
 
 > **Did you know?** Ozone is a friend up high and a foe down low! Ozone in the stratosphere protects us, but ozone near the ground forms when pollution from car exhausts and factories reacts with sunlight. It is part of city smog and harms our lungs and plants.
 
 ## Who discovered the ozone layer?
 
-- **Around 1840:** Christian Schönbein named the gas ozone.
-- **1913:** French physicists **Charles Fabry and Henri Buisson** discovered the ozone layer in the atmosphere.
-- **1920s:** British scientist **Gordon Dobson** built an instrument to measure ozone from the ground, which is why ozone amounts are measured today in "Dobson units".
+The discovery came in stages. Christian Schönbein named the gas around 1840. More than seventy years later, in 1913, the French physicists Charles Fabry and Henri Buisson found the ozone layer itself in the atmosphere. Then in the 1920s the British scientist Gordon Dobson built an instrument that could measure ozone from the ground. His name stuck: ozone amounts are still measured today in "Dobson units".
 
 ## What is the ozone hole, and what causes it?
 
-In **1974**, scientists **Mario Molina and Sherwood Rowland** warned that gases called **chlorofluorocarbons** (CFCs) could destroy ozone. These gases were widely used in fridges, air conditioners and aerosol spray cans. When they drift up to the stratosphere, UV light breaks them apart and releases **chlorine** atoms, and a single chlorine atom can destroy a very large number of ozone molecules. Molina, Rowland and the Dutch scientist **Paul Crutzen** shared the **1995** Nobel Prize in Chemistry for their work on ozone chemistry.
+In 1974 two scientists, Mario Molina and Sherwood Rowland, raised an alarm. Gases called **chlorofluorocarbons** (CFCs), they warned, could destroy ozone. At the time CFCs were everywhere: in fridges, air conditioners and aerosol spray cans, the kind of things found in almost every home. Once these gases drift up into the stratosphere, UV light breaks them apart and frees chlorine atoms, and a single chlorine atom can wreck a very large number of ozone molecules. Molina, Rowland and the Dutch scientist Paul Crutzen later shared the 1995 Nobel Prize in Chemistry for their work on ozone chemistry.
 
-In **1985**, scientists from the **British Antarctic Survey** reported a severe loss of ozone over Antarctica, which became known as the **"ozone hole"**. It is not really an empty hole but an area where ozone is much thinner. It appears every year during the Southern Hemisphere spring, roughly September and October, because extreme cold and icy polar clouds speed up the reactions that destroy ozone.
+Hard evidence followed. In 1985 researchers from the British Antarctic Survey reported a severe loss of ozone over Antarctica, and the press called it the "ozone hole". It isn't an empty gap in the sky. It is a region where ozone becomes much thinner than normal. It opens up every year during the Southern Hemisphere spring, roughly September and October, because the bitter polar cold creates icy clouds that speed up the reactions destroying ozone.
 
 ## How did the world save the ozone layer?
 
-On **16 September 1987**, countries agreed on the **Montreal Protocol**, an international treaty to phase out ozone-depleting substances. In **2009** it became the first treaty in UN history to be ratified by every country. That is why **16 September** is marked each year as the **International Day for the Preservation of the Ozone Layer**.
+On 16 September 1987 countries agreed on the **Montreal Protocol**, a treaty to phase out ozone-depleting substances step by step. In 2009 it became the first treaty in UN history to be ratified by every country. That date, 16 September, is now marked each year as the International Day for the Preservation of the Ozone Layer.
 
-The treaty has worked remarkably well: about **99%** of the banned substances have been phased out. A UN-backed scientific assessment published in January 2023 projected that the ozone layer will return to its pre-1980 levels by about:
+The treaty worked. About 99% of the banned substances have been phased out, and a UN-backed scientific assessment published in January 2023 projected that the ozone layer will return to its pre-1980 levels by about:
 
 | Region | Expected recovery |
 | --- | --- |
@@ -68,36 +69,22 @@ The treaty has worked remarkably well: about **99%** of the banned substances ha
 | Arctic | About 2045 |
 | Antarctic | About 2066 |
 
-This story is a great example of science and international cooperation solving a major environmental problem. **Climate change** is a different problem, driven mainly by greenhouse gases; you can read more about it in our lesson on [climate change](/en/articles/climate-change/).
+Notice that Antarctica comes last, since that is where the hole forms each spring. The whole story shows what happens when people listen to scientists and act together on a big environmental problem. Climate change is a separate problem, driven mainly by greenhouse gases, and you can read about it in our lesson on [climate change](/en/articles/climate-change/).
 
 ## What can students do?
 
-- Look after old fridges and air conditioners, and hand them to proper recycling services instead of dumping them.
-- Use sunscreen, a hat and sunglasses when spending long periods in the sun, especially around midday.
-- Spread awareness among classmates by sharing facts from the [Did you know: environment page](/en/did-you-know/environment/).
+A layer 30 kilometres up may feel far from daily life, but a few things are in your hands:
 
-## Frequently asked questions
+- Old fridges and air conditioners shouldn't be dumped. Hand them to proper recycling services, which remove their gases safely.
+- Wear sunscreen, a hat and sunglasses when you spend a long time outdoors, especially around midday, on a school trip or at a match.
+- Share what you've learned. The [Did you know: environment page](/en/did-you-know/environment/) has facts that work well for a class presentation or school assembly.
 
-### In which layer of the atmosphere is the ozone layer found?
-
-In the **stratosphere**, with most of the ozone about 15 to 35 kilometres above the ground.
-
-### What is ozone made of?
-
-An ozone molecule is made of three oxygen atoms (O₃).
-
-### Why is the ozone layer important?
-
-It absorbs most of the Sun's harmful ultraviolet radiation, protecting people, animals and plants from its effects.
+## Questions students ask about the ozone layer
 
 ### Does the ozone hole cause global warming?
 
-No. They are different problems. The ozone hole is caused by substances such as CFCs, while global warming is driven mainly by greenhouse gases such as carbon dioxide. However, some ozone-depleting substances are also greenhouse gases.
+No, though the two often get mixed up. The ozone hole is caused by substances such as CFCs, while global warming is driven mainly by greenhouse gases such as carbon dioxide. There is a small link: some ozone-depleting substances are also greenhouse gases.
 
 ### Is the ozone layer really healing?
 
-Yes. Scientific assessments show it is slowly recovering thanks to the Montreal Protocol, and the Antarctic ozone hole is expected to return to pre-1980 levels by about 2066.
-
-## Key takeaway
-
-The **ozone layer** is a natural shield in the **stratosphere** that absorbs most harmful UV radiation. Human-made gases such as CFCs thinned it and created the "ozone hole", but countries working together through the **Montreal Protocol** in 1987 have put it on the path to recovery, and it is expected to return to its earlier state over the coming decades.
+Yes, slowly. Scientific assessments show it is recovering thanks to the Montreal Protocol, and the ozone over Antarctica is expected to return to pre-1980 levels by about 2066.
