@@ -3,66 +3,73 @@ title: "Who Invented the Internet? When, Where and How"
 description: "Who invented the internet, and when? Learn about ARPANET in 1969, Vint Cerf and Bob Kahn's TCP/IP, and Tim Berners-Lee's World Wide Web, with a simple timeline."
 category: inventions
 date: 2026-11-19
+updated: 2026-11-20
 tags: ["Who invented", "Internet", "Inventions", "History of technology", "World Wide Web"]
 keywords: ["who invented the internet", "who invented the internet and what year", "who invented the internet first", "who invented the internet and where", "who invented the internet woman", "who is the father of the internet"]
 ---
 
-We use it every day to study, search and keep in touch, but few of us know its story. So **who invented the internet, and when and where?** The short answer: no single person invented the internet. Many scientists and engineers built it over several years. The best known are two American scientists, **Vint Cerf** and **Bob Kahn**, who designed the "language" networks use to talk to each other and are often called the "fathers of the internet". In this lesson we tell the story step by step, with a timeline and revision questions.
+Ask a class who invented the internet and you'll hear several names, and most of them are partly right. That's because nobody invented it alone. The internet was built by many scientists and engineers over a couple of decades. If you need two names, they are **Vint Cerf and Bob Kahn**, the American scientists who designed the rules networks use to talk to each other, which is why they're often called the "fathers of the internet". The story starts in the United States in 1969, and the internet as we'd recognise it arrived in 1983.
 
-## Who invented the internet? The short answer
+## Who invented the internet, when and where: the key facts
+
+Here are the answers you're most likely to need for a test or a quiz:
 
 | Question | Answer |
 | --- | --- |
-| Who invented the internet? | A team of scientists, best known **Vint Cerf and Bob Kahn**, the designers of TCP/IP |
-| Where did it start? | In the United States, with a network called **ARPANET** |
-| When was the first message sent? | On **29 October 1969** |
-| When was the modern internet born? | On **1 January 1983**, when ARPANET switched to TCP/IP |
-| Who invented the World Wide Web? | British scientist **Tim Berners-Lee**, at CERN in Switzerland, in 1989 |
+| Who invented the internet? | A team of scientists, best known Vint Cerf and Bob Kahn, the designers of TCP/IP |
+| Where did it start? | In the United States, with a network called ARPANET |
+| When was the first message sent? | On 29 October 1969 |
+| When was the modern internet born? | On 1 January 1983, when ARPANET switched to TCP/IP |
+| Who invented the World Wide Web? | British scientist Tim Berners-Lee, at CERN in Switzerland, in 1989 |
 
-It's important to tell the **internet** and the **web** apart. The internet is the network itself: millions of devices connected together. The web is a service that runs on top of the internet and lets us browse sites and pages through links.
+Notice that the last row is about something different. People mix up the **internet** and the **web** all the time. The internet is the network itself: millions of devices linked by cables, fibre and radio. The web is one service running on top of it, the one that lets you browse pages and click links. Email and chat apps also use the internet without being part of the web. Think of the internet as a city's road system and the web as the buses: buses need roads, but roads carry plenty of other traffic too.
 
 ## The first idea: splitting messages into packets
 
-In the 1960s computers were huge and expensive, and they couldn't easily talk to each other. A clever idea appeared, called **packet switching**: a message is cut into small pieces called "packets", each travels its own way across the network, and they are put back together when they arrive.
+Computers in the 1960s filled whole rooms, cost a fortune and couldn't easily talk to one another. The usual way to connect two places was the telephone model, where one line is held open between two ends for the whole call. If that line broke, the conversation was over.
 
-The idea was developed independently by American engineer **Paul Baran** and British scientist **Donald Davies**, who gave the "packet" its name. The internet still works this way today: a photo you send a friend turns into thousands of small packets.
+**Packet switching** offered something sturdier. A message is cut into small pieces called packets, each packet finds its own route across the network, and they're reassembled at the other end. If one route fails, packets simply take another.
+
+Two people came up with this independently: the American engineer Paul Baran and the British scientist Donald Davies, who gave the "packet" its name. Your phone still works this way. Send a friend a photo and it leaves as thousands of packets, some travelling different paths, which come back together as one picture on their screen.
 
 ## ARPANET: the network that led to the internet
 
-The US Advanced Research Projects Agency (ARPA) funded a network to link computers at universities and research centres. It was called **ARPANET**.
+The US Advanced Research Projects Agency (ARPA) paid for a network linking computers at universities and research centres, so researchers could share expensive machines instead of each campus buying its own. It was called **ARPANET**.
 
-On the evening of **29 October 1969**, a team at the University of California, Los Angeles, in Professor **Leonard Kleinrock**'s lab, tried to send the word LOGIN to a computer at the Stanford Research Institute. The system crashed after the first two letters, so the very first message on the network was **"LO"**! About an hour later the full login worked.
+On the evening of 29 October 1969, a team in Professor Leonard Kleinrock's lab at the University of California, Los Angeles, tried to send the word LOGIN to a computer at the Stanford Research Institute. Two letters got through, then the system crashed. So the first message ever sent on the network was "LO". About an hour later the full login worked.
 
 > **Did you know?** The first message sent over the network that led to the internet was just two letters, "LO", because the computer crashed before the word LOGIN was complete.
 
-In 1971 engineer **Ray Tomlinson** sent the first email between two computers on the network, and he chose the **@** sign to separate the user's name from the computer's name. We still use it in every email address.
+Two years later, in 1971, engineer Ray Tomlinson sent the first email between two computers on the network. He needed a symbol to separate a user's name from the computer's name and picked @, because it didn't appear in names. You type his choice every time you write an email address.
 
 ## Vint Cerf and Bob Kahn: the "fathers of the internet"
 
-Over time many different networks appeared, but they couldn't talk to each other. **Vint Cerf** and **Robert (Bob) Kahn** set out to solve this, and in 1974 they published a paper describing a new way to connect networks together. It became known as **TCP/IP**.
+By the 1970s ARPANET had company. Other networks appeared, some using satellites and some using radio, and each followed its own rules, so none could understand the others. Picture a classroom where every student speaks a different language and nobody shares one.
 
-A protocol is a set of agreed rules, like a shared language. TCP/IP works in a way you can compare to the post:
+Vint Cerf and Robert (Bob) Kahn set out to fix that. In 1974 they published a paper describing a way to connect separate networks, and it became known as **TCP/IP**. A protocol is just a set of agreed rules, the shared language that classroom was missing. The two halves are easy to picture as a postal service:
 
 | Part | What it does | Simple comparison |
 | --- | --- | --- |
-| **IP** (Internet Protocol) | Puts the sender's and receiver's addresses on each packet and routes it | The address written on an envelope |
-| **TCP** (Transmission Control Protocol) | Cuts the message into packets and checks they all arrive, in order | A postman who makes sure every letter arrives |
+| IP (Internet Protocol) | Puts the sender's and receiver's addresses on each packet and routes it | The address written on an envelope |
+| TCP (Transmission Control Protocol) | Cuts the message into packets and checks they all arrive, in order | A postman who makes sure every letter arrives |
 
-On **1 January 1983** the whole of ARPANET switched to TCP/IP, which is why many historians call that day **the internet's real birthday**. Cerf and Kahn have received major awards for their work, including the 2004 Turing Award, one of the highest honours in computer science.
+On 1 January 1983 all of ARPANET switched to TCP/IP, and many historians treat that day as the internet's real birthday. The name tells you the purpose: "internet" is short for "inter-network", the network between networks. Cerf and Kahn went on to win major awards for this work, including the 2004 Turing Award, one of the highest honours in computer science.
 
 ## Tim Berners-Lee and the birth of the web
 
-Until the late 1980s the internet was mostly a tool for scientists and universities. Then British scientist **Tim Berners-Lee**, who worked at **CERN** (the European particle physics laboratory) in Switzerland, put forward a proposal in **March 1989** for a system that linked information together with links.
+Through the 1980s the internet was mostly used by scientists and universities. Ordinary people had little reason to go near it. That changed because of **Tim Berners-Lee**, a British scientist at CERN, the European particle physics laboratory in Switzerland. Researchers there struggled to find documents scattered across different computers, so in March 1989 he proposed a system that tied information together with links.
 
-That proposal became the **World Wide Web**, and with it three things we still use today:
+That proposal grew into the World Wide Web, and it brought three things you use every day without thinking about them:
 
-1. **HTML:** the language web pages are written in.
-2. **URL:** the page address we type into the browser.
-3. **HTTP:** the rules a browser and a server use to exchange pages.
+1. HTML: the language web pages are written in.
+2. URL: the page address you type into the browser.
+3. HTTP: the rules a browser and a server use to exchange pages.
 
-The world's first website went online in 1991, and on **30 April 1993** CERN made the web software free for everyone, so the web spread quickly around the world. To understand the computers that store websites, read [what is a server](/en/articles/what-is-a-server/).
+The first website went online in 1991. The decisive moment came on 30 April 1993, when CERN made the web software free for anyone to use. With no fee standing in the way, the web spread around the world very quickly. If you're wondering where all those websites actually live, see [what is a server](/en/articles/what-is-a-server/).
 
 ## A timeline of internet history
+
+The same milestones in order, handy for revision:
 
 | Year | Event |
 | --- | --- |
@@ -77,30 +84,17 @@ The world's first website went online in 1991, and on **30 April 1993** CERN mad
 
 ## Did a woman help invent the internet?
 
-Many students search for "who invented the internet woman". In fact many women helped build the internet. One of the best known is American engineer **Radia Perlman**, who in 1985 invented an important algorithm called the **Spanning Tree Protocol** (STP), which helps networks move data without it going round in endless loops. She is sometimes called the "mother of the internet", although she herself stresses that the internet was a group effort, not one person's invention.
+Plenty of students search "who invented the internet woman", and it's a fair question. Many women helped build it. One of the best known is the American engineer Radia Perlman, who in 1985 invented the Spanning Tree Protocol (STP). It stops data from circling endlessly in loops inside a network, a problem that could otherwise bring a whole network to a halt. She's sometimes called the "mother of the internet", though she herself insists the internet was a group effort that no single person can claim.
 
-If you enjoy inventor stories, also read [who invented the telephone](/en/articles/who-invented-the-telephone/).
-
-## Frequently asked questions
+## What students ask about the invention of the internet
 
 ### Who really invented the internet?
-No single person. The two people most often credited are Vint Cerf and Bob Kahn, because they designed TCP/IP, the protocol all networks use to talk to each other.
-
-### Who invented the internet, and in what year?
-The first network (ARPANET) started in 1969, Cerf and Kahn published the idea of TCP in 1974, and the modern internet was born on 1 January 1983.
-
-### Where was the internet invented?
-It began in the United States, between universities and research centres in California. The World Wide Web was invented at CERN in Switzerland.
+No one person did. If a multiple-choice question wants a name, it almost certainly means Vint Cerf and Bob Kahn, because their TCP/IP is what lets every network talk to every other.
 
 ### Did Tim Berners-Lee invent the internet?
-No. Tim Berners-Lee invented the **World Wide Web** in 1989, a service that runs on top of the internet. The internet itself already existed.
+No. He invented the World Wide Web in 1989, a service that runs on the internet. The internet itself had been carrying email and files for researchers for years before that.
 
-### What does the word "internet" mean?
-"Internet" is short for "inter-network", meaning "the network between networks", because it links many networks together.
+### Where exactly was the internet invented?
+In the United States, among universities and research centres; the very first message went from UCLA in Los Angeles to the Stanford Research Institute. The web was born far away from there, at CERN in Switzerland.
 
-### What was the first message sent over the network?
-It was "LO", on 29 October 1969, because the system crashed before the word LOGIN was complete.
-
-## Key takeaway
-
-**Who invented the internet?** No single person: it was a team effort. It began with packet switching in the 1960s, then ARPANET in 1969, then TCP/IP, designed by Vint Cerf and Bob Kahn and adopted on 1 January 1983. Later, Tim Berners-Lee invented the World Wide Web in 1989. Learn the timeline and the difference between the internet and the web, and find more facts on our [technology "Did you know?" page](/en/did-you-know/technology/).
+If you like inventor stories, [who invented the telephone](/en/articles/who-invented-the-telephone/) has another one with an argument over who deserves the credit. For quick facts about computers and networks, try our [technology "Did you know?" page](/en/did-you-know/technology/).
