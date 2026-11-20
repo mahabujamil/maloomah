@@ -90,7 +90,7 @@ A Claude Code cloud routine, "معلومة — دروس يومية للطلاب 
 - Because of this, **always `git pull` before local work**; `main` changes every morning.
 - Network: on 2026-10-25 Mahmoud added `*.wikimedia.org`, `trends.google.com` and `suggestqueries.google.com` to the **Default** cloud environment's allowed domains (claude.ai/code → environment selector → Default → ⚙️ → Network access). Google Trends, autocomplete and the Wikimedia photo tool were verified working there on 2026-10-25, so the routine adds photos itself. On 2026-11-07 Mahmoud also allowed `quran.com`, `api.quran.com`, `sunnah.com`, `dorar.net` and `www.dorar.net` for verifying verses and hadiths. Get verse text from `https://api.quran.com/api/v4/quran/verses/imlaei?verse_key=<surah>:<ayah>` (English: `/api/v4/quran/translations/20?verse_key=...`, Saheeh International). sunnah.com and dorar.net pages sit behind a bot check, so verify a hadith's exact text and grading through WebSearch results restricted to those two domains, and don't try to get around the check. As a safety net during local sessions, run `node scripts/images.mjs missing` and add photos for anything listed.
 - Its sandbox Node is too old for Astro. It fetches Node 24 with `npm pack node-linux-x64@24`, which is already in its prompt.
-- **Temporary rewrite routine (owner rule 4):** «معلومة — إعادة صياغة المقالات بأسلوب بشري (مؤقت)» (`trig_01VhrCqpU4rzw5A7s6cLg8Za`, https://claude.ai/code/routines/trig_01VhrCqpU4rzw5A7s6cLg8Za) runs every hour (at :40) from 2026-11-19. Each run takes the 8 worst slugs from `node scripts/style-check.mjs --list 8`, rewrites both languages to rule 4, and pushes commits named `Rewrite (rule 4): …`. It has no connectors. **Disable it once `node scripts/style-check.mjs` reports 0 machine-like articles.**
+- **Temporary rewrite routine (owner rule 4):** «معلومة — إعادة صياغة المقالات بأسلوب بشري (مؤقت)» (`trig_01VhrCqpU4rzw5A7s6cLg8Za`, https://claude.ai/code/routines/trig_01VhrCqpU4rzw5A7s6cLg8Za) runs every hour (at :40) from 2026-11-19. Each run takes the 8 worst slugs from `node scripts/style-check.mjs --list 8`, rewrites both languages to rule 4, and pushes commits named `Rewrite (rule 4): …`. It has no connectors. It finished on 2026-11-20 (all articles clean) and is **disabled**; re-enable it only if many articles need rewriting again.
 
 ## Admin dashboard (`/admin/`, added 2026-11-06)
 
@@ -211,7 +211,7 @@ maloomah.com is also the developer website of Mahmoud's Android app «الذاك
 
 ## Still to do (update this list as items are completed)
 
-- [ ] **Rule 4 bulk rewrite** (started 2026-11-19): when `node scripts/style-check.mjs` shows `still machine-like: 0`, disable routine `trig_01VhrCqpU4rzw5A7s6cLg8Za`, then consider adding the style check to `scripts/audit.mjs` so it can never regress.
+- [x] **Rule 4 bulk rewrite** (2026-11-19 → 2026-11-20): all 132 articles rewritten and clean, rewrite routine `trig_01VhrCqpU4rzw5A7s6cLg8Za` disabled, and `scripts/audit.mjs` now prints `machine-like articles (rule 4)`, which must be 0 like every other count.
 
 - [x] Namecheap DNS → GitHub Pages: A records for `@` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME for `www` to `mahabujamil.github.io` (done 2026-10-23)
 - [x] HTTPS certificate issued for maloomah.com and www, with "Enforce HTTPS" on (2026-10-23)

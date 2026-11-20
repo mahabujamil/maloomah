@@ -68,3 +68,9 @@ console.log('bad canonicals:', badCanonical.length, badCanonical.slice(0, 10));
 console.log('missing images:', missingImg.length, missingImg.slice(0, 10));
 console.log('duplicate titles:', dupTitles.length);
 for (const [t, v] of dupTitles.slice(0, 10)) console.log('  ', t, v);
+
+// Owner rule 4 (2026-11-19): every article must stay clean in scripts/style-check.mjs.
+import { execFileSync } from 'node:child_process';
+const style = execFileSync(process.execPath, ['scripts/style-check.mjs', '--list', '999'], { encoding: 'utf8' }).trim();
+const machineLike = style ? style.split('\n') : [];
+console.log('machine-like articles (rule 4):', machineLike.length, machineLike.slice(0, 10));
