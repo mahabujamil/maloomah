@@ -3,77 +3,73 @@ title: "What Is Photosynthesis? Equation, Stages and Facts"
 description: "What is photosynthesis? A simple lesson for students: its definition and equation, where it happens, its two stages and how it differs from respiration."
 category: science
 date: 2026-11-16
+updated: 2026-11-20
 tags: ["Photosynthesis", "Plants", "Chlorophyll", "Science", "Lessons for students"]
 keywords: ["what is photosynthesis", "photosynthesis equation", "photosynthesis for kids", "photosynthesis definition", "photosynthesis vs respiration"]
 ---
 
-Every bite of food we eat and every breath we take can be traced back to a green leaf working quietly in the sunshine. That process is **photosynthesis**: the way plants make their own food from water, carbon dioxide and sunlight, releasing oxygen into the air as they do it. So what is photosynthesis, exactly? This lesson explains it step by step: the definition, the equation, where it happens, its two stages, the factors that affect it, and how it differs from respiration, with review questions and answers at the end.
+Think about your breakfast. The bread came from wheat, the egg from a hen fed on grain, the milk from a cow that ate grass. Follow any food back far enough and you end up at a green leaf in the sunshine. So what is photosynthesis? It is **the process plants use to make their own food from water, carbon dioxide and sunlight, giving off oxygen as they do it**. Once you know what goes into a leaf and what comes out, the rest of the topic falls into place.
 
-## What is photosynthesis?
+## What is photosynthesis, exactly?
 
-**Photosynthesis** is a life process carried out by green plants, algae and some bacteria. It turns **light energy** from the Sun into **chemical energy** stored in a sugar called glucose. To do it, a plant needs four things:
+Photosynthesis is a life process carried out by green plants, algae and some bacteria. It turns light energy from the Sun into chemical energy stored in a sugar called glucose. A plant doesn't feed on soil, as young children sometimes imagine; it builds its food inside its leaves.
 
-1. **Sunlight:** the energy source.
-2. **Water:** absorbed from the soil by the roots and carried up the stem to the leaves.
-3. **Carbon dioxide:** which enters the leaf from the air through tiny pores called **stomata**.
-4. **Chlorophyll:** the green pigment that absorbs light.
+For that it needs four things. Sunlight supplies the energy. Water is pulled up from the soil by the roots and travels through the stem to the leaves. Carbon dioxide drifts in from the air through tiny pores on the leaf called **stomata**. And **chlorophyll**, the green pigment, catches the light.
 
-The process produces two things: **glucose**, which the plant uses as food and fuel, and **oxygen**, which is released into the air.
+What comes out is glucose, which the plant uses as food and fuel, and oxygen, which escapes into the air for us to breathe.
 
 ## The photosynthesis equation
 
-The balanced chemical equation for photosynthesis is:
+The balanced chemical equation is:
 
 > 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂
 
-The word equation is: **carbon dioxide + water → glucose + oxygen** (in the presence of light and chlorophyll). In other words, six molecules of carbon dioxide and six of water make one molecule of glucose and six of oxygen.
+As a word equation: carbon dioxide + water → glucose + oxygen, in the presence of light and chlorophyll. Six molecules of carbon dioxide and six of water make one molecule of glucose and six of oxygen. Count the atoms of each element on both sides and you'll find they match, which is what "balanced" means.
 
 | Inputs (reactants) | Conditions | Outputs (products) |
 | --- | --- | --- |
 | Carbon dioxide (CO₂) | Sunlight | Glucose (C₆H₁₂O₆) |
 | Water (H₂O) | Chlorophyll | Oxygen (O₂) |
 
-**Exam tip:** the oxygen a plant releases comes from the **water molecules** that are split during the light stage, not from carbon dioxide. Teachers love asking about this.
+One detail catches a lot of students out in tests. The oxygen a plant releases comes from the water molecules split during the light stage, not from the carbon dioxide. It seems natural to guess CO₂, since it contains oxygen too, but experiments showed the source is water.
 
 ## Where does photosynthesis happen?
 
-Photosynthesis takes place in **chloroplasts**, small structures inside plant cells. They are most plentiful in the cells of the **leaf**, which is why the leaf is called the plant's "food factory". Inside each chloroplast are two important parts:
+It happens in **chloroplasts**, small structures inside plant cells. Leaf cells are packed with them, which is why the leaf gets called the plant's "food factory".
 
-- **Thylakoids:** stacks of membrane sacs that contain chlorophyll. The light stage happens here.
-- **Stroma:** the fluid that fills the chloroplast. The second stage happens here.
+Each chloroplast has two parts that matter here. The thylakoids are stacks of membrane sacs holding the chlorophyll, and the light stage takes place on them. The stroma is the fluid around them, and that's where the second stage happens.
 
-Chlorophyll absorbs **red and blue** light very well and reflects most **green** light, which is why leaves look green to us.
+Why green, though? Chlorophyll soaks up red and blue light very well but reflects most green light, and the reflected light is what reaches your eyes.
 
 ## The two stages of photosynthesis
 
-Photosynthesis happens in two linked stages.
+It helps to picture a factory with two departments: one generates power, the other uses that power to make the product.
 
 ### Stage 1: the light-dependent reactions
 
-These take place in the thylakoid membranes and need light directly:
+These take place in the thylakoid membranes and need light directly. In order:
 
 1. Chlorophyll absorbs light energy.
-2. That energy is used to **split water molecules**, releasing oxygen.
-3. The energy is stored for a short time in two energy-carrying molecules, **ATP** and **NADPH**.
+2. That energy splits water molecules, releasing oxygen.
+3. The energy is held for a short time in two carrier molecules, ATP and NADPH.
 
 ### Stage 2: the light-independent reactions (the Calvin cycle)
 
-These take place in the stroma. They don't need light directly, but they depend on the products of stage 1. ATP and NADPH are used to **fix carbon dioxide** and turn it into sugar. The cycle is named after the American chemist **Melvin Calvin**, who won the 1961 Nobel Prize in Chemistry for working it out.
+These happen in the stroma. They don't use light themselves, but they can't run without what stage 1 produces. ATP and NADPH are used to fix carbon dioxide and turn it into sugar. The cycle is named after the American chemist Melvin Calvin, who won the 1961 Nobel Prize in Chemistry for working it out.
+
+That's why it's misleading to call stage 2 "the dark reactions". It doesn't need light directly, but it soon stops once stage 1 stops.
 
 ## What does a plant do with its glucose?
 
-A plant doesn't use all its glucose at once. It puts it to several uses:
+Not all the glucose gets used straight away. Some is broken down in respiration to power growth. Some is turned into starch and stored in leaves, roots and seeds, which is why potatoes and wheat are so starchy. Some becomes cellulose, the material of cell walls. And with minerals taken from the soil, glucose is also the starting point for proteins and oils.
 
-- **Energy:** it breaks glucose down in respiration to power growth.
-- **Storage:** it turns glucose into **starch** and stores it in leaves, roots and seeds, as in potatoes and wheat.
-- **Building:** it turns glucose into **cellulose** to build cell walls.
-- **Making other substances:** such as proteins and oils, with help from minerals taken from the soil.
+That storage habit is behind a classic school experiment. To test a leaf for starch, you add iodine solution; if it turns blue-black, starch is there and the leaf has been photosynthesising. Do this one only with your teacher, because the method involves heating the leaf in alcohol.
 
-**A classic school experiment:** to test a leaf for starch, teachers use **iodine solution**. If it turns **blue-black**, starch is present, which shows the leaf has been photosynthesising. Do this experiment only with your teacher, because the method involves heating the leaf in alcohol.
-
-> **Did you know?** The US National Oceanic and Atmospheric Administration (NOAA) says that roughly **half of the oxygen** produced on Earth comes from the ocean, mostly from tiny photosynthesising organisms called **phytoplankton**, most of which can only be seen under a microscope.
+> **Did you know?** The US National Oceanic and Atmospheric Administration (NOAA) says that roughly half of the oxygen produced on Earth comes from the ocean, mostly from tiny photosynthesising organisms called phytoplankton, most of which can only be seen under a microscope.
 
 ## Factors that affect the rate of photosynthesis
+
+A pot plant in a dark corner with dry soil won't photosynthesise as fast as one on a sunny, well-watered windowsill. These are the main factors:
 
 | Factor | Effect |
 | --- | --- |
@@ -82,9 +78,11 @@ A plant doesn't use all its glucose at once. It puts it to several uses:
 | Temperature | There is a best range; very high or very low temperatures slow it down because it depends on enzymes |
 | Water supply | When water is short, the plant closes its stomata and less CO₂ gets in |
 
+The last row links two ideas. A thirsty plant doesn't just run short of water for the equation; it shuts its stomata to save water, and that cuts off its carbon dioxide as well.
+
 ## Photosynthesis vs respiration
 
-Many students mix these up, but they are almost opposites:
+Students often mix these up, yet they are close to mirror images: what goes into one comes out of the other.
 
 | Feature | Photosynthesis | Cellular respiration |
 | --- | --- | --- |
@@ -95,14 +93,17 @@ Many students mix these up, but they are almost opposites:
 | Outputs | Glucose and oxygen | Carbon dioxide, water and energy |
 | Energy | Stored | Released |
 
+The part people forget is that plants respire too, day and night, like every other living thing. During the day, though, a plant usually gives off more oxygen through photosynthesis than it uses in respiration.
+
 ## How scientists discovered photosynthesis
 
-- **Joseph Priestley (1771):** he put a sprig of mint in a sealed container where a candle had burned out. After several days, the air could keep a candle burning again: the plant had "restored" the air.
-- **Jan Ingenhousz (1779):** this Dutch physician showed in his book *Experiments upon Vegetables* that only the **green** parts of a plant give off this gas, and only in **light**.
+The story starts in 1771 with Joseph Priestley. He put a sprig of mint in a sealed container where a candle had burned until it went out. Several days later, the air could keep a candle burning again. The plant had somehow "restored" it.
 
-To learn how plants and carbon dioxide connect to our planet's climate, read our lesson on [climate change](/en/articles/climate-change/).
+Priestley didn't work out when or why this happened. In 1779 the Dutch physician Jan Ingenhousz showed, in his book *Experiments upon Vegetables*, that only the green parts of a plant give off this gas, and only in light.
 
-## Frequently asked questions
+To see how plants and carbon dioxide connect to our planet's climate, read our lesson on [climate change](/en/articles/climate-change/).
+
+## Revision questions on photosynthesis
 
 ### What is photosynthesis in simple words?
 
@@ -116,14 +117,8 @@ In chloroplasts inside plant cells, most of them in the leaves. That's why the l
 
 Glucose and oxygen. The plant stores extra glucose as starch.
 
-### Do plants respire at night?
-
-Yes. Plants respire day and night, but photosynthesis only happens in the light. During the day, a plant usually releases more oxygen through photosynthesis than it uses in respiration.
-
 ### Why is photosynthesis important for all living things?
 
 It is the starting point of food chains: herbivores eat plants and carnivores eat herbivores. It also keeps renewing the oxygen in the air.
 
-## Key takeaway
-
-**Photosynthesis** is how plants turn sunlight into food: they take in water and carbon dioxide, use chlorophyll in their chloroplasts, and produce glucose while releasing oxygen, in two stages, light-dependent and light-independent. Learn the equation and the two tables above, since they come up most in tests, and find more facts on our [science "Did you know?" page](/en/did-you-know/science/).
+When you revise for a test, focus on the equation and the photosynthesis vs respiration table, since those come up most often. You'll find more short facts on our [science "Did you know?" page](/en/did-you-know/science/).

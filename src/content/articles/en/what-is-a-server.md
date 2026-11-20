@@ -3,44 +3,42 @@ title: "What Is a Server? What It Does, the Main Types and How Websites Work"
 description: "What is a server and what does it do? A simple guide to servers in networks and on the internet, the main types from web servers to game servers, and the different kinds of web hosting."
 category: technology
 date: 2026-10-23
+updated: 2026-11-20
 tags: ["servers", "internet", "networking", "web hosting"]
 keywords: ["what is a server", "what does a server do", "types of servers", "game servers", "web hosting types"]
 ---
 
-Whenever you open a website, watch a video or play an online game, a machine somewhere in the world is working for you at that very moment. That machine is called a **server**. So what exactly is it, and how does it work?
+Every time you load a website, stream a video or join an online match, a machine you'll never see is doing work for you somewhere in the world. So what is a server, exactly? It's that machine, and once you understand how it works, a lot of everyday internet behaviour (slow games, sites that crash on results day) starts to make sense.
 
-## What is a server?
+## What is a server and what does it do?
 
-A **server** is a computer, or a program running on one, whose job is to **provide services or data** to other devices over a network. The devices making requests are called **clients**, like your phone or laptop.
+A server is **a computer, or a program running on one, that provides services or data to other devices over a network**. The devices asking for things, like your phone or laptop, are called clients.
 
-This setup is known as the **client–server model**:
-
-1. Your device (the client) **requests** something, such as a web page.
-2. The server **receives the request** and prepares a response.
-3. The server **sends** the page back, and it appears on your screen.
+Think of a school canteen. A student asks for a sandwich, the person behind the counter prepares it and hands it over. Networks work the same way, and the arrangement is called the **client–server model**: your device requests something such as a web page, the server receives the request and prepares a response, then sends the page back so it appears on your screen. The only real difference is scale. A busy server may handle thousands of requests every second.
 
 ## What happens when you open a website?
 
-Say you type **maloomah.com** into your browser:
+Say you type maloomah.com into your browser and press Enter. Here's the sequence:
 
-1. Your device asks a **DNS server** (Domain Name System): what's the address of this site? DNS works like the internet's phone book.
-2. It replies with a numeric address called an **IP address**.
-3. Your browser connects to the server at that address and requests the page.
+1. Your device asks a DNS (Domain Name System) server for the site's address. DNS works like the internet's phone book.
+2. The DNS server replies with a numeric address called an IP address.
+3. Your browser connects to the server at that address and asks for the page.
 4. The server sends the page's files: text, images and styling.
-5. Your browser assembles them and shows you the site, usually all within a fraction of a second!
+5. Your browser puts them together and shows you the site.
+
+All of that usually happens in a fraction of a second. The reason the first two steps exist at all is that people remember names while machines route traffic by numbers, so something has to translate between the two.
 
 ## How is a server different from a normal computer?
 
-In principle, any computer can act as a server. But servers at big companies are built to run **24 hours a day without stopping**, so they:
+In principle, any computer can act as a server. The difference is in what's expected of it. You switch your home computer off at night; a company's servers are built to run 24 hours a day without stopping, because someone, somewhere, is always visiting.
 
-- Sit in huge, cooled and secured **data centres**.
-- Are mounted in metal cabinets called **racks**.
-- Have **backup power** and extremely fast internet connections.
-- Keep copies of data on several machines, so nothing is lost if one fails.
+That's why they live in large **data centres** that are cooled and secured, mounted in metal cabinets called racks. Data centres have backup power for outages and extremely fast internet links. Data is usually copied across several machines too, so if one fails, another carries on and nothing is lost.
 
-> **Did you know?** The site you're reading doesn't run on a single server but on a network of servers spread around the world called a **content delivery network (CDN)**, so it reaches you from the nearest one, which is why it loads so quickly.
+> **Did you know?** The site you're reading doesn't run on a single server but on a network of servers spread around the world called a content delivery network (CDN), so it reaches you from the nearest one, which is why it loads so quickly.
 
-## The main types of servers
+## Types of servers and what each one does
+
+Servers tend to specialise. These are the ones you rely on most:
 
 | Type | What it does | Example |
 | --- | --- | --- |
@@ -52,40 +50,42 @@ In principle, any computer can act as a server. But servers at big companies are
 | DNS server | Translates site names into addresses | The internet's directory |
 | Streaming server | Delivers live video and audio | Video and live-streaming platforms |
 
+Several of them often cooperate behind a single click. When you log in to a site, the web server shows you the page while a database server quietly checks your username and password.
+
 ## What is a server in games like PUBG?
 
-In online games, the **server** is the machine that brings players into the same match and tracks every move. Games split their servers into **regions**, such as the Middle East, Europe and Asia.
+In online games, the server is the machine that puts players into the same match, keeps track of every move and tells everyone else what just happened. Games split their servers into regions such as the Middle East, Europe and Asia.
 
-Choosing the **server closest** to you lowers your **ping**, the time it takes your data to reach the server and come back, so the game runs faster with less lag.
+Region matters because data takes time to travel. Pick the server closest to you and your **ping**, the time it takes your data to reach the server and come back, drops, so the game feels quicker and lags less. A player in Cairo will usually have a smoother match on a Middle East server than on one in East Asia.
 
 ## Types of web hosting: where should your site live?
 
-If you want to build a website, you need "space" on a server; that's called **web hosting**:
+If you ever build a website, for a school project or a hobby, it needs space on a server. Renting that space is called web hosting, and the options differ in price, power and control:
 
-1. **Shared hosting:** your site shares one server with many others. Cheap and easy, good for beginners.
-2. **Virtual private server (VPS):** a dedicated slice of a powerful server, with more resources and control.
-3. **Dedicated server:** a whole server just for you. Very powerful and expensive, for large sites.
-4. **Cloud hosting:** resources spread across many servers that scale up and down as needed, such as services from Amazon, Google and Microsoft.
-5. **Static site hosting:** for sites made of ready-built pages, often free and very fast.
+1. Shared hosting: your site shares one server with many others. Cheap and easy, good for beginners.
+2. Virtual private server (VPS): a dedicated slice of a powerful server, with more resources and control.
+3. Dedicated server: a whole server just for you. Very powerful and expensive, for large sites.
+4. Cloud hosting: resources spread across many servers that scale up and down as needed, such as services from Amazon, Google and Microsoft.
+5. Static site hosting: for sites made of ready-built pages, often free and very fast.
+
+A sensible rule is to start small and move up only when your site actually outgrows its plan.
 
 ## What does "the server is down" mean?
 
-When people say "the server is down", they mean it has **stopped responding** to requests, because of a fault, maintenance or heavy traffic, or a cyberattack that floods it with fake requests.
+When people say the server is down, they mean it has stopped responding to requests. That can be a fault or planned maintenance. It can also be sheer traffic, the way exam-results sites sometimes buckle on the day results come out, or a cyberattack that floods the server with fake requests until real visitors can't get through.
 
-## Frequently asked questions
+## Questions students ask about servers
 
 ### Can my own computer be a server?
 
-Yes. Any computer can become a server with the right software, such as a small game server for your friends. But it has to stay on and connected to the internet all the time.
+Yes. With the right software any computer can become a server, for example a small game server for your friends. The catch is that it has to stay switched on and connected to the internet the whole time.
 
 ### What's the difference between a server and hosting?
 
-The server is the **machine** itself; hosting is the **service** that rents you space and resources on a server for your website.
+The server is the machine itself. Hosting is the service that rents you space and resources on a server for your website, a bit like the difference between a building and the flat you rent inside it.
 
 ### What is a "server" on a satellite receiver or IPTV box?
 
-That's a completely different topic, about decrypting pay-TV channels. We explain it in detail here: [Receiver and IPTV Server Codes](/en/articles/receiver-iptv-server-codes/).
+That's a completely different topic, about decrypting pay-TV channels. It's covered in detail here: [Receiver and IPTV Server Codes](/en/articles/receiver-iptv-server-codes/).
 
-## Key takeaway
-
-A server is a machine that provides services and data to other devices over a network. Without servers there would be no websites, email or online games. They range from web servers to game servers, and most run in huge data centres that never sleep.
+Without servers there would be no websites to open, no email arriving and no online matches to join. They're the quiet machines in data centres that never switch off.
