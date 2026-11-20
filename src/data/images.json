@@ -239,6 +239,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "essay-about-friendship": {
+    "alt": {
+      "ar": "صديقان يرفعان أيديهما فرحاً على تلة عند الغروب",
+      "en": "Two friends raising their arms in joy on a hilltop at sunset"
+    },
+    "title": "Two friends adventure",
+    "creator": "Mitesh7587",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Two_friends_adventure.jpg"
+  },
   "essay-about-honesty": {
     "alt": {
       "ar": "قلم حبر يكتب على ورقة مسطّرة، رمزاً لكتابة موضوع تعبير عن الصدق",
@@ -983,6 +995,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Washing_hands_with_soap_(3).jpg"
   },
+  "school-radio-about-good-manners": {
+    "alt": {
+      "ar": "فصل دراسي مرتب بطاولات وكراسي ولوحات طلابية على الجدار",
+      "en": "A tidy classroom with desks, chairs and student artwork on the wall"
+    },
+    "title": "3A 665",
+    "creator": "Escuela16de17",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:3A_665.jpg"
+  },
   "school-radio-about-health-and-nutrition": {
     "alt": {
       "ar": "خضار وفواكه طازجة ملوّنة تمثل الغذاء الصحي المتوازن",
@@ -1186,6 +1210,18 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Home-office-336377.jpg"
+  },
+  "vertebrates-and-invertebrates": {
+    "alt": {
+      "ar": "أخطبوط يزحف فوق صخور قاع البحر، وهو من الحيوانات اللافقارية",
+      "en": "An octopus crawling over rocks on the sea floor, an example of an invertebrate"
+    },
+    "title": "Octopus2",
+    "creator": "albert kok",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg"
   },
   "ways-to-earn-money-online": {
     "alt": {

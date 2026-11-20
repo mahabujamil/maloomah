@@ -3,68 +3,75 @@ title: "How Are Weather Forecasts Made? The Science Explained"
 description: "How are weather forecasts made? Where weather data comes from, how supercomputers predict it, why forecasts go wrong, and how far ahead to trust them."
 category: science
 date: 2026-10-28
+updated: 2026-11-20
 tags: ["weather", "meteorology", "weather forecast", "science"]
 keywords: ["how are weather forecasts made", "how does weather forecasting work", "science behind weather forecasting", "how are long term weather forecasts made", "weather tomorrow"]
 ---
 
-Before heading out, you check the weather app: umbrella or not? Cold tomorrow? Behind that little number on the screen is a remarkable chain of measurements, satellites and supercomputers. So how are weather forecasts made, and why are they sometimes spot on and sometimes way off?
+On Wednesday evening the forecast says Thursday will be wet, so you put an umbrella in your bag before bed. Next morning, it rains. How did anyone know what the air would do twelve hours later? **Weather forecasts are made** in three stages: measure the state of the atmosphere right now in thousands of places, calculate what happens next using the equations of physics on supercomputers, then have meteorologists check the result before it goes out. Understanding those stages also explains why forecasts are usually right, and why they sometimes aren't.
 
-## The core idea: the atmosphere obeys physics
+## How are weather forecasts made? The idea behind it
 
-Air moves, warms, cools and carries water vapour according to well-understood physical laws. If we know the state of the atmosphere **now** accurately enough, we can calculate its state **hours and days later** using mathematical equations. The Norwegian scientist **Vilhelm Bjerknes** set out this idea in 1904, and it is the foundation of what is now called **numerical weather prediction**.
+The air around us warms and cools, rises and sinks, and carries water vapour from place to place, all according to well-understood physical laws. That leads to an idea that sounds simple: if you know the state of the atmosphere now precisely enough, you can work out its state hours or days from now, in the same way a physics student can predict where a ball will land from its speed and direction.
 
-## Step 1: observe the weather everywhere
+The Norwegian scientist Vilhelm Bjerknes set out this approach in 1904, but for decades it was close to impossible to use, because the arithmetic involved is enormous. Today it is the basis of **numerical weather prediction**: forecasting with numbers and equations.
 
-You can't predict the future without knowing the present, so weather services collect millions of readings every day:
+## Step one: observing the air from land, sea and space
+
+You can't calculate the future without knowing the present, so weather services gather a huge volume of readings every day from sources that fill each other's gaps:
 
 | Data source | What it measures |
 | --- | --- |
 | Ground weather stations | Temperature, humidity, pressure, wind and rainfall |
-| Weather balloons (radiosondes) | Conditions up to more than 20 km high |
+| Weather balloons (radiosondes) | Conditions at heights of more than 20 km |
 | Satellites | Clouds, temperatures and water vapour over land and sea |
-| Weather radar | Where rain and storms are, and how intense |
-| Aircraft, ships and buoys | Readings over the oceans and in the upper air |
+| Weather radar | Where rain and storms are, and how intense they are |
+| Aircraft, ships and buoys | Readings over the oceans and high in the atmosphere |
 
-Countries share this data routinely through a network coordinated by the **World Meteorological Organization**, because the weather in any one place is shaped by what's happening thousands of kilometres away.
+Why would one country need readings from other continents? Because the low-pressure system that reaches your city in a few days may be forming over a distant sea right now. Countries therefore swap data constantly through a network coordinated by the World Meteorological Organization.
 
-## Step 2: supercomputers and mathematical models
+## Step two: supercomputers that calculate tomorrow
 
-Weather models divide the atmosphere into a huge three-dimensional grid of boxes, then calculate how temperature, pressure, wind and moisture will change in each box, step by step, into the future. That takes an enormous number of calculations, which is why major weather centres run some of the most powerful **supercomputers** in the world.
+Once the readings are in, forecasting models divide the whole atmosphere into a vast grid of three-dimensional boxes, stacked over and around the globe. For each box, the computer works out how temperature, pressure, wind and humidity will change a few minutes ahead, then a few minutes after that, step by step, until it reaches days into the future. Smaller boxes give more detail but multiply the number of calculations, which is why major weather centres run some of the most powerful computers in the world.
 
-Because observations are never perfect, centres run the model dozens of times with slight tweaks to the starting data, a technique called **ensemble forecasting**. If the runs agree, confidence is high; if they spread out, the weather is genuinely uncertain.
+Measurements are never perfect, though. There are always places without stations and small instrument errors. So centres run the model many times, often dozens, with slight changes to the starting data. This is called **ensemble forecasting**. If the runs agree, confidence is high; if they spread apart, forecasters know the weather for those days is genuinely uncertain.
 
-## Step 3: the forecaster's judgement
+More recently, [artificial intelligence](/en/articles/what-is-artificial-intelligence/) has joined the toolkit. Instead of solving physics equations, these models learn from decades of past weather how the atmosphere tends to evolve. The European Centre for Medium-Range Weather Forecasts made its machine-learning model operational on 25 February 2025, running alongside its traditional physics-based models and using far less energy per forecast.
 
-Computer output isn't the final forecast. Meteorologists compare several models, check them against what's actually happening, and add local knowledge about mountains, coastlines and deserts before issuing forecasts and warnings. That's where "40% chance of rain" comes from: roughly, similar conditions produce rain about 4 times in 10.
+> **Did you know?** During the First World War, the British scientist Lewis Fry Richardson tried to calculate a forecast just a few hours ahead with pencil and paper. It took him about six weeks, and the answer was wildly wrong. Decades later, in 1950, a team ran the first computer forecast on ENIAC, and a 24-hour forecast took roughly 24 hours to compute.
 
-> **Did you know?** Around 1922, British scientist **Lewis Fry Richardson** tried to calculate a one-day forecast by hand. It took him about six weeks, and the result was wildly unrealistic. In 1950 a team of scientists ran the first computer forecast on ENIAC, but a 24-hour forecast took roughly 24 hours to compute!
+## Step three: a meteorologist checks and decides
+
+What comes out of the computer is not the forecast you see on television. Meteorologists compare several models and add what they know about local geography: mountains force moist air upwards and squeeze more rain out of it, coasts have sea breezes that inland areas don't, and deserts cool quickly after dark. They then write the forecast in plain language and issue warnings when storms or heatwaves are on the way.
+
+This is also where "40% chance of rain" comes from. Roughly, it means that in conditions like those expected in your area, rain falls in about 4 out of 10 cases. It doesn't mean it will rain for 40% of the day, or over 40% of the city.
 
 ## Why do forecasts sometimes go wrong?
 
-The main reason is that the atmosphere is a **chaotic system**. In the 1960s American meteorologist **Edward Lorenz** discovered that tiny differences in starting conditions can grow until they change the outcome completely, the idea popularly known as the "butterfly effect". As a result:
+The deeper reason is that the atmosphere is a **chaotic system**. In the 1960s the American meteorologist Edward Lorenz re-ran a weather model on his computer and noticed that a tiny difference in the starting numbers grew over time until the whole result changed. That gave us the famous "butterfly effect": a small error today can become a large one a week from now.
 
-- Forecasts for **today and tomorrow** are usually accurate.
-- Forecasts out to **about 5–7 days** remain useful, with accuracy gradually falling.
-- Beyond **about 10 days** skill drops sharply, and many scientists put the theoretical limit for detailed forecasts at around two weeks.
+So how much you can trust a forecast depends on how far ahead it looks. Today and tomorrow are usually accurate. Forecasts out to about five to seven days remain useful, though they gradually lose precision. Beyond about ten days accuracy drops sharply, and many scientists put the theoretical limit for detailed day-by-day forecasts at roughly two weeks.
 
-So "monthly forecasts" are really **broad outlooks**, such as whether the month is likely to be warmer or wetter than usual, not a reliable forecast for a specific day.
+Those "30-day forecasts" in some apps are really broad tendencies, such as whether the month is likely to be warmer or wetter than usual. They shouldn't be read as a precise forecast for any single day.
 
-The good news is that accuracy keeps improving. A 2015 scientific review noted that today's six-day forecast is as accurate as the five-day forecast was ten years earlier, about one extra day of skill per decade. In recent years weather centres have also started using [artificial intelligence](/en/articles/what-is-artificial-intelligence/) models trained on decades of weather data.
+The good news is that forecasts keep getting better. A review published in Nature in 2015 found that forecast skill has been improving by about one day per decade, so a six-day forecast became as good as a five-day forecast had been ten years earlier.
 
-## Frequently asked questions
+## Reading a weather forecast wisely
 
-### What is the most accurate source of weather forecasts?
-Usually your country's official meteorological service, which combines global models with local expertise and issues official warnings.
+Knowing how forecasts are produced helps you use them well. Rely first on your country's official weather service, which combines global models with local expertise and is the body that issues warnings. Treat the next couple of days with confidence and the days further out as a possibility that may shift, and check again on the morning that matters, because the latest forecast is built on the latest measurements.
 
-### Why do two weather apps disagree?
-Each app may rely on a different model or process the results differently, especially for days further ahead.
+Keep an eye on the "feels like" temperature too. It estimates how the air feels on your skin once wind and humidity are taken into account, so a thermometer reading of 10 °C can feel more like 6 °C on a windy day.
 
-### Can thunderstorms be predicted precisely?
-Forecasters can predict the conditions that make storms likely, but pinpointing each storm is hard because they are small and fast-moving. Read more in [what is a thunderstorm](/en/articles/what-is-a-thunderstorm/).
+## Questions students ask about weather forecasts
 
-### What does "feels like" temperature mean?
-It estimates how warm or cold it feels to your body once wind and humidity are taken into account, and it can differ from the measured air temperature.
+### Why do two weather apps disagree about the same day?
 
-## Key takeaway
+Each app may use a different computer model, or process the results in its own way. The disagreement usually grows the further ahead you look, which is exactly what scientists expect from a chaotic system.
 
-Weather forecasting has three steps: observe the atmosphere now from thousands of sources, calculate the future with physics on supercomputers, and let meteorologists review the result. Forecasts for the next few days are quite reliable, and uncertainty grows the further ahead you look. Follow your official weather service, and check again before you head out.
+### Can thunderstorms be predicted accurately?
+
+Forecasters can spot the conditions that make storms likely a day or more in advance, but pinning down exactly where each one will form is hard, because storms are small and develop and fade quickly. You can read how they form in [what is a thunderstorm](/en/articles/what-is-a-thunderstorm/).
+
+### Is weather folklore ever right?
+
+Some sayings rest on genuine observations of a region's seasons, but they can't forecast a particular day. A proverb may describe what usually happens in a given month; a forecast calculates what will happen on one specific day from that day's measurements.
