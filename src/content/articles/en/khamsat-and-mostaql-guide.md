@@ -3,15 +3,16 @@ title: "Khamsat and Mostaql: A Practical Guide for Freelancers"
 description: "Khamsat and Mostaql explained: how the two Arabic freelance platforms differ, how to sell your first gig, write winning proposals and withdraw earnings."
 category: business
 date: 2026-11-05
+updated: 2026-11-20
 tags: ["Khamsat", "Mostaql", "freelancing", "make money online", "Hsoub"]
 keywords: ["khamsat and mostaql", "khamsat freelance", "mostaql freelance", "arabic freelance platforms", "how to withdraw earnings from mostaql", "how to withdraw earnings from khamsat", "khamsat vs mostaql"]
 ---
 
-If you speak Arabic and want to freelance online, two names come up before any others: **Khamsat and Mostaql**. Both are run by **Hsoub**, and they are the leading Arabic-language freelance platforms, but they work in very different ways. This practical guide shows you how to sell your first service on Khamsat, write a convincing proposal on Mostaql, verify your account and withdraw your earnings without falling for scams. If you haven't picked a skill yet, start with our [freelancing for beginners](/en/articles/freelancing-for-beginners/) guide, then come back here.
+Ask any Arabic speaker who freelances online where they started, and you'll probably hear two names: **Khamsat and Mostaql**. Both belong to the company Hsoub and share a single login, yet they work in almost opposite ways. Knowing the difference before you sign up saves a lot of wasted effort. Below you'll find how to sell a first service on Khamsat, how to write a proposal on Mostaql that gets read, how verification and withdrawals work, and which scams to watch for. If you haven't chosen a skill yet, read [freelancing for beginners](/en/articles/freelancing-for-beginners/) first.
 
 ## Khamsat and Mostaql: what's the difference?
 
-The core idea is simple. On **Khamsat** you list a ready-made service at a fixed price and buyers come to you. On **Mostaql** clients post projects and freelancers compete by sending proposals.
+On Khamsat you list a ready-made service at a fixed price and wait for buyers, a bit like running a small shop. On Mostaql it's the other way round: clients post projects and freelancers compete for them by sending proposals.
 
 | | Khamsat | Mostaql |
 | --- | --- | --- |
@@ -22,78 +23,70 @@ The core idea is simple. On **Khamsat** you list a ready-made service at a fixed
 | Best for | Small repeatable tasks: design, proofreading, voice-over | Bigger jobs: programming, long translations, content writing |
 | Account | One Hsoub account for both | One Hsoub account for both |
 
-That's why many freelancers use both: Khamsat for small recurring income and Mostaql for larger projects.
+Plenty of freelancers use both, with Khamsat bringing in small, regular orders and Mostaql supplying the bigger projects.
 
 ## Khamsat freelance: how to sell your first service
 
-1. **Pick a very specific service.** "Text logo design with three concepts" beats "I design anything".
-2. **Write a clear title** that starts with what buyers search for, such as "Arabic proofreading for an article up to 1,000 words".
-3. **Describe exactly what the buyer gets:** number of concepts, delivery time, number of revisions and what's not included.
-4. **Add real samples of your own work,** never images copied from the web.
-5. **Use upgrades** to raise the order value: faster delivery, source files or extra words.
-6. **Reply to messages quickly,** because response time builds buyer trust.
+Buyers scroll past dozens of similar listings and decide in seconds, so everything about your service should make the offer obvious:
 
-A new service can take a while to get its first order,, and early reviews matter most. You can also follow the requests section of the Khamsat community, where buyers describe what they need.
+1. Pick a very specific service. "Text logo design with three concepts" beats "I design anything".
+2. Write a title that starts with what buyers search for, such as "Arabic proofreading for an article up to 1,000 words".
+3. Spell out what the buyer gets: number of concepts, delivery time, number of revisions, and what's not included.
+4. Show real samples of your own work, never images copied from the web.
+5. Offer **upgrades** to raise the order value, like faster delivery, source files or extra words.
+6. Answer messages quickly. Response time is one of the first things that builds a buyer's trust.
+
+Don't panic if the first order takes a while; that's normal for a new listing. Early reviews matter more than anything else at this stage, because they're what reassures the next buyer. In the meantime, keep an eye on the requests section of the Khamsat community, where buyers post what they're looking for.
 
 ## Mostaql freelance: how to write a winning proposal
 
-Clients often read dozens of proposals, so make yours stand out:
+Picture a client who posts a brochure translation job and gets forty replies, most of them opening with "Hello, I am a professional translator." The one that stands out is usually the one that proves its writer read the brief.
 
-- **Open by restating the client's need** in one line, to show you actually read the brief.
-- **Explain your plan** in a few short steps instead of pasting your whole CV.
-- **Attach a sample** close to what's being requested.
-- **Give a realistic timeline and a sensible price.** Don't compete on being the cheapest alone.
-- **End with a smart question** about a missing detail, which invites a conversation.
+So open by restating what the client needs in a single line. Then lay out how you'd do the job in a few short steps, rather than pasting your CV. Attach a sample that's close to the request, since a sample persuades better than any description. Be realistic about price and timeline: being the cheapest rarely wins on its own, and an impossibly short deadline makes clients suspicious. Ending with a sharp question about a detail missing from the brief is a good way to start a conversation.
 
-Clients spot copy-paste proposals immediately.
+Generic proposals that could fit any project get spotted and skipped.
 
-> **Did you know?** The name "Khamsat" comes from the Arabic word for five: the platform started as a marketplace for small services from **$5**, which is still the lowest price a service can have.
+> **Did you know?** The name "Khamsat" comes from the Arabic word for five: the platform started as a marketplace for small services from $5, which is still the lowest price a service can have.
 
 ## Verifying your account
 
-Verification happens through your **Hsoub account**, so one verification covers both platforms. You're typically asked for a photo of an official ID and a selfie holding it, and your name, country and date of birth on the account must match the document. Mostaql's help page says review can take up to 48 hours.
+Because both platforms run on the same Hsoub account, you only verify once. You're usually asked for a photo of an official ID and a selfie holding it, and the name, country and date of birth on your account have to match the document. Mostaql's help page says the review can take up to 48 hours.
 
-Verification is required before you can withdraw, so do it early to avoid delaying your first payout.
+You can't withdraw until you're verified, so get it done before you earn anything.
 
 ## How to withdraw earnings from Khamsat and Mostaql
 
-Once your work is delivered and accepted, the money isn't withdrawable right away. According to the official help pages, **earnings are held for 14 working days**, counted from the day after delivery and excluding weekends and public holidays. The hold protects clients and reduces fraud.
+New freelancers are often surprised to find that an accepted job doesn't mean money they can withdraw. According to the official help pages, **earnings are held for 14 working days**, counted from the day after delivery and not counting weekends or public holidays. The hold is there to protect clients and cut down on fraud.
 
-- **PayPal:** available on both platforms, and only to a personal account in your own name. Mostaql's terms set a $25 minimum for PayPal withdrawals.
-- **Bank transfer:** available in selected countries, with a $250 minimum, and it can take several days to arrive.
-- **Other methods:** these change over time and by country, so check the Balance page in your account for the options and limits available to you right now.
+Once it ends, you choose how to get paid. PayPal works on both platforms, but only to a personal account in your own name, and Mostaql's terms set a $25 minimum for it. Bank transfer is available in selected countries, has a $250 minimum and can take several days to arrive. Other methods come and go and vary by country, so the Balance page in your account is the place to check what's available to you right now.
 
-Withdrawing to an account that isn't in your name breaks the rules and can get your account suspended. For more income ideas, see our guide to [ways to earn money online](/en/articles/ways-to-earn-money-online/).
+Withdrawing to an account that isn't yours breaks the rules and can get you suspended. For other income ideas, see [ways to earn money online](/en/articles/ways-to-earn-money-online/).
 
-## Important safety warnings
+## How to protect yourself from scams
 
-- **Never move payment or communication off the platform,** however tempting the offer. The platform is what protects you in a dispute.
-- **Never pay anyone "to get a project"** or for a "test" or "account activation". These are well-known scams.
-- **Never share your password or verification codes.**
-- **Don't hand over finished work before the order or proposal is officially accepted** on the platform.
+Most scams start with a request that sounds harmless. A few rules cover nearly all of them:
 
-## Frequently asked questions
+- Never move payment or communication off the platform, however tempting the offer. The platform is what protects you in a dispute.
+- Never pay anyone "to get a project" or for a "test" or "account activation". These are well-known scams.
+- Never share your password or verification codes.
+- Don't hand over finished work before the order or proposal is officially accepted on the platform.
 
-### Are Khamsat and Mostaql free to join?
+## Beginners' questions about Khamsat and Mostaql
 
-Yes. Signing up is free on both; the platforms take their commission from completed work, not from registration.
+### Are they free to join?
+
+Yes. Signing up costs nothing on either platform; they earn their commission from completed work.
 
 ### How much does Khamsat take from my earnings?
 
-Khamsat deducts 20% of each service's price, which is $1 from every $5 service.
+20% of each service's price, which works out to $1 on every $5 service.
 
 ### What is Mostaql's commission?
 
-Mostaql takes its commission from the freelancer's earnings, and the rate depends on your membership plan, so check the platform's membership page for the current figure.
+It comes out of the freelancer's earnings and depends on your membership plan, so check the membership page for the current rate.
 
-### When can I withdraw my earnings?
+### Can I start with no experience?
 
-After the 14-working-day hold ends (counted from the day after delivery) and once your account is verified.
+You need a real skill, even a beginner's one, and samples that show it. If you don't have one yet, our guide to [making money online without capital](/en/articles/make-money-online-without-capital/) covers skills worth learning first.
 
-### Can I start on Khamsat or Mostaql with no experience?
-
-You need a real skill, even at a beginner level, plus samples that prove it. You can learn an in-demand skill first, as explained in our guide to [making money online without capital](/en/articles/make-money-online-without-capital/).
-
-## Key takeaway
-
-**Khamsat and Mostaql** are genuine opportunities to freelance in Arabic: Khamsat for selling ready-made services from $5, and Mostaql for competing on bigger projects with thoughtful proposals. Verify your account early, factor the commission and hold period into your plans, and never take payment off the platform. Results don't come overnight, but quality, patience and good reviews build a steady income over time.
+Neither platform pays off overnight. Freelancers who plan around the commission and the holding period, and keep their work quality high, tend to find that good reviews pile up and turn into steady income.

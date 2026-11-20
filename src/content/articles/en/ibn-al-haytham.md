@@ -3,20 +3,20 @@ title: "Who Was Ibn al-Haytham? The Arab Founder of Modern Optics"
 description: "Who was Ibn al-Haytham? Meet the Arab scientist who explained how we see, wrote the Book of Optics and pioneered the experimental method, with a timeline."
 category: people
 date: 2026-10-23
-updated: 2026-11-13
+updated: 2026-11-20
 tags: ["Ibn al-Haytham", "Arab scientists", "optics", "Islamic Golden Age"]
 keywords: ["Ibn al-Haytham", "who was Ibn al-Haytham", "Ibn al-Haytham achievements", "Book of Optics", "Alhazen"]
 ---
 
-About a thousand years ago, when scholars believed the eye sends out rays in order to see, an Arab scientist said the opposite was true. And he didn't just say it; he **proved** it by experiment. His name was **Ibn al-Haytham**, and many historians consider him one of the founders of modern optics and of the experimental scientific method.
+Here's a question that sounds silly until you try to answer it: when you look at something, does your eye send rays out to it, or does light travel from it into your eye? A thousand years ago, some of the greatest scholars believed the first answer. Then an Arab scientist argued the opposite and backed it up with experiments. That man was **Ibn al-Haytham**, and many historians count him among the founders of modern optics and of the experimental scientific method.
 
 ## Who was Ibn al-Haytham?
 
-His full name was **Abu Ali al-Hasan ibn al-Hasan ibn al-Haytham**. He was born around **965 CE** in **Basra**, Iraq, and died around **1040 CE** in **Cairo**. In the West he is known by his Latin name, **Alhazen**.
+His full name was Abu Ali al-Hasan ibn al-Hasan ibn al-Haytham. He was born around 965 CE in Basra, Iraq, and died around 1040 CE in Cairo. European writers knew him by a Latin name, Alhazen, so if you come across both names, they belong to the same person.
 
-He was a true polymath, writing on optics, mathematics, astronomy, physics and engineering, with dozens of works attributed to him.
+He didn't stick to one subject. He wrote on optics, mathematics, astronomy, physics and engineering, and dozens of works are attributed to him. That wasn't unusual for scholars of his era, who didn't divide knowledge into the separate departments we have today.
 
-### Ibn al-Haytham at a glance: timeline
+### Timeline of Ibn al-Haytham's life
 
 | Date (approx.) | Event |
 | --- | --- |
@@ -29,63 +29,56 @@ He was a true polymath, writing on optics, mathematics, astronomy, physics and e
 
 ## The Nile and the famous "madness"
 
-Historical sources tell a famous story: Ibn al-Haytham claimed he could regulate the flooding of the Nile, so the Fatimid caliph **al-Hakim** summoned him to Egypt. But when he studied the site, he realised his plan was impossible with the tools of his time.
+The best-known story about him starts with a bold promise. Ibn al-Haytham claimed he could regulate the flooding of the Nile, and the Fatimid caliph al-Hakim summoned him to Egypt to do it. Once he went and studied the river himself, though, he realised the plan couldn't work with the tools of his time.
 
-Fearing the caliph's anger, the accounts say, he **pretended to be mad** and spent many years in isolation or house arrest. Remarkably, he used that time to write his greatest work.
+Al-Hakim had a reputation for harshness, and the accounts say Ibn al-Haytham, afraid of how the caliph would react, pretended to be mad. He spent years in isolation or under house arrest. What looks like wasted time turned out to be the most productive stretch of his life, because that's when he wrote his greatest work.
 
-## The Book of Optics: a revolution in understanding sight
+## The Book of Optics: how vision really works
 
-Ibn al-Haytham wrote the **Book of Optics** (*Kitab al-Manazir*) in seven volumes, roughly between 1011 and 1021. In it, he:
+The Book of Optics (*Kitab al-Manazir*) runs to seven volumes, written roughly between 1011 and 1021. Its central claim is that **we see because light reflects off objects and enters the eye**. The eye doesn't send out rays, as Greek scholars such as Euclid and Ptolemy had believed.
 
-1. **Showed that we see when light reflects off objects and enters the eye**, not because the eye emits rays, as great Greek scholars such as Euclid and Ptolemy had believed.
-2. Studied the **reflection** of light in mirrors and its **refraction** as it passes between air, water and glass.
-3. Explained the anatomy of the eye and how its parts work.
-4. Described the **camera obscura**, a dark room with a small hole: light enters through the hole and forms an upside-down image of the outside scene on the opposite wall. This is the same principle a **camera** works on.
+You can check the logic at home. Switch off every light in your room at night and you see nothing, even with your eyes wide open. If the eye produced its own rays, you wouldn't need a lamp.
 
-> **Did you know?** The word **"camera"** comes from the Latin "camera obscura", meaning **"dark room"**, the very idea Ibn al-Haytham studied and described so precisely.
+The book goes further. It studies how light reflects off mirrors and how it refracts, or bends, when it passes between air, water and glass. That bending is why a pencil standing in a glass of water looks broken at the surface. He also described the anatomy of the eye and how its parts work together.
+
+Then there is the **camera obscura**: a dark room with a small hole in one wall. Light comes through the hole and throws an upside-down image of the scene outside onto the opposite wall. A camera works on exactly this principle.
+
+> **Did you know?** The word "camera" comes from the Latin "camera obscura", meaning "dark room", the very idea Ibn al-Haytham studied and described so precisely.
 
 ## A father of the experimental method
 
-Ibn al-Haytham never accepted an idea just because a famous scholar had said it; he tested it himself. He called experimentation *i'tibar*. One of his best-known lines, from his *Doubts Concerning Ptolemy*, reads:
+Ibn al-Haytham refused to accept an idea just because someone famous had said it, even if that someone was Ptolemy. He tested it first, and he called this kind of testing *i'tibar*. One of his best-known lines, from *Doubts Concerning Ptolemy*, puts it this way:
 
 > "The duty of anyone who studies the writings of scientists, if learning the truth is his goal, is to make himself an adversary of everything he reads."
 
-That spirit of **methodical doubt**, testing hypotheses through experiment and observation, is the heart of the modern scientific method.
+In other words, a serious reader argues with the text and hunts for its weak points. That habit of methodical doubt, checking a hypothesis against experiment and observation, is the core of the scientific method. It's what you're doing in a school lab when you record your results before deciding what they mean.
 
-## His influence on the world
+## Ibn al-Haytham's influence on the world
 
-- The Book of Optics was translated into **Latin** in the late 12th or early 13th century and influenced major European scholars who studied light and optics centuries later.
-- The **United Nations** proclaimed **2015** the International Year of Light, coordinated by **UNESCO**. It celebrated about a thousand years since the Book of Optics and included an educational campaign called "1001 Inventions and the World of Ibn al-Haytham".
-- A **crater on the Moon** is named "Alhazen", and so is an **asteroid**.
-- His portrait has appeared on an Iraqi 10,000-dinar banknote.
+His ideas reached Europe when the Book of Optics was translated into Latin in the late 12th or early 13th century, and it shaped the work of major European scholars who studied light centuries later.
 
-## Lessons from Ibn al-Haytham's life
+He hasn't been forgotten. The United Nations declared 2015 the International Year of Light, coordinated by UNESCO, and it celebrated roughly a thousand years since the Book of Optics. One of its events was an educational campaign called "1001 Inventions and the World of Ibn al-Haytham". A crater on the Moon is named Alhazen, and so is an asteroid, and his portrait has appeared on an Iraqi 10,000-dinar banknote.
 
-1. **Always ask "why?"** and don't accept information without evidence.
-2. **Test things yourself**; experiments speak louder than words.
-3. **Turn hardship into opportunity**, as he turned years of isolation into a lasting achievement.
-4. **Respect scholars, and debate them**; scientific criticism isn't disrespect.
+## What his life teaches students
 
-## Frequently asked questions
+Ask "why?" and don't settle for a claim without evidence. Test things yourself when you can. His years of isolation show that a setback can become an opportunity if you use the time well. And his arguments with Ptolemy are a reminder that challenging a respected scholar isn't the same as disrespecting him: Ibn al-Haytham criticised Ptolemy's ideas and built on them at the same time.
+
+## Questions students ask about Ibn al-Haytham
 
 ### What were Ibn al-Haytham's most important achievements?
 
-Proving that vision happens when light enters the eye, studying reflection and refraction, describing the camera obscura, and making experiment the foundation for reaching scientific truth.
+He showed that vision happens when light enters the eye, studied reflection and refraction, described the camera obscura, and made experiment the basis for reaching scientific truth.
 
-### Why is Ibn al-Haytham called the father of optics?
+### Why is he called the father of optics?
 
-Because his Book of Optics offered the first complete, experimentally supported theory of light and vision, and it remained a reference for centuries.
+His Book of Optics gave the first complete theory of light and vision backed by experiments, and scholars relied on it for centuries.
 
 ### Did Ibn al-Haytham invent the camera?
 
-Not literally. Earlier thinkers, such as the Chinese philosopher Mozi and Aristotle, had noticed that light passing through a small hole forms an image. But Ibn al-Haytham was among the first to study the **camera obscura** scientifically, with experiments and geometry, and to explain why the image appears upside down, which is the idea a camera is built on. Photographic cameras that record images came along in the 19th century.
+Not literally. Earlier thinkers, including the Chinese philosopher Mozi and Aristotle, had noticed that light passing through a small hole forms an image. Ibn al-Haytham was among the first to study the camera obscura scientifically, with experiments and geometry, and to explain why the image comes out upside down. That's the idea cameras are built on. Photographic cameras that actually record images arrived in the 19th century.
 
 ### Where can I read the Book of Optics?
 
-It has been edited and published in Arabic and translated into several languages; look for it in university and digital libraries.
+It has been edited and published in Arabic and translated into several languages. University and digital libraries are the place to look.
 
-To meet more Arab scientists, read about [Ibn Sina](/en/articles/who-is-ibn-sina/) and [al-Khwarizmi](/en/articles/who-is-al-khwarizmi/), and browse the [Did you know: inventions page](/en/did-you-know/inventions/).
-
-## Key takeaway
-
-Ibn al-Haytham, a scientist from Basra, changed humanity's understanding of light and vision and laid the foundations of the experimental method a thousand years ago. His story reminds us that curiosity, methodical doubt and experiment are the keys to discovery in every age.
+If his story caught your interest, meet more Arab scientists: [Ibn Sina](/en/articles/who-is-ibn-sina/) and [al-Khwarizmi](/en/articles/who-is-al-khwarizmi/). Or browse the [Did you know: inventions page](/en/did-you-know/inventions/).
