@@ -3,39 +3,32 @@ title: "What Is Twitch and How Do You Make Money on It?"
 description: "What is Twitch and how does it work? A beginner's guide to the top live streaming platform, Twitch Affiliate requirements, and the main ways streamers earn money."
 category: business
 date: 2026-10-27
+updated: 2026-11-20
 tags: ["Twitch", "Live streaming", "Make money online", "Content creation", "Gaming"]
 keywords: ["what is twitch", "how to make money on twitch", "twitch affiliate requirements", "twitch", "how does twitch work"]
 ---
 
-If you play video games, you have almost certainly heard of **Twitch**, the live streaming platform where millions of people watch others play, chat and create in real time. But what is Twitch exactly, how does it work, and can you really make money on it? This beginner's guide walks you through it step by step.
+Millions of people spend their evenings watching someone else play a video game, and they aren't just watching. They type into a chat box, and a few seconds later the player reads their name out loud and answers. That's **Twitch**. If you're a student who's curious about it, or a parent wondering what your teenager is doing, the two big questions are usually the same: what is Twitch, and can people really make money on it?
 
 ## What is Twitch?
 
-**Twitch** is an American live streaming platform. It launched in **2011** and was bought by **Amazon** in **2014** for about $970 million. It became famous for **video game streaming**: a creator (the "streamer") plays live in front of an audience and talks to viewers at the same time.
+**Twitch is an American live streaming platform that launched in 2011 and was bought by Amazon in 2014 for about $970 million.** It made its name with video game streaming, where a creator, called a "streamer", plays live in front of an audience and talks to viewers at the same time.
 
-Today Twitch goes far beyond games. You will also find streams about:
-
-- **Talk and conversation** (the Just Chatting category, one of the most watched on the site).
-- **Music**, singing and live performances.
-- **Cooking**, art and programming.
-- **Esports** and major tournaments.
+Games are still a big part of it, but far from all of it. One of the most watched categories is Just Chatting, which is exactly what it sounds like: people talking with their audience. There are also musicians performing live, people cooking, drawing or writing code on camera, and esports tournaments that draw huge crowds.
 
 ## How does Twitch work?
 
-The idea is simple: a streamer broadcasts live from a computer, phone or games console, and viewers watch on the website or app. What sets Twitch apart from YouTube is **real-time interaction**:
+A streamer goes live from a computer, phone or games console, and viewers watch on the website or the app. What makes Twitch different from YouTube is **real-time interaction**. The audience isn't just watching a finished video; it's part of the show.
 
-- **Chat:** viewers type messages and the streamer answers them on the spot.
-- **Follow:** free, and you get a notification when the stream goes live.
-- **Subscribe:** a paid monthly way to support a channel, with perks such as custom emotes.
-- **Channel Points:** earned by watching, and redeemed for rewards inside the channel.
+Viewers type in the chat and the streamer responds on the spot. If you like a channel you can follow it for free, which sends you a notification whenever it goes live. If you want to support it with money, you can subscribe, a paid monthly option that comes with perks like the channel's own custom emotes. Regular viewers also collect Channel Points just by watching, and swap them for small rewards inside that channel.
 
 ## Twitch Affiliate requirements
 
-Twitch does not pay every channel automatically. Earnings come through two main programmes.
+Opening a channel doesn't mean Twitch starts paying you. Money comes through two programmes, each with its own bar to clear.
 
 ### The Affiliate programme
 
-This is the first step to earning. Under the latest published requirements at the time of writing, you need to reach the following within **30 days**:
+This is where earning begins. Under the latest published requirements at the time of writing, a channel needs to reach all of these within 30 days:
 
 | Requirement | Target |
 | --- | --- |
@@ -44,50 +37,46 @@ This is the first step to earning. Under the latest published requirements at th
 | Broadcast days | 4 different days |
 | Viewers | An average of 3 concurrent viewers |
 
-Twitch recently lowered these thresholds from 50 followers, 8 hours and 7 days, and it may change them again. Check the **Achievements** section of your Creator Dashboard for the current rules and your progress. Once you qualify, Twitch invites you by email and in the dashboard.
+These targets used to be higher: 50 followers, 8 hours and 7 days. Twitch lowered them, and it may change them again, so the most reliable place to check is the Achievements section of your Creator Dashboard, which shows the current rules and how close you are. Once you qualify, Twitch sends an invitation by email and in the dashboard.
 
 ### The Partner programme
 
-This is the higher tier and requires a much larger audience. The "Path to Partner" achievement asks for roughly **25 hours streamed on 12 different days with an average of 75 viewers** over 30 days, after which Twitch reviews the application. Partners get extra perks and tools.
+Partner is the next tier up and needs a much bigger audience. The "Path to Partner" achievement asks for roughly 25 hours streamed on 12 different days with an average of 75 viewers over 30 days. After that, Twitch staff review the application. Partners get extra perks and tools.
 
 ## How streamers make money on Twitch
 
-Once you are an Affiliate, income can come from several sources:
+Once a channel is an Affiliate, money can come in from several directions, and most successful streamers rely on more than one:
 
-1. **Subscriptions:** viewers pay a monthly fee in three tiers, and the streamer receives a share (often 50% to start). Prices vary by country.
-2. **Bits:** a virtual currency viewers buy and send in chat to cheer on a channel. The streamer earns **one US cent per Bit**.
-3. **Ads:** shown to viewers during streams, with a share of the revenue going to the channel.
-4. **Sponsorships:** as your audience grows, brands may pay you to promote their products.
-5. **Outside income:** direct donations, [affiliate marketing](/en/articles/affiliate-marketing-guide/) and merchandise.
+1. Subscriptions: viewers pay a monthly fee in one of three tiers, and the streamer receives a share, often 50% to start. Prices vary by country.
+2. Bits: a virtual currency viewers buy and send in chat to cheer a channel on. The streamer earns one US cent per Bit.
+3. Ads: shown to viewers during streams, with part of the revenue going to the channel.
+4. Sponsorships: once an audience grows, brands may pay the streamer to promote their products.
+5. Outside income: direct donations, [affiliate marketing](/en/articles/affiliate-marketing-guide/) and merchandise.
 
 > **Did you know?** The name "Twitch" comes from "twitch gameplay", a term for games that depend on lightning-fast reflexes, such as shooters.
 
-## Tips for growing on Twitch
+## What helps a Twitch channel grow
 
-- **Keep a consistent schedule.** Viewers need to know when to find you; consistency matters more than stream length.
-- **Talk to your chat.** Greet new viewers by name. Interaction is the heart of Twitch.
-- **Pick a niche.** Focus on a game or format you know well instead of jumping around.
-- **Fix your audio first.** A good microphone matters more than an expensive camera.
-- **Share short clips** on other platforms to reach new viewers, as covered in our guides to [TikTok monetization](/en/articles/tiktok-monetization/) and [YouTube monetization](/en/articles/youtube-monetization/).
+Nothing builds a channel like a schedule people can rely on. Two hours every Tuesday and Thursday will do more for you than long streams on random days, because viewers need to know when to show up. Close behind is talking to your chat. Greeting new viewers by name sounds small, but that feeling of being noticed is why people come back.
 
-## Frequently asked questions
+It also pays to pick a lane. A streamer who sticks to one game or one kind of content is easier to recommend than one who jumps around. And when it comes to gear, sort out your sound first. People will put up with an average picture, but bad audio makes them leave, so a decent microphone matters more than an expensive camera.
+
+Finally, cut short clips from your streams and share them elsewhere to reach new people. Our guides to [TikTok monetization](/en/articles/tiktok-monetization/) and [YouTube monetization](/en/articles/youtube-monetization/) cover how that side works.
+
+## What students and parents ask about Twitch
 
 ### Is Twitch free to use?
 
-Yes. Creating an account, watching and streaming are all free. Subscribing to channels and buying Bits are optional.
+Yes. Making an account, watching and streaming are all free. Subscribing to channels and buying Bits are entirely optional.
 
 ### How old do you have to be to use Twitch?
 
-Twitch requires users to be **at least 13 years old**. Parents should keep an eye on teenagers' use of live streaming and chat.
+Twitch requires users to be at least 13. Because live streams and chat are open to strangers, it's a good idea for parents to keep an eye on how teenagers use it and to talk with them about privacy.
 
 ### Can you stream on Twitch from a phone?
 
-Yes. The Twitch app lets you go live from your phone, which is a free way to start, although streaming from a computer gives you more control and better quality.
+Yes. The Twitch app lets you go live straight from your phone, which is a free way to try it out. Streaming from a computer gives you more control and better quality once you get serious.
 
 ### How much do Twitch streamers earn?
 
-There is no fixed figure. Income depends on subscribers, viewers and sponsorships, and most beginners earn small amounts at first. Treat Twitch as a long-term project rather than quick money.
-
-## Key takeaway
-
-Twitch is Amazon's live streaming platform, best known for gaming and real-time interaction with viewers. Earning starts with the Affiliate programme once you meet a few fairly modest targets, and income then comes from subscriptions, Bits, ads and sponsorships. The real secret is consistency, interaction and building a community around your channel.
+There's no fixed figure. Income depends on subscribers, viewers and sponsorships, and most beginners earn small amounts at first. It works best as a long-term project built on consistency and a real community, not as a quick way to make money.
