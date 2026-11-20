@@ -3,15 +3,16 @@ title: "How to Make Money on Upwork: A Beginner's Guide"
 description: "How to make money on Upwork as a beginner: get your profile approved, understand Connects and the variable service fee, write winning proposals and get paid."
 category: business
 date: 2026-11-06
+updated: 2026-11-20
 tags: ["Upwork", "freelancing", "make money online", "Upwork Connects", "online jobs"]
 keywords: ["how to make money on upwork", "upwork for beginners", "upwork connects", "upwork fees", "upwork proposal tips", "upwork withdrawal", "upwork vs fiverr"]
 ---
 
-Learning **how to make money on Upwork** makes sense if you have a professional skill and want bigger projects and long-term clients. Upwork is one of the world's largest freelance marketplaces, with freelancers in programming, design, translation, marketing and writing. This guide explains how to get your profile approved, how Connects and fees work, how to write a proposal clients actually read, and how to withdraw your earnings.
+If you can code, design, translate, market or write well, sooner or later someone will tell you to "just get on Upwork". It's good advice for the right person. Upwork is one of the world's largest freelance marketplaces, and learning **how to make money on Upwork** pays off most if you have a professional skill and want bigger projects and clients who come back. Getting there comes down to four things: a profile that gets approved, a clear grasp of Connects and fees, proposals clients actually read, and knowing how the money reaches you.
 
 ## What is Upwork, and how is it different from Fiverr?
 
-On **Upwork**, clients post jobs and freelancers send proposals to win them. On [Fiverr](/en/articles/fiverr-guide/), sellers list ready-made gigs and wait for buyers. Upwork takes more initiative, but it often leads to larger projects and longer relationships.
+The two platforms work in opposite directions. On Upwork, clients post jobs and freelancers compete for them by sending proposals. On [Fiverr](/en/articles/fiverr-guide/), sellers list ready-made gigs and wait for buyers to order. That means Upwork asks more of you up front, since you have to find work and pitch for it, but it often leads to larger projects and longer working relationships.
 
 | Item | Upwork | Fiverr |
 | --- | --- | --- |
@@ -20,73 +21,46 @@ On **Upwork**, clients post jobs and freelancers send proposals to win them. On 
 | Platform fee | variable freelancer fee | flat 20% |
 | Contract types | hourly or fixed-price | fixed-price packages |
 
-## Upwork for beginners: getting your profile approved
+So which is better for a beginner? Fiverr is easier to start on because it doesn't use Connects, while Upwork suits larger projects. You don't have to choose, though. Plenty of freelancers run profiles on both.
 
-Upwork doesn't accept every profile automatically. Incomplete profiles, or profiles in very crowded categories, may be declined. To improve your chances:
+## How to make money on Upwork as a beginner: getting your profile approved
 
-1. **Pick a clear niche:** "English–Arabic legal translator" beats "translator".
-2. **Write a professional title** and an overview that opens with the problem you solve for clients.
-3. **Add a real portfolio,** even if it's practice projects.
-4. **Use a clear photo and your real name,** and verify your identity when asked.
-5. **Set a realistic hourly rate** for your level. You can raise it later.
+Many newcomers are surprised to find that Upwork doesn't accept every profile automatically. Incomplete profiles, and profiles in very crowded categories, can be declined. If that happens to you, the reason is usually one of those two, and the fix is to strengthen your title, overview and portfolio and try again. These steps give you the best chance the first time:
 
-Still choosing a skill? Start with [freelancing for beginners](/en/articles/freelancing-for-beginners/).
+1. Pick a clear niche. "English–Arabic legal translator" beats plain "translator", because clients search for someone who solves their specific problem.
+2. Write a professional title, and an overview that opens with the problem you solve for clients rather than with your life story.
+3. Add a real portfolio, even if it's made of practice projects.
+4. Use a clear photo and your real name, and verify your identity when Upwork asks.
+5. Set an hourly rate that's realistic for your level. You can raise it as reviews come in.
+
+Still deciding which skill to sell? Start with [freelancing for beginners](/en/articles/freelancing-for-beginners/) before you open an account.
 
 ## Upwork Connects: what they are and what they cost
 
-**Connects** are the tokens you spend to send proposals. According to Upwork's official pricing page:
+Every proposal costs a few tokens called **Connects**. According to Upwork's official pricing page, a Basic freelancer account is free and includes 10 Connects per month, and extra Connects cost about $0.15 each. Jobs don't all charge the same amount: the number a posting requires varies, and it can climb for popular jobs that attract a crowd. There's also a paid Freelancer Plus plan that gives you more Connects and extra features, though its price changes from time to time.
 
-- A **Basic** freelancer account is **free** and includes **10 Connects per month**.
-- Extra Connects cost about **$0.15 each**.
-- The number of Connects a job requires varies and can be higher for popular jobs.
-- A paid **Freelancer Plus** plan gives more Connects and extra features; its price changes from time to time.
-
-So don't spend Connects on every job. Target postings that match your skills closely, ideally from clients with verified payment methods.
+Ten Connects disappear quickly if you apply to everything that looks vaguely relevant. It's smarter to save them for postings that match your skills closely, ideally from clients with verified payment methods, since those are the jobs you have a real shot at.
 
 ## Upwork fees for freelancers
 
-Since May 2025, Upwork has charged freelancers a **variable service fee** of **0% to 15%** per contract, shown to you before you submit a proposal. Withdrawal methods may also carry small fees. Always check Upwork's official fees page, because the system has changed more than once.
+Since May 2025, Upwork has charged freelancers a variable service fee of 0% to 15% per contract. The rate is shown to you before you submit a proposal, so you know what you'll actually take home. Depending on how you withdraw, there may be small extra fees on top. Upwork has reworked its fee system more than once, so check the official fees page before you count on a particular number.
 
 > **Did you know?** On fixed-price contracts, Upwork protects freelancers with escrow: the client funds each milestone before work begins, and the money is released after delivery. Never start a milestone that hasn't been funded.
 
 ## How to write an Upwork proposal that wins
 
-- **Lead with the client, not yourself:** restate their problem in one line, then say how you'll solve it.
-- **Customise every proposal:** copy-paste proposals are easy to spot.
-- **Attach relevant work** that matches what they're asking for.
-- **Ask one smart question** that shows you read the brief.
-- **Keep it short:** two or three paragraphs is usually enough.
+Picture the client scrolling through thirty proposals, most of them opening with "Hi, I'm an experienced freelancer." The one that stands out starts with the client's project instead. Restate their problem in a single line, then explain how you'd solve it.
 
-Every successful contract lifts your **Job Success Score**, and you may earn badges such as Rising Talent and later Top Rated, which make clients trust your proposals more.
+Write each proposal fresh, because copy-paste templates are easy to spot. Attach a piece of past work that resembles what they need; a concrete sample persuades better than any description of your talents. One thoughtful question about the project shows you actually read the brief. And keep it short: two or three paragraphs is usually plenty.
+
+Each successful contract lifts your **Job Success Score**, and over time you may earn badges such as Rising Talent and later Top Rated, which make clients trust your proposals more. The hardest part is the start. You may send dozens of proposals before landing your first contract, and no income is guaranteed. Can you really make money on Upwork? Yes, if you bring a clear skill and the patience to get through that early stretch.
 
 ## Upwork withdrawal: getting paid
 
-Once work is approved, earnings pass through a short security period and then become available. Withdrawal methods depend on your country and can include direct bank transfer, Payoneer, PayPal and wire transfer, each with its own fee, minimum and timing. Freelancers in Jordan, for example, can sign up and work on Upwork, and the methods available to them appear in their account settings.
+After the client approves your work, your earnings sit in a short security period before they become available. From there, how long the money takes to reach you depends on the withdrawal method. Options vary by country and can include direct bank transfer, Payoneer, PayPal and wire transfer, each with its own fee, minimum and timing. Freelancers in Jordan, for example, can sign up and work on Upwork, and the methods open to them appear in their account settings, as they do for every country.
 
-## Mistakes and scams to avoid
+## Mistakes and scams beginners run into
 
-- Never accept **payment outside Upwork**. It breaks the rules and removes your protection.
-- Beware of "clients" who send cheques or ask you to buy equipment or pay for training.
-- Don't move the conversation to outside apps before a contract starts.
-- Don't buy ready-made Upwork accounts; they get banned.
+The most costly mistake is agreeing to **payment outside Upwork**. It breaks the platform's rules, and it throws away the escrow protection that would have covered you if the client vanished. Be wary, too, of "clients" who send you a cheque, or who ask you to buy equipment or pay for training before you start; these are classic scam patterns. Keep the conversation on Upwork until a contract actually begins rather than moving to outside apps. And never buy a ready-made Upwork account, however tempting the shortcut looks, because those accounts get banned.
 
-## Frequently asked questions
-
-### Can you really make money on Upwork?
-Yes, but it takes a clear skill and patience. You may need dozens of proposals before your first contract, and no income is guaranteed.
-
-### How much do Upwork Connects cost?
-About $0.15 each, and free accounts receive 10 Connects a month.
-
-### Why was my Upwork profile rejected?
-Usually because it's incomplete or the category is oversaturated. Improve your title, overview and portfolio, then try again.
-
-### Is Upwork or Fiverr better for beginners?
-Fiverr is easier to start on because it doesn't use Connects; Upwork suits larger projects. Many freelancers use both.
-
-### How long does it take to get paid on Upwork?
-After the client approves your work, there's a short security period before funds are available, then transfer time depends on your withdrawal method.
-
-## Key takeaway
-
-You can **make money on Upwork** as a beginner by building a focused profile, spending Connects wisely, writing tailored proposals and keeping all work and payments on the platform. Basic accounts are free with 10 Connects a month, and the service fee varies from 0% to 15%. Always check Upwork's official pages, as prices and rules change.
+Put together, a beginner's path on Upwork is fairly clear: a focused profile, Connects spent with care, proposals written for each client, and all work and payments kept on the platform. Prices and rules keep shifting, so treat Upwork's own pages as the final word.
