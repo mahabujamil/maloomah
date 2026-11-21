@@ -239,6 +239,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "essay-about-arabic-language": {
+    "alt": {
+      "ar": "لوحة من الخط العربي القديم مزخرفة بأبيات من الشعر العربي",
+      "en": "A decorated page of classical Arabic calligraphy showing lines of Arabic poetry"
+    },
+    "title": "Banat Souad calligraphy",
+    "creator": "Unknown authorUnknown author",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Banat_Souad_calligraphy.png"
+  },
   "essay-about-friendship": {
     "alt": {
       "ar": "صديقان يرفعان أيديهما فرحاً على تلة عند الغروب",
@@ -334,6 +346,18 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Social_Media_App_Icons_On_The_Screen_of_A_Smartphone.jpg"
+  },
+  "facts-about-the-sun": {
+    "alt": {
+      "ar": "قرص الشمس كاملاً مصوّراً بمرشح فلكي خاص تظهر فيه تفاصيل سطحها",
+      "en": "The full disk of the Sun photographed through a special solar filter, showing detail on its surface"
+    },
+    "title": "Sun in H-alpha – Solar Activity from Prishtina Observatory",
+    "creator": "Astroclubkosova",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Sun_in_H-alpha_%E2%80%93_Solar_Activity_from_Prishtina_Observatory.jpg"
   },
   "falafel-recipe": {
     "alt": {
@@ -874,6 +898,18 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Anatomy-1751201_1280.png"
+  },
+  "newtons-laws-of-motion": {
+    "alt": {
+      "ar": "مهد نيوتن: كرات معدنية معلّقة توضح انتقال الحركة وقانون الفعل ورد الفعل",
+      "en": "A Newton's cradle: hanging steel balls that show how motion and force pass from one object to another"
+    },
+    "title": "Newton's Cradle (15221366308)",
+    "creator": "Sheila Sund from Salem, United States",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Newton%27s_Cradle_(15221366308).jpg"
   },
   "offside-rule-explained": {
     "alt": {
