@@ -311,6 +311,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Open_book_with_apples_placed_on_a_wooden_table_in_a_bright_indoor_setting.jpg"
   },
+  "essay-about-science": {
+    "alt": {
+      "ar": "أنابيب اختبار ودوارق ملونة في مختبر علوم مدرسي",
+      "en": "Test tubes and flasks filled with coloured liquids in a science lab"
+    },
+    "title": "Equipment and glassware",
+    "creator": "Belikov Maxim",
+    "creatorUrl": "",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Equipment_and_glassware.jpg"
+  },
   "essay-about-water": {
     "alt": {
       "ar": "قناة ماء تجري بين الأعشاب الخضراء وتروي الحقول الزراعية",
@@ -1127,6 +1139,18 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Classroom2.jpg"
   },
+  "school-radio-about-time": {
+    "alt": {
+      "ar": "ساعة رملية قديمة على طاولة خشبية ترمز إلى قيمة الوقت",
+      "en": "An old hourglass on a wooden table, a symbol of the value of time"
+    },
+    "title": "Hourglass 1",
+    "creator": "Suohros",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Hourglass_1.jpg"
+  },
   "school-radio-about-tolerance": {
     "alt": {
       "ar": "مصافحة بين يدين مختلفتين في لون البشرة رمزاً للتسامح والأخوة",
@@ -1582,6 +1606,18 @@
     "license": "Public Domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Bodleian_MS._Huntington_214_roll332_frame36.jpg"
+  },
+  "who-is-al-razi": {
+    "alt": {
+      "ar": "تمثالا أبي بكر الرازي وعمر الخيام في جناح العلماء بمقر الأمم المتحدة في فيينا",
+      "en": "Statues of Abu Bakr al-Razi and Omar Khayyam in the Scholars Pavilion at the UN office in Vienna"
+    },
+    "title": "Persian Scholar pavilion in Viena UN (Rhazes&Khayyam)",
+    "creator": "Yamaha5",
+    "creatorUrl": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Persian_Scholar_pavilion_in_Viena_UN_(Rhazes%26Khayyam).jpg"
   },
   "who-is-ibn-battuta": {
     "alt": {
