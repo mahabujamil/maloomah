@@ -35,6 +35,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:GIRAFFES_AT_DUBLIN_ZOO_(AFRICAN_PLAINS_SECTION)-128906_(34685386712).jpg"
   },
+  "arabic-language-quiz-questions-and-answers": {
+    "alt": {
+      "ar": "حروف الأبجدية العربية مكتوبة بالترتيب من الألف إلى الياء",
+      "en": "The letters of the Arabic alphabet written in order from alif to ya"
+    },
+    "title": "Arb-alfabita",
+    "creator": "BFPlayer 0",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Arb-alfabita.png"
+  },
   "are-money-making-apps-real": {
     "alt": {
       "ar": "يد تمسك هاتفا ذكيا تظهر على شاشته أيقونات تطبيقات ملونة",
@@ -286,6 +298,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Melito_di_Porto_Salvo_-_Paesaggio_lungo_la_strada_di_Pentedattilo_-_3.jpg"
+  },
+  "essay-about-mother": {
+    "alt": {
+      "ar": "ظل أم تمسك بيد طفلها وهما يمشيان على شاطئ البحر وقت الغروب",
+      "en": "Silhouette of a mother holding her child's hand as they walk along a beach at sunset"
+    },
+    "title": "Tender Loving Care",
+    "creator": "Partha3003",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tender_Loving_Care.jpg"
   },
   "essay-about-pollution": {
     "alt": {
@@ -730,6 +754,18 @@
     "license": "CC BY 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
     "source": "https://commons.wikimedia.org/wiki/File:Heart_oblique_external.jpg"
+  },
+  "human-nervous-system": {
+    "alt": {
+      "ar": "مخطط يوضح الجهاز العصبي المركزي والجهاز العصبي الذاتي والجسدي والخلايا العصبية الحسية والحركية",
+      "en": "Diagram of the central nervous system with the autonomic and somatic systems and sensory and motor neurons"
+    },
+    "title": "Autonomic and Somatic Nervous System",
+    "creator": "Christinelmiller",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Autonomic_and_Somatic_Nervous_System.png"
   },
   "human-respiratory-system": {
     "alt": {
