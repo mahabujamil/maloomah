@@ -1,7 +1,7 @@
 ---
 title: "Al-Thakireen App Privacy Policy"
 description: "Privacy policy of Al-Thakireen, the azkar, prayer times and Quran app: what data it uses, how it stays on your device, and how its ads work."
-updated: 2026-10-31
+updated: 2026-11-06
 ---
 
 This page explains how **Al-Thakireen (الذاكرين)**, an Android app for daily azkar, prayer times, the Holy Quran and Hisn al-Muslim, handles your data. The app is from the same publisher as **Maloomah**.
@@ -23,6 +23,13 @@ This page explains how **Al-Thakireen (الذاكرين)**, an Android app for d
 - Approximate location is requested only when you tap "Locate me", to calculate prayer times and the Qibla direction on your device.
 - It is sent to Android's built-in geocoding service (by Google) only to find your city's name. We do not keep it or send it anywhere else.
 - You can search for your city by name instead, without granting this permission.
+
+## Quran recitation (optional)
+
+- When you press "Listen" in the Quran reader, your device connects to the mp3quran.net server to stream the surah audio file and fetch its verse timings, and to a settings file on maloomah.com to learn which reciters are available.
+- These servers see your device's IP address, as any website you visit does. We send them no name, location or other information about you.
+- Surahs you download are stored on your device and are deleted when you uninstall the app, or from the "Listen" sheet.
+- The app uses a background playback service so the recitation continues while the screen is locked.
 
 ## Other permissions
 
