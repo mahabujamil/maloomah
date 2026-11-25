@@ -347,6 +347,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Equipment_and_glassware.jpg"
   },
+  "essay-about-technology": {
+    "alt": {
+      "ar": "يدان تكتبان على حاسوب محمول، رمز للتكنولوجيا في حياتنا اليومية",
+      "en": "Hands typing on a laptop, a symbol of technology in everyday life"
+    },
+    "title": "Facial login as password using laptop camera",
+    "creator": "Intel Free Press",
+    "creatorUrl": "",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Facial_login_as_password_using_laptop_camera.jpg"
+  },
   "essay-about-water": {
     "alt": {
       "ar": "قناة ماء تجري بين الأعشاب الخضراء وتروي الحقول الزراعية",
@@ -1163,6 +1175,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Laboratory_equipment_of_modern_chemistry_classroom.jpg"
   },
+  "school-radio-about-the-environment": {
+    "alt": {
+      "ar": "متطوعون يزرعون الأشجار في أرض مفتوحة لحماية البيئة",
+      "en": "Volunteers planting trees on open ground to protect the environment"
+    },
+    "title": "Chicago Burnham Corridor Volunteers planting (13984713420)",
+    "creator": "U.S. Fish and Wildlife Service Headquarters",
+    "creatorUrl": "",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicago_Burnham_Corridor_Volunteers_planting_(13984713420).jpg"
+  },
   "school-radio-about-the-teacher": {
     "alt": {
       "ar": "فصل دراسي مرتب فيه سبورة خضراء ومقاعد الطلاب قبل بدء الحصة",
@@ -1618,6 +1642,18 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Light_bulb_in_grandfather%27s_lamp.jpg"
+  },
+  "who-invented-the-printing-press": {
+    "alt": {
+      "ar": "نموذج خشبي لآلة الطباعة اليدوية القديمة في متحف للطباعة",
+      "en": "A wooden hand printing press of the early type on display in a museum of typography"
+    },
+    "title": "Museum of typography",
+    "creator": "Wikielia",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Museum_of_typography.jpg"
   },
   "who-invented-the-telephone": {
     "alt": {
