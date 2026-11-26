@@ -251,6 +251,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG"
   },
+  "environment-quiz-questions-and-answers": {
+    "alt": {
+      "ar": "غابة صنوبر كثيفة يغطيها الضباب",
+      "en": "A dense pine forest covered in morning mist"
+    },
+    "title": "Nature-forest-trees-fog",
+    "creator": "Jaymantri",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Nature-forest-trees-fog.jpg"
+  },
   "essay-about-arabic-language": {
     "alt": {
       "ar": "لوحة من الخط العربي القديم مزخرفة بأبيات من الشعر العربي",
@@ -983,6 +995,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Ziggurat_of_Ur_Site_in_Nasiriyah_11.jpg"
   },
+  "milky-way-galaxy": {
+    "alt": {
+      "ar": "مجرة درب التبانة تظهر قوساً مضيئاً فوق سهل في ليلة صافية",
+      "en": "The Milky Way arching over open grassland on a clear night"
+    },
+    "title": "The Milky Way arch in the steppes of Kazakhstan",
+    "creator": "Astrobond",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Milky_Way_arch_in_the_steppes_of_Kazakhstan.jpg"
+  },
   "newtons-laws-of-motion": {
     "alt": {
       "ar": "مهد نيوتن: كرات معدنية معلّقة توضح انتقال الحركة وقانون الفعل ورد الفعل",
@@ -1162,6 +1186,18 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:11.19_%E3%80%8C2016%E7%B8%BD%E7%B5%B1%E5%BA%9C%E9%9F%B3%E6%A8%82%E6%9C%83%E3%80%8D%E7%8F%BE%E5%A0%B4_(31072356766).jpg"
+  },
+  "school-radio-about-reading": {
+    "alt": {
+      "ar": "رفوف كتب طويلة في مكتبة عامة",
+      "en": "Long rows of bookshelves in a public library"
+    },
+    "title": "Rammohun Library and Free Reading Room - General Section Collection (2)",
+    "creator": "Sumitsurai",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rammohun_Library_and_Free_Reading_Room_-_General_Section_Collection_(2).jpg"
   },
   "school-radio-about-science": {
     "alt": {
