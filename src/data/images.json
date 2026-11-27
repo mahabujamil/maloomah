@@ -371,6 +371,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Facial_login_as_password_using_laptop_camera.jpg"
   },
+  "essay-about-time": {
+    "alt": {
+      "ar": "ساعة رملية قديمة على طاولة خشبية تذكّر بقيمة الوقت",
+      "en": "An old hourglass on a wooden table, a reminder of how time runs out"
+    },
+    "title": "Hourglass 1",
+    "creator": "Suohros",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Hourglass_1.jpg"
+  },
   "essay-about-water": {
     "alt": {
       "ar": "قناة ماء تجري بين الأعشاب الخضراء وتروي الحقول الزراعية",
@@ -406,6 +418,18 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Social_Media_App_Icons_On_The_Screen_of_A_Smartphone.jpg"
+  },
+  "facts-about-bees": {
+    "alt": {
+      "ar": "نحلة عسل تجمع الرحيق وحبوب اللقاح من زهرة صفراء",
+      "en": "A honey bee gathering nectar and pollen from a yellow flower"
+    },
+    "title": "Honey Bee on Gaillardia Flower - Flickr - Swallowtail Garden Seeds",
+    "creator": "Swallowtail Garden Seeds from Santa Rosa, California, United States",
+    "creatorUrl": "",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Honey_Bee_on_Gaillardia_Flower_-_Flickr_-_Swallowtail_Garden_Seeds.jpg"
   },
   "facts-about-the-sun": {
     "alt": {
@@ -1726,6 +1750,18 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Persian_Scholar_pavilion_in_Viena_UN_(Rhazes%26Khayyam).jpg"
+  },
+  "who-is-ibn-al-nafis": {
+    "alt": {
+      "ar": "مجمع السلطان قلاوون في شارع المعز بالقاهرة، وكان يضم البيمارستان المنصوري الذي عمل فيه ابن النفيس",
+      "en": "The Qalawun complex on al-Muizz Street in Cairo, which housed the Mansuri hospital where Ibn al-Nafis worked"
+    },
+    "title": "Qalawun complex 09",
+    "creator": "Marsupium",
+    "creatorUrl": "",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Qalawun_complex_09.jpg"
   },
   "who-is-ibn-battuta": {
     "alt": {
