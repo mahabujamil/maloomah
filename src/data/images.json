@@ -371,6 +371,18 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Facial_login_as_password_using_laptop_camera.jpg"
   },
+  "essay-about-the-teacher": {
+    "alt": {
+      "ar": "فصل دراسي فارغ فيه سبورة خضراء ومقاعد مرتبة تنتظر الطلاب والمعلم",
+      "en": "An empty classroom with a green chalkboard and neat rows of desks waiting for the teacher and students"
+    },
+    "title": "Classroom2",
+    "creator": "Darklanlan",
+    "creatorUrl": "",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Classroom2.jpg"
+  },
   "essay-about-time": {
     "alt": {
       "ar": "ساعة رملية قديمة على طاولة خشبية تذكّر بقيمة الوقت",
@@ -1091,6 +1103,18 @@
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:ISS-51_Moon,_Earth%27s_limb_and_the_thin_blue_atmosphere.jpg"
   },
+  "parts-of-a-cell": {
+    "alt": {
+      "ar": "خلايا نباتية تحت المجهر تظهر فيها الجدر الخلوية والبلاستيدات الخضراء",
+      "en": "Plant cells under a microscope showing cell walls and green chloroplasts"
+    },
+    "title": "Bryum capillare leaf cells",
+    "creator": "Des_Callaghan",
+    "creatorUrl": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bryum_capillare_leaf_cells.jpg"
+  },
   "phases-of-the-moon": {
     "alt": {
       "ar": "رسم توضيحي لأطوار القمر الثمانية خلال الشهر القمري",
@@ -1330,6 +1354,18 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Child_draws_on_tablet_while_sitting_indoors.jpg"
+  },
+  "seven-wonders-of-the-ancient-world": {
+    "alt": {
+      "ar": "الهرم الأكبر في الجيزة، العجيبة الوحيدة الباقية من عجائب الدنيا السبع القديمة",
+      "en": "The Great Pyramid of Giza, the only one of the Seven Wonders of the Ancient World still standing"
+    },
+    "title": "Kheops-Pyramid",
+    "creator": "Nina",
+    "creatorUrl": "",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg"
   },
   "smart-electricity-meter": {
     "alt": {
